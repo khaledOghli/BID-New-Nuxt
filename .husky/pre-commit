@@ -1,0 +1,8 @@
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Lint staged files
+pnpm run lint
+
+pnpm run commit

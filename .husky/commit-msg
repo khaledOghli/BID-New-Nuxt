@@ -1,0 +1,21 @@
+
+#!/bin/sh
+
+# Commit message pattern
+commit_msg_pattern="^(feat|fix|docs|style|refactor|test|chore)(\(.+\))?: .{1,50}$"
+
+# Commit message validation function
+validate_commit_msg() {
+  commit_msg_file=$1
+  commit_msg=$(cat "$commit_msg_file")
+
+  if ! echo "$commit_msg" | grep -iqE "$commit_msg_pattern"; then
+    echo "Invalid commit message format!"
+    echo "Commit message should follow the pattern: <type>(<scope>): <description>"
+    echo "Example: feat(auth): add login functionality"
+    exit 1
+  fi
+}
+
+# Validate commit message
+validate_commit_msg "$1"
