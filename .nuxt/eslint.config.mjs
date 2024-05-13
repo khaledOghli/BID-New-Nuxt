@@ -15,34 +15,52 @@ export const options = resolveOptions({
   },
   "dirs": {
     "pages": [
-      "pages"
+      "pages",
+      "apps/landing/pages",
+      "apps/auth/pages"
     ],
     "composables": [
       "composables",
-      "utils"
+      "utils",
+      "apps/landing/composables",
+      "apps/landing/utils",
+      "apps/auth/composables",
+      "apps/auth/utils"
     ],
     "components": [
-      "components"
+      "components",
+      "apps/landing/components",
+      "apps/auth/components"
     ],
     "componentsPrefixed": [],
     "layouts": [
-      "layouts"
+      "layouts",
+      "apps/landing/layouts",
+      "apps/auth/layouts"
     ],
     "plugins": [
-      "plugins"
+      "plugins",
+      "apps/landing/plugins",
+      "apps/auth/plugins"
     ],
     "middleware": [
-      "middleware"
+      "middleware",
+      "apps/landing/middleware",
+      "apps/auth/middleware"
     ],
     "modules": [
-      "modules"
+      "modules",
+      "apps/landing/modules",
+      "apps/auth/modules"
     ],
     "servers": [],
     "root": [
       "/Users/khaledoghli/Work/BID-New-Nuxt"
     ],
     "src": [
-      ""
+      "",
+      "apps/landing",
+      "apps/auth"
     ]
   }
 })

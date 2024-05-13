@@ -4,6 +4,10 @@ import { appDescription } from './constants/index'
 const baseUrl = process.env.BASE_URL || '/'
 
 export default defineNuxtConfig({
+  extends: [
+    './apps/landing',
+    './apps/auth',
+  ],
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -12,7 +16,26 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
     'nuxt-primevue',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    'nuxt-icon',
+    '@nuxtjs/i18n',
+    '@nuxtjs/fontaine',
   ],
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  runtimeConfig: {
+    public: {},
+  },
+
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-dark',
+      },
+    },
+    preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini'],
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest

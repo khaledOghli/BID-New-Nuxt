@@ -9,7 +9,7 @@
   "workbench.colorTheme": "Vitesse Dark",
   "workbench.editor.tabActionLocation": "left",
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "icons",
   "workbench.list.smoothScrolling": true,
   "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
   "workbench.preferredLightColorTheme": "Vitesse Light",
