@@ -10,27 +10,15 @@ const props
 </script>
 
 <template>
-  <nuxt-link
-    class="
-      px-4
-      py-2
-      transition
-      duration-300
-      hover:bg-indigo-500
-      hover:text-white
-      rounded
-      flex
-      gap-2
-      items-center
-      w-full
-    "
+  <NuxtLink
+    class="w-full flex items-center gap-2 rounded px-4 py-2 transition duration-300 hover:bg-indigo-500 hover:text-white"
   >
     <div v-if="child" class="w-5" />
-    <Icon v-else-if="icon" class="w-5 h-5" :name="icon" />
+    <Icon v-else-if="icon" class="h-5 w-5" :name="icon" />
     <span class="flex-grow">
       <slot>{{ text }}</slot>
     </span>
-    <Icon v-if="parent" name="ri:arrow-right-s-line" class="w-5 h-5" />
-    <div v-else-if="appendIcon" class="w-5 h-5" :class="appendIcon" />
-  </nuxt-link>
+    <Icon v-if="parent" name="ri:arrow-right-s-line" class="h-5 w-5" />
+    <div v-else-if="appendIcon" class="h-5 w-5" :class="appendIcon" />
+  </NuxtLink>
 </template>

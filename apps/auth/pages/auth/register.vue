@@ -35,13 +35,15 @@ const onSubmit = handleSubmit((values) => {
 
       <div class="mb-5 flex items-center justify-between gap-2">
         <label class="flex flex-wrap items-center gap-2 text-sm">
-          <input type="checkbox"
-            class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500">
+          <input
+            type="checkbox"
+            class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500"
+          >
 
           <span> I agree with </span>
-          <nuxt-link to="/toc" class="inline text-sm text-primary-500 font-semibold hover:underline">
+          <NuxtLink to="/toc" class="inline text-sm text-primary-500 font-semibold hover:underline">
             Terms and Condition
-          </nuxt-link>
+          </NuxtLink>
         </label>
       </div>
 
@@ -51,9 +53,9 @@ const onSubmit = handleSubmit((values) => {
 
       <div class="text-sm text-gray-600">
         Already have an account?
-        <nuxt-link to="/auth/login" class="text-sm text-primary-500 font-semibold hover:underline">
+        <NuxtLink to="/auth/login" class="text-sm text-primary-500 font-semibold hover:underline">
           Login
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </form>
   </div>

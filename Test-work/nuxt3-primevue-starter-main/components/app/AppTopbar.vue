@@ -68,20 +68,20 @@ function redirectToGithub() {
       <span style="color: var(--primary-color)">Nuxt3 PrimeVue Starter</span>
     </NuxtLink>
 
-    <button class="layout-menu-button layout-topbar-button p-link" @click="onMenuToggle()">
+    <button class="layout-menu-button layout-topbar-button p-link" @click="onMenuToggle">
       <i class="pi pi-bars" />
     </button>
 
-    <button class="p-link layout-topbar-button layout-topbar-menu-button" @click="onTopBarMenuButton()">
+    <button class="p-link layout-topbar-button layout-topbar-menu-button" @click="onTopBarMenuButton">
       <i class="pi pi-ellipsis-v" />
     </button>
 
     <div class="layout-topbar-menu" :class="topbarMenuClasses">
-      <button class="p-link layout-topbar-button" @click="onTopBarMenuButton()">
+      <button class="p-link layout-topbar-button" @click="onTopBarMenuButton">
         <i class="pi pi-calendar" />
         <span>Calendar</span>
       </button>
-      <button class="p-link layout-topbar-button" @click="onTopBarMenuButton()">
+      <button class="p-link layout-topbar-button" @click="onTopBarMenuButton">
         <i class="pi pi-user" />
         <span>Profile</span>
       </button>
@@ -94,7 +94,7 @@ function redirectToGithub() {
         <span>Github</span>
       </button>
     </div>
-    <client-only>
+    <ClientOnly>
       <OverlayPanel id="overlay_panel" ref="op" append-to="body" style="width: 200px">
         <h6>Theme</h6>
         <div class="field-radiobutton">
@@ -167,7 +167,7 @@ function redirectToGithub() {
           />
         </div>
       </OverlayPanel>
-    </client-only>
+    </ClientOnly>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <details class="mt-5">
-    <summary class="text-sm select-none cursor-pointer">
+    <summary class="cursor-pointer select-none text-sm">
       View Code
     </summary>
     <slot />

@@ -16,7 +16,7 @@ const availableLocales = computed(() => {
       v-for="currentLocale in availableLocales"
       :key="currentLocale.code"
       href="#"
-      @click.prevent.stop="setLocale(currentLocale.code)"
+      @click.prevent.stop="() => setLocale(currentLocale.code)"
     >{{ currentLocale.name }}</a>
     <p>{{ t('save') }}</p>
     <p>{{ d(testDate, 'short') }}</p>

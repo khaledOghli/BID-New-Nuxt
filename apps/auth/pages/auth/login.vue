@@ -66,20 +66,26 @@ const onSubmit = handleSubmit(async (values) => {
         {{ error }}
       </div>
 
-      <VInput v-model="email" wrapper-class="mb-4" name="email" label="Email" placeholder="Email"
-        hint="Email: admin@example.com" />
-      <VInput v-model="password" wrapper-class="mb-4" name="password" label="Password" placeholder="Password"
-        type="password" hint="Password: admin" />
+      <VInput
+        v-model="email" wrapper-class="mb-4" name="email" label="Email" placeholder="Email"
+        hint="Email: admin@example.com"
+      />
+      <VInput
+        v-model="password" wrapper-class="mb-4" name="password" label="Password" placeholder="Password"
+        type="password" hint="Password: admin"
+      />
 
       <div class="mb-5 flex items-center justify-between gap-2">
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox"
-            class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500">
+          <input
+            type="checkbox"
+            class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500"
+          >
           Remember me
         </label>
-        <nuxt-link to="/auth/forgot-password" class="text-sm text-primary-500 font-semibold hover:underline">
+        <NuxtLink to="/auth/forgot-password" class="text-sm text-primary-500 font-semibold hover:underline">
           Forgot Password?
-        </nuxt-link>
+        </NuxtLink>
       </div>
 
       <VButton type="submit" color="primary" block class="mb-5">
@@ -94,9 +100,9 @@ const onSubmit = handleSubmit(async (values) => {
 
       <div class="text-sm text-gray-600">
         Don't have account?
-        <nuxt-link to="/auth/register" class="text-sm text-primary-500 font-semibold hover:underline">
+        <NuxtLink to="/auth/register" class="text-sm text-primary-500 font-semibold hover:underline">
           Register
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </form>
   </div>

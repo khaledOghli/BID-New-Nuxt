@@ -37,7 +37,7 @@ const config = useRuntimeConfig()
       on-demand · instant · fully customizable
     </div>
 
-    <client-only>
+    <ClientOnly>
       <div v-if="'development' === config.public.APP_MODE">
         <h4 pt-10>
           Inspector
@@ -52,7 +52,7 @@ const config = useRuntimeConfig()
           View, play and analyse rules and setup ...
         </article>
       </div>
-    </client-only>
+    </ClientOnly>
   </div>
 </template>
 

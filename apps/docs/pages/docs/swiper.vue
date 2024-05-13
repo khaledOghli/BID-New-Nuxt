@@ -7,12 +7,12 @@ import 'swiper/css/pagination'
 
 definePageMeta({})
 
-const onSwiper = (swiper) => {
+function onSwiper(swiper) {
   // eslint-disable-next-line no-console
   console.log(swiper)
 }
 
-const onSlideChange = () => {
+function onSlideChange() {
   // eslint-disable-next-line no-console
   console.log('slide change')
 }
@@ -30,7 +30,7 @@ const modules = [Navigation, Pagination, A11y]
       :space-between="50"
       class="relative"
       @swiper="onSwiper"
-      @slideChange="onSlideChange"
+      @slide-change="onSlideChange"
     >
       <SwiperSlide v-for="i in 5" :key="i">
         <LandingQuote
@@ -48,7 +48,7 @@ const modules = [Navigation, Pagination, A11y]
       :slides-per-view="1"
       :space-between="50"
       @swiper="onSwiper"
-      @slideChange="onSlideChange"
+      @slide-change="onSlideChange"
     >
       <SwiperSlide v-for="i in 5" :key="i">
         <LandingQuote class="text-center" :title="`Quote ${i}`" description="Lorem ipsum" />
@@ -59,16 +59,16 @@ const modules = [Navigation, Pagination, A11y]
       <VButton
         size="lg"
         shadow
-        class="w-10 !h-10 px-0 py-0 rounded-full swiper-btn-prev z-10 absolute top-1/2 -left-5 transform -translate-y-1/2"
+        class="swiper-btn-prev absolute top-1/2 z-10 w-10 transform rounded-full px-0 py-0 -left-5 !h-10 -translate-y-1/2"
       >
-        <Icon class="w-5 h-5" name="heroicons:chevron-left-20-solid" />
+        <Icon class="h-5 w-5" name="heroicons:chevron-left-20-solid" />
       </VButton>
       <VButton
         size="lg"
         shadow
-        class="w-10 !h-10 px-0 py-0 rounded-full swiper-btn-next z-10 absolute top-1/2 -right-5 transform -translate-y-1/2"
+        class="swiper-btn-next absolute top-1/2 z-10 w-10 transform rounded-full px-0 py-0 -right-5 !h-10 -translate-y-1/2"
       >
-        <Icon class="w-5 h-5" name="heroicons:chevron-right-20-solid" />
+        <Icon class="h-5 w-5" name="heroicons:chevron-right-20-solid" />
       </VButton>
 
       <Swiper
@@ -81,7 +81,7 @@ const modules = [Navigation, Pagination, A11y]
         :slides-per-view="1"
         :space-between="50"
         @swiper="onSwiper"
-        @slideChange="onSlideChange"
+        @slide-change="onSlideChange"
       >
         <SwiperSlide v-for="i in 5" :key="i">
           <LandingQuote

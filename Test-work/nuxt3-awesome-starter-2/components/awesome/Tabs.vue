@@ -86,7 +86,7 @@ onMounted(() => {
           :style="{
             zIndex: 2,
           }"
-          @click="activeTab = item.name"
+          @click="() => activeTab = item.name"
         >
           <a href="#" @click.prevent="$emit('click')">
             {{ item.title }}

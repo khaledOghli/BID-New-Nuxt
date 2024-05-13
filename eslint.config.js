@@ -20,18 +20,19 @@ export default nuxt(
           order: ['defineProps', 'defineEmits'],
           defineExposeLast: true,
         }],
-         "vue/enforce-style-attribute": [
-          "error",
-          { "allow": ["scoped"] }
+        'vue/enforce-style-attribute': [
+          'error',
+          { allow: ['scoped'] },
         ],
         'vue/html-button-has-type': ['error', { button: true, submit: true, reset: true }],
         'vue/no-empty-component-block': ['error'],
         'vue/no-multiple-objects-in-class': ['error'],
         'vue/v-for-delimiter-style': ['error', 'in'],
-        'vue/v-on-handler-style': ['error', ["method", "inline-function"]],
+        'vue/v-on-handler-style': ['error', ['method', 'inline-function']],
         'vue/no-side-effects-in-computed-properties': ['error'],
-        "no-magic-numbers": ["error", { "ignore": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }],
+        'no-magic-numbers': ['error', { ignore: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }],
       },
+      ignores: ['theme/'],
     },
   ),
 )

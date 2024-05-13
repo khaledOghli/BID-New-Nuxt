@@ -34,8 +34,10 @@ const onSubmit = handleSubmit((values) => {
 
       <VInput wrapper-class="mb-4" name="email" label="Email" placeholder="Email" />
       <VInput wrapper-class="mb-4" name="password" label="Password" placeholder="Password" />
-      <VInput wrapper-class="mb-4" name="passwordConfirmation" label="Password Confirmation"
-        placeholder="Password Confirmation" />
+      <VInput
+        wrapper-class="mb-4" name="passwordConfirmation" label="Password Confirmation"
+        placeholder="Password Confirmation"
+      />
 
       <VButton type="submit" color="primary" block>
         Submit

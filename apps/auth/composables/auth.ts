@@ -1,11 +1,9 @@
 import type { AuthUser } from '~~/stores/auth'
 
-export const useAuthStorage = (
-  { authTokenKey, authUserKey } = {
-    authTokenKey: 'auth.token',
-    authUserKey: 'auth.user',
-  },
-) => {
+export function useAuthStorage({ authTokenKey, authUserKey } = {
+  authTokenKey: 'auth.token',
+  authUserKey: 'auth.user',
+}) {
   const user = useCookie<AuthUser>(authUserKey)
   const token = useCookie<string>(authTokenKey)
 

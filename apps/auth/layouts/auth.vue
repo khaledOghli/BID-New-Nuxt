@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <div class="h-screen flex items-center justify-center w-full">
+  <div class="h-screen w-full flex items-center justify-center">
     <div class="lg:w-[400px]">
-      <Logo class="flex justify-center mb-5" />
-      <div class="bg-white rounded-xl shadow-md">
+      <Logo class="mb-5 flex justify-center" />
+      <div class="rounded-xl bg-white shadow-md">
         <slot />
       </div>
     </div>

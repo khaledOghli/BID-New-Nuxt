@@ -8,12 +8,12 @@ definePageMeta({
   <main>
     <ContentDoc>
       <template #not-found>
-        <div class="min-h-[400px] grid place-items-center">
-          <div class="text-center p-10">
-            <h3 class="text-2xl font-bold mb-2">
+        <div class="grid min-h-[400px] place-items-center">
+          <div class="p-10 text-center">
+            <h3 class="mb-2 text-2xl font-bold">
               404
             </h3>
-            <p class="text-sm text-gray-600 mb-6">
+            <p class="mb-6 text-sm text-gray-600">
               Document or page not found
             </p>
             <VButton href="/" size="sm" text color="primary">

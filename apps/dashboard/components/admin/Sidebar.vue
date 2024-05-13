@@ -83,60 +83,23 @@ const menus = ref([
   <VModalBackdrop v-if="isOpen" @click="isOpen = false" />
 
   <aside
-    class="
-      px-2
-      w-10/12
-      sm:w-[300px]
-      border-r
-      h-screen
-      fixed
-      sm:sticky
-      top-0
-      border-gray-200
-      pb-2
-      bg-white
-      z-10
-      flex-col
-      transition-all
-      duration-300
-      transform
-      sm:transform-none
-    "
+    class="fixed top-0 z-10 h-screen w-10/12 flex-col transform border-r border-gray-200 bg-white px-2 pb-2 transition-all duration-300 sm:sticky sm:w-[300px] sm:transform-none"
     :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
   >
     <!-- nav header -->
     <div
-      class="
-        flex
-        justify-between
-        gap-2
-        items-center
-        px-4
-        border-b border-gray-200
-        -mx-2
-        sm:border-none
-      "
+      class="flex items-center justify-between gap-2 border-b border-gray-200 px-4 -mx-2 sm:border-none"
     >
-      <nuxt-link
+      <NuxtLink
         to="/"
-        class="
-          py-5
-          w-full
-          font-bold
-          text-lg text-indigo-500
-          flex
-          gap-2
-          items-center
-          justify-between
-          sm:justify-center
-        "
+        class="w-full flex items-center justify-between gap-2 py-5 text-lg text-indigo-500 font-bold sm:justify-center"
       >
-        <div class="flex gap-2 items-center justify-center">
+        <div class="flex items-center justify-center gap-2">
           {{ $t('app_name') }}
         </div>
-      </nuxt-link>
+      </NuxtLink>
       <button
-        class="i-ri-close-line w-6 h-6 text inline sm:hidden"
+        class="text i-ri-close-line inline h-6 w-6 sm:hidden"
         @click="isOpen = false"
       />
     </div>
@@ -151,5 +114,3 @@ const menus = ref([
     </ul>
   </aside>
 </template>
-
-

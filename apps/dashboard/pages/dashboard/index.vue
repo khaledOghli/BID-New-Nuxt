@@ -35,16 +35,16 @@ const stats = ref([
 <template>
   <div>
     <div class="mb-5">
-      <nuxt-link class="font-semibold text-2xl" to="/">
+      <NuxtLink class="text-2xl font-semibold" to="/">
         Dashboard
-      </nuxt-link>
+      </NuxtLink>
       <div class="text-gray-500">
         Overview & summary
       </div>
     </div>
 
     <!-- stats -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 mb-5 gap-5">
+    <div class="grid grid-cols-2 mb-5 gap-5 sm:grid-cols-4">
       <AdminMetricItem
         v-for="stat in stats"
         :key="stat.text"

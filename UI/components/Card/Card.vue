@@ -32,8 +32,10 @@ withDefaults(
 
 <template>
   <div :class="classes.wrapper">
-    <slot name="headerWrapper" :title="title" :bordered="bordered" :classes="[classes.header, headerClass]"
-      :hide-header="hideHeader">
+    <slot
+      name="headerWrapper" :title="title" :bordered="bordered" :classes="[classes.header, headerClass]"
+      :hide-header="hideHeader"
+    >
       <VCardHeader v-if="!hideHeader" :title="title" :bordered="bordered" :class="[classes.header, headerClass]">
         <slot name="header" />
       </VCardHeader>

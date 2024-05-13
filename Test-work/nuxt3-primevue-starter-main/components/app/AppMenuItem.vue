@@ -78,16 +78,16 @@ function checkActiveRoute(item) {
     >
       <i :class="item.icon" class="layout-menuitem-icon" />
       <span class="layout-menuitem-text">{{ item.label }}</span>
-      <i v-if="item.items" class="pi layout-submenu-toggler pi-fw pi-angle-down" />
+      <i v-if="item.items" class="layout-submenu-toggler pi pi-fw pi-angle-down" />
     </a>
-    <nuxt-link v-if="item.to && !item.items && item.visible !== false" :class="[item.class, { 'active-route': checkActiveRoute(item) }]" tabindex="0" :to="item.to" @click="itemClick($event, item, index)">
+    <NuxtLink v-if="item.to && !item.items && item.visible !== false" :class="[item.class, { 'active-route': checkActiveRoute(item) }]" tabindex="0" :to="item.to" @click="itemClick($event, item, index)">
       <i :class="item.icon" class="layout-menuitem-icon" />
       <span class="layout-menuitem-text">{{ item.label }}</span>
       <i v-if="item.items" class="pi pi-fw pi-angle-down layout-submenu-toggler" />
-    </nuxt-link>
+    </NuxtLink>
     <Transition v-if="item.items && item.visible !== false" name="layout-submenu">
       <ul v-show="root ? true : isActiveMenu" class="layout-submenu">
-        <app-menu-item
+        <AppMenuItem
           v-for="(child, i) in item.items"
           :key="child"
           :index="i"
