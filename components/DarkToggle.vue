@@ -24,6 +24,6 @@ function toggleDark() {
 
 <template>
   <button class="!outline-none" @click="toggleDark">
-    <div class="i-carbon-sun dark:i-carbon-moon" />
+    <Icon :name="color.preference === 'light' ? 'i-carbon-sun' : 'i-carbon-moon'" />
   </button>
 </template>

@@ -17,5 +17,10 @@ const online = useOnline()
         </div>
       </template>
     </Suspense>
+    <VCard title="Hello">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit esse
+      voluptatem et deserunt earum explicabo aut quis laboriosam nostrum
+      quisquam sequi maxime est vitae, vero reiciendis veniam repudiandae fugit!
+    </VCard>
   </div>
 </template>

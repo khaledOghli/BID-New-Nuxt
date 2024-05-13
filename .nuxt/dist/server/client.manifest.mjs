@@ -1,1 +1,1 @@
-export { default } from "file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@nuxt+vite-builder@3.11.2_eslint@9.2.0_rollup@2.79.1_sass@1.77.0_typescript@5.4.5_vue-tsc@2.0.16_vue@3.4.27/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@nuxt+vite-builder@3.11.2_@types+node@20.12.11_eslint@9.2.0_rollup@4.17.2_sass@1.77.1_typescr_556wb5ybm4stdnwef57cbxhoee/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

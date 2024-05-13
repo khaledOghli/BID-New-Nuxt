@@ -39,11 +39,30 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
-    'index': RouteRecordInfo<'index', '/', Record<never, never>, Record<never, never>>,
-    'all': RouteRecordInfo<'all', '/:all(.*)*', { all?: ParamValueZeroOrMore<true> }, { all?: ParamValueZeroOrMore<false> }>,
-    'auth': RouteRecordInfo<'auth', '/auth', Record<never, never>, Record<never, never>>,
-    'hi-id': RouteRecordInfo<'hi-id', '/hi/:id()', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    'test': RouteRecordInfo<'test', '/test', Record<never, never>, Record<never, never>>,
+    'index___en': RouteRecordInfo<'index___en', '/', Record<never, never>, Record<never, never>>,
+    'all___en': RouteRecordInfo<'all___en', '/:all(.*)*', { all?: ParamValueZeroOrMore<true> }, { all?: ParamValueZeroOrMore<false> }>,
+    'index___ar': RouteRecordInfo<'index___ar', '/ar', Record<never, never>, Record<never, never>>,
+    'all___ar': RouteRecordInfo<'all___ar', '/ar/:all(.*)*', { all?: ParamValueZeroOrMore<true> }, { all?: ParamValueZeroOrMore<false> }>,
+    'auth-forgot-password___ar': RouteRecordInfo<'auth-forgot-password___ar', '/ar/auth/forgot-password', Record<never, never>, Record<never, never>>,
+    'auth-login___ar': RouteRecordInfo<'auth-login___ar', '/ar/auth/login', Record<never, never>, Record<never, never>>,
+    'auth-register___ar': RouteRecordInfo<'auth-register___ar', '/ar/auth/register', Record<never, never>, Record<never, never>>,
+    'auth-reset-password___ar': RouteRecordInfo<'auth-reset-password___ar', '/ar/auth/reset-password', Record<never, never>, Record<never, never>>,
+    'dashboard___ar': RouteRecordInfo<'dashboard___ar', '/ar/dashboard', Record<never, never>, Record<never, never>>,
+    'docs-slug___ar': RouteRecordInfo<'docs-slug___ar', '/ar/docs/:slug(.*)*', { slug?: ParamValueZeroOrMore<true> }, { slug?: ParamValueZeroOrMore<false> }>,
+    'docs-forms___ar': RouteRecordInfo<'docs-forms___ar', '/ar/docs/forms', Record<never, never>, Record<never, never>>,
+    'docs-swiper___ar': RouteRecordInfo<'docs-swiper___ar', '/ar/docs/swiper', Record<never, never>, Record<never, never>>,
+    'hi-id___ar': RouteRecordInfo<'hi-id___ar', '/ar/hi/:id()', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    'test___ar': RouteRecordInfo<'test___ar', '/ar/test', Record<never, never>, Record<never, never>>,
+    'auth-forgot-password___en': RouteRecordInfo<'auth-forgot-password___en', '/auth/forgot-password', Record<never, never>, Record<never, never>>,
+    'auth-login___en': RouteRecordInfo<'auth-login___en', '/auth/login', Record<never, never>, Record<never, never>>,
+    'auth-register___en': RouteRecordInfo<'auth-register___en', '/auth/register', Record<never, never>, Record<never, never>>,
+    'auth-reset-password___en': RouteRecordInfo<'auth-reset-password___en', '/auth/reset-password', Record<never, never>, Record<never, never>>,
+    'dashboard___en': RouteRecordInfo<'dashboard___en', '/dashboard', Record<never, never>, Record<never, never>>,
+    'docs-slug___en': RouteRecordInfo<'docs-slug___en', '/docs/:slug(.*)*', { slug?: ParamValueZeroOrMore<true> }, { slug?: ParamValueZeroOrMore<false> }>,
+    'docs-forms___en': RouteRecordInfo<'docs-forms___en', '/docs/forms', Record<never, never>, Record<never, never>>,
+    'docs-swiper___en': RouteRecordInfo<'docs-swiper___en', '/docs/swiper', Record<never, never>, Record<never, never>>,
+    'hi-id___en': RouteRecordInfo<'hi-id___en', '/hi/:id()', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    'test___en': RouteRecordInfo<'test___en', '/test', Record<never, never>, Record<never, never>>,
   }
 }
 

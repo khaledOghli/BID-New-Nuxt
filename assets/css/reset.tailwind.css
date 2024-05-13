@@ -388,6 +388,3 @@
     display: none;
   }
 }
-@layer primevue {
-  --primary-color: #4e73df;
-}

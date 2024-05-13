@@ -5,7 +5,10 @@ const baseUrl = process.env.BASE_URL || '/'
 
 export default defineNuxtConfig({
   extends: [
+    './UI',
     './apps/landing',
+    './apps/dashboard',
+    './apps/docs',
     './apps/auth',
   ],
   modules: [
@@ -16,7 +19,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
     'nuxt-primevue',
-    '@nuxtjs/tailwindcss',
     '@nuxt/content',
     'nuxt-icon',
     '@nuxtjs/i18n',
@@ -100,6 +102,12 @@ export default defineNuxtConfig({
     },
 
   },
+
+  i18n: {
+    locales: ['en', 'ar'],
+    defaultLocale: 'en',
+  },
+
   pwa,
 
   devtools: {
@@ -116,4 +124,5 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+
 })

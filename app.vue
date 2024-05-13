@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { appName } from '~/constants'
 import './assets/css/reset.tailwind.css'
+import './assets/css/app.css'
 
 useHead({
   title: appName,
