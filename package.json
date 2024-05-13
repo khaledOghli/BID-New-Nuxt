@@ -11,6 +11,7 @@
     "start": "node .output/server/index.mjs",
     "start:generate": "npx serve .output/public",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit",
     "generate-theme-light": "sass --update assets/primevue/themes/aura/light/blue/theme.scss:public/themes/aura-light-blue/theme.css",
     "generate-theme-dark": "sass --update assets/primevue/themes/aura/dark/blue/theme.scss:public/themes/aura-dark-blue/theme.css",
