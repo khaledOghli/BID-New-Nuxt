@@ -49,6 +49,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@unocss/eslint-config": "^0.60.2",
     "@unocss/nuxt": "^0.60.2",
+    "@unocss/preset-wind": "^0.60.2",
     "@vite-pwa/nuxt": "^0.7.0",
     "@vueuse/nuxt": "^10.9.0",
     "autoprefixer": "^10.4.19",

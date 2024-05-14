@@ -9,6 +9,7 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 import { presetScrollbar } from 'unocss-preset-scrollbar'
+import presetWind from '@unocss/preset-wind'
 
 export default defineConfig({
   theme: {
@@ -61,8 +62,14 @@ export default defineConfig({
     // },
   },
   shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
+    [
+      'btn',
+      'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
+    ],
+    [
+      'icon-btn',
+      'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
+    ],
   ],
   presets: [
     presetUno(),
@@ -81,17 +88,15 @@ export default defineConfig({
     presetScrollbar({
       // config
     }),
+    presetWind(),
   ],
-  layers: {
-    'components': -1,
-    'default': -3,
-    'utilities': -2,
-    'my-layer': 3,
-    'primevue': 4,
-  },
+  // layers: {
+  //   'components': -1,
+  //   'default': -3,
+  //   'utilities': -2,
+  //   'my-layer': 3,
+  //   'primevue': 4,
+  // },
 
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup(),
-  ],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 })

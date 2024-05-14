@@ -70,6 +70,9 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.60.2
     version: 0.60.2(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11)(webpack@5.91.0)
+  '@unocss/preset-wind':
+    specifier: ^0.60.2
+    version: 0.60.2
   '@vite-pwa/nuxt':
     specifier: ^0.7.0
     version: 0.7.0(rollup@4.17.2)(vite@5.2.11)(workbox-build@7.1.0)(workbox-window@7.1.0)
