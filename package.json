@@ -14,7 +14,7 @@
     "lint:fix": "eslint --ignore-pattern 'theme/' --ignore-pattern 'node_modules/' --ignore-pattern 'Test-work/' --ignore-pattern 'assets/primevue --fix",
     "format": "prettier --write .",
     "lint-staged": "lint-staged",
-    "commit": "git-cz",
+    "commit": "lint-staged && git-cz",
     "typecheck": "vue-tsc --noEmit",
     "generate-theme-light": "sass --update assets/primevue/themes/aura/light/blue/theme.scss:public/themes/aura-light-blue/theme.css",
     "generate-theme-dark": "sass --update assets/primevue/themes/aura/dark/blue/theme.scss:public/themes/aura-dark-blue/theme.css",
