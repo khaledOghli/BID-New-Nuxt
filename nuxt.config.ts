@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     './apps/landing',
     './apps/dashboard',
     './apps/docs',
+    './apps/permit',
     './apps/auth',
   ],
   modules: [
@@ -36,7 +37,20 @@ export default defineNuxtConfig({
         default: 'github-dark',
       },
     },
-    preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini'],
+    preload: [
+      'json',
+      'js',
+      'ts',
+      'html',
+      'css',
+      'vue',
+      'diff',
+      'shell',
+      'markdown',
+      'yaml',
+      'bash',
+      'ini',
+    ],
   },
 
   experimental: {
@@ -77,14 +91,29 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        { id: 'theme-link', rel: 'stylesheet', href: `${baseUrl}themes/aura-light-blue/theme.css` },
+        {
+          id: 'theme-link',
+          rel: 'stylesheet',
+          href: `${baseUrl}themes/aura-light-blue/theme.css`,
+        },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
+        {
+          name: 'apple-mobile-web-app-status-bar-style',
+          content: 'black-translucent',
+        },
+        {
+          name: 'theme-color',
+          media: '(prefers-color-scheme: light)',
+          content: 'white',
+        },
+        {
+          name: 'theme-color',
+          media: '(prefers-color-scheme: dark)',
+          content: '#222222',
+        },
       ],
     },
   },
@@ -100,7 +129,6 @@ export default defineNuxtConfig({
     components: {
       include: ['Button'],
     },
-
   },
 
   i18n: {
@@ -124,5 +152,4 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-
 })

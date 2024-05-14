@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { spawn } from 'node:child_process'
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import process from 'node:process'
 import { Readable } from 'node:stream'
 import { fileURLToPath } from 'node:url'
@@ -82,9 +82,30 @@ child.on('exit', async (code) => {
 
       const indexPath = join(pagesDir, 'index.vue')
       writeFileSync(indexPath, formattedContent)
-      console.log(
-        'index.vue file created successfully and formatted using Prettier.',
+      console.log('index.vue file created successfully and formatted using Prettier.')
+
+      // Update nuxt.config.ts file
+      const nuxtConfigPath = join(__dirname, 'nuxt.config.ts')
+      const nuxtConfigContent = readFileSync(nuxtConfigPath, 'utf-8')
+      const updatedConfigContent = nuxtConfigContent.replace(
+        /extends:\s*\[[^]*?\]/m,
+        (match) => {
+          // Add the new folder before './apps/auth'
+          const updatedExtendsArray = match.replace(
+            /(\[([^]*?)\])/m,
+            (arrayMatch) => {
+              return arrayMatch.replace('./apps/auth', `./apps/${folderName}',\n  './apps/auth`)
+            },
+          )
+          return updatedExtendsArray
+        },
       )
+
+      // Format the updated content using Prettier
+      const formattedConfigContent = await format(updatedConfigContent, { parser: 'typescript' })
+
+      writeFileSync(nuxtConfigPath, formattedConfigContent)
+      console.log('nuxt.config.ts file updated successfully and formatted using Prettier.')
     }
     catch (error) {
       console.error('Error creating folders and files:', error)
