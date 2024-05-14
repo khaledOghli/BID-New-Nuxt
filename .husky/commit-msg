@@ -1,21 +1,20 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-#!/bin/sh
-
-# Commit message pattern
 commit_msg_pattern="^(feat|fix|docs|style|refactor|test|chore)(\(.+\))?: .{1,50}$"
 
-# Commit message validation function
 validate_commit_msg() {
-  commit_msg_file=$1
-  commit_msg=$(cat "$commit_msg_file")
-
-  if ! echo "$commit_msg" | grep -iqE "$commit_msg_pattern"; then
-    echo "Invalid commit message format!"
-    echo "Commit message should follow the pattern: <type>(<scope>): <description>"
-    echo "Example: feat(auth): add login functionality"
-    exit 1
-  fi
+  red='\033[0;31m'
+  green='\033[0;32m'
+  blue='\033[0;34m'
+  no_color='\033[0m'
+  echo " ${red} - Invalid commit message. Your commit message should follow this pattern: ${green}type(scope): subject"
+  echo " ${red} - 'type' is one of the following: ${blue} [feat, fix, docs, style, refactor, test, chore]"
+  echo " ${red} - 'scope' is optional and can be anything specifying the place of the commit change"
+  echo " ${red} - 'subject' is a brief description of the change, try to keep it under 50 characters${no_color}"
+  exit 1
 }
 
-# Validate commit message
-validate_commit_msg "$1"
+if ! npx --no-install commitlint --edit "$1"; then
+  validate_commit_msg
+fi
