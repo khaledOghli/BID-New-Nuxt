@@ -21,6 +21,10 @@ To get started!
 - [x] Nuxt Installed
 - [ ] Solution Architecture
 - [x] PNPM Package Manager Installed
+- [x] PNPM Configurations
+- [x] Recommended Code Rules Expressions
+- [x] Git Commit Lint
+- [x] Git Conventional Commits Configurations
 - [ ] Nuxt Configurations
 - [x] UnoCss Tailwind Module Installed
 - [x] UnoCss Configurations
