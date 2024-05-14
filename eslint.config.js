@@ -2,10 +2,13 @@
 import antfu from '@antfu/eslint-config'
 import nuxt from './.nuxt/eslint.config.mjs'
 
+// const MIN_LENGTH = 3;
+
 export default nuxt(
   antfu({
     unocss: true,
     formatters: true,
+    // plugins: ['spellcheck'],
     rules: {
       'vue/component-name-in-template-casing': [
         'error',
@@ -50,6 +53,22 @@ export default nuxt(
           detectObjects: false,
         },
       ],
+      // 'spellcheck/spell-checker': [
+      //   'error',
+      //   {
+      //     comments: true,
+      //     strings: true,
+      //     identifiers: true,
+      //     lang: 'en_US',
+      //     skipWords: [],
+      //     skipIfMatch: [
+      //       "http://[^s]*",
+      //       "^[-\\w]+\/[-\\w\\.]+$"
+      //     ],
+      //     skipWordIfMatch: [],
+      //     minLength: MIN_LENGTH
+      //   },
+      // ],
     },
     ignores: ['theme/'],
   }),
