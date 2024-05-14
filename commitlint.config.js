@@ -1,15 +1,43 @@
+const HEADER_MAX_LENGTH = 72
+const BODY_MAX_LINE_LENGTH = 100
+const FOOTER_MAX_LINE_LENGTH = 100
+const RULE_LEVEL_ERROR = 2
+const RULE_LEVEL_WARNING = 1
+
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
-      2,
+      RULE_LEVEL_ERROR,
       'always',
-      ['build', 'feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'revert'],
+      [
+        'build',
+        'feat',
+        'fix',
+        'docs',
+        'style',
+        'refactor',
+        'test',
+        'chore',
+        'revert',
+      ],
     ],
-    'subject-case': [2, 'always', 'sentence-case'],
-    'subject-empty': [2, 'never'],
-    'header-max-length': [2, 'always', 72],
-    'body-max-line-length': [2, 'always', 100],
-    'footer-max-line-length': [2, 'always', 100],
+    'subject-case': [
+      RULE_LEVEL_ERROR,
+      'always',
+      ['lower-case', 'sentence-case'],
+    ],
+    'subject-empty': [RULE_LEVEL_ERROR, 'never'],
+    'header-max-length': [RULE_LEVEL_WARNING, 'always', HEADER_MAX_LENGTH],
+    'body-max-line-length': [
+      RULE_LEVEL_WARNING,
+      'always',
+      BODY_MAX_LINE_LENGTH,
+    ],
+    'footer-max-line-length': [
+      RULE_LEVEL_WARNING,
+      'always',
+      FOOTER_MAX_LINE_LENGTH,
+    ],
   },
 }
