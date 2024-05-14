@@ -14,11 +14,16 @@
     "lint:fix": "eslint --ignore-pattern 'theme/' --ignore-pattern 'node_modules/' --ignore-pattern 'Test-work/' --ignore-pattern 'assets/primevue --fix",
     "format": "prettier --write .",
     "lint-staged": "lint-staged",
-    "commit": "commit",
+    "commit": "git-cz",
     "typecheck": "vue-tsc --noEmit",
     "generate-theme-light": "sass --update assets/primevue/themes/aura/light/blue/theme.scss:public/themes/aura-light-blue/theme.css",
     "generate-theme-dark": "sass --update assets/primevue/themes/aura/dark/blue/theme.scss:public/themes/aura-dark-blue/theme.css",
     "generate-themes": "pnpm run generate-theme-light && pnpm run generate-theme-dark"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
   "dependencies": {
     "highlight.js": "^11.9.0",
@@ -32,6 +37,7 @@
     "@antfu/eslint-config": "^2.17.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
     "@commitlint/prompt-cli": "^19.3.0",
     "@iconify-json/carbon": "^1.1.32",
     "@iconify-json/twemoji": "^1.1.15",
@@ -47,13 +53,17 @@
     "@vueuse/nuxt": "^10.9.0",
     "autoprefixer": "^10.4.19",
     "babel-loader": "^9.1.3",
+    "commitizen": "^4.3.0",
     "consola": "^3.2.3",
+    "conventional-changelog-atom": "^5.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-format": "^0.1.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-spellcheck": "^0.0.20",
     "husky": "^9.0.11",
+    "inquirer": "9",
     "lint-staged": "^15.2.2",
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
