@@ -35,6 +35,8 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.showSnippets": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
@@ -88,15 +90,8 @@
   // ========== Extension configs ==========
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
-  "errorLens.enabledDiagnosticLevels": [
-    "warning",
-    "error"
-  ],
-  "errorLens.excludeBySource": [
-    "cSpell",
-    "Grammarly",
-    "eslint"
-  ],
+  "errorLens.enabledDiagnosticLevels": ["warning", "error"],
+  "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
   // ESLint config: https://github.com/antfu/eslint-config
   "eslint.codeAction.showDocumentation": {
     "enable": true
@@ -300,9 +295,89 @@
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
-  "cSpell.words": [
-    "Nuxt",
-    "Pinia"
-  ],
-  "nuxt.isNuxtApp": false
+  "cSpell.words": ["Nuxt", "Pinia"],
+  "nuxt.isNuxtApp": false,
+  "todohighlight.defaultStyle": {
+    "color": "#F28100",
+    "backgroundColor": "#fff7e9",
+    "overviewRulerColor": "#ffab00",
+    "border": "1px solid #FC9D2F",
+    "padding": "7px",
+    "borderRadius": "3px",
+    "isWholeLine": false
+    // other styling properties goes here ...
+  },
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "BUG:",
+      "color": "#eb2738",
+      "backgroundColor": "#f6dde0",
+      "border": "1px solid #FD5362",
+      "overviewRulerColor": "grey",
+      "isWholeLine": true
+    },
+    {
+      "text": "VALIDATION:",
+      "color": "#2d874b",
+      "backgroundColor": "#bffcd3",
+      "border": "1px solid #72e999",
+      "overviewRulerColor": "grey",
+      "isWholeLine": true
+    },
+    {
+      "text": "API:",
+      "isWholeLine": true,
+      "color": "#7337EE",
+      "backgroundColor": "#EEE5FF",
+      "border": "1px solid #8950FC"
+    },
+    {
+      "text": "INFO:",
+      "color": "#1C52B5",
+      "backgroundColor": "#E1F0FF",
+      "border": "1px solid #3c88fc",
+      "overviewRulerColor": "grey",
+      "isWholeLine": true
+    },
+    {
+      "text": "IMPORTS:",
+      "color": "#7337EE",
+      "backgroundColor": "#EEE5FF",
+      "border": "1px solid #8950FC",
+      "overviewRulerColor": "#7337EE",
+      "isWholeLine": true
+    },
+    {
+      "text": "CONFIG:",
+      "color": "#637590",
+      "backgroundColor": "#EBEDF1",
+      "border": "1px solid #8290A5",
+      "overviewRulerColor": "#637590",
+      "isWholeLine": true
+    },
+    {
+      "text": "PROPS:",
+      "color": "#FFFFFF",
+      "backgroundColor": "#B1BCE6",
+      "border": "1px solid #9A86A4",
+      "overviewRulerColor": "#9A86A4",
+      "isWholeLine": true
+    },
+    {
+      "text": "WARNING:",
+      "color": "#F28100",
+      "backgroundColor": "#fff7e9",
+      "overviewRulerColor": "#ffab00",
+      "border": "1px solid #FC9D2F",
+      "isWholeLine": true
+    },
+    {
+      "text": "TODO:",
+      "borderRadius": "2px"
+      // NOTE: using borderRadius along with `border` or you will see nothing change
+      // other styling properties goes here ...
+    }
+  ]
 }
