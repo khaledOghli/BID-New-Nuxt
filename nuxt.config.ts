@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
@@ -9,7 +10,6 @@ export default defineNuxtConfig({
     './apps/landing',
     './apps/dashboard',
     './apps/docs',
-    './apps/permit',
     './apps/auth',
   ],
   modules: [
