@@ -59,20 +59,35 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <div class="h-full flex items-center justify-center">
-    <form class="mx-auto max-w-md w-full rounded-lg px-10 py-8" @submit="onSubmit">
+    <form
+      class="mx-auto max-w-md w-full rounded-lg px-10 py-8"
+      @submit="onSubmit"
+    >
       <!-- <AuthHeader title="Login" subtitle="Please enter your credentials" /> -->
 
-      <div v-if="error" class="bg-error-600 mb-4 rounded-lg px-4 py-3 text-sm text-white">
+      <div
+        v-if="error"
+        class="bg-error-600 mb-4 rounded-lg px-4 py-3 text-sm text-white"
+      >
         {{ error }}
       </div>
 
       <VInput
-        v-model="email" wrapper-class="mb-4" name="email" label="Email" placeholder="Email"
+        v-model="email"
+        wrapper-class="mb-4"
+        name="email"
+        label="Email"
+        placeholder="Email"
         hint="Email: admin@example.com"
       />
       <VInput
-        v-model="password" wrapper-class="mb-4" name="password" label="Password" placeholder="Password"
-        type="password" hint="Password: admin"
+        v-model="password"
+        wrapper-class="mb-4"
+        name="password"
+        label="Password"
+        placeholder="Password"
+        type="password"
+        hint="Password: admin"
       />
 
       <div class="mb-5 flex items-center justify-between gap-2">
@@ -83,7 +98,10 @@ const onSubmit = handleSubmit(async (values) => {
           >
           Remember me
         </label>
-        <NuxtLink to="/auth/forgot-password" class="text-sm text-primary-500 font-semibold hover:underline">
+        <NuxtLink
+          to="/auth/forgot-password"
+          class="text-sm text-primary-500 font-semibold hover:underline"
+        >
           Forgot Password?
         </NuxtLink>
       </div>
@@ -100,7 +118,10 @@ const onSubmit = handleSubmit(async (values) => {
 
       <div class="text-sm text-gray-600">
         Don't have account?
-        <NuxtLink to="/auth/register" class="text-sm text-primary-500 font-semibold hover:underline">
+        <NuxtLink
+          to="/auth/register"
+          class="text-sm text-primary-500 font-semibold hover:underline"
+        >
           Register
         </NuxtLink>
       </div>

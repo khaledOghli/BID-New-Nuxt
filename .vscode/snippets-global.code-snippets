@@ -68,7 +68,7 @@
   },
   "vue-script-setup-props": {
     "scope": "vue",
-    "prefix": "vprops",
+    "prefix": "vsprops",
     "body": [
       "const props = defineProps<{",
       "  modelValue?: boolean,",

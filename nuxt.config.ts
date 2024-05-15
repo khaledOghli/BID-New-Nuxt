@@ -1,8 +1,11 @@
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
 const baseUrl = process.env.BASE_URL || '/'
+// eslint-disable-next-line no-magic-numbers
+const oneYear = 1000 * 60 * 60 * 24 * 365
 
 export default defineNuxtConfig({
   extends: [
@@ -15,6 +18,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
+    '@nuxt/image',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
@@ -24,11 +28,27 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     '@nuxtjs/fontaine',
+    '@dargmuesli/nuxt-cookie-control',
   ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   runtimeConfig: {
-    public: {},
+    public: {
+      baseUrl,
+      $t: (key: string) => key,
+    },
+  },
+
+  plugins: ['~/plugins/i18n'],
+
+  image: {
+    provider: 'ipx',
+    quality: 80,
+    format: ['png', 'jpeg', 'webp'],
+  },
+
+  imports: {
+    dirs: ['./stores', './locales'],
   },
 
   content: {
@@ -132,8 +152,36 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    locales: ['en', 'ar'],
+    vueI18n: './i18n.config.ts',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'locales/en-US.json',
+      },
+      {
+        code: 'ar',
+        iso: 'ar-AR',
+        name: 'Arabic',
+        file: 'locales/ar-AR.json',
+      },
+    ],
+    strategy: 'prefix',
     defaultLocale: 'en',
+    customRoutes: 'config',
+    // skipSettingLocaleOnNavigate: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
+    // pages: {
+    //   about: {
+    //     en: '/about',
+    //     fr: '/a-propos',
+    //   },
+    // },
   },
 
   pwa,
@@ -150,6 +198,47 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       standalone: false,
+    },
+  },
+
+  cookieControl: {
+    cookieExpiryOffsetMs: oneYear, // one year
+    // set all these to true for highest GDPR enforcement
+    isAcceptNecessaryButtonEnabled: true,
+    isModalForced: false,
+    isCookieIdVisible: true,
+    closeModalOnClickOutside: true,
+    // show cookie button
+    isControlButtonEnabled: true,
+    // disable to get unstyled css for tailwind
+    isCssEnabled: false,
+    isDashInDescriptionEnabled: false,
+    cookies: {
+      necessary: [
+        {
+          // name: {
+          //   en: en.cookies.necessary.title,
+          //   ar: ar.cookies.necessary.title,
+          // },
+          // description: {
+          //   en: en.cookies.necessary.description,
+          //   ar: ar.cookies.necessary.description,
+          // },
+          targetCookieIds: ['ncc_'],
+        },
+      ],
+      optional: [],
+    },
+    locales: ['en', 'fr', 'ar'],
+  },
+
+  vite: {
+    vue: {
+      script: {
+        globalTypeFiles: [
+          fileURLToPath(new URL('./index.d.ts', import.meta.url)),
+        ],
+      },
     },
   },
 })

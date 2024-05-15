@@ -1,3 +1,8 @@
 .prose :where(pre, code):not(:where(.not-prose, .not-prose *)) {
   @apply bg-dark-600;
 }
+.untouchable {
+  pointer-events: none;
+  user-select: none;
+  touch-action: none;
+}

@@ -1,9 +1,0 @@
-@layer tailwind-base, tailwind-utilities, components;
-
-@layer tailwind-base {
-  body {
-    background-color: red !important;
-  }
-  /* @import 'uno.css'; */
-  /* @import 'node_modules/@unocss/reset/tailwind.css' */
-}
