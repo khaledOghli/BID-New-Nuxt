@@ -38,11 +38,14 @@ export default {
 
       // States
       {
-        'hover:bg-surface-100 dark:hover:bg-surface-800': context?.selectable && !context?.selected,
+        'hover:bg-surface-100 dark:hover:bg-surface-800':
+          context?.selectable && !context?.selected,
         'hover:bg-primary-highlight-hover': context?.selectable && context?.selected,
       },
 
-      { 'cursor-pointer': context?.selectable },
+      {
+        'cursor-pointer': context?.selectable,
+      },
     ],
   }),
   linecell: {
@@ -94,7 +97,9 @@ export default {
       'rounded-none',
 
       // Color
-      { 'border-t border-surface-200 dark:border-surface-700': context.lineTop },
+      {
+        'border-t border-surface-200 dark:border-surface-700': context.lineTop,
+      },
     ],
   }),
   nodecell: {
@@ -135,4 +140,4 @@ export default {
       'w-4 h-4',
     ],
   },
-}
+};

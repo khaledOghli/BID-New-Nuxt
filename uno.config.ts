@@ -7,9 +7,9 @@ import {
   presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss'
-import { presetScrollbar } from 'unocss-preset-scrollbar'
-import presetWind from '@unocss/preset-wind'
+} from 'unocss';
+import { presetScrollbar } from 'unocss-preset-scrollbar';
+import presetWind from '@unocss/preset-wind';
 
 export default defineConfig({
   theme: {
@@ -99,4 +99,4 @@ export default defineConfig({
   // },
 
   transformers: [transformerDirectives(), transformerVariantGroup()],
-})
+});

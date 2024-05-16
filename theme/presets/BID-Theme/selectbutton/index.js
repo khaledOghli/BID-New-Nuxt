@@ -1,6 +1,10 @@
 export default {
   root: ({ props }) => ({
-    class: [{ 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }],
+    class: [
+      {
+        'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+      },
+    ],
   }),
   button: ({ context, props }) => ({
     class: [
@@ -26,18 +30,24 @@ export default {
       'bg-surface-100 dark:bg-surface-950',
       {
         'text-surface-600 dark:text-white/60 before:bg-transparent': !context.active,
-        'text-surface-800 dark:text-white/80 before:bg-surface-0 dark:before:bg-surface-800': context.active,
+        'text-surface-800 dark:text-white/80 before:bg-surface-0 dark:before:bg-surface-800':
+          context.active,
       },
 
       // Invalid State
-      { 'border first:border-r-0 last:border-l-0 border-red-500 dark:border-red-400': props.invalid },
+      {
+        'border first:border-r-0 last:border-l-0 border-red-500 dark:border-red-400':
+          props.invalid,
+      },
 
       // States
       'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 focus:z-10',
       {
         'hover:text-surface-800 dark:hover:text-white/80': !context.active && !props.invalid,
       },
-      { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
+      {
+        'opacity-60 select-none pointer-events-none cursor-default': context.disabled,
+      },
 
       // Transition
       'transition duration-200',
@@ -49,4 +59,4 @@ export default {
   label: {
     class: 'font-medium leading-[normal] text-center w-full z-10 relative',
   },
-}
+};

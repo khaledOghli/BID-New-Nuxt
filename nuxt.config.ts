@@ -1,20 +1,14 @@
-import process from 'node:process'
-import { fileURLToPath } from 'node:url'
-import { pwa } from './config/pwa'
-import { appDescription } from './constants/index'
+import process from 'node:process';
+import { fileURLToPath } from 'node:url';
+import { pwa } from './config/pwa';
+import { appDescription } from './constants/index';
 
-const baseUrl = process.env.BASE_URL || '/'
+const baseUrl = process.env.BASE_URL || '/';
 // eslint-disable-next-line no-magic-numbers
-const oneYear = 1000 * 60 * 60 * 24 * 365
+const oneYear = 1000 * 60 * 60 * 24 * 365;
 
 export default defineNuxtConfig({
-  extends: [
-    './UI',
-    './apps/landing',
-    './apps/dashboard',
-    './apps/docs',
-    './apps/auth',
-  ],
+  extends: ['./UI', './apps/landing', './apps/dashboard', './apps/docs', './apps/auth'],
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -108,9 +102,20 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width,initial-scale=1',
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        {
+          rel: 'icon',
+          href: '/favicon.ico',
+          sizes: 'any',
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/nuxt.svg',
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: '/apple-touch-icon.png',
+        },
         {
           id: 'theme-link',
           rel: 'stylesheet',
@@ -118,8 +123,14 @@ export default defineNuxtConfig({
         },
       ],
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: appDescription },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          name: 'description',
+          content: appDescription,
+        },
         {
           name: 'apple-mobile-web-app-status-bar-style',
           content: 'black-translucent',
@@ -235,10 +246,8 @@ export default defineNuxtConfig({
   vite: {
     vue: {
       script: {
-        globalTypeFiles: [
-          fileURLToPath(new URL('./index.d.ts', import.meta.url)),
-        ],
+        globalTypeFiles: [fileURLToPath(new URL('./index.d.ts', import.meta.url))],
       },
     },
   },
-})
+});

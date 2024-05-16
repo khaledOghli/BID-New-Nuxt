@@ -4,7 +4,10 @@ export default {
       'relative',
 
       // Size
-      { 'h-[3px]': props.orientation == 'horizontal', 'w-[3px]': props.orientation == 'vertical' },
+      {
+        'h-[3px]': props.orientation == 'horizontal',
+        'w-[3px]': props.orientation == 'vertical',
+      },
 
       // Shape
       'border-0',
@@ -14,7 +17,9 @@ export default {
       'bg-surface-200 dark:bg-surface-800',
 
       // States
-      { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
+      {
+        'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+      },
     ],
   }),
   range: ({ props }) => ({
@@ -135,4 +140,4 @@ export default {
       'touch-action-none',
     ],
   }),
-}
+};

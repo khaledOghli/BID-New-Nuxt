@@ -5,7 +5,9 @@ export default {
       'inline-block',
 
       // Misc
-      { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
+      {
+        'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+      },
     ],
   }),
   input: {
@@ -67,7 +69,8 @@ export default {
       // Size
       'h-[150px] w-[150px]',
     ],
-    style: 'background: linear-gradient(to top, #000 0%, rgb(0 0 0 / 0) 100%), linear-gradient(to right, #fff 0%, rgb(255 255 255 / 0) 100%)',
+    style:
+      'background: linear-gradient(to top, #000 0%, rgb(0 0 0 / 0) 100%), linear-gradient(to right, #fff 0%, rgb(255 255 255 / 0) 100%)',
   },
   colorhandle: {
     class: [
@@ -100,7 +103,8 @@ export default {
       // Opacity
       'opacity-85',
     ],
-    style: 'background: linear-gradient(0deg, red 0, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, red)',
+    style:
+      'background: linear-gradient(0deg, red 0, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, red)',
   },
   huehandle: {
     class: [
@@ -119,8 +123,9 @@ export default {
   },
   transition: {
     enterFromClass: 'opacity-0 scale-y-[0.8]',
-    enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
+    enterActiveClass:
+      'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-}
+};

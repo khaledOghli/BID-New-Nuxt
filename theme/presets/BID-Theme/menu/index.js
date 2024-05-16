@@ -35,7 +35,8 @@ export default {
       'text-surface-700 dark:text-white/80',
       {
         'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-        'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
+        'text-surface-500 dark:text-white/70 bg-surface-200':
+          context.focused && !context.active,
         'text-primary-highlight-inverse bg-primary-hightlight': context.active,
       },
 
@@ -50,7 +51,9 @@ export default {
       },
 
       // Disabled
-      { 'opacity-60 pointer-events-none cursor-default': context.disabled },
+      {
+        'opacity-60 pointer-events-none cursor-default': context.disabled,
+      },
     ],
   }),
   action: {
@@ -107,8 +110,9 @@ export default {
   },
   transition: {
     enterFromClass: 'opacity-0 scale-y-[0.8]',
-    enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
+    enterActiveClass:
+      'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-}
+};

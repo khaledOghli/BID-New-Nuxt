@@ -140,7 +140,7 @@
 }
 .cookieControl__ModalContent input + button:before {
   @apply absolute left-[4px] top-[50%] h-[18px] w-[18px] transform rounded-[50%] bg-white transition duration-200;
-  content: "";
+  content: '';
   transform: translate3d(0, -50%, 0);
 }
 .cookieControl__ModalContentInner h3 {

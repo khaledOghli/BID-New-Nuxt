@@ -60,4 +60,4 @@ export default {
       'text-surface-600 dark:text-white/70',
     ],
   },
-}
+};

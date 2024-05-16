@@ -31,22 +31,34 @@ export default {
       'transition duration-200 ease-in-out',
 
       // Colors
-      { 'bg-surface-0 dark:bg-surface-950': !props.disabled },
       {
-        'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
-        'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined && !props.invalid,
-        'border-primary': props.value == props.modelValue && props.value !== undefined && !props.disabled,
+        'bg-surface-0 dark:bg-surface-950': !props.disabled,
+      },
+      {
+        'text-surface-700 dark:text-white/80':
+          props.value !== props.modelValue && props.value !== undefined,
+        'border-surface-300 dark:border-surface-700':
+          props.value !== props.modelValue && props.value !== undefined && !props.invalid,
+        'border-primary':
+          props.value == props.modelValue && props.value !== undefined && !props.disabled,
       },
       // Invalid State
-      { 'border-red-500 dark:border-red-400': props.invalid },
+      {
+        'border-red-500 dark:border-red-400': props.invalid,
+      },
 
       // States
       {
-        'peer-hover:border-surface-400 dark:peer-hover:border-surface-400': !props.disabled && !props.invalid && props.value !== props.modelValue,
-        'peer-hover:border-primary-hover': !props.disabled && props.value == props.modelValue && props.value !== undefined,
-        'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
-        'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
-        'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default': props.disabled,
+        'peer-hover:border-surface-400 dark:peer-hover:border-surface-400':
+          !props.disabled && !props.invalid && props.value !== props.modelValue,
+        'peer-hover:border-primary-hover':
+          !props.disabled && props.value == props.modelValue && props.value !== undefined,
+        'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300':
+          !props.disabled && props.value == props.modelValue && props.value !== undefined,
+        'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400':
+          !props.disabled,
+        'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default':
+          props.disabled,
       },
     ],
   }),
@@ -100,4 +112,4 @@ export default {
       'transition duration-200',
     ],
   }),
-}
+};

@@ -48,4 +48,4 @@ export default {
       'progress-spinner-circle',
     ],
   },
-}
+};

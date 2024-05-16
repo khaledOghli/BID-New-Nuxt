@@ -17,14 +17,19 @@ export default {
   value: ({ props }) => ({
     class: [
       // Flexbox & Overflow & Position
-      { 'absolute flex items-center justify-center overflow-hidden': props.mode !== 'indeterminate' },
+      {
+        'absolute flex items-center justify-center overflow-hidden':
+          props.mode !== 'indeterminate',
+      },
 
       // Colors
       'bg-primary',
 
       // Spacing & Sizing
       'm-0',
-      { 'h-full w-0': props.mode !== 'indeterminate' },
+      {
+        'h-full w-0': props.mode !== 'indeterminate',
+      },
 
       // Shape
       'border-0',
@@ -37,8 +42,10 @@ export default {
 
       // Before & After (indeterminate)
       {
-        'before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-inherit ': props.mode == 'indeterminate',
-        'after:absolute after:top-0 after:left-0 after:bottom-0 after:bg-inherit after:delay-1000': props.mode == 'indeterminate',
+        'before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-inherit ':
+          props.mode == 'indeterminate',
+        'after:absolute after:top-0 after:left-0 after:bottom-0 after:bg-inherit after:delay-1000':
+          props.mode == 'indeterminate',
       },
     ],
   }),
@@ -55,4 +62,4 @@ export default {
       'leading-5',
     ],
   },
-}
+};

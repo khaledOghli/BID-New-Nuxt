@@ -2,9 +2,13 @@ export default {
   root: ({ props, parent }) => ({
     class: [
       'flex',
-      { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
       {
-        'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled,
+        'first:rounded-l-md rounded-none last:rounded-r-md':
+          parent.instance.$name == 'InputGroup',
+      },
+      {
+        'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default':
+          props.disabled,
       },
     ],
   }),
@@ -30,21 +34,37 @@ export default {
       // Color
       'text-surface-700 dark:text-white/80',
       'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-      { 'bg-surface-0 dark:bg-surface-950': !props.disabled },
+      {
+        'bg-surface-0 dark:bg-surface-950': !props.disabled,
+      },
       'border',
-      { 'border-surface-300 dark:border-surface-700': !props.invalid },
+      {
+        'border-surface-300 dark:border-surface-700': !props.invalid,
+      },
 
       // Invalid State
       'invalid:focus:ring-red-200',
       'invalid:hover:border-red-500',
-      { 'border-red-500 dark:border-red-400': props.invalid },
+      {
+        'border-red-500 dark:border-red-400': props.invalid,
+      },
 
       // States
-      { 'hover:border-surface-400 dark:hover:border-surface-700': !props.invalid },
-      { 'outline-none outline-offset-0 z-10 ring-1 ring-primary-500 dark:ring-primary-400': state.focused },
+      {
+        'hover:border-surface-400 dark:hover:border-surface-700': !props.invalid,
+      },
+      {
+        'outline-none outline-offset-0 z-10 ring-1 ring-primary-500 dark:ring-primary-400':
+          state.focused,
+      },
 
       // Filled State *for FloatLabel
-      { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null && props.modelValue?.length !== 0 },
+      {
+        filled:
+          parent.instance?.$name == 'FloatLabel' &&
+          props.modelValue !== null &&
+          props.modelValue?.length !== 0,
+      },
 
       // Transition
       'transition duration-200 ease-in-out',
@@ -108,4 +128,4 @@ export default {
       'cursor-pointer',
     ],
   },
-}
+};

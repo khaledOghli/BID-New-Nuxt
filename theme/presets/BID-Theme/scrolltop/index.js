@@ -24,7 +24,8 @@ export default {
         'text-white dark:text-surface-900': props.target === 'parent',
         'text-surface-0': props.target === 'window',
         'bg-primary': props.target === 'parent',
-        'bg-surface-600 dark:bg-surface-700 hover:bg-surface-700 dark:hover:bg-surface-600': props.target === 'window',
+        'bg-surface-600 dark:bg-surface-700 hover:bg-surface-700 dark:hover:bg-surface-600':
+          props.target === 'window',
       },
 
       // States
@@ -40,4 +41,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-150',
     leaveToClass: 'opacity-0',
   },
-}
+};

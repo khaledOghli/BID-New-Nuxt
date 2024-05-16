@@ -1,8 +1,8 @@
-const HEADER_MAX_LENGTH = 72
-const BODY_MAX_LINE_LENGTH = 100
-const FOOTER_MAX_LINE_LENGTH = 100
-const RULE_LEVEL_ERROR = 2
-const RULE_LEVEL_WARNING = 1
+const HEADER_MAX_LENGTH = 72;
+const BODY_MAX_LINE_LENGTH = 100;
+const FOOTER_MAX_LINE_LENGTH = 100;
+const RULE_LEVEL_ERROR = 2;
+const RULE_LEVEL_WARNING = 1;
 
 export default {
   parserPreset: 'conventional-changelog-conventionalcommits',
@@ -11,35 +11,13 @@ export default {
     'type-enum': [
       RULE_LEVEL_ERROR,
       'always',
-      [
-        'build',
-        'feat',
-        'fix',
-        'docs',
-        'style',
-        'refactor',
-        'test',
-        'chore',
-        'revert',
-      ],
+      ['build', 'feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'revert'],
     ],
-    'subject-case': [
-      RULE_LEVEL_ERROR,
-      'always',
-      ['lower-case', 'sentence-case'],
-    ],
+    'subject-case': [RULE_LEVEL_ERROR, 'always', ['lower-case', 'sentence-case']],
     'subject-empty': [RULE_LEVEL_ERROR, 'never'],
     'header-max-length': [RULE_LEVEL_WARNING, 'always', HEADER_MAX_LENGTH],
-    'body-max-line-length': [
-      RULE_LEVEL_WARNING,
-      'always',
-      BODY_MAX_LINE_LENGTH,
-    ],
-    'footer-max-line-length': [
-      RULE_LEVEL_WARNING,
-      'always',
-      FOOTER_MAX_LINE_LENGTH,
-    ],
+    'body-max-line-length': [RULE_LEVEL_WARNING, 'always', BODY_MAX_LINE_LENGTH],
+    'footer-max-line-length': [RULE_LEVEL_WARNING, 'always', FOOTER_MAX_LINE_LENGTH],
   },
   prompt: {
     settings: {
@@ -55,7 +33,7 @@ export default {
     },
     questions: {
       type: {
-        description: 'Select the type of change that you\'re committing:',
+        description: "Select the type of change that you're committing:",
         enum: {
           feat: {
             description: 'A new feature',
@@ -79,8 +57,7 @@ export default {
             emoji: '💎',
           },
           refactor: {
-            description:
-              'A code change that neither fixes a bug nor adds a feature',
+            description: 'A code change that neither fixes a bug nor adds a feature',
             title: 'Code Refactoring',
             emoji: '📦',
           },
@@ -107,7 +84,7 @@ export default {
             emoji: '⚙️',
           },
           chore: {
-            description: 'Other changes that don\'t modify src or test files',
+            description: "Other changes that don't modify src or test files",
             title: 'Chores',
             emoji: '♻️',
           },
@@ -119,12 +96,10 @@ export default {
         },
       },
       scope: {
-        description:
-          'What is the scope of this change (e.g. component or file name):',
+        description: 'What is the scope of this change (e.g. component or file name):',
       },
       subject: {
-        description:
-          'Write a short, imperative tense description of the change:',
+        description: 'Write a short, imperative tense description of the change:',
       },
       body: {
         description: 'Provide a longer description of the change',
@@ -151,4 +126,4 @@ export default {
       },
     },
   },
-}
+};

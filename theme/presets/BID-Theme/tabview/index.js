@@ -5,7 +5,9 @@ export default {
       'relative',
 
       // Misc
-      { 'overflow-hidden': props.scrollable },
+      {
+        'overflow-hidden': props.scrollable,
+      },
     ],
   }),
   navContent: ({ instance }) => ({
@@ -81,7 +83,8 @@ export default {
         // Misc
         'outline-none',
         {
-          'opacity-60 cursor-default user-select-none select-none pointer-events-none': props?.disabled,
+          'opacity-60 cursor-default user-select-none select-none pointer-events-none':
+            props?.disabled,
         },
       ],
     }),
@@ -105,9 +108,11 @@ export default {
 
         // Colors and Conditions
         {
-          'border-surface-200 dark:border-surface-700': parent.state.d_activeIndex !== context.index,
+          'border-surface-200 dark:border-surface-700':
+            parent.state.d_activeIndex !== context.index,
           'bg-surface-0 dark:bg-surface-900': parent.state.d_activeIndex !== context.index,
-          'text-surface-700 dark:text-surface-0/80': parent.state.d_activeIndex !== context.index,
+          'text-surface-700 dark:text-surface-0/80':
+            parent.state.d_activeIndex !== context.index,
 
           'bg-surface-0 dark:bg-surface-900': parent.state.d_activeIndex === context.index,
           'border-primary': parent.state.d_activeIndex === context.index,
@@ -117,8 +122,10 @@ export default {
         // States
         'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 ring-inset focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300',
         {
-          'hover:bg-surface-0 dark:hover:bg-surface-800/80': parent.state.d_activeIndex !== context.index,
-          'hover:text-surface-900 dark:hover:text-surface-0': parent.state.d_activeIndex !== context.index,
+          'hover:bg-surface-0 dark:hover:bg-surface-800/80':
+            parent.state.d_activeIndex !== context.index,
+          'hover:text-surface-900 dark:hover:text-surface-0':
+            parent.state.d_activeIndex !== context.index,
         },
 
         // Transitions
@@ -152,4 +159,4 @@ export default {
       'text-surface-900 dark:text-surface-0/80',
     ],
   },
-}
+};

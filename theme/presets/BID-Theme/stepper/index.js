@@ -25,7 +25,10 @@ export default {
   },
   stepperpanel: {
     panel: ({ context, parent }) => ({
-      class: [context.active ? 'flex-1' : '', parent.props.orientation === 'vertical' ? 'flex flex-col flex-initial' : ''],
+      class: [
+        context.active ? 'flex-1' : '',
+        parent.props.orientation === 'vertical' ? 'flex flex-col flex-initial' : '',
+      ],
     }),
     header: ({ parent, context }) => ({
       class: [
@@ -125,10 +128,14 @@ export default {
     separator: ({ context, state, parent }) => ({
       class: [
         // Colors (Conditional for active step)
-        state.d_activeStep <= context.index ? 'bg-surface-200 dark:bg-surface-700' : 'bg-primary',
+        state.d_activeStep <= context.index
+          ? 'bg-surface-200 dark:bg-surface-700'
+          : 'bg-primary',
 
         // Conditional for Vertical Orientation
-        parent.props.orientation === 'vertical' ? ['flex-none', 'w-[2px]', 'h-auto', 'ml-[calc(1.29rem+2px)]'] : ['flex-1', 'w-full', 'h-[2px]', 'ml-4'],
+        parent.props.orientation === 'vertical'
+          ? ['flex-none', 'w-[2px]', 'h-auto', 'ml-[calc(1.29rem+2px)]']
+          : ['flex-1', 'w-full', 'h-[2px]', 'ml-4'],
 
         // Transitions
         'transition-shadow',
@@ -136,12 +143,18 @@ export default {
       ],
     }),
     transition: {
-      class: ['flex flex-1', 'bg-surface-0 dark:bg-surface-900', 'text-surface-900 dark:text-surface-0'],
+      class: [
+        'flex flex-1',
+        'bg-surface-0 dark:bg-surface-900',
+        'text-surface-900 dark:text-surface-0',
+      ],
       enterFromClass: 'max-h-0',
-      enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
+      enterActiveClass:
+        'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
       enterToClass: 'max-h-[1000px]',
       leaveFromClass: 'max-h-[1000px]',
-      leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
+      leaveActiveClass:
+        'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
       leaveToClass: 'max-h-0',
     },
     content: ({ parent }) => ({
@@ -158,4 +171,4 @@ export default {
       'p-4',
     ],
   },
-}
+};

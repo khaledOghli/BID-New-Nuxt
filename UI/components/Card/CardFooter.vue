@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    bordered?: boolean
-  }>(),
-  {
-    bordered: false,
-  },
-)
+  const props = withDefaults(
+    defineProps<{
+      bordered?: boolean;
+    }>(),
+    {
+      bordered: false,
+    }
+  );
 </script>
 
 <template>

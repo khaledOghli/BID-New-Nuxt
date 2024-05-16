@@ -5,7 +5,10 @@ export default {
       'w-96 rounded-md',
 
       // Positioning
-      { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' },
+      {
+        '-translate-x-2/4':
+          props.position == 'top-center' || props.position == 'bottom-center',
+      },
     ],
   }),
   container: ({ props }) => ({
@@ -53,7 +56,9 @@ export default {
   icon: ({ props }) => ({
     class: [
       // Sizing and Spacing
-      props.message.severity === 'contrast' || props.message.severity === 'secondary' ? 'w-0' : 'w-[1.125rem] h-[1.125rem] mr-2',
+      props.message.severity === 'contrast' || props.message.severity === 'secondary'
+        ? 'w-0'
+        : 'w-[1.125rem] h-[1.125rem] mr-2',
       'text-lg leading-[normal]',
     ],
   }),
@@ -69,7 +74,14 @@ export default {
     class: 'font-medium block',
   },
   detail: ({ props }) => ({
-    class: ['block', 'text-sm', props.message.severity === 'contrast' ? 'text-surface-0 dark:text-surface-950' : 'text-surface-700 dark:text-surface-0', { 'mt-2': props.message.summary }],
+    class: [
+      'block',
+      'text-sm',
+      props.message.severity === 'contrast'
+        ? 'text-surface-0 dark:text-surface-950'
+        : 'text-surface-700 dark:text-surface-0',
+      { 'mt-2': props.message.summary },
+    ],
   }),
   closebutton: ({ props }) => ({
     class: [
@@ -111,7 +123,8 @@ export default {
     enterFromClass: 'opacity-0 translate-y-2/4',
     enterActiveClass: 'transition-[transform,opacity] duration-300',
     leaveFromClass: 'max-h-[1000px]',
-    leaveActiveClass: '!transition-[max-height_.45s_cubic-bezier(0,1,0,1),opacity_.3s,margin-bottom_.3s] overflow-hidden',
+    leaveActiveClass:
+      '!transition-[max-height_.45s_cubic-bezier(0,1,0,1),opacity_.3s,margin-bottom_.3s] overflow-hidden',
     leaveToClass: 'max-h-0 opacity-0 mb-0',
   },
-}
+};

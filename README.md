@@ -22,9 +22,10 @@ To get started!
 - [ ] Solution Architecture
 - [x] PNPM Package Manager Installed
 - [x] PNPM Configurations
-- [x] Recommended Code Rules Expressions
+- [x] Code Checker Recommended Rules Expressions
 - [x] Git Commit Lint
 - [x] Git Conventional Commits Configurations
+- [ ] Code Formatter Settings shared between Developers
 - [ ] Nuxt Configurations
 - [x] UnoCss Tailwind Module Installed
 - [x] UnoCss Configurations

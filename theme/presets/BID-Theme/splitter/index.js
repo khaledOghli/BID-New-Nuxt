@@ -11,10 +11,14 @@ export default {
       'rounded-md',
 
       // Borders (Conditional)
-      { 'border border-solid border-surface-200 dark:border-surface-700': !context.nested },
+      {
+        'border border-solid border-surface-200 dark:border-surface-700': !context.nested,
+      },
 
       // Nested
-      { 'flex grow border-0': context.nested },
+      {
+        'flex grow border-0': context.nested,
+      },
     ],
   }),
 
@@ -65,4 +69,4 @@ export default {
       },
     ],
   }),
-}
+};

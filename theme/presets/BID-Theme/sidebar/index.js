@@ -6,7 +6,10 @@ export default {
 
       // Position
       'relative',
-      { '!transition-none !transform-none !w-screen !h-screen !max-h-full !top-0 !left-0': props.position == 'full' },
+      {
+        '!transition-none !transform-none !w-screen !h-screen !max-h-full !top-0 !left-0':
+          props.position == 'full',
+      },
 
       // Size
       {
@@ -112,10 +115,14 @@ export default {
       // Transitions
       'transition-all',
       'duration-300',
-      { 'p-5': !props.position == 'full' },
+      {
+        'p-5': !props.position == 'full',
+      },
 
       // Background and Effects
-      { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal },
+      {
+        'has-[.mask-active]:bg-transparent bg-black/40': props.modal,
+      },
     ],
   }),
   transition: ({ props }) => {
@@ -144,6 +151,6 @@ export default {
                 enterActiveClass: 'transition-opacity duration-400 ease-in',
                 leaveActiveClass: 'transition-opacity duration-400 ease-in',
                 leaveToClass: 'opacity-0 mask-active',
-              }
+              };
   },
-}
+};

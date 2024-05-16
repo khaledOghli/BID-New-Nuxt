@@ -2,7 +2,9 @@ export default {
   root: ({ props }) => ({
     class: [
       // Misc
-      { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
+      {
+        'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+      },
     ],
   }),
   range: {
@@ -41,4 +43,4 @@ export default {
       'fill-surface-600 dark:fill-surface-200',
     ],
   },
-}
+};

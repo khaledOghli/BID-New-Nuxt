@@ -68,7 +68,9 @@ export default {
       'text-surface-700 dark:text-surface-0/80',
 
       // State
-      { 'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly },
+      {
+        'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly,
+      },
 
       // Transition
       'transition duration-200 ease-in',
@@ -83,10 +85,12 @@ export default {
       'text-primary',
 
       // State
-      { 'hover:text-primary-600 dark:hover:text-primary-300': !props.readonly },
+      {
+        'hover:text-primary-600 dark:hover:text-primary-300': !props.readonly,
+      },
 
       // Transition
       'transition duration-200 ease-in',
     ],
   }),
-}
+};

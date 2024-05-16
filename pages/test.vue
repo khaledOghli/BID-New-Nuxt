@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const online = useOnline()
+  const online = useOnline();
 </script>
 
 <template>
@@ -7,9 +7,7 @@ const online = useOnline()
     <Suspense>
       <ClientOnly>
         <PageView v-if="online" />
-        <div v-else text-gray:80>
-          You're offline
-        </div>
+        <div v-else text-gray:80>You're offline</div>
       </ClientOnly>
       <template #fallback>
         <div italic op50>
@@ -18,9 +16,9 @@ const online = useOnline()
       </template>
     </Suspense>
     <VCard title="Hello">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit esse
-      voluptatem et deserunt earum explicabo aut quis laboriosam nostrum
-      quisquam sequi maxime est vitae, vero reiciendis veniam repudiandae fugit!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit esse voluptatem et
+      deserunt earum explicabo aut quis laboriosam nostrum quisquam sequi maxime est vitae,
+      vero reiciendis veniam repudiandae fugit!
     </VCard>
   </div>
 </template>

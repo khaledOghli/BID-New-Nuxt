@@ -12,7 +12,10 @@ export default {
       // Color
       'bg-surface-0 dark:bg-surface-900',
       'border border-surface-200 dark:border-surface-700',
-      { 'p-2 items-center': props.orientation == 'horizontal', 'flex-col sm:w-48 p-1': props.orientation !== 'horizontal' },
+      {
+        'p-2 items-center': props.orientation == 'horizontal',
+        'flex-col sm:w-48 p-1': props.orientation !== 'horizontal',
+      },
     ],
   }),
   menu: ({ props }) => ({
@@ -22,7 +25,10 @@ export default {
       'items-center',
       'flex-wrap',
       'flex-col sm:flex-row',
-      { hidden: !props?.mobileActive, flex: props?.mobileActive },
+      {
+        hidden: !props?.mobileActive,
+        flex: props?.mobileActive,
+      },
 
       // Position
       'absolute sm:relative',
@@ -64,7 +70,8 @@ export default {
       //  Colors
       {
         'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-        'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
+        'text-surface-500 dark:text-white/70 bg-surface-200':
+          context.focused && !context.active,
         'text-primary-highlight-inverse bg-primary-hightlight': context.active,
       },
 
@@ -193,4 +200,4 @@ export default {
   end: {
     class: 'ml-auto self-center',
   },
-}
+};

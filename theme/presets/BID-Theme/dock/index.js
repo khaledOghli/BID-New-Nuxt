@@ -59,8 +59,12 @@ export default {
       // Conditional Scaling
       {
         'hover:scale-150': instance.currentIndex === context.index,
-        'scale-125': instance.currentIndex - 1 === context.index || instance.currentIndex + 1 === context.index,
-        'scale-110': instance.currentIndex - 2 === context.index || instance.currentIndex + 2 === context.index,
+        'scale-125':
+          instance.currentIndex - 1 === context.index ||
+          instance.currentIndex + 1 === context.index,
+        'scale-110':
+          instance.currentIndex - 2 === context.index ||
+          instance.currentIndex + 2 === context.index,
       },
 
       // Positioning & Hover States
@@ -90,4 +94,4 @@ export default {
       'cursor-default overflow-hidden',
     ],
   },
-}
+};

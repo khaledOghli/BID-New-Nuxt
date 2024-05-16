@@ -34,7 +34,8 @@ export default {
       'text-surface-700 dark:text-white/80',
       {
         'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-        'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
+        'text-surface-500 dark:text-white/70 bg-surface-200':
+          context.focused && !context.active,
         'text-primary-highlight-inverse bg-primary-hightlight': context.active,
       },
 
@@ -49,7 +50,9 @@ export default {
       },
 
       // Disabled
-      { 'opacity-60 pointer-events-none cursor-default': context.disabled },
+      {
+        'opacity-60 pointer-events-none cursor-default': context.disabled,
+      },
     ],
   }),
   action: {
@@ -115,4 +118,4 @@ export default {
   separator: {
     class: 'border-t border-surface-200 dark:border-surface-600 my-[2px]',
   },
-}
+};

@@ -1,23 +1,23 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { A11y, Navigation, Pagination } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import { A11y, Navigation, Pagination } from 'swiper';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
 
-definePageMeta({})
+  definePageMeta({});
 
-function onSwiper(swiper) {
-  // eslint-disable-next-line no-console
-  console.log(swiper)
-}
+  function onSwiper(swiper) {
+    // eslint-disable-next-line no-console
+    console.log(swiper);
+  }
 
-function onSlideChange() {
-  // eslint-disable-next-line no-console
-  console.log('slide change')
-}
+  function onSlideChange() {
+    // eslint-disable-next-line no-console
+    console.log('slide change');
+  }
 
-const modules = [Navigation, Pagination, A11y]
+  const modules = [Navigation, Pagination, A11y];
 </script>
 
 <template>
@@ -30,14 +30,9 @@ const modules = [Navigation, Pagination, A11y]
       :space-between="50"
       class="relative"
       @swiper="onSwiper"
-      @slide-change="onSlideChange"
-    >
+      @slide-change="onSlideChange">
       <SwiperSlide v-for="i in 5" :key="i">
-        <LandingQuote
-          class="text-center"
-          :title="`Quote ${i}`"
-          description="Lorem ipsum"
-        />
+        <LandingQuote class="text-center" :title="`Quote ${i}`" description="Lorem ipsum" />
       </SwiperSlide>
     </Swiper>
 
@@ -48,8 +43,7 @@ const modules = [Navigation, Pagination, A11y]
       :slides-per-view="1"
       :space-between="50"
       @swiper="onSwiper"
-      @slide-change="onSlideChange"
-    >
+      @slide-change="onSlideChange">
       <SwiperSlide v-for="i in 5" :key="i">
         <LandingQuote class="text-center" :title="`Quote ${i}`" description="Lorem ipsum" />
       </SwiperSlide>
@@ -59,15 +53,13 @@ const modules = [Navigation, Pagination, A11y]
       <VButton
         size="lg"
         shadow
-        class="swiper-btn-prev absolute top-1/2 z-10 w-10 transform rounded-full px-0 py-0 -left-5 !h-10 -translate-y-1/2"
-      >
+        class="swiper-btn-prev absolute -left-5 top-1/2 z-10 !h-10 w-10 -translate-y-1/2 transform rounded-full px-0 py-0">
         <Icon class="h-5 w-5" name="heroicons:chevron-left-20-solid" />
       </VButton>
       <VButton
         size="lg"
         shadow
-        class="swiper-btn-next absolute top-1/2 z-10 w-10 transform rounded-full px-0 py-0 -right-5 !h-10 -translate-y-1/2"
-      >
+        class="swiper-btn-next absolute -right-5 top-1/2 z-10 !h-10 w-10 -translate-y-1/2 transform rounded-full px-0 py-0">
         <Icon class="h-5 w-5" name="heroicons:chevron-right-20-solid" />
       </VButton>
 
@@ -77,18 +69,15 @@ const modules = [Navigation, Pagination, A11y]
           nextEl: '.swiper-btn-next',
           prevEl: '.swiper-btn-prev',
         }"
-        :pagination="{ clickable: true }"
+        :pagination="{
+          clickable: true,
+        }"
         :slides-per-view="1"
         :space-between="50"
         @swiper="onSwiper"
-        @slide-change="onSlideChange"
-      >
+        @slide-change="onSlideChange">
         <SwiperSlide v-for="i in 5" :key="i">
-          <LandingQuote
-            class="text-center"
-            :title="`Quote ${i}`"
-            description="Lorem ipsum"
-          />
+          <LandingQuote class="text-center" :title="`Quote ${i}`" description="Lorem ipsum" />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -6,7 +6,9 @@ export default {
     header: ({ props }) => ({
       class: [
         // State
-        { 'select-none pointer-events-none cursor-default opacity-60': props?.disabled },
+        {
+          'select-none pointer-events-none cursor-default opacity-60': props?.disabled,
+        },
       ],
     }),
     headerAction: {
@@ -43,7 +45,12 @@ export default {
       ],
     },
     headerIcon: ({ context }) => ({
-      class: ['inline-block ml-2', { 'text-surface-900 dark:text-surface-0': context.active }],
+      class: [
+        'inline-block ml-2',
+        {
+          'text-surface-900 dark:text-surface-0': context.active,
+        },
+      ],
     }),
     headerTitle: {
       class: 'leading-none',
@@ -63,11 +70,13 @@ export default {
     },
     transition: {
       enterFromClass: 'max-h-0',
-      enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
+      enterActiveClass:
+        'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
       enterToClass: 'max-h-[1000px]',
       leaveFromClass: 'max-h-[1000px]',
-      leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
+      leaveActiveClass:
+        'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
       leaveToClass: 'max-h-0',
     },
   },
-}
+};

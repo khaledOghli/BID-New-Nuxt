@@ -25,7 +25,10 @@ export default {
       'items-center',
       'flex-wrap',
       'flex-col sm:flex-row',
-      { hidden: !props?.mobileActive, flex: props?.mobileActive },
+      {
+        hidden: !props?.mobileActive,
+        flex: props?.mobileActive,
+      },
 
       // Position
       'absolute sm:relative',
@@ -63,7 +66,8 @@ export default {
       'text-surface-700 dark:text-white/80',
       {
         'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-        'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
+        'text-surface-500 dark:text-white/70 bg-surface-200':
+          context.focused && !context.active,
         'text-primary-highlight-inverse bg-primary-hightlight': context.active,
       },
 
@@ -133,7 +137,9 @@ export default {
       // Position
       'static sm:absolute',
       'z-10',
-      { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
+      {
+        'sm:absolute sm:left-full sm:top-0': props.level > 1,
+      },
 
       // Color
       'bg-surface-0 dark:bg-surface-900',
@@ -174,4 +180,4 @@ export default {
   end: {
     class: 'ml-auto self-center',
   },
-}
+};

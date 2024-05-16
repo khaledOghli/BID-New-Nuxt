@@ -52,7 +52,8 @@ export default {
       // States
       'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 ring-inset focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300',
       {
-        'hover:text-surface-900 dark:hover:text-surface-0': state.d_activeIndex !== context.index,
+        'hover:text-surface-900 dark:hover:text-surface-0':
+          state.d_activeIndex !== context.index,
       },
 
       // Transitions
@@ -67,4 +68,4 @@ export default {
   icon: {
     class: 'mr-2',
   },
-}
+};

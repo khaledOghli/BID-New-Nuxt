@@ -81,6 +81,8 @@
     "typescript": "^5.4.5",
     "unocss": "^0.60.2",
     "unocss-preset-scrollbar": "^0.3.1",
+    "volar-service-prettier": "^0.0.45",
+    "volar-service-prettyhtml": "^0.0.45",
     "vue-i18n": "9",
     "vue-loader": "^17.4.2",
     "vue-tsc": "^2.0.17"

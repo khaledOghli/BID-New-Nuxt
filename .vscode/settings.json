@@ -217,8 +217,8 @@
   "iconify.inplace": true,
   "svg.preview.mode": "svg",
   // I only use Prettier for manually formatting
-  "prettier.enable": false,
-  "prettier.printWidth": 200,
+  "prettier.enable": true,
+  "prettier.printWidth": 80,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   // ========== File Nesting ==========
@@ -380,5 +380,24 @@
       // NOTE: using borderRadius along with `border` or you will see nothing change
       // other styling properties goes here ...
     }
-  ]
+  ],
+  "html.format.wrapAttributes": "aligned-multiple",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.endOfLine": "auto",
+  "editor.wrappingIndent": "indent",
+  "editor.wrappingStrategy": "advanced",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

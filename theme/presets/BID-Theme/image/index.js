@@ -203,4 +203,4 @@ export default {
     leaveActiveClass: 'transition-all duration-150 ease-in',
     leaveToClass: 'opacity-0 scale-75',
   },
-}
+};

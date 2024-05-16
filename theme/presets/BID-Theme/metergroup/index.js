@@ -4,7 +4,10 @@ export default {
       // Flexbox
       'flex gap-4',
 
-      { 'flex-col': props.orientation == 'horizontal', 'flex-row': props.orientation == 'vertical' },
+      {
+        'flex-col': props.orientation == 'horizontal',
+        'flex-row': props.orientation == 'vertical',
+      },
     ],
   }),
   metercontainer: ({ props }) => ({
@@ -12,11 +15,17 @@ export default {
       // Flexbox
       'flex',
 
-      { 'flex-col': props.orientation === 'vertical' },
+      {
+        'flex-col': props.orientation === 'vertical',
+      },
 
       // Sizing
-      { 'w-2 h-full': props.orientation === 'vertical' },
-      { 'h-2': props.orientation === 'horizontal' },
+      {
+        'w-2 h-full': props.orientation === 'vertical',
+      },
+      {
+        'h-2': props.orientation === 'horizontal',
+      },
 
       // Colors
       'bg-gray-200 dark:bg-gray-700',
@@ -49,22 +58,30 @@ export default {
       // Display & Flexbox
       'flex flex-wrap',
 
-      { 'gap-4': props.labelOrientation === 'horizontal' },
+      {
+        'gap-4': props.labelOrientation === 'horizontal',
+      },
 
-      { 'gap-2': props.labelOrientation === 'vertical' },
+      {
+        'gap-2': props.labelOrientation === 'vertical',
+      },
 
-      { 'flex-col': props.labelOrientation === 'vertical' },
+      {
+        'flex-col': props.labelOrientation === 'vertical',
+      },
 
       // Conditional Alignment - Horizontal
       {
         'align-end': props.labelOrientation === 'horizontal' && props.labelPosition === 'end',
-        'align-start': props.labelOrientation === 'horizontal' && props.labelPosition === 'start',
+        'align-start':
+          props.labelOrientation === 'horizontal' && props.labelPosition === 'start',
       },
 
       // Conditional Alignment - Vertical
       {
         'justify-end': props.labelOrientation === 'vertical' && props.labelPosition === 'end',
-        'justify-start': props.labelOrientation === 'vertical' && props.labelPosition === 'start',
+        'justify-start':
+          props.labelOrientation === 'vertical' && props.labelPosition === 'start',
       },
 
       // List Styling
@@ -94,4 +111,4 @@ export default {
       'rounded-full',
     ],
   },
-}
+};

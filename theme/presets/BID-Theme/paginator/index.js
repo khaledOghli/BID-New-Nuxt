@@ -35,7 +35,8 @@ export default {
       // State
       {
         'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
-        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+          !context.disabled,
       },
 
       // Transition
@@ -43,7 +44,9 @@ export default {
 
       // Misc
       'user-none overflow-hidden',
-      { 'cursor-default pointer-events-none opacity-60': context.disabled },
+      {
+        'cursor-default pointer-events-none opacity-60': context.disabled,
+      },
     ],
   }),
   previouspagebutton: ({ context }) => ({
@@ -66,7 +69,8 @@ export default {
       // State
       {
         'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
-        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+          !context.disabled,
       },
 
       // Transition
@@ -74,7 +78,9 @@ export default {
 
       // Misc
       'user-none overflow-hidden',
-      { 'cursor-default pointer-events-none opacity-60': context.disabled },
+      {
+        'cursor-default pointer-events-none opacity-60': context.disabled,
+      },
     ],
   }),
   nextpagebutton: ({ context }) => ({
@@ -97,7 +103,8 @@ export default {
       // State
       {
         'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
-        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+          !context.disabled,
       },
 
       // Transition
@@ -105,7 +112,9 @@ export default {
 
       // Misc
       'user-none overflow-hidden',
-      { 'cursor-default pointer-events-none opacity-60': context.disabled },
+      {
+        'cursor-default pointer-events-none opacity-60': context.disabled,
+      },
     ],
   }),
   lastpagebutton: ({ context }) => ({
@@ -128,7 +137,8 @@ export default {
       // State
       {
         'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
-        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+          !context.disabled,
       },
 
       // Transition
@@ -136,7 +146,9 @@ export default {
 
       // Misc
       'user-none overflow-hidden',
-      { 'cursor-default pointer-events-none opacity-60': context.disabled },
+      {
+        'cursor-default pointer-events-none opacity-60': context.disabled,
+      },
     ],
   }),
   pagebutton: ({ context }) => ({
@@ -159,7 +171,8 @@ export default {
       // State
       {
         'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
-        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+        'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+          !context.disabled,
       },
 
       // Transition
@@ -167,7 +180,9 @@ export default {
 
       // Misc
       'user-none overflow-hidden',
-      { 'cursor-default pointer-events-none opacity-60': context.disabled },
+      {
+        'cursor-default pointer-events-none opacity-60': context.disabled,
+      },
     ],
   }),
   rowperpagedropdown: {
@@ -194,12 +209,18 @@ export default {
 
         // States
         'hover:border-surface-400 dark:hover:border-surface-600',
-        { 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !state.focused },
+        {
+          'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+            !state.focused,
+        },
 
         // Misc
         'cursor-pointer',
         'select-none',
-        { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled },
+        {
+          'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default':
+            props.disabled,
+        },
       ],
     }),
     input: {
@@ -305,9 +326,17 @@ export default {
         },
 
         // States
-        { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-        { 'hover:bg-primary-highlight-hover': context.selected },
-        { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
+        {
+          'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]':
+            !context.focused && !context.selected,
+        },
+        {
+          'hover:bg-primary-highlight-hover': context.selected,
+        },
+        {
+          'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]':
+            context.focused && !context.selected,
+        },
 
         // Transitions
         'transition-shadow',
@@ -391,12 +420,18 @@ export default {
 
         // States
         'hover:border-surface-400 dark:hover:border-surface-600',
-        { 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': !state.focused },
+        {
+          'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400':
+            !state.focused,
+        },
 
         // Misc
         'cursor-pointer',
         'select-none',
-        { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled },
+        {
+          'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default':
+            props.disabled,
+        },
       ],
     }),
     input: {
@@ -502,9 +537,17 @@ export default {
         },
 
         // States
-        { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-        { 'hover:bg-primary-highlight-hover': context.selected },
-        { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
+        {
+          'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]':
+            !context.focused && !context.selected,
+        },
+        {
+          'hover:bg-primary-highlight-hover': context.selected,
+        },
+        {
+          'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]':
+            context.focused && !context.selected,
+        },
 
         // Transitions
         'transition-shadow',
@@ -523,4 +566,4 @@ export default {
   end: {
     class: 'ml-auto',
   },
-}
+};

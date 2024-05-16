@@ -11,9 +11,7 @@
 }
 
 .p-inputnumber-buttons-stacked .p-button.p-inputnumber-button .p-button-label,
-.p-inputnumber-buttons-horizontal
-  .p-button.p-inputnumber-button
-  .p-button-label {
+.p-inputnumber-buttons-horizontal .p-button.p-inputnumber-button .p-button-label {
   display: none;
 }
 
@@ -41,9 +39,7 @@
   flex-direction: column;
 }
 
-.p-inputnumber-buttons-stacked
-  .p-inputnumber-button-group
-  .p-button.p-inputnumber-button {
+.p-inputnumber-buttons-stacked .p-inputnumber-button-group .p-button.p-inputnumber-button {
   flex: 1 1 auto;
 }
 

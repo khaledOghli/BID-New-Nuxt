@@ -1,10 +1,8 @@
 {
   "*.{js,jsx,ts,tsx,vue}": [
     "prettier --write",
-    "eslint --fix",
-    "eslint"
+    "eslint --ignore-pattern 'theme/' --ignore-pattern 'assets/primevue/' --fix",
+    "eslint --max-warnings 0"
   ],
-  "*.{json,md,yml}": [
-    "prettier --write"
-  ]
+  "*.{json,md,yml}": ["prettier --write"]
 }

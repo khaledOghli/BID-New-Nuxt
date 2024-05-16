@@ -33,7 +33,9 @@ export default {
       'transition-none',
 
       // States
-      { 'hover:bg-surface-100 dark:hover:bg-surface-800': props.toggleable },
+      {
+        'hover:bg-surface-100 dark:hover:bg-surface-800': props.toggleable,
+      },
     ],
   }),
   toggler: ({ props }) => ({
@@ -46,14 +48,23 @@ export default {
       { 'py-2 px-3': props.toggleable },
 
       // Shape
-      { 'rounded-md': props.toggleable },
+      {
+        'rounded-md': props.toggleable,
+      },
 
       // Color
-      { 'text-surface-700 dark:text-surface-200 hover:text-surface-900': props.toggleable },
+      {
+        'text-surface-700 dark:text-surface-200 hover:text-surface-900': props.toggleable,
+      },
 
       // States
-      { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
-      { 'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300': props.toggleable },
+      {
+        'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable,
+      },
+      {
+        'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300':
+          props.toggleable,
+      },
 
       // Misc
       {
@@ -65,17 +76,24 @@ export default {
     class: 'mr-2 inline-block',
   },
   legendTitle: ({ props }) => ({
-    class: ['flex items-center justify-center leading-none', { 'py-2 px-3': !props.toggleable }],
+    class: [
+      'flex items-center justify-center leading-none',
+      {
+        'py-2 px-3': !props.toggleable,
+      },
+    ],
   }),
   content: {
     class: 'p-0',
   },
   transition: {
     enterFromClass: 'max-h-0',
-    enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
+    enterActiveClass:
+      'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
     enterToClass: 'max-h-[1000px]',
     leaveFromClass: 'max-h-[1000px]',
-    leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
+    leaveActiveClass:
+      'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
     leaveToClass: 'max-h-0',
   },
-}
+};

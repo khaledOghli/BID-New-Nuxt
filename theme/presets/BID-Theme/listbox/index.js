@@ -4,16 +4,25 @@ export default {
       'rounded-md',
 
       // Colors
-      { 'bg-surface-0 dark:bg-surface-900': !props.disabled },
+      {
+        'bg-surface-0 dark:bg-surface-900': !props.disabled,
+      },
       'text-surface-700 dark:text-white/80',
       'border',
-      { 'border-surface-300 dark:border-surface-700': !props.invalid },
+      {
+        'border-surface-300 dark:border-surface-700': !props.invalid,
+      },
 
       // Disabled State
-      { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled },
+      {
+        'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default':
+          props.disabled,
+      },
 
       // Invalid State
-      { 'border-red-500 dark:border-red-400': props.invalid },
+      {
+        'border-red-500 dark:border-red-400': props.invalid,
+      },
     ],
   }),
   wrapper: {
@@ -50,9 +59,17 @@ export default {
       },
 
       // States
-      { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-      { 'hover:bg-primary-highlight-hover': context.selected },
-      { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
+      {
+        'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]':
+          !context.focused && !context.selected,
+      },
+      {
+        'hover:bg-primary-highlight-hover': context.selected,
+      },
+      {
+        'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]':
+          context.focused && !context.selected,
+      },
 
       // Transition
       'transition-shadow duration-200',
@@ -143,4 +160,4 @@ export default {
   filtericon: {
     class: ['absolute', 'top-1/2 right-3', '-mt-2'],
   },
-}
+};

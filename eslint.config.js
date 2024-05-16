@@ -1,6 +1,6 @@
 // @ts-check
-import antfu from '@antfu/eslint-config'
-import nuxt from './.nuxt/eslint.config.mjs'
+import antfu from '@antfu/eslint-config';
+import nuxt from './.nuxt/eslint.config.mjs';
 
 export default nuxt(
   antfu({
@@ -10,7 +10,10 @@ export default nuxt(
       'vue/component-name-in-template-casing': [
         'error',
         'PascalCase',
-        { registeredComponentsOnly: false, ignores: [] },
+        {
+          registeredComponentsOnly: false,
+          ignores: [],
+        },
       ],
       'vue/component-api-style': ['error', ['script-setup']],
       'vue/block-lang': ['error', { script: { lang: 'ts' } }],
@@ -32,7 +35,11 @@ export default nuxt(
       'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
       'vue/html-button-has-type': [
         'error',
-        { button: true, submit: true, reset: true },
+        {
+          button: true,
+          submit: true,
+          reset: true,
+        },
       ],
       'vue/no-empty-component-block': ['error'],
       'vue/no-multiple-objects-in-class': ['error'],
@@ -50,7 +57,14 @@ export default nuxt(
           detectObjects: false,
         },
       ],
+      'vue/max-attributes-per-line': ['error', { singleline: 1 }],
+      'vue/first-attribute-linebreak': [
+        'error',
+        {
+          multiline: 'below',
+          singleline: 'beside',
+        },
+      ],
     },
-    ignores: ['theme/'],
-  }),
-)
+  })
+);

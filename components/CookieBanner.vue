@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-const { locale } = useI18n()
-/* Example to watch for a cookie being accepted */
-/*
+  const { locale } = useI18n();
+  /* Example to watch for a cookie being accepted */
+  /*
 const {
   // cookiesEnabled,
   cookiesEnabledIds,
@@ -29,11 +29,17 @@ watch(
   <div>
     <CookieControl :locale="locale.slice(0, 2)">
       <template #bar>
-        <h3>{{ $t('cookies.bar.title') }}</h3>
-        <p>{{ $t('cookies.bar.description') }}</p>
+        <h3>
+          {{ $t('cookies.bar.title') }}
+        </h3>
+        <p>
+          {{ $t('cookies.bar.description') }}
+        </p>
       </template>
       <template #modal>
-        <h3>{{ $t('cookies.modal.title') }}</h3>
+        <h3>
+          {{ $t('cookies.modal.title') }}
+        </h3>
         <p>
           {{ $t('cookies.modal.description') }}
           <NuxtLink to="/privacy-policy">

@@ -1,60 +1,60 @@
 /* eslint-disable no-console */
 
-import { spawn } from 'node:child_process'
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import process from 'node:process'
-import { Readable } from 'node:stream'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
-import { format } from 'prettier'
+import { spawn } from 'node:child_process';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import process from 'node:process';
+import { Readable } from 'node:stream';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { format } from 'prettier';
 
 // Get the current file's path
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Get the folder name from the command line arguments
-const folderName = process.argv[process.argv.length - 1]
+const folderName = process.argv[process.argv.length - 1];
 
 if (!folderName) {
-  console.error('Error: Please provide a folder name')
-  process.exit(1)
+  console.error('Error: Please provide a folder name');
+  process.exit(1);
 }
 
 // Create a readable stream with "No" as input
-const noStream = Readable.from('No\n')
+const noStream = Readable.from('No\n');
 
 // Run the command
-const command = `cd apps/ && pnpm dlx nuxi@latest init ${folderName} --package-manager=pnpm`
+const command = `cd apps/ && pnpm dlx nuxi@latest init ${folderName} --package-manager=pnpm`;
 const child = spawn(command, {
   shell: true,
   stdio: ['pipe', 'pipe', 'pipe'], // Redirect stdout, stderr, and stdin
-})
+});
 
 // Pipe the "No" input stream to the child process stdin
-noStream.pipe(child.stdin)
+noStream.pipe(child.stdin);
 
 // Log stdout and stderr
 child.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`)
-})
+  console.log(`stdout: ${data}`);
+});
 
 child.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`)
-})
+  console.error(`stderr: ${data}`);
+});
 
 // Handle process exit
 child.on('exit', async (code) => {
   if (code === 0) {
-    console.log('Nuxt.js application setup completed successfully.')
+    console.log('Nuxt.js application setup completed successfully.');
 
     // Create components and pages folders
-    const componentsDir = join(__dirname, 'apps', folderName, 'components')
-    const pagesDir = join(__dirname, 'apps', folderName, 'pages')
+    const componentsDir = join(__dirname, 'apps', folderName, 'components');
+    const pagesDir = join(__dirname, 'apps', folderName, 'pages');
 
     try {
-      mkdirSync(componentsDir)
-      mkdirSync(pagesDir)
-      console.log('Components and Pages folders created successfully.')
+      mkdirSync(componentsDir);
+      mkdirSync(pagesDir);
+      console.log('Components and Pages folders created successfully.');
 
       // Create index.vue file inside pages folder
       const indexVueContent = `
@@ -75,43 +75,42 @@ child.on('exit', async (code) => {
         <style scoped>
 
         </style>
-      `
+      `;
 
       // Format the content using Prettier
-      const formattedContent = await format(indexVueContent, { parser: 'vue' })
+      const formattedContent = await format(indexVueContent, {
+        parser: 'vue',
+      });
 
-      const indexPath = join(pagesDir, 'index.vue')
-      writeFileSync(indexPath, formattedContent)
-      console.log('index.vue file created successfully and formatted using Prettier.')
+      const indexPath = join(pagesDir, 'index.vue');
+      writeFileSync(indexPath, formattedContent);
+      console.log('index.vue file created successfully and formatted using Prettier.');
 
       // Update nuxt.config.ts file
-      const nuxtConfigPath = join(__dirname, 'nuxt.config.ts')
-      const nuxtConfigContent = readFileSync(nuxtConfigPath, 'utf-8')
+      const nuxtConfigPath = join(__dirname, 'nuxt.config.ts');
+      const nuxtConfigContent = readFileSync(nuxtConfigPath, 'utf-8');
       const updatedConfigContent = nuxtConfigContent.replace(
         /extends:\s*\[[^]*?\]/m,
         (match) => {
           // Add the new folder before './apps/auth'
-          const updatedExtendsArray = match.replace(
-            /(\[([^]*?)\])/m,
-            (arrayMatch) => {
-              return arrayMatch.replace('./apps/auth', `./apps/${folderName}',\n  './apps/auth`)
-            },
-          )
-          return updatedExtendsArray
-        },
-      )
+          const updatedExtendsArray = match.replace(/(\[([^]*?)\])/m, (arrayMatch) => {
+            return arrayMatch.replace('./apps/auth', `./apps/${folderName}',\n  './apps/auth`);
+          });
+          return updatedExtendsArray;
+        }
+      );
 
       // Format the updated content using Prettier
-      const formattedConfigContent = await format(updatedConfigContent, { parser: 'typescript' })
+      const formattedConfigContent = await format(updatedConfigContent, {
+        parser: 'typescript',
+      });
 
-      writeFileSync(nuxtConfigPath, formattedConfigContent)
-      console.log('nuxt.config.ts file updated successfully and formatted using Prettier.')
+      writeFileSync(nuxtConfigPath, formattedConfigContent);
+      console.log('nuxt.config.ts file updated successfully and formatted using Prettier.');
+    } catch (error) {
+      console.error('Error creating folders and files:', error);
     }
-    catch (error) {
-      console.error('Error creating folders and files:', error)
-    }
+  } else {
+    console.error('Nuxt.js application setup failed.');
   }
-  else {
-    console.error('Nuxt.js application setup failed.')
-  }
-})
+});

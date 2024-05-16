@@ -5,15 +5,15 @@ export default defineNuxtPlugin((nuxtApp) => {
     _oldLocale,
     _newLocale,
     _isInitialSetup,
-    nuxtApp,
+    nuxtApp
   ) => {
     // console.log('onBeforeLanguageSwitch', oldLocale, newLocale, isInitialSetup)
     document
       .querySelector('html')
-      .setAttribute('dir', nuxtApp.$i18n.localeProperties.value.dir)
-  }
+      .setAttribute('dir', nuxtApp.$i18n.localeProperties.value.dir);
+  };
   // onLanguageSwitched called right after a new locale has been set
   nuxtApp.$i18n.onLanguageSwitched = (_oldLocale, _newLocale) => {
     // console.log('onLanguageSwitched', oldLocale, newLocale)
-  }
-})
+  };
+});

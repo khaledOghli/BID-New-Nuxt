@@ -49,7 +49,9 @@ export default {
 
       // Misc
       'overflow-hidden',
-      { 'cursor-pointer': !props.readonly },
+      {
+        'cursor-pointer': !props.readonly,
+      },
     ],
   }),
   step: ({ context, props }) => ({
@@ -81,7 +83,8 @@ export default {
 
       // States
       {
-        'hover:border-surface-300 dark:hover:border-surface-500': !context.active && !props.readonly,
+        'hover:border-surface-300 dark:hover:border-surface-500':
+          !context.active && !props.readonly,
       },
 
       // Transition
@@ -101,7 +104,10 @@ export default {
       'mt-2',
 
       // Colors
-      { 'text-surface-700 dark:text-white/70': !context.active, 'text-primary': context.active },
+      {
+        'text-surface-700 dark:text-white/70': !context.active,
+        'text-primary': context.active,
+      },
 
       // Text and Overflow
       'whitespace-nowrap',
@@ -110,4 +116,4 @@ export default {
       'max-w-full',
     ],
   }),
-}
+};
