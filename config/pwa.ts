@@ -1,8 +1,8 @@
-import process from 'node:process';
-import type { ModuleOptions } from '@vite-pwa/nuxt';
-import { appDescription, appName } from '../constants/index';
+import process from 'node:process'
+import type { ModuleOptions } from '@vite-pwa/nuxt'
+import { appDescription, appName } from '../constants/index'
 
-const scope = '/';
+const scope = '/'
 
 export const pwa: ModuleOptions = {
   registerType: 'autoUpdate',
@@ -39,36 +39,36 @@ export const pwa: ModuleOptions = {
     navigateFallbackDenylist: [/^\/api\//],
     navigateFallback: '/',
     cleanupOutdatedCaches: true,
-    runtimeCaching: [
-      {
-        urlPattern: /^https:\/\/fonts.googleapis.com\/.*/i,
-        handler: 'CacheFirst',
-        options: {
-          cacheName: 'google-fonts-cache',
-          expiration: {
-            maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-          },
-          cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      },
-      {
-        urlPattern: /^https:\/\/fonts.gstatic.com\/.*/i,
-        handler: 'CacheFirst',
-        options: {
-          cacheName: 'gstatic-fonts-cache',
-          expiration: {
-            maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-          },
-          cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      },
-    ],
+    // runtimeCaching: [
+    //   {
+    //     urlPattern: /^https:\/\/fonts.googleapis.com\/.*/i,
+    //     handler: 'CacheFirst',
+    //     options: {
+    //       cacheName: 'google-fonts-cache',
+    //       expiration: {
+    //         maxEntries: 10,
+    //         maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+    //       },
+    //       cacheableResponse: {
+    //         statuses: [0, 200],
+    //       },
+    //     },
+    //   },
+    //   {
+    //     urlPattern: /^https:\/\/fonts.gstatic.com\/.*/i,
+    //     handler: 'CacheFirst',
+    //     options: {
+    //       cacheName: 'gstatic-fonts-cache',
+    //       expiration: {
+    //         maxEntries: 10,
+    //         maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+    //       },
+    //       cacheableResponse: {
+    //         statuses: [0, 200],
+    //       },
+    //     },
+    //   },
+    // ],
   },
   registerWebManifestInRouteRules: true,
   writePlugin: true,
@@ -76,4 +76,4 @@ export const pwa: ModuleOptions = {
     enabled: process.env.VITE_PLUGIN_PWA === 'true',
     navigateFallback: scope,
   },
-};
+}

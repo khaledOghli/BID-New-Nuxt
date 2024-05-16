@@ -1,6 +1,6 @@
 // @ts-check
-import antfu from '@antfu/eslint-config';
-import nuxt from './.nuxt/eslint.config.mjs';
+import antfu from '@antfu/eslint-config'
+import nuxt from './.nuxt/eslint.config.mjs'
 
 export default nuxt(
   antfu({
@@ -65,6 +65,14 @@ export default nuxt(
           singleline: 'beside',
         },
       ],
+      'vue/no-restricted-syntax': ['error'],
+      // 'vue/no-restricted-syntax': [
+      //   'error',
+      //   {
+      //     selector: 'VElement VText[value=/[^{}]+/]',
+      //     message: 'Hardcoded text is not allowed. Use $t() instead.',
+      //   },
+      // ],
     },
-  })
-);
+  }),
+)

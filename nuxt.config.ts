@@ -30,6 +30,10 @@ export default defineNuxtConfig({
     'nuxt-viewport',
     'nuxt-icons',
     '@nuxtjs/web-vitals',
+    'nuxt-time',
+    '@nuxt/scripts',
+    '@unlazy/nuxt',
+    'nuxt-security',
   ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -72,6 +76,12 @@ export default defineNuxtConfig({
     },
 
     fallbackBreakpoint: 'lg',
+  },
+
+  webVitals: {
+    provider: 'log',
+    debug: true, // debug enable metrics reporting on dev environments
+    disabled: false,
   },
 
   imports: {
