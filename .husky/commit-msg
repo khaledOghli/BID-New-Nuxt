@@ -12,7 +12,6 @@ validate_commit_msg() {
   echo " ${red} - 'type' is one of the following: ${blue} [feat, fix, docs, style, refactor, test, chore]"
   echo " ${red} - 'scope' is optional and can be anything specifying the place of the commit change"
   echo " ${red} - 'subject' is a brief description of the change, try to keep it under 50 characters${no_color}"
-  pnpm run commit
 }
 
 if ! npx --no-install commitlint --edit "$1"; then
