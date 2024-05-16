@@ -4,12 +4,11 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss';
-import { presetScrollbar } from 'unocss-preset-scrollbar';
-import presetWind from '@unocss/preset-wind';
+} from 'unocss'
+import { presetScrollbar } from 'unocss-preset-scrollbar'
+import presetWind from '@unocss/preset-wind'
 
 export default defineConfig({
   theme: {
@@ -78,13 +77,6 @@ export default defineConfig({
       scale: 1.2,
     }),
     presetTypography(),
-    presetWebFonts({
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
-      },
-    }),
     presetScrollbar({
       // config
     }),
@@ -99,4 +91,4 @@ export default defineConfig({
   // },
 
   transformers: [transformerDirectives(), transformerVariantGroup()],
-});
+})

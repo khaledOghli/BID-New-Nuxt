@@ -25,7 +25,7 @@ To get started!
 - [x] Code Checker Recommended Rules Expressions
 - [x] Git Commit Lint
 - [x] Git Conventional Commits Configurations
-- [ ] Code Formatter Settings shared between Developers
+- [x] Code Formatter Configuration Settings shared in workspace
 - [ ] Nuxt Configurations
 - [x] UnoCss Tailwind Module Installed
 - [x] UnoCss Configurations

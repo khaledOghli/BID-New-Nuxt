@@ -1,16 +1,18 @@
-import process from 'node:process';
-import { fileURLToPath } from 'node:url';
-import { pwa } from './config/pwa';
-import { appDescription } from './constants/index';
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
+import { pwa } from './config/pwa'
+import { appDescription } from './constants/index'
 
-const baseUrl = process.env.BASE_URL || '/';
+const baseUrl = process.env.BASE_URL || '/'
 // eslint-disable-next-line no-magic-numbers
-const oneYear = 1000 * 60 * 60 * 24 * 365;
+const oneYear = 1000 * 60 * 60 * 24 * 365
 
 export default defineNuxtConfig({
   extends: ['./UI', './apps/landing', './apps/dashboard', './apps/docs', './apps/auth'],
   modules: [
     '@vueuse/nuxt',
+    '@nuxt/fonts',
+    '@nuxtjs/fontaine',
     '@unocss/nuxt',
     '@nuxt/image',
     '@pinia/nuxt',
@@ -23,13 +25,17 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/fontaine',
     '@dargmuesli/nuxt-cookie-control',
+    // '@nuxtjs/storybook',
+    'nuxt-lodash',
+    'nuxt-viewport',
+    'nuxt-icons',
+    '@nuxtjs/web-vitals',
   ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   runtimeConfig: {
     public: {
       baseUrl,
-      $t: (key: string) => key,
     },
   },
 
@@ -39,6 +45,33 @@ export default defineNuxtConfig({
     provider: 'ipx',
     quality: 80,
     format: ['png', 'jpeg', 'webp'],
+  },
+
+  viewport: {
+    breakpoints: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      '2xl': 1536,
+    },
+
+    defaultBreakpoints: {
+      desktop: 'lg',
+      mobile: 'xs',
+      tablet: 'md',
+    },
+
+    cookie: {
+      expires: 365, // 365 days
+      name: 'viewport',
+      path: '/',
+      sameSite: 'Strict',
+      secure: true,
+    },
+
+    fallbackBreakpoint: 'lg',
   },
 
   imports: {
@@ -181,7 +214,6 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'en',
     customRoutes: 'config',
-    // skipSettingLocaleOnNavigate: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -250,4 +282,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})

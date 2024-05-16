@@ -30,7 +30,7 @@ $shade950: #020617 !default;
 $disabledInputBg: $shade200 !default;
 
 //global
-$fontFamily: 'Inter var', sans-serif !default;
+$fontFamily: 'dubai_web', sans-serif !default;
 $fontSize: 1rem !default;
 $fontWeight: normal !default;
 $textColor: $shade700 !default;
@@ -886,10 +886,10 @@ $imagePreviewActionIconFontSize: 1.5rem !default;
 $imagePreviewActionIconBorderRadius: 50% !default;
 
 :root {
-  font-family: 'Inter var', sans-serif;
+  font-family: 'dubai_web', sans-serif;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   font-variation-settings: normal;
-  --font-family: 'Inter var', sans-serif;
+  --font-family: 'dubai_web', sans-serif;
   --font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   --text-color: #{$shade700};
   --text-color-secondary: #{$shade500};
