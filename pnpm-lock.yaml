@@ -23,6 +23,9 @@ importers:
       nuxt-icons:
         specifier: ^3.2.1
         version: 3.2.1(rollup@4.17.2)
+      nuxt-umami:
+        specifier: ^2.6.1
+        version: 2.6.1
       primevue:
         specifier: 3.52.0
         version: 3.52.0(vue@3.4.27(typescript@5.4.5))
@@ -6499,6 +6502,9 @@ packages:
 
   nuxt-time@0.1.3:
     resolution: {integrity: sha512-Ie9KA4DfaebqDaTy+u49VVI8lHHjTlllEqdFgeQuvQItrkDaojXWKLwHfW7ju7tDJlpVIV9K6KpRXWPAWUq7Bw==}
+
+  nuxt-umami@2.6.1:
+    resolution: {integrity: sha512-/dZd5ImGoLhzGPbuXkS7bffJX1AnofvjPQhNYIOfvqeKeT8/n9l7mE8TbA8h/QeuJbC+cfV01AI0dwnnKKXd/w==}
 
   nuxt-viewport@2.1.5:
     resolution: {integrity: sha512-nAOYveopKVPvzfDfMx23nbFzCD8jk+uEX2QY6o4ldLGfVeC5yULqkjY/8ZuRGMADB7bfH/9YZQs0C2aWsTaTcA==}
@@ -17761,6 +17767,8 @@ snapshots:
     transitivePeerDependencies:
       - rollup
       - supports-color
+
+  nuxt-umami@2.6.1: {}
 
   nuxt-viewport@2.1.5(rollup@4.17.2)(vue@3.4.27(typescript@5.4.5)):
     dependencies:

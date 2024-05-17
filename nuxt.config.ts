@@ -1,6 +1,6 @@
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
-import { pwa } from './config/pwa'
+// import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
 const baseUrl = process.env.BASE_URL || '/'
@@ -8,7 +8,7 @@ const baseUrl = process.env.BASE_URL || '/'
 const oneYear = 1000 * 60 * 60 * 24 * 365
 
 export default defineNuxtConfig({
-  extends: ['./UI', './apps/landing', './apps/dashboard', './apps/docs', './apps/auth'],
+  extends: ['./UI', './apps/landing', './apps/dashboard', './apps/auth'],
   modules: [
     '@vueuse/nuxt',
     '@nuxt/fonts',
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@vite-pwa/nuxt',
+    // '@vite-pwa/nuxt',
     '@nuxt/eslint',
     'nuxt-primevue',
     '@nuxt/content',
@@ -94,20 +94,6 @@ export default defineNuxtConfig({
         default: 'github-dark',
       },
     },
-    preload: [
-      'json',
-      'js',
-      'ts',
-      'html',
-      'css',
-      'vue',
-      'diff',
-      'shell',
-      'markdown',
-      'yaml',
-      'bash',
-      'ini',
-    ],
   },
 
   experimental: {
@@ -237,7 +223,7 @@ export default defineNuxtConfig({
     // },
   },
 
-  pwa,
+  // pwa,
 
   devtools: {
     enabled: true,
@@ -266,22 +252,6 @@ export default defineNuxtConfig({
     // disable to get unstyled css for tailwind
     isCssEnabled: false,
     isDashInDescriptionEnabled: false,
-    cookies: {
-      necessary: [
-        {
-          // name: {
-          //   en: en.cookies.necessary.title,
-          //   ar: ar.cookies.necessary.title,
-          // },
-          // description: {
-          //   en: en.cookies.necessary.description,
-          //   ar: ar.cookies.necessary.description,
-          // },
-          targetCookieIds: ['ncc_'],
-        },
-      ],
-      optional: [],
-    },
     locales: ['en', 'fr', 'ar'],
   },
 
