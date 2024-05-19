@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
+    "dev:docs": "cd docs && pnpm run dev",
     "dev": "nuxi dev",
     "generate": "nuxi generate",
     "prepare": "husky",
