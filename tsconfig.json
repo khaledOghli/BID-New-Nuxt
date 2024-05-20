@@ -1,4 +1,21 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "include": [".nuxt/nuxt.d.ts", "**/*"]
+  "include": [".nuxt/nuxt.d.ts", "**/*.ts", "**/*.tsx", "**/*.vue"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "types": ["./types/sweetAlert/sweetalert2.d.ts"],
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

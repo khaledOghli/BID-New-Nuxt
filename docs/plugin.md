@@ -1,121 +1,190 @@
-# 插件
+# Plugins
 
-> 更新时间：2023-12-20
+> Last updated at 2024.05.20
 
+## Sweet Alert
 
+#### Used [sweetalert2](https://sweetalert2.github.io/) library
 
+#### Plugin Developed by @khaledOghli
 
-## 时间线
-
-采用了 [@HanochMa](https://github.com/HanochMa/) 的项目
-
-仓库：https://github.com/HanochMa/vitepress-markdown-timeline
-
-Demo：https://hanochma.github.io/daily/2023-04
-
-
-::: code-group
-```sh [pnpm]
-pnpm add -D vitepress-markdown-timeline
-```
-
-```sh [yarn]
-yarn add -D vitepress-markdown-timeline
-```
-
-```sh [npm]
-npm install vitepress-markdown-timeline
-```
-
-```sh [bun]
-bun add -D vitepress-markdown-timeline
-```
-:::
-
-
-在 `config.mts` 中注册 markdown 解析插件
+### How to use
 
 ```ts{1,8-11}
-import timeline from "vitepress-markdown-timeline"; // [!code focus]
+<script setup lang="ts">
+  import type { SweetAlertOptions } from 'sweetalert2'; // [!code focus]
 
-export default {
-  markdown: { // [!code focus]
-    //行号显示
-    lineNumbers: true, 
+  const { $useSweetAlert } = useNuxtApp(); // [!code focus]
+  const options: SweetAlertOptions = { // [!code focus]
+    title: 'Hello World!',
+    text: 'This is a simple alert!',
+    icon: 'success',
+    showConfirmButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Yes',
+    cancelButtonText: 'No',
+  };
+  const confirmCallback = () => {
+    console.log('Confirmed!');
+  };
+  const dismissedCallback = () => {
+    console.log('Dismissed!');
+  };
+  const deniedCallback = () => {
+    console.log('Denied!');
+  };
+  $useSweetAlert(options, confirmCallback, dismissedCallback, deniedCallback); // [!code focus]
 
-    //时间线 // [!code focus:5]
-    config: (md) => {
-      md.use(timeline);
-    },
-  }, 
-}
+</script>
 ```
 
+### Change Colors
 
-在 `.vitepress/theme/index.ts` 中引入时间线样式
+<!-- 2 method  -->
+<!-- 1:
+  confirmButtonColor: '#3d88fc',
+  cancelButtonColor: '#7c7c7c',
+  denyButtonColor: '#fc2134',
+ -->
+ <!-- 2: 
+   buttonsStyling: false,
+  customClass: {
+    confirmButton: 'btn-primary',
+    denyButton: 'btn-light',
+    cancelButton: 'btn-light',
+  },
+  -->
 
-::: info 说明
-如果你没有这个文件，就自己新建
+Using Object Method
+
+```ts
+const options: SweetAlertOptions = {
+  confirmButtonColor: '#3d88fc',
+  cancelButtonColor: '#7c7c7c',
+  denyButtonColor: '#fc2134',
+  color: '#7c7c7c',
+  background: '#f1f1f1',
+};
+```
+
+Using Class Method
+
+```ts
+const options: SweetAlertOptions = {
+  buttonsStyling: false,
+  customClass: {
+    confirmButton: 'btn-primary',
+    denyButton: 'btn-light',
+    cancelButton: 'btn-light',
+    closeButton: 'btn-light',
+  },
+  color: '#7c7c7c',
+  background: '#f1f1f1',
+};
+```
+
+### Typescript
+
+::: info Types
+For TypeScript users, you can import the SweetAlertOptions interface from the sweetalert2 package,
+and the object contains: [sweetalert2.d.ts](https://github.com/sweetalert2/sweetalert2/blob/main/sweetalert2.d.ts)
 :::
 
 ```ts{4-5}
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
-
-// 只需添加以下一行代码，引入时间线样式
-import "vitepress-markdown-timeline/dist/theme/index.css";
-
-export default {
-  extends: DefaultTheme,
+export type SweetAlertOptions = SweetAlertInputValidator & {
+  title?: string | HTMLElement | JQuery | undefined;
+  titleText?: string | undefined;
+  text?: string | undefined;
+  html?: string | HTMLElement | JQuery | undefined;
+  icon?: SweetAlertIcon | undefined;
+  iconColor?: string | undefined;
+  iconHtml?: string | undefined;
+  footer?: string | HTMLElement | JQuery | undefined;
+  template?: string | HTMLTemplateElement | undefined;
+  backdrop?: boolean | string | undefined;
+  toast?: boolean | undefined;
+  target?: string | HTMLElement | null | undefined;
+  width?: number | string | undefined;
+  padding?: number | string | undefined;
+  color?: string | undefined;
+  background?: string | undefined;
+  position?: SweetAlertPosition | undefined;
+  grow?: SweetAlertGrow | undefined;
+  animation?: boolean | undefined;
+  showClass?: SweetAlertShowClass | undefined;
+  hideClass?: SweetAlertHideClass | undefined;
+  customClass?: SweetAlertCustomClass | string | undefined;
+  timer?: number | undefined;
+  timerProgressBar?: boolean | undefined;
+  heightAuto?: boolean | undefined;
+  allowOutsideClick?: ValueOrThunk<boolean> | undefined;
+  allowEscapeKey?: ValueOrThunk<boolean> | undefined;
+  allowEnterKey?: ValueOrThunk<boolean> | undefined;
+  stopKeydownPropagation?: boolean | undefined;
+  keydownListenerCapture?: boolean | undefined;
+  showConfirmButton?: boolean | undefined;
+  showDenyButton?: boolean | undefined;
+  showCancelButton?: boolean | undefined;
+  confirmButtonText?: string | undefined;
+  denyButtonText?: string | undefined;
+  cancelButtonText?: string | undefined;
+  confirmButtonColor?: string | undefined;
+  denyButtonColor?: string | undefined;
+  cancelButtonColor?: string | undefined;
+  confirmButtonAriaLabel?: string | undefined;
+  denyButtonAriaLabel?: string | undefined;
+  cancelButtonAriaLabel?: string | undefined;
+  buttonsStyling?: boolean | undefined;
+  reverseButtons?: boolean | undefined;
+  focusConfirm?: boolean | undefined;
+  focusDeny?: boolean | undefined;
+  focusCancel?: boolean | undefined;
+  returnFocus?: boolean | undefined;
+  showCloseButton?: boolean | undefined;
+  closeButtonHtml?: string | undefined;
+  closeButtonAriaLabel?: string | undefined;
+  loaderHtml?: string | undefined;
+  showLoaderOnConfirm?: boolean | undefined;
+  showLoaderOnDeny?: boolean | undefined;
+  preConfirm?(inputValue: any): SyncOrAsync<any>;
+  preDeny?(value: any): SyncOrAsync<any | void>;
+  imageUrl?: string | null | undefined;
+  imageWidth?: number | string | undefined;
+  imageHeight?: number | string | undefined;
+  imageAlt?: string | undefined;
+  inputLabel?: string | undefined;
+  inputPlaceholder?: string | undefined;
+  inputValue?: SyncOrAsync<string | number | File | FileList> | undefined;
+  inputOptions?: SyncOrAsync<ReadonlyMap<string, string> | Record<string, any>> | undefined;
+  inputAutoFocus?: boolean | undefined;
+  inputAutoTrim?: boolean | undefined;
+  inputAttributes?: Record<string, string> | undefined;
+  returnInputValueOnDeny?: boolean | undefined;
+  validationMessage?: string | undefined;
+  progressSteps?: readonly string[] | undefined;
+  currentProgressStep?: number | undefined;
+  progressStepsDistance?: number | string | undefined;
+  willOpen?(popup: HTMLElement): void;
+  didOpen?(popup: HTMLElement): void;
+  didRender?(popup: HTMLElement): void;
+  willClose?(popup: HTMLElement): void;
+  didClose?(): void;
+  didDestroy?(): void;
+  scrollbarPadding?: boolean | undefined;
 }
-```
-
-最后我们在markdown文件中，按格式使用即可
-
-输入：
-
-```md
-::: timeline 2023-04-24
-- 一个非常棒的开源项目 H5-Dooring 目前 star 3.1k
-  - 开源地址 https://github.com/MrXujiang/h5-Dooring
-  - 基本介绍 http://h5.dooring.cn/doc/zh/guide/
-- 《深入浅出webpack》 http://webpack.wuhaolin.cn/
-:::
-
-::: timeline 2023-04-23
-:::
 
 
 ```
 
-
-输出：
-
-::: timeline 2023-04-24
-- 一个非常棒的开源项目 H5-Dooring 目前 star 3.1k
-  - 开源地址 https://github.com/MrXujiang/h5-Dooring
-  - 基本介绍 http://h5.dooring.cn/doc/zh/guide/
-- 《深入浅出webpack》 http://webpack.wuhaolin.cn/
-:::
-
-::: timeline 2023-04-23
-:::
-
-
-
-
-
-
-
-
+<!--
 ## 谷歌分析
 
 利用插件 [google-analytics](https://analytics.google.com/) ，来查看网站访问量，这里我们用 [@ZhongxuYang](https://github.com/ZhongxuYang/) 的插件
 
 仓库：https://github.com/ZhongxuYang/vitepress-plugin-google-analytics
 
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D vitepress-plugin-google-analytics
 ```
@@ -131,8 +200,8 @@ npm install vitepress-plugin-google-analytics
 ```sh [bun]
 bun add -D vitepress-plugin-google-analytics
 ```
-:::
 
+:::
 
 在 `.vitepress/theme/index.ts` 中引入
 
@@ -151,23 +220,14 @@ export default {
 }
 ```
 
-
-
-
-
-
-
-
-
 ## 图片缩放
 
 Vuepress是可以直接安装插件 [medium-zoom](https://github.com/francoischalifour/medium-zoom) 的，非常好用
 
 但是Vitepress直接用不了，在 [vitepress的issues中找到了方法#854](https://github.com/vuejs/vitepress/issues/854)
 
-
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D medium-zoom
 ```
@@ -183,9 +243,8 @@ npm install medium-zoom
 ```sh [bun]
 bun add -D medium-zoom
 ```
+
 :::
-
-
 
 在 `.vitepress/theme/index.ts` 添加如下代码，并保存
 
@@ -230,7 +289,7 @@ export default {
 }
 
 .medium-zoom-image {
-  z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
+  z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
 }
 ```
 
@@ -242,16 +301,6 @@ export default {
 
 ![](/img_test.jpg)
 
-
-
-
-
-
-
-
-
-
-
 ## 看板娘
 
 第一次接触的人会比较懵，其实就是在右下角有个二次元的人物，类似电子宠物
@@ -260,8 +309,8 @@ export default {
 
 仓库：https://github.com/xinlei3166/vitepress-theme-website
 
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D vitepress-theme-website
 ```
@@ -277,9 +326,8 @@ npm install vitepress-theme-website
 ```sh [bun]
 bun add -D vitepress-theme-website
 ```
+
 :::
-
-
 
 在 `.vitepress/theme/index.ts` 粘贴下面代码并保存
 
@@ -327,13 +375,6 @@ model: {
 },
 ```
 
-
-
-
-
-
-
-
 ## 浏览量
 
 我对这个并不感冒，看了一下，基本上是用的 [不蒜子](http://busuanzi.ibruce.info/)
@@ -341,6 +382,7 @@ model: {
 但是想要好看就得自己封装一下
 
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D busuanzi.pure.js
 ```
@@ -356,9 +398,8 @@ npm install busuanzi.pure.js
 ```sh [bun]
 bun add -D busuanzi.pure.js
 ```
+
 :::
-
-
 
 ```ts{4-5,10-16}
 // .vitepress/theme/index.ts
@@ -383,13 +424,9 @@ export default {
 使用就很简单了，也可以自己写个好看点的组件
 
 ```html
-本站总访问量 <span id="busuanzi_value_site_pv" /> 次
-本站访客数 <span id="busuanzi_value_site_uv" /> 人次
+本站总访问量 <span id="busuanzi_value_site_pv" /> 次 本站访客数
+<span id="busuanzi_value_site_uv" /> 人次
 ```
-
-
-
-
 
 ## 自动侧边栏
 
@@ -405,9 +442,8 @@ export default {
 
 https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
 
-
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D vite-plugin-vitepress-auto-sidebar
 ```
@@ -423,10 +459,8 @@ npm install vite-plugin-vitepress-auto-sidebar
 ```sh [bun]
 bun add -D vite-plugin-vitepress-auto-sidebar
 ```
+
 :::
-
-
-
 
 ```ts{2,5-12}
 // .vitepress/configs.mts
@@ -444,9 +478,6 @@ export default defineConfig({
 })
 ```
 
-
-
-
 ## Todo
 
 为什么Vitepress没有任务列表，在 [issues#1923](https://github.com/vuejs/vitepress/issues/1923) 和 [issues#413](https://github.com/vuejs/vitepress/issues/413) 里找到了这个问题
@@ -457,8 +488,8 @@ export default defineConfig({
 
 测试下来感觉 [markdown-it-task-checkbox](https://github.com/linsir/markdown-it-task-checkbox) 更好用点
 
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D markdown-it-task-checkbox
 ```
@@ -474,8 +505,8 @@ npm install markdown-it-task-checkbox --save
 ```sh [bun]
 bun add -D markdown-it-task-checkbox
 ```
-:::
 
+:::
 
 如果根据文档配置的话是不行的，源码也比较久了，使用的是 [commonjs 同步函数](https://zh.wikipedia.org/wiki/CommonJS) ，而Vitepress使用的是 [ES module 异步函数](https://zh.wikipedia.org/wiki/ECMAScript)
 
@@ -508,6 +539,7 @@ export default defineConfig({
 ```
 
 ::: details 关于引用报错但未爆红
+
 > 无法找到模块“markdown-it-task-checkbox”的声明文件。“/node_modules/.pnpm/markdown-it-task-checkbox@1.0.6/node_modules/markdown-it-task-checkbox/index.js”隐式拥有 "any" 类型。
 >
 > 尝试使用 `npm i --save-dev @types/markdown-it-task-checkbox` (如果存在)，或者添加一个包含 `declare module 'markdown-it-task-checkbox';` 的新声明(.d.ts)文件ts(7016)
@@ -522,14 +554,13 @@ export default defineConfig({
 :::
 
 ::: tip 说明
-`disabled` 改成  `false` ，可以激活勾选框
+`disabled` 改成 `false` ，可以激活勾选框
 :::
 
 版本过低，跑不起来，我们直接安装 `@types/node`
 
-
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -d @types/node
 ```
@@ -545,8 +576,8 @@ npm install @types/node --save
 ```sh [bun]
 bun add -D @types/node
 ```
-:::
 
+:::
 
 最后自己测试效果即可
 
@@ -554,27 +585,19 @@ bun add -D @types/node
 - [ ] 睡觉
 - [x] 打豆豆
 
-
-
-
-
-
-
 ## 评论
 
 评论的插件比较多：
 
-* [Giscus](https://giscus.app/zh-CN)、[waline](https://waline.js.org/)、[gitalk](https://gitalk.github.io/)
+- [Giscus](https://giscus.app/zh-CN)、[waline](https://waline.js.org/)、[gitalk](https://gitalk.github.io/)
 
-* [Valine](https://valine.js.org/quickstart.html)、[disqus](https://disqus.com/)[Twikoo](https://twikoo.js.org/)、[Artalk](https://artalk.js.org/guide/deploy.html)
+- [Valine](https://valine.js.org/quickstart.html)、[disqus](https://disqus.com/)[Twikoo](https://twikoo.js.org/)、[Artalk](https://artalk.js.org/guide/deploy.html)
 
 从个人角度而言，[Giscus](https://giscus.app/zh-CN) 最佳，就用它演示，其他的这里就不赘述了
 
 ::: details 关于 [@xinlei3166](https://github.com/xinlei3166/) 的 waline 插件
 
-
 在使用看板娘发时候就已经装好了，直接引用就行了
-
 
 ```ts{4,11-13}
 // .vitepress/theme/index.ts
@@ -600,7 +623,6 @@ export default {
 所以要用 [waline](https://waline.js.org/) 话就 [参考官方的教程](https://waline.js.org/guide/get-started/)
 :::
 
-
 ### 安装giscus
 
 Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
@@ -609,10 +631,7 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 
 点击 `Install` 安装
 
-
 ![](/giscus-01.png)
-
-
 
 选择 `Only select repositories`，再指定一个你想开启讨论的仓库
 
@@ -628,8 +647,6 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 完成后可以在个人头像-设置-应用 `Applications` 中看到
 :::
 
-
-
 ### 开启讨论
 
 因为giscus会把评论数据都放到讨论 `discussions` 中
@@ -637,7 +654,6 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 我们进入要开启讨论的仓库，点设置 - 勾选讨论 `Settings - discussions`
 
 ![](/giscus-03.png)
-
 
 ### 生成数据
 
@@ -651,11 +667,9 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 
 ![](/giscus-05.png)
 
-
 下方就自动生成了你的关键数据
 
 ![](/giscus-06.png)
-
 
 其中 `data-repo` 、 `data-repo-id` 、 `data-category` 和 `data-category-id` 这4个是我们的关键数据
 
@@ -678,7 +692,6 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 </script>
 ```
 
-
 ### 安装使用
 
 有能力的可以用官方给的js数据封装，我这里用 [@T-miracle](https://github.com/T-miracle/) 的插件
@@ -686,6 +699,7 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 仓库：https://github.com/T-miracle/vitepress-plugin-comment-with-giscus
 
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D vitepress-plugin-comment-with-giscus
 ```
@@ -701,8 +715,8 @@ npm install vitepress-plugin-comment-with-giscus
 ```sh [bun]
 bun add -D vitepress-plugin-comment-with-giscus
 ```
-:::
 
+:::
 
 在 `.vitepress/theme/index.ts` 中填入下面代码
 
@@ -721,7 +735,7 @@ export default {
     // Get frontmatter and route
     const { frontmatter } = useData();
     const route = useRoute();
-        
+
     // giscus配置
     giscusTalk({
       repo: 'your github repository', //仓库
@@ -731,7 +745,7 @@ export default {
       mapping: 'pathname',
       inputPosition: 'bottom',
       lang: 'zh-CN',
-      }, 
+      },
       {
         frontmatter, route
       },
@@ -754,4 +768,5 @@ export default {
 comment: false
 ---
 ```
-:::
+
+::: -->

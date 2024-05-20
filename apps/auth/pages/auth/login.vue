@@ -49,7 +49,7 @@
       auth.user = user;
       auth.loggedIn = true;
 
-      router.push((route.query as any).next || '/');
+      router.push(route.query.next || '/');
     } catch (e: any) {
       error.value = e.data.error;
     }

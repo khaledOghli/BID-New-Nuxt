@@ -6,9 +6,9 @@ import {
   presetUno,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss'
-import { presetScrollbar } from 'unocss-preset-scrollbar'
-import presetWind from '@unocss/preset-wind'
+} from 'unocss';
+import { presetScrollbar } from 'unocss-preset-scrollbar';
+import presetWind from '@unocss/preset-wind';
 
 export default defineConfig({
   theme: {
@@ -51,6 +51,21 @@ export default defineConfig({
         800: '#0f5ffc',
         900: '#0048fc',
       },
+      light: {
+        default: '#989898',
+        '50': '#ffffff',
+        '100': '#efefef',
+        '200': '#dcdcdc',
+        '300': '#bdbdbd',
+        '400': '#989898',
+        '500': '#7c7c7c',
+        '600': '#656565',
+        '700': '#525252',
+        '800': '#464646',
+        '900': '#3d3d3d',
+        '950': '#292929',
+        '1000': '#0e0e0e',
+      },
     },
     // breakpoints: {
     //   'sm': '640px',
@@ -63,11 +78,12 @@ export default defineConfig({
   shortcuts: [
     [
       'btn',
-      'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
+      'flex justify-center items-center py-2.25 px-4 text-base rounded cursor-pointer select-none transition duration-200 ease-in-out',
     ],
     [
-      'icon-btn',
-      'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
+      /^btn-(.*)$/,
+      ([, c]) =>
+        `bg-${c}-400 text-${c}-50 bg-opacity-90 hover:bg-opacity-100 hover:text-${c}-50`,
     ],
   ],
   presets: [
@@ -91,4 +107,4 @@ export default defineConfig({
   // },
 
   transformers: [transformerDirectives(), transformerVariantGroup()],
-})
+});

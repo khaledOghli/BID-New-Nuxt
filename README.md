@@ -85,7 +85,7 @@ To get started!
   - [ ] PWA Configurations
 - [ ] MicroInteractions Module
   - [ ] Toasts Module
-  - [ ] SweetAlerts Module
+  - [x] SweetAlerts Module
   - [ ] Icons Animations Module
   - [ ] User Messages to clarify the actions
 - [ ] Animations Form Builder Module
