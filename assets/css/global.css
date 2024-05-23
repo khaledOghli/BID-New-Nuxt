@@ -1,3 +1,17 @@
+body,
+html {
+  @apply bg-light-50 text-light-900 dark:text-light-100 h-full dark:bg-slate-800;
+}
+
+.main_container {
+  @apply flex h-full flex-col;
+}
+.main_content {
+  flex: 1 0 auto;
+}
+.sticky_footer {
+  @apply flex-shrink-0;
+}
 .prose :where(pre, code):not(:where(.not-prose, .not-prose *)) {
   @apply bg-dark-600;
 }

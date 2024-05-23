@@ -82,6 +82,8 @@ export default defineConfig({
       'btn',
       'flex justify-center items-center py-2.25 px-4 text-base rounded cursor-pointer select-none transition duration-200 ease-in-out',
     ],
+    ['card-base', 'shadow-lg rounded-lg p-4'],
+    ['card-bg', 'bg-light-50 dark:bg-slate-800'],
     [
       /^btn-(.*)$/,
       ([, c]) =>

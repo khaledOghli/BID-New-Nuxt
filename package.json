@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.0.5",
+  "packageManager": "pnpm@9.0.4",
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
@@ -20,7 +20,8 @@
     "generate-theme-light": "sass --update assets/primevue/themes/aura/light/blue/theme.scss:public/themes/aura-light-blue/theme.css",
     "generate-theme-dark": "sass --update assets/primevue/themes/aura/dark/blue/theme.scss:public/themes/aura-dark-blue/theme.css",
     "generate-themes": "pnpm run generate-theme-light && pnpm run generate-theme-dark",
-    "create:app": "node createNuxtApp.js"
+    "create:app": "node createNuxtApp.js",
+    "storybook:dev": "start-storybook dev --config-dir -p 6006"
   },
   "config": {
     "commitizen": {
