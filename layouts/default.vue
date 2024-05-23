@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-white">
+  <div class="bg-light-50 text-light-900 min-h-screen">
     <div class="container mx-auto max-w-screen-lg px-8">
       <header class="mb-5">
         <nav class="flex flex-row justify-between pb-5 pt-10">

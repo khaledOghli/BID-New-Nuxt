@@ -213,6 +213,9 @@ importers:
       unocss-preset-scrollbar:
         specifier: ^0.3.1
         version: 0.3.1(unocss@0.60.2(@unocss/webpack@0.60.2(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1)(terser@5.31.0)))
+      unocss-preset-theme:
+        specifier: ^0.12.0
+        version: 0.12.0(@unocss/core@0.60.2)
       volar-service-prettier:
         specifier: ^0.0.45
         version: 0.0.45(prettier@3.2.5)
@@ -2639,6 +2642,9 @@ packages:
   '@unocss/core@0.56.5':
     resolution: {integrity: sha512-fx5VhOjSHn0HdV2D34pEwFMAHJcJQRTCp1xEE4GzxY1irXzaa+m2aYf5PZjmDxehiOC16IH7TO9FOWANXk1E0w==}
 
+  '@unocss/core@0.58.9':
+    resolution: {integrity: sha512-wYpPIPPsOIbIoMIDuH8ihehJk5pAZmyFKXIYO/Kro98GEOFhz6lJoLsy6/PZuitlgp2/TSlubUuWGjHWvp5osw==}
+
   '@unocss/core@0.60.2':
     resolution: {integrity: sha512-9i+eAJAqvy9bv0vrQxUU7VtR+wO6Vfk6dqrPHKRV/vlbwRT18v/C++dQ2L6PLM1CKxgNTeld0iTlpo8J3xZlxQ==}
 
@@ -2700,6 +2706,10 @@ packages:
 
   '@unocss/rule-utils@0.56.5':
     resolution: {integrity: sha512-CXIGHCIC9B8WUl9KbbFMSZHcsIgfmI/+X0bjBv6xrgBVC1EQ2Acq4PYnJIbaRGBRAhl9wYjNL7Zq2UWOdowHAw==}
+    engines: {node: '>=14'}
+
+  '@unocss/rule-utils@0.58.9':
+    resolution: {integrity: sha512-45bDa+elmlFLthhJmKr2ltKMAB0yoXnDMQ6Zp5j3OiRB7dDMBkwYRPvHLvIe+34Ey7tDt/kvvDPtWMpPl2quUQ==}
     engines: {node: '>=14'}
 
   '@unocss/rule-utils@0.60.2':
@@ -8530,6 +8540,11 @@ packages:
     peerDependencies:
       unocss: '>= 0.31.13 < 1'
 
+  unocss-preset-theme@0.12.0:
+    resolution: {integrity: sha512-zdK66OO7UoGts5ZP5mXH55D3Lu82EBL94+s+DH+NQemzhTyZaGIxrovFupsSlfTC4gdKCm89w6OeNac6FLIDUw==}
+    peerDependencies:
+      '@unocss/core': '>= 0.52.0'
+
   unocss@0.60.2:
     resolution: {integrity: sha512-Cj1IXS+VZuiZtQxHn/ffAAN422gUusUEgF1RS83WyNB0kMsJyIxb9KK9N425QAvQvsKpL5GrZs5KoNtU3zGMog==}
     engines: {node: '>=14'}
@@ -12953,6 +12968,8 @@ snapshots:
 
   '@unocss/core@0.56.5': {}
 
+  '@unocss/core@0.58.9': {}
+
   '@unocss/core@0.60.2': {}
 
   '@unocss/eslint-config@0.60.2(eslint@8.57.0)(typescript@5.4.5)':
@@ -13079,6 +13096,11 @@ snapshots:
   '@unocss/rule-utils@0.56.5':
     dependencies:
       '@unocss/core': 0.56.5
+
+  '@unocss/rule-utils@0.58.9':
+    dependencies:
+      '@unocss/core': 0.58.9
+      magic-string: 0.30.10
 
   '@unocss/rule-utils@0.60.2':
     dependencies:
@@ -20127,6 +20149,11 @@ snapshots:
     dependencies:
       '@unocss/preset-mini': 0.56.5
       unocss: 0.60.2(@unocss/webpack@0.60.2(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1)(terser@5.31.0))
+
+  unocss-preset-theme@0.12.0(@unocss/core@0.60.2):
+    dependencies:
+      '@unocss/core': 0.60.2
+      '@unocss/rule-utils': 0.58.9
 
   unocss@0.60.2(@unocss/webpack@0.60.2(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1)(terser@5.31.0)):
     dependencies:

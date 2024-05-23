@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import './assets/css/reset.tailwind.css';
+  // import './assets/css/reset.tailwind.css';
   import './assets/css/app.css';
   const { locale, t } = useI18n();
 

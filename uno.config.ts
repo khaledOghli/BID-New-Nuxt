@@ -9,6 +9,8 @@ import {
 } from 'unocss';
 import { presetScrollbar } from 'unocss-preset-scrollbar';
 import presetWind from '@unocss/preset-wind';
+import type { Theme } from 'unocss/preset-uno';
+// import presetTheme from 'unocss-preset-theme';
 
 export default defineConfig({
   theme: {
@@ -52,7 +54,7 @@ export default defineConfig({
         900: '#0048fc',
       },
       light: {
-        default: '#989898',
+        default: '#ffffff',
         '50': '#ffffff',
         '100': '#efefef',
         '200': '#dcdcdc',
@@ -88,6 +90,28 @@ export default defineConfig({
   ],
   presets: [
     presetUno(),
+    // presetTheme<Theme>({
+    //   theme: {
+    //     dark: {
+    //       colors: {
+    //         light: {
+    //           DEFAULT: '#0e0e23',
+    //           '50': '#0e0e23',
+    //           '100': '#32357d',
+    //           '200': '#35359e',
+    //           '300': '#413fc3',
+    //           '400': '#4d4ede',
+    //           '500': '#6974eb',
+    //           '600': '#8697f3',
+    //           '700': '#a9bcf8',
+    //           '800': '#c9d6fc',
+    //           '900': '#e1eafe',
+    //           '950': '#eff3fe',
+    //         },
+    //       },
+    //     },
+    //   },
+    // }),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
@@ -98,6 +122,7 @@ export default defineConfig({
     }),
     presetWind(),
   ],
+
   // layers: {
   //   'components': -1,
   //   'default': -3,

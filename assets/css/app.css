@@ -1,5 +1,5 @@
+@import 'reset.tailwind.css';
 @import 'typography.css';
 @import 'global.css';
-@import 'cookiecontrol.css';
 @import 'components.css';
 /* Rest of your code */

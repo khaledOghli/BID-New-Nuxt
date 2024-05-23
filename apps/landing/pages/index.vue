@@ -10,7 +10,7 @@
     const options: SweetAlertOptions = {
       title: 'Hello World!',
       text: 'This is a simple alert!',
-      icon: 'success',
+      icon: 'info',
       showConfirmButton: true,
       showCancelButton: true,
       confirmButtonText: 'Yes',
