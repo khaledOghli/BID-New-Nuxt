@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <GridCols />
+  <Common-GridCols />
   <!-- <VitePwaManifest /> -->
   <!-- <CookieBanner /> -->
   <NuxtLayout>

@@ -99,11 +99,18 @@
         <div class="align-items-center flex gap-2">
           <div
             class="flex flex-col space-x-3 space-y-4 sm:flex-row sm:space-y-0 rtl:space-x-reverse">
-            <ThemeSwitcher />
-            <LangSwitcher />
+            <Common-ThemeSwitcher />
+            <Common-LangSwitcher />
           </div>
         </div>
       </template>
     </VMenuBar>
   </div>
 </template>
+<style scoped>
+  :deep(.p-menubar .p-menubar-end) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline-start: auto;
+  }
+</style>

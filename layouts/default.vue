@@ -1,13 +1,20 @@
 <script setup lang="ts">
+  const { locale, locales } = useI18n();
   useLocaleHead({
     addDirAttribute: true,
     identifierAttribute: 'id',
     addSeoAttributes: true,
   });
+  // useHeadSafe({
+  //   htmlAttrs: {
+  //     dir: locale.value == 'ar' ? 'rtl' : 'ltr',
+  //   },
+  // });
 </script>
 
 <template>
   <div class="card-bg main_container min-h-screen">
+    {{ locale }}
     <header class="mb-5">
       <div class="container mx-auto px-8">
         <nav class="flex flex-row justify-between pb-5 pt-10">

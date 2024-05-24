@@ -2,7 +2,12 @@ body,
 html {
   @apply bg-light-50 text-light-900 dark:text-light-100 h-full dark:bg-slate-800;
 }
-
+html[lang='ar'] {
+  direction: rtl;
+}
+html[lang='en'] {
+  direction: ltr;
+}
 .main_container {
   @apply flex h-full flex-col;
 }
