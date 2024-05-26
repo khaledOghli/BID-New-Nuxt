@@ -87,7 +87,7 @@ export const parameters = {
 export const globals = {
   locales: {
     en: "English",
-    de: "Deutsch",
+    ar: "Arabic",
   },
 };
 

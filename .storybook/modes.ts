@@ -1,10 +1,10 @@
 type Viewport = "mobile" | "tablet" | "desktop";
 type Theme = "light" | "dark";
-type Locale = "en" | "de";
+type Locale = "en" | "ar";
 
 const viewports: Viewport[] = ["mobile", "tablet", "desktop"];
 const themes: Theme[] = ["light", "dark"];
-const locales: Locale[] = ["en", "de"];
+const locales: Locale[] = ["en", "ar"];
 
 /**
  * All modes with different viewports
