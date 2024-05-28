@@ -1,9 +1,10 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "pnpm@9.1.1",
   "scripts": {
     "build": "nuxi build",
+    "install": "node install.mjs",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "dev:docs": "cd docs && pnpm run dev",
     "dev": "nuxi dev",

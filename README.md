@@ -88,4 +88,5 @@ To get started!
   - [x] SweetAlerts Module
   - [ ] Icons Animations Module
   - [ ] User Messages to clarify the actions
-- [ ] Animations Form Builder Module
+- [ ] Animations
+- [ ] Form Builder Module
