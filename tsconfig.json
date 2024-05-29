@@ -4,9 +4,10 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "types": [
+      "@nuxt/types",
       "./types/sweetAlert/sweetalert2.d.ts",
-      "./types/composables.d.ts",
-      "./types/index.d.ts"
+      "./types/index.d.ts",
+      "./types/utils.d.ts"
     ],
     "typeRoots": ["./types", "./node_modules/@types"],
     "esModuleInterop": true,

@@ -1,6 +1,5 @@
 import Swal from 'sweetalert2';
 import type { SweetAlertOptions, SweetAlertResult } from 'sweetalert2';
-import { defineNuxtPlugin } from '#app';
 
 // Define default options for SweetAlert
 const defaultSwalOptions: SweetAlertOptions = {
@@ -67,8 +66,16 @@ const useSweetAlert = (
   );
 };
 
+declare module '#app' {
+  interface NuxtApp {
+    $useSweetAlert: typeof useSweetAlert;
+  }
+}
+
 export default defineNuxtPlugin((nuxtApp) => {
   // Make SweetAlert2 and the custom function available globally
   nuxtApp.provide('swal', Swal);
   nuxtApp.provide('useSweetAlert', useSweetAlert);
 });
+
+export { useSweetAlert };
