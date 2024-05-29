@@ -5,7 +5,9 @@
   useHead({
     title: 'Home',
   });
-
+  const date = useLocaleDate(new Date());
+  const dateOnlyTime = useLocaleOnlyTime(new Date());
+  const dateWithTime = useLocaleDateWithTime(new Date());
   const showAlert = () => {
     const options: SweetAlertOptions = {
       title: 'Hello World!',
@@ -36,6 +38,9 @@
 <template>
   <div>
     <h1>Home</h1>
+    <p>{{ date }}</p>
+    <p>{{ dateOnlyTime }}</p>
+    <p>{{ dateWithTime }}</p>
     <Button @click="showAlert" label="Hi Home" />
   </div>
 </template>

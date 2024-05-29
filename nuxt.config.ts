@@ -84,7 +84,13 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ['./stores', './locales'],
+    // presets: [
+    //   {
+    // from: './composables/locale.ts',
+    // imports: ['useLocaleDate', 'useLocaleDateWithTime', 'useLocaleOnlyTime'],
+    //   },
+    // ],
+    // dirs: ['./stores', './locales', './composables'],
   },
 
   content: {

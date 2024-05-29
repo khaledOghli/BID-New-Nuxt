@@ -1,9 +1,14 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "include": [".nuxt/nuxt.d.ts", "**/*.ts", "**/*.tsx", "**/*.vue"],
+  "include": [".nuxt/nuxt.d.ts", "**/*.ts", "**/*.tsx", "**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "types": ["./types/sweetAlert/sweetalert2.d.ts"],
+    "types": [
+      "./types/sweetAlert/sweetalert2.d.ts",
+      "./types/composables.d.ts",
+      "./types/index.d.ts"
+    ],
+    "typeRoots": ["./types", "./node_modules/@types"],
     "esModuleInterop": true,
     "module": "ESNext",
     "target": "ESNext",
@@ -16,6 +21,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    }
   }
 }

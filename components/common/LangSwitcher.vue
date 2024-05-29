@@ -4,10 +4,12 @@
   const availableLocales = computed(() => {
     return locales.value.filter((i: { code: string }) => i.code !== locale.value);
   });
+  const locales1 = useLocales();
+  const locale1 = useLocale();
 </script>
 
 <template>
-  <div class="h-full">
+  <div class="flex h-full items-center">
     <NuxtLink
       v-for="locale in availableLocales"
       :key="locale.code"
