@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   definePageMeta({
     layout: 'admin',
-    middleware: 'auth',
+    // middleware: 'auth',
   });
 
   const stats = ref([
@@ -34,21 +34,7 @@
 
 <template>
   <div>
-    <div class="mb-5">
-      <NuxtLink class="text-2xl font-semibold" to="/"> Dashboard </NuxtLink>
-      <div class="text-gray-500">Overview & summary</div>
-    </div>
-
-    <!-- stats -->
-    <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-4">
-      <AdminMetricItem v-for="stat in stats" :key="stat.text" v-bind="stat" />
-    </div>
-
     <!-- card -->
-    <VCard title="Hello">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit esse voluptatem et
-      deserunt earum explicabo aut quis laboriosam nostrum quisquam sequi maxime est vitae,
-      vero reiciendis veniam repudiandae fugit!
-    </VCard>
+
   </div>
 </template>

@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ['~/plugins/i18n'],
+  // plugins: ['~/plugins/i18n'],
 
   image: {
     provider: 'ipx',
