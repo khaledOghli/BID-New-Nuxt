@@ -1,9 +1,8 @@
 <script setup lang="ts">
   import type { SweetAlertOptions } from 'sweetalert2';
-  import { useToast } from 'primevue/usetoast';
-  const { $useSweetAlert } = useNuxtApp();
-  const { $useToaster } = useNuxtApp();
-  const toast = useToast();
+  // const { $useSweetAlert } = useNuxtApp();
+  const swal = useSwal();
+  const toaster = useToaster();
 
   useHead({
     title: 'Home',
@@ -34,18 +33,30 @@
       console.log('Denied!');
     };
 
-    $useSweetAlert(options, confirmCallback, dismissedCallback, deniedCallback);
+    swal.add(options, confirmCallback, dismissedCallback, deniedCallback);
   };
 
   const showToast = () => {
     const taostOptions = {
       severity: 'error',
+      summary: 'xxxxxx',
+      detail: 'ccccc',
+      life: 0,
+      position: 'bottom-left',
+    };
+    toaster.add(taostOptions);
+  };
+
+  const showToast2 = () => {
+    const taostOptions = {
+      severity: 'success',
       summary: 'interceptOptions.msgTitle',
       detail: 'interceptOptions.msgBody',
       life: 0,
     };
-    $useToaster(taostOptions);
+    toaster.add(taostOptions);
   };
+
 </script>
 
 <template>
@@ -56,5 +67,7 @@
     <p>{{ dateWithTime }}</p>
     <Button @click="showAlert" label="Hi Swal" />
     <Button @click="showToast" label="Hi Toast" />
+    <Button @click="showToast2" label="Hi Toast 2" />
+
   </div>
 </template>

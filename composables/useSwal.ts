@@ -66,16 +66,11 @@ const useSweetAlert = (
   );
 };
 
-declare module '#app' {
-  interface NuxtApp {
-    $useSweetAlert: typeof useSweetAlert;
+export const useSwal = (options) => {
+  return {
+    add: (options: SweetAlertOptions) => {
+      console.log('add', options);
+      useSweetAlert(options);
+    }
   }
 }
-
-export default defineNuxtPlugin((nuxtApp) => {
-  // Make SweetAlert2 and the custom function available globally
-  nuxtApp.provide('swal', Swal);
-  nuxtApp.provide('useSweetAlert', useSweetAlert);
-});
-
-export { useSweetAlert };

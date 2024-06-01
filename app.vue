@@ -1,7 +1,6 @@
 <script setup lang="ts">
   // import './assets/css/reset.tailwind.css';
   import './assets/css/app.css';
-  import Toast from 'primevue/toast';
   const { locale, t } = useI18n();
 
   useHead({
@@ -16,9 +15,10 @@
 
 <template>
   <Common-GridCols />
+  <Common-ToastGroup />
   <!-- <VitePwaManifest /> -->
   <!-- <CookieBanner /> -->
-  <Toast />
+
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
