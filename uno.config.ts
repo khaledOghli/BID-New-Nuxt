@@ -84,6 +84,7 @@ export default defineConfig({
     ],
     ['card-base', 'shadow-lg rounded-lg p-4'],
     ['card-bg', 'bg-light-50 dark:bg-slate-800'],
+    ['layout-container', 'container mx-auto px-2'],
     [
       /^btn-(.*)$/,
       ([, c]) =>

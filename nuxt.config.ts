@@ -192,7 +192,8 @@ export default defineNuxtConfig({
     },
     // importPT: { from: path.resolve(__dirname, './theme/presets/BID-Theme/') }, // import and apply preset
     components: {
-      include: ['Button'],
+      prefix: 'Prime',
+      include: ['Button', 'InputText', 'Menubar'],
     },
   },
 
@@ -203,20 +204,28 @@ export default defineNuxtConfig({
         code: 'en',
         iso: 'en-US',
         name: 'English',
-        file: 'locales/en-US.json',
+        file: {
+          path: 'en-US.json',
+          cache: true,
+        },
         dir: 'ltr',
       },
       {
         code: 'ar',
         iso: 'ar-AR',
         name: 'Arabic',
-        file: 'locales/ar-AR.json',
+        file: {
+          path: 'ar-AR.json',
+          cache: true,
+        },
         dir: 'rtl',
       },
     ],
     strategy: 'prefix',
     defaultLocale: 'en',
     customRoutes: 'config',
+    lazy: true,
+    langDir: 'locales',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',

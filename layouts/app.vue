@@ -15,7 +15,7 @@
 <template>
   <div class="card-bg main_container min-h-screen">
     <AppHeader />
-    <div class="main_content container mx-auto px-8">
+    <div class="main_content layout-container">
       <div class="rounded-2xl bg-white px-6 py-8 shadow-xl dark:bg-slate-800">
         <slot />
       </div>

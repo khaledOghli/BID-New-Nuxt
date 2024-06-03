@@ -1,0 +1,8 @@
+@layer prime-overwrite {
+  body .p-toast .p-toast-message .p-toast-message-content {
+    @apply border-0;
+  }
+  body .main_container header .p-menubar.p-component.main_menubar {
+    @apply px-1;
+  }
+}

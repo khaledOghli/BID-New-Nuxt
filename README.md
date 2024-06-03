@@ -19,28 +19,28 @@ To get started!
 ## Features To Do
 
 - [x] Nuxt Installed
-- [ ] Solution Architecture
+- [ ] Solution Architecture (In Progress)
 - [x] PNPM Package Manager Installed
 - [x] PNPM Configurations
 - [x] Code Checker Recommended Rules Expressions
 - [x] Git Commit Lint
 - [x] Git Conventional Commits Configurations
 - [x] Code Formatter Configuration Settings shared in workspace
-- [ ] Nuxt Configurations
+- [ ] Nuxt Configurations (In Progress)
 - [x] UnoCss Tailwind Module Installed
 - [x] UnoCss Configurations
 - [x] TypeScript Installed
 - [ ] Typography Configurations
 - [x] Theme Changeable Configurations
 - [ ] Theme Branding Configurations
-- [x] Dark Mode Configurations (If you want to use it)
+- [x] Dark Mode Configurations
 - [x] Dark Mode Toggle
 - [ ] Layouts Added
   - [x] Able to add multiple layouts
   - [ ] Default Layout
   - [ ] Dashboard Layout
 - [x] Pages Added
-- [ ] Store Management Pinia Module Installed
+- [x] Store Management Pinia Module Installed
 - [ ] Localizations Module
 - [x] PrimeVue Installed
 - [x] PrimeVue Configurations
@@ -56,6 +56,9 @@ To get started!
 - [ ] File Upload Module
 - [ ] UseFetch Nuxt Module
 - [ ] Errors Handling Module
+- [ ] Errors Pages
+- [ ] Loading Module
+- [ ] Empty State Module
 - [ ] Auth Module
   - [ ] Authentication Module
   - [ ] Authorization Module
@@ -81,10 +84,8 @@ To get started!
 - [ ] Storage Module
 - [ ] Generic Enums Module
 - [ ] Generic Types Module
-- [x] PWA Module
-  - [ ] PWA Configurations
 - [ ] MicroInteractions Module
-  - [ ] Toasts Module
+  - [x] Toasts Module
   - [x] SweetAlerts Module
   - [ ] Icons Animations Module
   - [ ] User Messages to clarify the actions

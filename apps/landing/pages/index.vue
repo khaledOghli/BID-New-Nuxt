@@ -1,5 +1,10 @@
 <script setup lang="ts">
   import type { SweetAlertOptions } from 'sweetalert2';
+
+  import { useField, useForm } from 'vee-validate';
+  import { toTypedSchema } from '@vee-validate/zod';
+  import * as zod from 'zod';
+
   // const { $useSweetAlert } = useNuxtApp();
   const swal = useSwal();
   const toaster = useToaster();
@@ -57,6 +62,22 @@
     toaster.add(taostOptions);
   };
 
+  const validationSchema = toTypedSchema(
+    zod.object({
+      email: zod
+        .string()
+        .min(1, { message: 'This is required' })
+        .email({ message: 'Must be a valid email' }),
+    })
+  );
+
+  const { handleSubmit, errors } = useForm({
+    validationSchema,
+  });
+  const { value: email } = useField('email');
+  const onSubmit = handleSubmit((values) => {
+    alert(JSON.stringify(values, null, 2));
+  });
 </script>
 
 <template>
@@ -65,9 +86,24 @@
     <p>{{ date }}</p>
     <p>{{ dateOnlyTime }}</p>
     <p>{{ dateWithTime }}</p>
-    <Button @click="showAlert" label="Hi Swal" />
-    <Button @click="showToast" label="Hi Toast" />
-    <Button @click="showToast2" label="Hi Toast 2" />
+    <PrimeButton @click="showAlert" label="Hi Swal" />
+    <PrimeButton @click="showToast" label="Hi Toast" />
+    <PrimeButton @click="showToast2" label="Hi Toast 2" />
 
+    <form @submit="onSubmit">
+      <div>
+        <label for="name">Name</label>
+        <PrimeInputText
+          v-model="email"
+          id="email"
+          name="email"
+          :class="{ 'p-invalid': errors.email }" />
+        <span>
+          {{ errors.email }}
+        </span>
+      </div>
+
+      <PrimeButton type="submit">Submit</PrimeButton>
+    </form>
   </div>
 </template>

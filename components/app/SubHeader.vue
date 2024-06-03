@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import InputText from 'primevue/inputtext';
-  import Avatar from 'primevue/avatar';
   import type { MenuItem } from '~/UI/components/MenuBar/MenuBar.d.ts';
 
   const items = ref<Array<MenuItem>>([

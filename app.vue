@@ -14,6 +14,7 @@
 </script>
 
 <template>
+  <Common-PageLoadingIndicator />
   <Common-GridCols />
   <Common-ToastGroup />
   <!-- <VitePwaManifest /> -->

@@ -15,7 +15,7 @@
 <template>
   <div class="card-bg main_container min-h-screen">
     <header class="mb-5">
-      <div class="container mx-auto px-8">
+      <div class="layout-container">
         <nav class="flex flex-row justify-between pb-5 pt-10">
           <NuxtLink to="/" aria-label="Home" class="min-w-fit">
             <NuxtImg
@@ -35,7 +35,7 @@
       </div>
       <Layout-SubMenu />
     </header>
-    <div class="main_content container mx-auto px-8">
+    <div class="main_content layout-container">
       <div class="rounded-2xl bg-white px-6 py-8 shadow-xl dark:bg-slate-800">
         <slot />
       </div>

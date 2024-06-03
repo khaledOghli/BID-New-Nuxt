@@ -2,7 +2,7 @@
 
 <template>
   <header class="mb-5">
-    <div class="container mx-auto px-8">
+    <div class="layout-container">
       <nav class="flex flex-row justify-between pb-5 pt-10">
         <NuxtLink to="/" aria-label="Home" class="min-w-fit">
           <NuxtImg
