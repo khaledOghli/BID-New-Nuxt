@@ -1,6 +1,6 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "include": [".nuxt/nuxt.d.ts", "**/*.ts", "**/*.tsx", "**/*"],
+  "include": ["env.d.ts", ".nuxt/nuxt.d.ts", "**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "types": [

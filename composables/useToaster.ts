@@ -1,6 +1,6 @@
 import { useToast } from 'primevue/usetoast';
 import type { ToastServiceMethods } from 'primevue/toastservice';
-import type {ToastProps,ToastMessageOptions} from 'primevue/toast';
+import type { ToastProps, ToastMessageOptions } from 'primevue/toast';
 interface ToastOptionsInterface extends ToastProps {
   allwedMultiple?: boolean;
   severity?: 'success' | 'info' | 'warn' | 'error';
@@ -43,6 +43,6 @@ export const useToaster = (options: ToastOptionsInterface) => {
     },
     removeAllGroups: () => {
       toast.removeAllGroups();
-    }
-  }
+    },
+  };
 };

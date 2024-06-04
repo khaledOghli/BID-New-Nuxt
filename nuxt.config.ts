@@ -193,7 +193,7 @@ export default defineNuxtConfig({
     // importPT: { from: path.resolve(__dirname, './theme/presets/BID-Theme/') }, // import and apply preset
     components: {
       prefix: 'Prime',
-      include: ['Button', 'InputText', 'Menubar'],
+      include: ['Button', 'InputText', 'InputNumber', 'Menubar', 'InlineMessage'],
     },
   },
 

@@ -68,16 +68,28 @@
         .string()
         .min(1, { message: 'This is required' })
         .email({ message: 'Must be a valid email' }),
+      phone: zod.union([
+        zod.string().regex(/^\d{10}$/, { message: 'Must be a valid phone number' }),
+        zod.undefined(),
+        zod.literal(''),
+      ]),
+      // number with uae mobile number
+      UAEMobile: zod.number().refine(
+        (value) => {
+          const str = value.toString();
+          return str.length === 12 && str.startsWith('971');
+        },
+        { message: 'Must be a valid UAE mobile number' }
+      ),
     })
   );
-
   const { handleSubmit, errors } = useForm({
     validationSchema,
   });
-  const { value: email } = useField('email');
   const onSubmit = handleSubmit((values) => {
     alert(JSON.stringify(values, null, 2));
   });
+  const mobile = ref('');
 </script>
 
 <template>
@@ -90,20 +102,31 @@
     <PrimeButton @click="showToast" label="Hi Toast" />
     <PrimeButton @click="showToast2" label="Hi Toast 2" />
 
-    <form @submit="onSubmit">
-      <div>
-        <label for="name">Name</label>
-        <PrimeInputText
-          v-model="email"
-          id="email"
-          name="email"
-          :class="{ 'p-invalid': errors.email }" />
-        <span>
-          {{ errors.email }}
-        </span>
-      </div>
+    <div>
+      <VInputText
+        id="name"
+        validationName="email"
+        :invalid="errors.email"
+        placeholder="Enter your name"
+        label="Name"
+        helper="Enter your name" />
+      <VInputText
+        id="phone"
+        :invalid="errors.phone"
+        v-model="mobile"
+        placeholder="Enter your phone"
+        label="phone"
+        helper="Enter your phone" />
 
-      <PrimeButton type="submit">Submit</PrimeButton>
-    </form>
+      <VInputNumber
+        id="UAEMobile"
+        validationName="UAEMobile"
+        :invalid="errors.UAEMobile"
+        placeholder="Enter your UAEMobile"
+        label="UAEMobile"
+        helper="Enter your UAEMobile" />
+    </div>
+
+    <PrimeButton @click="onSubmit" type="submit">Submit</PrimeButton>
   </div>
 </template>
