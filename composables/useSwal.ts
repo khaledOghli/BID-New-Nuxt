@@ -1,5 +1,7 @@
-import Swal from 'sweetalert2'
-import type { SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
+import type { SweetAlertOptions, SweetAlertResult } from 'sweetalert2';
+import Swal from 'sweetalert2';
+
+const defaultTime = 500;
 
 // Define default options for SweetAlert
 const defaultSwalOptions: SweetAlertOptions = {
@@ -26,12 +28,12 @@ const defaultSwalOptions: SweetAlertOptions = {
   //   cancelButton: 'btn-light',
   // },
   confirmButtonText: 'OK',
-}
+};
 
 // Define callback types for SweetAlert actions
-type ConfirmCallback = () => void
-type DismissedCallback = () => void
-type DeniedCallback = () => void
+type ConfirmCallback = () => void;
+type DismissedCallback = () => void;
+type DeniedCallback = () => void;
 
 /**
  * A utility function to display a SweetAlert modal.
@@ -45,30 +47,30 @@ function useSweetAlert(options: SweetAlertOptions, confirmCallback?: ConfirmCall
   const preConfirm = () => {
     return new Promise<void>((resolve) => {
       setTimeout(() => {
-        resolve()
-      }, 500)
-    })
-  }
+        resolve();
+      }, defaultTime);
+    });
+  };
 
   // Merge default options with provided options and display the SweetAlert modal
   Swal.fire(Object.assign({}, defaultSwalOptions, options, { preConfirm })).then(
     (result: SweetAlertResult) => {
       // Execute appropriate callback based on modal result
       if (result.isConfirmed && confirmCallback)
-        confirmCallback()
+        confirmCallback();
       else if (result.isDismissed && dismissedCallback)
-        dismissedCallback()
+        dismissedCallback();
       else if (result.isDenied && deniedCallback)
-        deniedCallback()
+        deniedCallback();
     },
-  )
+  );
 }
 
-export function useSwal(options) {
+export function useSwal() {
   return {
     add: (options: SweetAlertOptions) => {
-      console.log('add', options)
-      useSweetAlert(options)
+      console.log('add', options);
+      useSweetAlert(options);
     },
-  }
+  };
 }

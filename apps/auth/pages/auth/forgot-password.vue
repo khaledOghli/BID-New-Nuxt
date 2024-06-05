@@ -1,24 +1,27 @@
 <script lang="ts" setup>
-import { useForm } from 'vee-validate'
-import { object, string } from 'yup'
+import { useForm } from 'vee-validate';
+import { object, string } from 'yup';
+
+const { $t } = useI18n();
 
 useHead({
   title: 'Forgot Password',
-})
+});
 
 definePageMeta({
   layout: 'auth',
-})
+});
 
 const { handleSubmit } = useForm({
   validationSchema: object({
     email: string().required().email().label('Email'),
   }),
-})
+});
 
 const onSubmit = handleSubmit((values) => {
-  console.log(JSON.stringify(values, null, 2))
-})
+  const PRETTY_PRINT_INDENT = 2;
+  console.log(JSON.stringify(values, null, PRETTY_PRINT_INDENT));
+});
 </script>
 
 <template>
@@ -41,7 +44,7 @@ const onSubmit = handleSubmit((values) => {
         color="primary"
         block
       >
-        Send Password Reset Link
+        {{ $t('Send Password Reset Link') }}
       </VButton>
     </form>
   </div>

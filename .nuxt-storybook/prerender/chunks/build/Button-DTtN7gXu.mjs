@@ -1,6 +1,6 @@
-import { computed, createVNode, defineComponent, mergeProps, renderSlot, resolveDynamicComponent, useSSRContext, withCtx } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/index.mjs'
-import { ssrRenderSlot, ssrRenderVNode } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/server-renderer/index.mjs'
-import { _ as _export_sfc } from './server.mjs'
+import { computed, createVNode, defineComponent, mergeProps, renderSlot, resolveDynamicComponent, useSSRContext, withCtx } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/index.mjs';
+import { ssrRenderSlot, ssrRenderVNode } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/server-renderer/index.mjs';
+import { _ as _export_sfc } from './server.mjs';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: 'Button',
@@ -47,8 +47,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     },
   },
   setup(__props) {
-    const props = __props
-    const tag = computed(() => props.to ? 'nuxt-link' : props.href ? 'a' : 'button')
+    const props = __props;
+    const tag = computed(() => props.to ? 'nuxt-link' : props.href ? 'a' : 'button');
     return (_ctx, _push, _parent, _attrs) => {
       ssrRenderVNode(_push, createVNode(resolveDynamicComponent(tag.value), mergeProps({
         to: __props.to,
@@ -57,23 +57,23 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2)
-            ssrRenderSlot(_ctx.$slots, 'default', {}, null, _push2, _parent2, _scopeId)
+            ssrRenderSlot(_ctx.$slots, 'default', {}, null, _push2, _parent2, _scopeId);
           else
-            return [renderSlot(_ctx.$slots, 'default')]
+            return [renderSlot(_ctx.$slots, 'default')];
         }),
         _: 3,
         /* FORWARDED */
-      }), _parent)
-    }
+      }), _parent);
+    };
   },
-})
-const _sfc_setup = _sfc_main.setup
+});
+const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add('UI/components/Button/Button.vue')
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0
-}
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main, [['__file', '/Users/khaledoghli/Work/BID-New-Nuxt/UI/components/Button/Button.vue']])
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add('UI/components/Button/Button.vue');
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main, [['__file', '/Users/khaledoghli/Work/BID-New-Nuxt/UI/components/Button/Button.vue']]);
 
-export { __nuxt_component_0 as _ }
+export { __nuxt_component_0 as _ };
 // # sourceMappingURL=Button-DTtN7gXu.mjs.map

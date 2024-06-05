@@ -27,9 +27,9 @@ import {
   useSSRContext,
   withCtx,
   withDirectives,
-} from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/index.mjs'
-import { defu } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs'
-import { appendHeader } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/h3@1.11.1/node_modules/h3/dist/index.mjs'
+} from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/index.mjs';
+import { defu } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import { appendHeader } from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/h3@1.11.1/node_modules/h3/dist/index.mjs';
 import {
   ssrGetDirectiveProps,
   ssrInterpolate,
@@ -37,7 +37,7 @@ import {
   ssrRenderClass,
   ssrRenderComponent,
   ssrRenderSlot,
-} from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/server-renderer/index.mjs'
+} from 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/server-renderer/index.mjs';
 import {
   B as BaseStyle,
   D as DomHandler,
@@ -57,348 +57,348 @@ import {
   i as useRequestEvent,
   n as useRuntimeConfig,
   w as withLeadingSlash,
-} from './server.mjs'
-import { _ as __nuxt_component_0$1 } from './nuxt-link-CLfuIrY3.mjs'
-import { a as script$1$1, s as script$6 } from './baseicon.esm-DJCrXsDq.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-router@4.3.2_vue@3.4.27_typescript@5.4.5_/node_modules/vue-router/dist/vue-router.node.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs'
-import '../_/renderer.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-bundle-renderer@2.1.0/node_modules/vue-bundle-renderer/dist/runtime.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/devalue@4.3.3/node_modules/devalue/index.js'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@unhead+ssr@1.9.11/node_modules/@unhead/ssr/dist/index.mjs'
-import '../runtime.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unenv@1.9.0/node_modules/unenv/runtime/fetch/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/fs.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/fs-lite.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/lru-cache.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/cheerio@1.0.0-rc.12/node_modules/cheerio/lib/esm/slim.js'
-import 'node:crypto'
-import 'node:fs'
-import 'node:url'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/pathe@1.1.2/node_modules/pathe/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/xss@1.0.15/node_modules/xss/lib/index.js'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ipx@2.1.0_ioredis@5.4.1/node_modules/ipx/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unhead@1.9.11/node_modules/unhead/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@unhead+shared@1.9.11/node_modules/@unhead/shared/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unctx@2.3.1/node_modules/unctx/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-devtools-stub@0.1.0/node_modules/vue-devtools-stub/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/cookie-es@1.1.0/node_modules/cookie-es/dist/index.mjs'
-import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/sweetalert2@11.11.0/node_modules/sweetalert2/dist/sweetalert2.all.js'
+} from './server.mjs';
+import { _ as __nuxt_component_0$1 } from './nuxt-link-CLfuIrY3.mjs';
+import { a as script$1$1, s as script$6 } from './baseicon.esm-DJCrXsDq.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-router@4.3.2_vue@3.4.27_typescript@5.4.5_/node_modules/vue-router/dist/vue-router.node.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
+import '../_/renderer.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-bundle-renderer@2.1.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/devalue@4.3.3/node_modules/devalue/index.js';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@unhead+ssr@1.9.11/node_modules/@unhead/ssr/dist/index.mjs';
+import '../runtime.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unenv@1.9.0/node_modules/unenv/runtime/fetch/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/cheerio@1.0.0-rc.12/node_modules/cheerio/lib/esm/slim.js';
+import 'node:crypto';
+import 'node:fs';
+import 'node:url';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/pathe@1.1.2/node_modules/pathe/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/xss@1.0.15/node_modules/xss/lib/index.js';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/ipx@2.1.0_ioredis@5.4.1/node_modules/ipx/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unhead@1.9.11/node_modules/unhead/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/@unhead+shared@1.9.11/node_modules/@unhead/shared/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/unctx@2.3.1/node_modules/unctx/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/vue-devtools-stub@0.1.0/node_modules/vue-devtools-stub/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/cookie-es@1.1.0/node_modules/cookie-es/dist/index.mjs';
+import 'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/sweetalert2@11.11.0/node_modules/sweetalert2/dist/sweetalert2.all.js';
 
 async function imageMeta(_ctx, url) {
   const meta = await _imageMeta(url).catch((err) => {
-    console.error(`Failed to get image meta for ${url}`, `${err}`)
+    console.error(`Failed to get image meta for ${url}`, `${err}`);
     return {
       width: 0,
       height: 0,
       ratio: 0,
-    }
-  })
-  return meta
+    };
+  });
+  return meta;
 }
 async function _imageMeta(url) {
   {
     const imageMeta2 = await import(
       'file:///Users/khaledoghli/Work/BID-New-Nuxt/node_modules/.pnpm/image-meta@0.2.0/node_modules/image-meta/dist/index.mjs'
-    ).then(r => r.imageMeta)
-    const data2 = await fetch(url).then(res => res.buffer())
-    const metadata = imageMeta2(data2)
+    ).then(r => r.imageMeta);
+    const data2 = await fetch(url).then(res => res.buffer());
+    const metadata = imageMeta2(data2);
     if (!metadata)
-      throw new Error(`No metadata could be extracted from the image \`${url}\`.`)
+      throw new Error(`No metadata could be extracted from the image \`${url}\`.`);
 
-    const { width, height } = metadata
+    const { width, height } = metadata;
     const meta = {
       width,
       height,
       ratio: width && height ? width / height : void 0,
-    }
-    return meta
+    };
+    return meta;
   }
 }
 function createMapper(map) {
   return (key) => {
-    return key ? map[key] || key : map.missingValue
-  }
+    return key ? map[key] || key : map.missingValue;
+  };
 }
 function createOperationsGenerator({ formatter, keyMap, joinWith = '/', valueMap } = {}) {
   if (!formatter)
-    formatter = (key, value) => `${key}=${value}`
+    formatter = (key, value) => `${key}=${value}`;
 
   if (keyMap && typeof keyMap !== 'function')
-    keyMap = createMapper(keyMap)
+    keyMap = createMapper(keyMap);
 
-  const map = valueMap || {}
+  const map = valueMap || {};
   Object.keys(map).forEach((valueKey) => {
     if (typeof map[valueKey] !== 'function')
-      map[valueKey] = createMapper(map[valueKey])
-  })
+      map[valueKey] = createMapper(map[valueKey]);
+  });
   return (modifiers = {}) => {
     const operations = Object.entries(modifiers)
       .filter(([_, value]) => typeof value !== 'undefined')
       .map(([key, value]) => {
-        const mapper = map[key]
+        const mapper = map[key];
         if (typeof mapper === 'function')
-          value = mapper(modifiers[key])
+          value = mapper(modifiers[key]);
 
-        key = typeof keyMap === 'function' ? keyMap(key) : key
-        return formatter(key, value)
-      })
-    return operations.join(joinWith)
-  }
+        key = typeof keyMap === 'function' ? keyMap(key) : key;
+        return formatter(key, value);
+      });
+    return operations.join(joinWith);
+  };
 }
 function parseSize(input = '') {
   if (typeof input === 'number')
-    return input
+    return input;
 
   if (typeof input === 'string') {
     if (input.replace('px', '').match(/^\d+$/g))
-      return Number.parseInt(input, 10)
+      return Number.parseInt(input, 10);
   }
 }
 function parseDensities(input = '') {
   if (input === void 0 || !input.length)
-    return []
+    return [];
 
-  const densities = /* @__PURE__ */ new Set()
+  const densities = /* @__PURE__ */ new Set();
   for (const density of input.split(' ')) {
-    const d = Number.parseInt(density.replace('x', ''))
+    const d = Number.parseInt(density.replace('x', ''));
     if (d)
-      densities.add(d)
+      densities.add(d);
   }
-  return Array.from(densities)
+  return Array.from(densities);
 }
 function checkDensities(densities) {
   if (densities.length === 0) {
     throw new Error(
       '`densities` must not be empty, configure to `1` to render regular size only (DPR 1.0)',
-    )
+    );
   }
   if (Array.from(densities).some(d => d > 2)) {
-    const _densities = densities
+    const _densities = densities;
     if (!_densities._warned) {
       console.warn(
         '[nuxt] [image] Density values above `2` are not recommended. See https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio.',
-      )
+      );
     }
-    _densities._warned = true
+    _densities._warned = true;
   }
 }
 function parseSizes(input) {
-  const sizes = {}
+  const sizes = {};
   if (typeof input === 'string') {
     for (const entry of input.split(/[\s,]+/).filter(e => e)) {
-      const s = entry.split(':')
+      const s = entry.split(':');
       if (s.length !== 2)
-        sizes['1px'] = s[0].trim()
+        sizes['1px'] = s[0].trim();
       else
-        sizes[s[0].trim()] = s[1].trim()
+        sizes[s[0].trim()] = s[1].trim();
     }
   }
   else {
-    Object.assign(sizes, input)
+    Object.assign(sizes, input);
   }
-  return sizes
+  return sizes;
 }
 function prerenderStaticImages(src = '', srcset = '') {
   const paths = [src, ...srcset.split(', ').map(s => s.trim().split(' ')[0].trim())].filter(
     s => s && s.includes('/_ipx/'),
-  )
+  );
   if (!paths.length)
-    return
+    return;
 
   appendHeader(
     useRequestEvent(),
     'x-nitro-prerender',
     paths.map(p => encodeURIComponent(p)).join(', '),
-  )
+  );
 }
 function createImage(globalOptions) {
   const ctx = {
     options: globalOptions,
-  }
+  };
   const getImage2 = (input, options = {}) => {
-    const image = resolveImage(ctx, input, options)
+    const image = resolveImage(ctx, input, options);
     {
-      prerenderStaticImages(image.url)
+      prerenderStaticImages(image.url);
     }
-    return image
-  }
+    return image;
+  };
   const $img = (input, modifiers = {}, options = {}) => {
     return getImage2(input, {
       ...options,
       modifiers: defu(modifiers, options.modifiers || {}),
-    }).url
-  }
+    }).url;
+  };
   for (const presetName in globalOptions.presets) {
     $img[presetName] = (source, modifiers, options) =>
-      $img(source, modifiers, { ...globalOptions.presets[presetName], ...options })
+      $img(source, modifiers, { ...globalOptions.presets[presetName], ...options });
   }
-  $img.options = globalOptions
-  $img.getImage = getImage2
-  $img.getMeta = (input, options) => getMeta(ctx, input, options)
-  $img.getSizes = (input, options) => getSizes(ctx, input, options)
-  ctx.$img = $img
-  return $img
+  $img.options = globalOptions;
+  $img.getImage = getImage2;
+  $img.getMeta = (input, options) => getMeta(ctx, input, options);
+  $img.getSizes = (input, options) => getSizes(ctx, input, options);
+  ctx.$img = $img;
+  return $img;
 }
 async function getMeta(ctx, input, options) {
-  const image = resolveImage(ctx, input, { ...options })
+  const image = resolveImage(ctx, input, { ...options });
   if (typeof image.getMeta === 'function')
-    return await image.getMeta()
+    return await image.getMeta();
   else
-    return await imageMeta(ctx, image.url)
+    return await imageMeta(ctx, image.url);
 }
 function resolveImage(ctx, input, options) {
-  let _a, _b
+  let _a, _b;
   if (input && typeof input !== 'string') {
     throw new TypeError(
       `input must be a string (received ${typeof input}: ${JSON.stringify(input)})`,
-    )
+    );
   }
   if (!input || input.startsWith('data:')) {
     return {
       url: input,
-    }
+    };
   }
-  const { provider, defaults } = getProvider(ctx, options.provider || ctx.options.provider)
-  const preset = getPreset(ctx, options.preset)
-  input = hasProtocol(input) ? input : withLeadingSlash(input)
+  const { provider, defaults } = getProvider(ctx, options.provider || ctx.options.provider);
+  const preset = getPreset(ctx, options.preset);
+  input = hasProtocol(input) ? input : withLeadingSlash(input);
   if (!provider.supportsAlias) {
     for (const base in ctx.options.alias) {
       if (input.startsWith(base))
-        input = joinURL(ctx.options.alias[base], input.substr(base.length))
+        input = joinURL(ctx.options.alias[base], input.substr(base.length));
     }
   }
   if (provider.validateDomains && hasProtocol(input)) {
-    const inputHost = parseURL(input).host
+    const inputHost = parseURL(input).host;
     if (!ctx.options.domains.find(d => d === inputHost)) {
       return {
         url: input,
-      }
+      };
     }
   }
-  const _options = defu(options, preset, defaults)
-  _options.modifiers = { ..._options.modifiers }
-  const expectedFormat = _options.modifiers.format
+  const _options = defu(options, preset, defaults);
+  _options.modifiers = { ..._options.modifiers };
+  const expectedFormat = _options.modifiers.format;
   if ((_a = _options.modifiers) == null ? void 0 : _a.width)
-    _options.modifiers.width = parseSize(_options.modifiers.width)
+    _options.modifiers.width = parseSize(_options.modifiers.width);
 
   if ((_b = _options.modifiers) == null ? void 0 : _b.height)
-    _options.modifiers.height = parseSize(_options.modifiers.height)
+    _options.modifiers.height = parseSize(_options.modifiers.height);
 
-  const image = provider.getImage(input, _options, ctx)
-  image.format = image.format || expectedFormat || ''
-  return image
+  const image = provider.getImage(input, _options, ctx);
+  image.format = image.format || expectedFormat || '';
+  return image;
 }
 function getProvider(ctx, name) {
-  const provider = ctx.options.providers[name]
+  const provider = ctx.options.providers[name];
   if (!provider)
-    throw new Error(`Unknown provider: ${name}`)
+    throw new Error(`Unknown provider: ${name}`);
 
-  return provider
+  return provider;
 }
 function getPreset(ctx, name) {
   if (!name)
-    return {}
+    return {};
 
   if (!ctx.options.presets[name])
-    throw new Error(`Unknown preset: ${name}`)
+    throw new Error(`Unknown preset: ${name}`);
 
-  return ctx.options.presets[name]
+  return ctx.options.presets[name];
 }
 function getSizes(ctx, input, opts) {
-  let _a, _b, _c, _d, _e
-  const width = parseSize((_a = opts.modifiers) == null ? void 0 : _a.width)
-  const height = parseSize((_b = opts.modifiers) == null ? void 0 : _b.height)
-  const sizes = parseSizes(opts.sizes)
+  let _a, _b, _c, _d, _e;
+  const width = parseSize((_a = opts.modifiers) == null ? void 0 : _a.width);
+  const height = parseSize((_b = opts.modifiers) == null ? void 0 : _b.height);
+  const sizes = parseSizes(opts.sizes);
   const densities = ((_c = opts.densities) == null ? void 0 : _c.trim())
     ? parseDensities(opts.densities.trim())
-    : ctx.options.densities
-  checkDensities(densities)
-  const hwRatio = width && height ? height / width : 0
-  const sizeVariants = []
-  const srcsetVariants = []
+    : ctx.options.densities;
+  checkDensities(densities);
+  const hwRatio = width && height ? height / width : 0;
+  const sizeVariants = [];
+  const srcsetVariants = [];
   if (Object.keys(sizes).length >= 1) {
     for (const key in sizes) {
-      const variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx)
+      const variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx);
       if (variant === void 0)
-        continue
+        continue;
 
       sizeVariants.push({
         size: variant.size,
         screenMaxWidth: variant.screenMaxWidth,
         media: `(max-width: ${variant.screenMaxWidth}px)`,
-      })
+      });
       for (const density of densities) {
         srcsetVariants.push({
           width: variant._cWidth * density,
           src: getVariantSrc(ctx, input, opts, variant, density),
-        })
+        });
       }
     }
-    finaliseSizeVariants(sizeVariants)
+    finaliseSizeVariants(sizeVariants);
   }
   else {
     for (const density of densities) {
-      const key = Object.keys(sizes)[0]
-      let variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx)
+      const key = Object.keys(sizes)[0];
+      let variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx);
       if (variant === void 0) {
         variant = {
           size: '',
           screenMaxWidth: 0,
           _cWidth: (_d = opts.modifiers) == null ? void 0 : _d.width,
           _cHeight: (_e = opts.modifiers) == null ? void 0 : _e.height,
-        }
+        };
       }
       srcsetVariants.push({
         width: density,
         src: getVariantSrc(ctx, input, opts, variant, density),
-      })
+      });
     }
   }
-  finaliseSrcsetVariants(srcsetVariants)
-  const defaultVariant = srcsetVariants[srcsetVariants.length - 1]
+  finaliseSrcsetVariants(srcsetVariants);
+  const defaultVariant = srcsetVariants[srcsetVariants.length - 1];
   const sizesVal = sizeVariants.length
     ? sizeVariants.map(v => `${v.media ? `${v.media} ` : ''}${v.size}`).join(', ')
-    : void 0
-  const suffix = sizesVal ? 'w' : 'x'
-  const srcsetVal = srcsetVariants.map(v => `${v.src} ${v.width}${suffix}`).join(', ')
+    : void 0;
+  const suffix = sizesVal ? 'w' : 'x';
+  const srcsetVal = srcsetVariants.map(v => `${v.src} ${v.width}${suffix}`).join(', ');
   return {
     sizes: sizesVal,
     srcset: srcsetVal,
     src: defaultVariant == null ? void 0 : defaultVariant.src,
-  }
+  };
 }
 function getSizesVariant(key, size, height, hwRatio, ctx) {
   const screenMaxWidth
-    = (ctx.options.screens && ctx.options.screens[key]) || Number.parseInt(key)
-  const isFluid = size.endsWith('vw')
+    = (ctx.options.screens && ctx.options.screens[key]) || Number.parseInt(key);
+  const isFluid = size.endsWith('vw');
   if (!isFluid && /^\d+$/.test(size))
-    size = `${size}px`
+    size = `${size}px`;
 
   if (!isFluid && !size.endsWith('px'))
-    return void 0
+    return void 0;
 
-  let _cWidth = Number.parseInt(size)
+  let _cWidth = Number.parseInt(size);
   if (!screenMaxWidth || !_cWidth)
-    return void 0
+    return void 0;
 
   if (isFluid)
-    _cWidth = Math.round((_cWidth / 100) * screenMaxWidth)
+    _cWidth = Math.round((_cWidth / 100) * screenMaxWidth);
 
-  const _cHeight = hwRatio ? Math.round(_cWidth * hwRatio) : height
+  const _cHeight = hwRatio ? Math.round(_cWidth * hwRatio) : height;
   return {
     size,
     screenMaxWidth,
     _cWidth,
     _cHeight,
-  }
+  };
 }
 function getVariantSrc(ctx, input, opts, variant, density) {
   return ctx.$img(
@@ -409,31 +409,31 @@ function getVariantSrc(ctx, input, opts, variant, density) {
       height: variant._cHeight ? variant._cHeight * density : void 0,
     },
     opts,
-  )
+  );
 }
 function finaliseSizeVariants(sizeVariants) {
-  let _a
-  sizeVariants.sort((v1, v2) => v1.screenMaxWidth - v2.screenMaxWidth)
-  let previousMedia = null
+  let _a;
+  sizeVariants.sort((v1, v2) => v1.screenMaxWidth - v2.screenMaxWidth);
+  let previousMedia = null;
   for (let i = sizeVariants.length - 1; i >= 0; i--) {
-    const sizeVariant = sizeVariants[i]
+    const sizeVariant = sizeVariants[i];
     if (sizeVariant.media === previousMedia)
-      sizeVariants.splice(i, 1)
+      sizeVariants.splice(i, 1);
 
-    previousMedia = sizeVariant.media
+    previousMedia = sizeVariant.media;
   }
   for (let i = 0; i < sizeVariants.length; i++)
-    sizeVariants[i].media = ((_a = sizeVariants[i + 1]) == null ? void 0 : _a.media) || ''
+    sizeVariants[i].media = ((_a = sizeVariants[i + 1]) == null ? void 0 : _a.media) || '';
 }
 function finaliseSrcsetVariants(srcsetVariants) {
-  srcsetVariants.sort((v1, v2) => v1.width - v2.width)
-  let previousWidth = null
+  srcsetVariants.sort((v1, v2) => v1.width - v2.width);
+  let previousWidth = null;
   for (let i = srcsetVariants.length - 1; i >= 0; i--) {
-    const sizeVariant = srcsetVariants[i]
+    const sizeVariant = srcsetVariants[i];
     if (sizeVariant.width === previousWidth)
-      srcsetVariants.splice(i, 1)
+      srcsetVariants.splice(i, 1);
 
-    previousWidth = sizeVariant.width
+    previousWidth = sizeVariant.width;
   }
 }
 const operationsGenerator = createOperationsGenerator({
@@ -448,29 +448,29 @@ const operationsGenerator = createOperationsGenerator({
   },
   joinWith: '&',
   formatter: (key, val) => `${encodeParam(key)}_${encodeParam(val)}`,
-})
+});
 function getImage(src, { modifiers = {}, baseURL } = {}, ctx) {
   if (modifiers.width && modifiers.height) {
-    modifiers.resize = `${modifiers.width}x${modifiers.height}`
-    delete modifiers.width
-    delete modifiers.height
+    modifiers.resize = `${modifiers.width}x${modifiers.height}`;
+    delete modifiers.width;
+    delete modifiers.height;
   }
-  const params = operationsGenerator(modifiers) || '_'
+  const params = operationsGenerator(modifiers) || '_';
   if (!baseURL)
-    baseURL = joinURL(ctx.options.nuxt.baseURL, '/_ipx')
+    baseURL = joinURL(ctx.options.nuxt.baseURL, '/_ipx');
 
   return {
     url: joinURL(baseURL, params, encodePath(src)),
-  }
+  };
 }
-const validateDomains = true
-const supportsAlias = true
+const validateDomains = true;
+const supportsAlias = true;
 const ipxRuntime$XjtYOzrVuX = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   getImage,
   supportsAlias,
   validateDomains,
-})
+});
 const imageOptions = {
   screens: {
     'xs': 320,
@@ -488,13 +488,13 @@ const imageOptions = {
   densities: [1, 2],
   format: ['png', 'jpeg', 'webp', 'webp'],
   quality: 80,
-}
+};
 imageOptions.providers = {
   ipx: { provider: ipxRuntime$XjtYOzrVuX, defaults: {} },
-}
+};
 function useImage() {
-  const config = useRuntimeConfig()
-  const nuxtApp = useNuxtApp()
+  const config = useRuntimeConfig();
+  const nuxtApp = useNuxtApp();
   return (
     nuxtApp.$img
     || nuxtApp._img
@@ -504,7 +504,7 @@ function useImage() {
         baseURL: config.app.baseURL,
       },
     }))
-  )
+  );
 }
 function markFeatureUsage(featureName) {
   let _a;
@@ -514,7 +514,7 @@ function markFeatureUsage(featureName) {
       detail: {
         feature: featureName,
       },
-    })
+    });
 }
 const baseImageProps = {
   // input source
@@ -559,14 +559,14 @@ const baseImageProps = {
   },
   // csp
   nonce: { type: [String], default: void 0 },
-}
+};
 function useBaseImage(props) {
   const options = computed(() => {
     return {
       provider: props.provider,
       preset: props.preset,
-    }
-  })
+    };
+  });
   const attrs = computed(() => {
     return {
       width: parseSize(props.width),
@@ -580,9 +580,9 @@ function useBaseImage(props) {
       loading: props.loading,
       decoding: props.decoding,
       nonce: props.nonce,
-    }
-  })
-  const $img = useImage()
+    };
+  });
+  const $img = useImage();
   const modifiers = computed(() => {
     return {
       ...props.modifiers,
@@ -592,28 +592,28 @@ function useBaseImage(props) {
       quality: props.quality || $img.options.quality,
       background: props.background,
       fit: props.fit,
-    }
-  })
+    };
+  });
   return {
     options,
     attrs,
     modifiers,
-  }
+  };
 }
 const imgProps = {
   ...baseImageProps,
   placeholder: { type: [Boolean, String, Number, Array], default: void 0 },
   placeholderClass: { type: String, default: void 0 },
-}
+};
 const __nuxt_component_1 = defineComponent({
   name: 'NuxtImg',
   props: imgProps,
   emits: ['load', 'error'],
   setup: (props, ctx) => {
-    const $img = useImage()
-    const _base = useBaseImage(props)
-    const placeholderLoaded = ref(false)
-    const imgEl = ref()
+    const $img = useImage();
+    const _base = useBaseImage(props);
+    const placeholderLoaded = ref(false);
+    const imgEl = ref();
     const sizes = computed(() =>
       $img.getSizes(props.src, {
         ..._base.options.value,
@@ -625,31 +625,31 @@ const __nuxt_component_1 = defineComponent({
           height: parseSize(props.height),
         },
       }),
-    )
+    );
     const attrs = computed(() => {
-      const attrs2 = { ..._base.attrs.value, 'data-nuxt-img': '' }
+      const attrs2 = { ..._base.attrs.value, 'data-nuxt-img': '' };
       if (!props.placeholder || placeholderLoaded.value) {
-        attrs2.sizes = sizes.value.sizes
-        attrs2.srcset = sizes.value.srcset
+        attrs2.sizes = sizes.value.sizes;
+        attrs2.srcset = sizes.value.srcset;
       }
-      return attrs2
-    })
+      return attrs2;
+    });
     const placeholder = computed(() => {
-      let placeholder2 = props.placeholder
+      let placeholder2 = props.placeholder;
       if (placeholder2 === '')
-        placeholder2 = true
+        placeholder2 = true;
 
       if (!placeholder2 || placeholderLoaded.value)
-        return false
+        return false;
 
       if (typeof placeholder2 === 'string')
-        return placeholder2
+        return placeholder2;
 
       const size = Array.isArray(placeholder2)
         ? placeholder2
         : typeof placeholder2 === 'number'
           ? [placeholder2, placeholder2]
-          : [10, 10]
+          : [10, 10];
       return $img(
         props.src,
         {
@@ -660,16 +660,16 @@ const __nuxt_component_1 = defineComponent({
           blur: size[3] || 3,
         },
         _base.options.value,
-      )
-    })
+      );
+    });
     const mainSrc = computed(() =>
       props.sizes
         ? sizes.value.src
         : $img(props.src, _base.modifiers.value, _base.options.value),
-    )
-    const src = computed(() => (placeholder.value ? placeholder.value : mainSrc.value))
+    );
+    const src = computed(() => (placeholder.value ? placeholder.value : mainSrc.value));
     if (props.preload) {
-      const isResponsive = Object.values(sizes.value).every(v => v)
+      const isResponsive = Object.values(sizes.value).every(v => v);
       useHead({
         link: [
           {
@@ -688,44 +688,44 @@ const __nuxt_component_1 = defineComponent({
               : {}),
           },
         ],
-      })
+      });
     }
     {
-      prerenderStaticImages(src.value, sizes.value.srcset)
+      prerenderStaticImages(src.value, sizes.value.srcset);
     }
-    const nuxtApp = useNuxtApp()
-    const initialLoad = nuxtApp.isHydrating
+    const nuxtApp = useNuxtApp();
+    const initialLoad = nuxtApp.isHydrating;
     onMounted(() => {
       if (placeholder.value) {
-        const img = new Image()
-        img.src = mainSrc.value
+        const img = new Image();
+        img.src = mainSrc.value;
         if (props.sizes) {
-          img.sizes = sizes.value.sizes || ''
-          img.srcset = sizes.value.srcset
+          img.sizes = sizes.value.sizes || '';
+          img.srcset = sizes.value.srcset;
         }
         img.onload = (event) => {
-          placeholderLoaded.value = true
-          ctx.emit('load', event)
-        }
-        markFeatureUsage('nuxt-image')
-        return
+          placeholderLoaded.value = true;
+          ctx.emit('load', event);
+        };
+        markFeatureUsage('nuxt-image');
+        return;
       }
       if (!imgEl.value)
-        return
+        return;
 
       if (imgEl.value.complete && initialLoad) {
         if (imgEl.value.getAttribute('data-error'))
-          ctx.emit('error', new Event('error'))
+          ctx.emit('error', new Event('error'));
         else
-          ctx.emit('load', new Event('load'))
+          ctx.emit('load', new Event('load'));
       }
       imgEl.value.onload = (event) => {
-        ctx.emit('load', event)
-      }
+        ctx.emit('load', event);
+      };
       imgEl.value.onerror = (event) => {
-        ctx.emit('error', event)
-      }
-    })
+        ctx.emit('error', event);
+      };
+    });
     return () =>
       h('img', {
         ref: imgEl,
@@ -735,13 +735,13 @@ const __nuxt_component_1 = defineComponent({
         class:
           props.placeholder && !placeholderLoaded.value ? [props.placeholderClass] : void 0,
         src: src.value,
-      })
+      });
   },
-})
+});
 const script$5 = {
   name: 'BarsIcon',
   extends: script$6,
-}
+};
 const _hoisted_1$4 = /* @__PURE__ */ createElementVNode(
   'path',
   {
@@ -752,8 +752,8 @@ const _hoisted_1$4 = /* @__PURE__ */ createElementVNode(
   },
   null,
   -1,
-)
-const _hoisted_2$3 = [_hoisted_1$4]
+);
+const _hoisted_2$3 = [_hoisted_1$4];
 function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   return (
     openBlock(),
@@ -772,35 +772,35 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
       _hoisted_2$3,
       16,
     )
-  )
+  );
 }
-script$5.render = render$4
+script$5.render = render$4;
 const inlineStyles = {
   submenu: function submenu(_ref) {
-    const instance = _ref.instance
-    const processedItem = _ref.processedItem
+    const instance = _ref.instance;
+    const processedItem = _ref.processedItem;
     return {
       display: instance.isItemActive(processedItem) ? 'block' : 'none',
-    }
+    };
   },
-}
+};
 const classes = {
   root: function root(_ref2) {
-    const instance = _ref2.instance
+    const instance = _ref2.instance;
     return [
       'p-menubar p-component',
       {
         'p-menubar-mobile': instance.queryMatches,
         'p-menubar-mobile-active': instance.mobileActive,
       },
-    ]
+    ];
   },
   start: 'p-menubar-start',
   button: 'p-menubar-button',
   menu: 'p-menubar-root-list',
   menuitem: function menuitem(_ref3) {
-    const instance = _ref3.instance
-    const processedItem = _ref3.processedItem
+    const instance = _ref3.instance;
+    const processedItem = _ref3.processedItem;
     return [
       'p-menuitem',
       {
@@ -808,7 +808,7 @@ const classes = {
         'p-focus': instance.isItemFocused(processedItem),
         'p-disabled': instance.isItemDisabled(processedItem),
       },
-    ]
+    ];
   },
   content: 'p-menuitem-content',
   action: 'p-menuitem-link',
@@ -818,16 +818,16 @@ const classes = {
   submenu: 'p-submenu-list',
   separator: 'p-menuitem-separator',
   end: 'p-menubar-end',
-}
+};
 const MenubarStyle = BaseStyle.extend({
   name: 'menubar',
   classes,
   inlineStyles,
-})
+});
 const script$4 = {
   name: 'AngleDownIcon',
   extends: script$6,
-}
+};
 const _hoisted_1$3 = /* @__PURE__ */ createElementVNode(
   'path',
   {
@@ -836,8 +836,8 @@ const _hoisted_1$3 = /* @__PURE__ */ createElementVNode(
   },
   null,
   -1,
-)
-const _hoisted_2$2 = [_hoisted_1$3]
+);
+const _hoisted_2$2 = [_hoisted_1$3];
 function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   return (
     openBlock(),
@@ -856,13 +856,13 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
       _hoisted_2$2,
       16,
     )
-  )
+  );
 }
-script$4.render = render$3
+script$4.render = render$3;
 const script$3 = {
   name: 'AngleRightIcon',
   extends: script$6,
-}
+};
 const _hoisted_1$2 = /* @__PURE__ */ createElementVNode(
   'path',
   {
@@ -871,8 +871,8 @@ const _hoisted_1$2 = /* @__PURE__ */ createElementVNode(
   },
   null,
   -1,
-)
-const _hoisted_2$1 = [_hoisted_1$2]
+);
+const _hoisted_2$1 = [_hoisted_1$2];
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (
     openBlock(),
@@ -891,9 +891,9 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
       _hoisted_2$1,
       16,
     )
-  )
+  );
 }
-script$3.render = render$2
+script$3.render = render$2;
 const script$2 = {
   name: 'BaseMenubar',
   extends: script$1$1,
@@ -923,9 +923,9 @@ const script$2 = {
   provide: function provide() {
     return {
       $parentInstance: this,
-    }
+    };
   },
-}
+};
 const script$1 = {
   name: 'MenubarSub',
   hostName: 'Menubar',
@@ -972,21 +972,21 @@ const script$1 = {
   list: null,
   methods: {
     getItemId: function getItemId(processedItem) {
-      return ''.concat(this.menuId, '_').concat(processedItem.key)
+      return ''.concat(this.menuId, '_').concat(processedItem.key);
     },
     getItemKey: function getItemKey(processedItem) {
-      return this.getItemId(processedItem)
+      return this.getItemId(processedItem);
     },
     getItemProp: function getItemProp(processedItem, name, params) {
       return processedItem && processedItem.item
         ? ObjectUtils.getItemValue(processedItem.item[name], params)
-        : void 0
+        : void 0;
     },
     getItemLabel: function getItemLabel(processedItem) {
-      return this.getItemProp(processedItem, 'label')
+      return this.getItemProp(processedItem, 'label');
     },
     getItemLabelId: function getItemLabelId(processedItem) {
-      return ''.concat(this.menuId, '_').concat(processedItem.key, '_label')
+      return ''.concat(this.menuId, '_').concat(processedItem.key, '_label');
     },
     getPTOptions: function getPTOptions(processedItem, index, key) {
       return this.ptm(key, {
@@ -998,68 +998,68 @@ const script$1 = {
           disabled: this.isItemDisabled(processedItem),
           level: this.level,
         },
-      })
+      });
     },
     isItemActive: function isItemActive(processedItem) {
       return this.activeItemPath.some((path) => {
-        return path.key === processedItem.key
-      })
+        return path.key === processedItem.key;
+      });
     },
     isItemVisible: function isItemVisible(processedItem) {
-      return this.getItemProp(processedItem, 'visible') !== false
+      return this.getItemProp(processedItem, 'visible') !== false;
     },
     isItemDisabled: function isItemDisabled(processedItem) {
-      return this.getItemProp(processedItem, 'disabled')
+      return this.getItemProp(processedItem, 'disabled');
     },
     isItemFocused: function isItemFocused(processedItem) {
-      return this.focusedItemId === this.getItemId(processedItem)
+      return this.focusedItemId === this.getItemId(processedItem);
     },
     isItemGroup: function isItemGroup(processedItem) {
-      return ObjectUtils.isNotEmpty(processedItem.items)
+      return ObjectUtils.isNotEmpty(processedItem.items);
     },
     onItemClick: function onItemClick(event, processedItem) {
       this.getItemProp(processedItem, 'command', {
         originalEvent: event,
         item: processedItem.item,
-      })
+      });
       this.$emit('item-click', {
         originalEvent: event,
         processedItem,
         isFocus: true,
-      })
+      });
     },
     onItemMouseEnter: function onItemMouseEnter(event, processedItem) {
       this.$emit('item-mouseenter', {
         originalEvent: event,
         processedItem,
-      })
+      });
     },
     onItemMouseMove: function onItemMouseMove(event, processedItem) {
       this.$emit('item-mousemove', {
         originalEvent: event,
         processedItem,
-      })
+      });
     },
     getAriaSetSize: function getAriaSetSize() {
-      const _this = this
+      const _this = this;
       return this.items.filter((processedItem) => {
         return (
           _this.isItemVisible(processedItem) && !_this.getItemProp(processedItem, 'separator')
-        )
-      }).length
+        );
+      }).length;
     },
     getAriaPosInset: function getAriaPosInset(index) {
-      const _this2 = this
+      const _this2 = this;
       return (
         index
         - this.items.slice(0, index).filter((processedItem) => {
           return (
             _this2.isItemVisible(processedItem)
             && _this2.getItemProp(processedItem, 'separator')
-          )
+          );
         }).length
         + 1
-      )
+      );
     },
     getMenuItemProps: function getMenuItemProps(processedItem, index) {
       return {
@@ -1089,7 +1089,7 @@ const script$1 = {
           },
           this.getPTOptions(processedItem, index, 'submenuIcon'),
         ),
-      }
+      };
     },
   },
   components: {
@@ -1099,7 +1099,7 @@ const script$1 = {
   directives: {
     ripple: Ripple,
   },
-}
+};
 const _hoisted_1$1 = [
   'id',
   'aria-label',
@@ -1112,14 +1112,14 @@ const _hoisted_1$1 = [
   'data-p-highlight',
   'data-p-focused',
   'data-p-disabled',
-]
-const _hoisted_2 = ['onClick', 'onMouseenter', 'onMousemove']
-const _hoisted_3 = ['href', 'target']
-const _hoisted_4 = ['id']
-const _hoisted_5 = ['id']
+];
+const _hoisted_2 = ['onClick', 'onMouseenter', 'onMousemove'];
+const _hoisted_3 = ['href', 'target'];
+const _hoisted_4 = ['id'];
+const _hoisted_5 = ['id'];
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_MenubarSub = resolveComponent('MenubarSub', true)
-  const _directive_ripple = resolveDirective('ripple')
+  const _component_MenubarSub = resolveComponent('MenubarSub', true);
+  const _directive_ripple = resolveDirective('ripple');
   return (
     openBlock(),
     createElementBlock(
@@ -1189,13 +1189,13 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
                               {
                                 class: _ctx.cx('content'),
                                 onClick: function onClick($event) {
-                                  return $options.onItemClick($event, processedItem)
+                                  return $options.onItemClick($event, processedItem);
                                 },
                                 onMouseenter: function onMouseenter($event) {
-                                  return $options.onItemMouseEnter($event, processedItem)
+                                  return $options.onItemMouseEnter($event, processedItem);
                                 },
                                 onMousemove: function onMousemove($event) {
-                                  return $options.onItemMouseMove($event, processedItem)
+                                  return $options.onItemMouseMove($event, processedItem);
                                 },
                               },
                               $options.getPTOptions(processedItem, index, 'content'),
@@ -1382,17 +1382,17 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
                                   'onItemClick':
                                     _cache[0]
                                     || (_cache[0] = function ($event) {
-                                      return _ctx.$emit('item-click', $event)
+                                      return _ctx.$emit('item-click', $event);
                                     }),
                                   'onItemMouseenter':
                                     _cache[1]
                                     || (_cache[1] = function ($event) {
-                                      return _ctx.$emit('item-mouseenter', $event)
+                                      return _ctx.$emit('item-mouseenter', $event);
                                     }),
                                   'onItemMousemove':
                                     _cache[2]
                                     || (_cache[2] = function ($event) {
-                                      return _ctx.$emit('item-mousemove', $event)
+                                      return _ctx.$emit('item-mousemove', $event);
                                     }),
                                 },
                                 null,
@@ -1443,16 +1443,16 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
                 ],
                 64,
               )
-            )
+            );
           }),
           128,
         )),
       ],
       16,
     )
-  )
+  );
 }
-script$1.render = render$1
+script$1.render = render$1;
 const script = {
   name: 'Menubar',
   extends: script$2,
@@ -1473,20 +1473,20 @@ const script = {
       dirty: false,
       query: null,
       queryMatches: false,
-    }
+    };
   },
   watch: {
     '$attrs.id': function $attrsId(newValue) {
-      this.id = newValue || UniqueComponentId()
+      this.id = newValue || UniqueComponentId();
     },
     'activeItemPath': function activeItemPath(newPath) {
       if (ObjectUtils.isNotEmpty(newPath)) {
-        this.bindOutsideClickListener()
-        this.bindResizeListener()
+        this.bindOutsideClickListener();
+        this.bindResizeListener();
       }
       else {
-        this.unbindOutsideClickListener()
-        this.unbindResizeListener()
+        this.unbindOutsideClickListener();
+        this.unbindResizeListener();
       }
     },
   },
@@ -1494,83 +1494,83 @@ const script = {
   container: null,
   menubar: null,
   mounted: function mounted() {
-    this.id = this.id || UniqueComponentId()
-    this.bindMatchMediaListener()
+    this.id = this.id || UniqueComponentId();
+    this.bindMatchMediaListener();
   },
   beforeUnmount: function beforeUnmount() {
-    this.mobileActive = false
-    this.unbindOutsideClickListener()
-    this.unbindResizeListener()
-    this.unbindMatchMediaListener()
+    this.mobileActive = false;
+    this.unbindOutsideClickListener();
+    this.unbindResizeListener();
+    this.unbindMatchMediaListener();
     if (this.container)
-      ZIndexUtils.clear(this.container)
+      ZIndexUtils.clear(this.container);
 
-    this.container = null
+    this.container = null;
   },
   methods: {
     getItemProp: function getItemProp2(item, name) {
-      return item ? ObjectUtils.getItemValue(item[name]) : void 0
+      return item ? ObjectUtils.getItemValue(item[name]) : void 0;
     },
     getItemLabel: function getItemLabel2(item) {
-      return this.getItemProp(item, 'label')
+      return this.getItemProp(item, 'label');
     },
     isItemDisabled: function isItemDisabled2(item) {
-      return this.getItemProp(item, 'disabled')
+      return this.getItemProp(item, 'disabled');
     },
     isItemVisible: function isItemVisible2(item) {
-      return this.getItemProp(item, 'visible') !== false
+      return this.getItemProp(item, 'visible') !== false;
     },
     isItemGroup: function isItemGroup2(item) {
-      return ObjectUtils.isNotEmpty(this.getItemProp(item, 'items'))
+      return ObjectUtils.isNotEmpty(this.getItemProp(item, 'items'));
     },
     isItemSeparator: function isItemSeparator(item) {
-      return this.getItemProp(item, 'separator')
+      return this.getItemProp(item, 'separator');
     },
     getProccessedItemLabel: function getProccessedItemLabel(processedItem) {
-      return processedItem ? this.getItemLabel(processedItem.item) : void 0
+      return processedItem ? this.getItemLabel(processedItem.item) : void 0;
     },
     isProccessedItemGroup: function isProccessedItemGroup(processedItem) {
-      return processedItem && ObjectUtils.isNotEmpty(processedItem.items)
+      return processedItem && ObjectUtils.isNotEmpty(processedItem.items);
     },
     toggle: function toggle(event) {
-      const _this = this
+      const _this = this;
       if (this.mobileActive) {
-        this.mobileActive = false
-        ZIndexUtils.clear(this.menubar)
-        this.hide()
+        this.mobileActive = false;
+        ZIndexUtils.clear(this.menubar);
+        this.hide();
       }
       else {
-        this.mobileActive = true
-        ZIndexUtils.set('menu', this.menubar, this.$primevue.config.zIndex.menu)
+        this.mobileActive = true;
+        ZIndexUtils.set('menu', this.menubar, this.$primevue.config.zIndex.menu);
         setTimeout(() => {
-          _this.show()
-        }, 1)
+          _this.show();
+        }, 1);
       }
-      this.bindOutsideClickListener()
-      event.preventDefault()
+      this.bindOutsideClickListener();
+      event.preventDefault();
     },
     show: function show() {
-      DomHandler.focus(this.menubar)
+      DomHandler.focus(this.menubar);
     },
     hide: function hide(event, isFocus) {
-      const _this2 = this
+      const _this2 = this;
       if (this.mobileActive) {
-        this.mobileActive = false
+        this.mobileActive = false;
         setTimeout(() => {
-          DomHandler.focus(_this2.$refs.menubutton)
-        }, 0)
+          DomHandler.focus(_this2.$refs.menubutton);
+        }, 0);
       }
-      this.activeItemPath = []
+      this.activeItemPath = [];
       this.focusedItemInfo = {
         index: -1,
         level: 0,
         parentKey: '',
-      }
-      isFocus && DomHandler.focus(this.menubar)
-      this.dirty = false
+      };
+      isFocus && DomHandler.focus(this.menubar);
+      this.dirty = false;
     },
     onFocus: function onFocus(event) {
-      this.focused = true
+      this.focused = true;
       if (!this.popup) {
         this.focusedItemInfo
           = this.focusedItemInfo.index !== -1
@@ -1579,387 +1579,387 @@ const script = {
                 index: this.findFirstFocusedItemIndex(),
                 level: 0,
                 parentKey: '',
-              }
+              };
       }
-      this.$emit('focus', event)
+      this.$emit('focus', event);
     },
     onBlur: function onBlur(event) {
-      this.focused = false
+      this.focused = false;
       this.focusedItemInfo = {
         index: -1,
         level: 0,
         parentKey: '',
-      }
-      this.searchValue = ''
-      this.dirty = false
-      this.$emit('blur', event)
+      };
+      this.searchValue = '';
+      this.dirty = false;
+      this.$emit('blur', event);
     },
     onKeyDown: function onKeyDown(event) {
-      const metaKey = event.metaKey || event.ctrlKey
+      const metaKey = event.metaKey || event.ctrlKey;
       switch (event.code) {
         case 'ArrowDown':
-          this.onArrowDownKey(event)
-          break
+          this.onArrowDownKey(event);
+          break;
         case 'ArrowUp':
-          this.onArrowUpKey(event)
-          break
+          this.onArrowUpKey(event);
+          break;
         case 'ArrowLeft':
-          this.onArrowLeftKey(event)
-          break
+          this.onArrowLeftKey(event);
+          break;
         case 'ArrowRight':
-          this.onArrowRightKey(event)
-          break
+          this.onArrowRightKey(event);
+          break;
         case 'Home':
-          this.onHomeKey(event)
-          break
+          this.onHomeKey(event);
+          break;
         case 'End':
-          this.onEndKey(event)
-          break
+          this.onEndKey(event);
+          break;
         case 'Space':
-          this.onSpaceKey(event)
-          break
+          this.onSpaceKey(event);
+          break;
         case 'Enter':
         case 'NumpadEnter':
-          this.onEnterKey(event)
-          break
+          this.onEnterKey(event);
+          break;
         case 'Escape':
-          this.onEscapeKey(event)
-          break
+          this.onEscapeKey(event);
+          break;
         case 'Tab':
-          this.onTabKey(event)
-          break
+          this.onTabKey(event);
+          break;
         case 'PageDown':
         case 'PageUp':
         case 'Backspace':
         case 'ShiftLeft':
         case 'ShiftRight':
-          break
+          break;
         default:
           if (!metaKey && ObjectUtils.isPrintableCharacter(event.key))
-            this.searchItems(event, event.key)
+            this.searchItems(event, event.key);
 
-          break
+          break;
       }
     },
     onItemChange: function onItemChange(event) {
-      const processedItem = event.processedItem
-      const isFocus = event.isFocus
+      const processedItem = event.processedItem;
+      const isFocus = event.isFocus;
       if (ObjectUtils.isEmpty(processedItem))
-        return
-      const index = processedItem.index
-      const key = processedItem.key
-      const level = processedItem.level
-      const parentKey = processedItem.parentKey
-      const items = processedItem.items
-      const grouped = ObjectUtils.isNotEmpty(items)
+        return;
+      const index = processedItem.index;
+      const key = processedItem.key;
+      const level = processedItem.level;
+      const parentKey = processedItem.parentKey;
+      const items = processedItem.items;
+      const grouped = ObjectUtils.isNotEmpty(items);
       const activeItemPath2 = this.activeItemPath.filter((p) => {
-        return p.parentKey !== parentKey && p.parentKey !== key
-      })
-      grouped && activeItemPath2.push(processedItem)
+        return p.parentKey !== parentKey && p.parentKey !== key;
+      });
+      grouped && activeItemPath2.push(processedItem);
       this.focusedItemInfo = {
         index,
         level,
         parentKey,
-      }
-      this.activeItemPath = activeItemPath2
-      grouped && (this.dirty = true)
-      isFocus && DomHandler.focus(this.menubar)
+      };
+      this.activeItemPath = activeItemPath2;
+      grouped && (this.dirty = true);
+      isFocus && DomHandler.focus(this.menubar);
     },
     onItemClick: function onItemClick2(event) {
-      const originalEvent = event.originalEvent
-      const processedItem = event.processedItem
-      const grouped = this.isProccessedItemGroup(processedItem)
-      const root2 = ObjectUtils.isEmpty(processedItem.parent)
-      const selected = this.isSelected(processedItem)
+      const originalEvent = event.originalEvent;
+      const processedItem = event.processedItem;
+      const grouped = this.isProccessedItemGroup(processedItem);
+      const root2 = ObjectUtils.isEmpty(processedItem.parent);
+      const selected = this.isSelected(processedItem);
       if (selected) {
-        const index = processedItem.index
-        const key = processedItem.key
-        const level = processedItem.level
-        const parentKey = processedItem.parentKey
+        const index = processedItem.index;
+        const key = processedItem.key;
+        const level = processedItem.level;
+        const parentKey = processedItem.parentKey;
         this.activeItemPath = this.activeItemPath.filter((p) => {
-          return key !== p.key && key.startsWith(p.key)
-        })
+          return key !== p.key && key.startsWith(p.key);
+        });
         this.focusedItemInfo = {
           index,
           level,
           parentKey,
-        }
-        this.dirty = !root2
-        DomHandler.focus(this.menubar)
+        };
+        this.dirty = !root2;
+        DomHandler.focus(this.menubar);
       }
       else {
         if (grouped) {
-          this.onItemChange(event)
+          this.onItemChange(event);
         }
         else {
           const rootProcessedItem = root2
             ? processedItem
             : this.activeItemPath.find((p) => {
-              return p.parentKey === ''
-            })
-          this.hide(originalEvent)
+              return p.parentKey === '';
+            });
+          this.hide(originalEvent);
           this.changeFocusedItemIndex(
             originalEvent,
             rootProcessedItem ? rootProcessedItem.index : -1,
-          )
-          this.mobileActive = false
-          DomHandler.focus(this.menubar)
+          );
+          this.mobileActive = false;
+          DomHandler.focus(this.menubar);
         }
       }
     },
     onItemMouseEnter: function onItemMouseEnter2(event) {
       if (!this.mobileActive && this.dirty)
-        this.onItemChange(event)
+        this.onItemChange(event);
     },
     onItemMouseMove: function onItemMouseMove2(event) {
       if (this.focused)
-        this.changeFocusedItemIndex(event, event.processedItem.index)
+        this.changeFocusedItemIndex(event, event.processedItem.index);
     },
     menuButtonClick: function menuButtonClick(event) {
-      this.toggle(event)
+      this.toggle(event);
     },
     menuButtonKeydown: function menuButtonKeydown(event) {
       (event.code === 'Enter' || event.code === 'NumpadEnter' || event.code === 'Space')
-      && this.menuButtonClick(event)
+      && this.menuButtonClick(event);
     },
     onArrowDownKey: function onArrowDownKey(event) {
-      const processedItem = this.visibleItems[this.focusedItemInfo.index]
-      const root2 = processedItem ? ObjectUtils.isEmpty(processedItem.parent) : null
+      const processedItem = this.visibleItems[this.focusedItemInfo.index];
+      const root2 = processedItem ? ObjectUtils.isEmpty(processedItem.parent) : null;
       if (root2) {
-        const grouped = this.isProccessedItemGroup(processedItem)
+        const grouped = this.isProccessedItemGroup(processedItem);
         if (grouped) {
           this.onItemChange({
             originalEvent: event,
             processedItem,
-          })
+          });
           this.focusedItemInfo = {
             index: -1,
             parentKey: processedItem.key,
-          }
-          this.onArrowRightKey(event)
+          };
+          this.onArrowRightKey(event);
         }
       }
       else {
         const itemIndex
           = this.focusedItemInfo.index !== -1
             ? this.findNextItemIndex(this.focusedItemInfo.index)
-            : this.findFirstFocusedItemIndex()
-        this.changeFocusedItemIndex(event, itemIndex)
+            : this.findFirstFocusedItemIndex();
+        this.changeFocusedItemIndex(event, itemIndex);
       }
-      event.preventDefault()
+      event.preventDefault();
     },
     onArrowUpKey: function onArrowUpKey(event) {
-      const _this3 = this
-      const processedItem = this.visibleItems[this.focusedItemInfo.index]
-      const root2 = ObjectUtils.isEmpty(processedItem.parent)
+      const _this3 = this;
+      const processedItem = this.visibleItems[this.focusedItemInfo.index];
+      const root2 = ObjectUtils.isEmpty(processedItem.parent);
       if (root2) {
-        const grouped = this.isProccessedItemGroup(processedItem)
+        const grouped = this.isProccessedItemGroup(processedItem);
         if (grouped) {
           this.onItemChange({
             originalEvent: event,
             processedItem,
-          })
+          });
           this.focusedItemInfo = {
             index: -1,
             parentKey: processedItem.key,
-          }
-          const itemIndex = this.findLastItemIndex()
-          this.changeFocusedItemIndex(event, itemIndex)
+          };
+          const itemIndex = this.findLastItemIndex();
+          this.changeFocusedItemIndex(event, itemIndex);
         }
       }
       else {
         const parentItem = this.activeItemPath.find((p) => {
-          return p.key === processedItem.parentKey
-        })
+          return p.key === processedItem.parentKey;
+        });
         if (this.focusedItemInfo.index === 0) {
           this.focusedItemInfo = {
             index: -1,
             parentKey: parentItem ? parentItem.parentKey : '',
-          }
-          this.searchValue = ''
-          this.onArrowLeftKey(event)
+          };
+          this.searchValue = '';
+          this.onArrowLeftKey(event);
           this.activeItemPath = this.activeItemPath.filter((p) => {
-            return p.parentKey !== _this3.focusedItemInfo.parentKey
-          })
+            return p.parentKey !== _this3.focusedItemInfo.parentKey;
+          });
         }
         else {
           const _itemIndex
             = this.focusedItemInfo.index !== -1
               ? this.findPrevItemIndex(this.focusedItemInfo.index)
-              : this.findLastFocusedItemIndex()
-          this.changeFocusedItemIndex(event, _itemIndex)
+              : this.findLastFocusedItemIndex();
+          this.changeFocusedItemIndex(event, _itemIndex);
         }
       }
-      event.preventDefault()
+      event.preventDefault();
     },
     onArrowLeftKey: function onArrowLeftKey(event) {
-      const _this4 = this
-      const processedItem = this.visibleItems[this.focusedItemInfo.index]
+      const _this4 = this;
+      const processedItem = this.visibleItems[this.focusedItemInfo.index];
       const parentItem = processedItem
         ? this.activeItemPath.find((p) => {
-          return p.key === processedItem.parentKey
+          return p.key === processedItem.parentKey;
         })
-        : null
+        : null;
       if (parentItem) {
         this.onItemChange({
           originalEvent: event,
           processedItem: parentItem,
-        })
+        });
         this.activeItemPath = this.activeItemPath.filter((p) => {
-          return p.parentKey !== _this4.focusedItemInfo.parentKey
-        })
-        event.preventDefault()
+          return p.parentKey !== _this4.focusedItemInfo.parentKey;
+        });
+        event.preventDefault();
       }
       else {
         const itemIndex
           = this.focusedItemInfo.index !== -1
             ? this.findPrevItemIndex(this.focusedItemInfo.index)
-            : this.findLastFocusedItemIndex()
-        this.changeFocusedItemIndex(event, itemIndex)
-        event.preventDefault()
+            : this.findLastFocusedItemIndex();
+        this.changeFocusedItemIndex(event, itemIndex);
+        event.preventDefault();
       }
     },
     onArrowRightKey: function onArrowRightKey(event) {
-      const processedItem = this.visibleItems[this.focusedItemInfo.index]
+      const processedItem = this.visibleItems[this.focusedItemInfo.index];
       const parentItem = processedItem
         ? this.activeItemPath.find((p) => {
-          return p.key === processedItem.parentKey
+          return p.key === processedItem.parentKey;
         })
-        : null
+        : null;
       if (parentItem) {
-        const grouped = this.isProccessedItemGroup(processedItem)
+        const grouped = this.isProccessedItemGroup(processedItem);
         if (grouped) {
           this.onItemChange({
             originalEvent: event,
             processedItem,
-          })
+          });
           this.focusedItemInfo = {
             index: -1,
             parentKey: processedItem.key,
-          }
-          this.onArrowDownKey(event)
+          };
+          this.onArrowDownKey(event);
         }
       }
       else {
         const itemIndex
           = this.focusedItemInfo.index !== -1
             ? this.findNextItemIndex(this.focusedItemInfo.index)
-            : this.findFirstFocusedItemIndex()
-        this.changeFocusedItemIndex(event, itemIndex)
-        event.preventDefault()
+            : this.findFirstFocusedItemIndex();
+        this.changeFocusedItemIndex(event, itemIndex);
+        event.preventDefault();
       }
     },
     onHomeKey: function onHomeKey(event) {
-      this.changeFocusedItemIndex(event, this.findFirstItemIndex())
-      event.preventDefault()
+      this.changeFocusedItemIndex(event, this.findFirstItemIndex());
+      event.preventDefault();
     },
     onEndKey: function onEndKey(event) {
-      this.changeFocusedItemIndex(event, this.findLastItemIndex())
-      event.preventDefault()
+      this.changeFocusedItemIndex(event, this.findLastItemIndex());
+      event.preventDefault();
     },
     onEnterKey: function onEnterKey(event) {
       if (this.focusedItemInfo.index !== -1) {
         const element = DomHandler.findSingle(
           this.menubar,
           'li[id="'.concat(''.concat(this.focusedItemId), '"]'),
-        )
+        );
         const anchorElement
-          = element && DomHandler.findSingle(element, 'a[data-pc-section="action"]')
-        anchorElement ? anchorElement.click() : element && element.click()
-        const processedItem = this.visibleItems[this.focusedItemInfo.index]
-        const grouped = this.isProccessedItemGroup(processedItem)
-        !grouped && (this.focusedItemInfo.index = this.findFirstFocusedItemIndex())
+          = element && DomHandler.findSingle(element, 'a[data-pc-section="action"]');
+        anchorElement ? anchorElement.click() : element && element.click();
+        const processedItem = this.visibleItems[this.focusedItemInfo.index];
+        const grouped = this.isProccessedItemGroup(processedItem);
+        !grouped && (this.focusedItemInfo.index = this.findFirstFocusedItemIndex());
       }
-      event.preventDefault()
+      event.preventDefault();
     },
     onSpaceKey: function onSpaceKey(event) {
-      this.onEnterKey(event)
+      this.onEnterKey(event);
     },
     onEscapeKey: function onEscapeKey(event) {
       if (this.focusedItemInfo.level !== 0) {
-        const _focusedItemInfo = this.focusedItemInfo
-        this.hide(event, false)
+        const _focusedItemInfo = this.focusedItemInfo;
+        this.hide(event, false);
         this.focusedItemInfo = {
           index: Number(_focusedItemInfo.parentKey.split('_')[0]),
           level: 0,
           parentKey: '',
-        }
+        };
       }
-      event.preventDefault()
+      event.preventDefault();
     },
     onTabKey: function onTabKey(event) {
       if (this.focusedItemInfo.index !== -1) {
-        const processedItem = this.visibleItems[this.focusedItemInfo.index]
-        const grouped = this.isProccessedItemGroup(processedItem)
+        const processedItem = this.visibleItems[this.focusedItemInfo.index];
+        const grouped = this.isProccessedItemGroup(processedItem);
         !grouped
         && this.onItemChange({
           originalEvent: event,
           processedItem,
-        })
+        });
       }
-      this.hide()
+      this.hide();
     },
     bindOutsideClickListener: function bindOutsideClickListener() {
-      const _this5 = this
+      const _this5 = this;
       if (!this.outsideClickListener) {
         this.outsideClickListener = function (event) {
           const isOutsideContainer
-            = _this5.container && !_this5.container.contains(event.target)
+            = _this5.container && !_this5.container.contains(event.target);
           const isOutsideTarget = !(
             _this5.target
             && (_this5.target === event.target || _this5.target.contains(event.target))
-          )
+          );
           if (isOutsideContainer && isOutsideTarget)
-            _this5.hide()
+            _this5.hide();
         };
-        (void 0).addEventListener('click', this.outsideClickListener)
+        (void 0).addEventListener('click', this.outsideClickListener);
       }
     },
     unbindOutsideClickListener: function unbindOutsideClickListener() {
       if (this.outsideClickListener) {
-        (void 0).removeEventListener('click', this.outsideClickListener)
-        this.outsideClickListener = null
+        (void 0).removeEventListener('click', this.outsideClickListener);
+        this.outsideClickListener = null;
       }
     },
     bindResizeListener: function bindResizeListener() {
-      const _this6 = this
+      const _this6 = this;
       if (!this.resizeListener) {
         this.resizeListener = function (event) {
           if (!DomHandler.isTouchDevice())
-            _this6.hide(event, true)
+            _this6.hide(event, true);
 
-          _this6.mobileActive = false
+          _this6.mobileActive = false;
         };
-        (void 0).addEventListener('resize', this.resizeListener)
+        (void 0).addEventListener('resize', this.resizeListener);
       }
     },
     unbindResizeListener: function unbindResizeListener() {
       if (this.resizeListener) {
-        (void 0).removeEventListener('resize', this.resizeListener)
-        this.resizeListener = null
+        (void 0).removeEventListener('resize', this.resizeListener);
+        this.resizeListener = null;
       }
     },
     bindMatchMediaListener: function bindMatchMediaListener() {
-      const _this7 = this
+      const _this7 = this;
       if (!this.matchMediaListener) {
-        const query = matchMedia('(max-width: '.concat(this.breakpoint, ')'))
-        this.query = query
-        this.queryMatches = query.matches
+        const query = matchMedia('(max-width: '.concat(this.breakpoint, ')'));
+        this.query = query;
+        this.queryMatches = query.matches;
         this.matchMediaListener = function () {
-          _this7.queryMatches = query.matches
-          _this7.mobileActive = false
-        }
-        this.query.addEventListener('change', this.matchMediaListener)
+          _this7.queryMatches = query.matches;
+          _this7.mobileActive = false;
+        };
+        this.query.addEventListener('change', this.matchMediaListener);
       }
     },
     unbindMatchMediaListener: function unbindMatchMediaListener() {
       if (this.matchMediaListener) {
-        this.query.removeEventListener('change', this.matchMediaListener)
-        this.matchMediaListener = null
+        this.query.removeEventListener('change', this.matchMediaListener);
+        this.matchMediaListener = null;
       }
     },
     isItemMatched: function isItemMatched(processedItem) {
-      let _this$getProccessedIt
+      let _this$getProccessedIt;
       return (
         this.isValidItem(processedItem)
         && ((_this$getProccessedIt = this.getProccessedItemLabel(processedItem)) === null
@@ -1968,7 +1968,7 @@ const script = {
           : _this$getProccessedIt
             .toLocaleLowerCase()
             .startsWith(this.searchValue.toLocaleLowerCase()))
-      )
+      );
     },
     isValidItem: function isValidItem(processedItem) {
       return (
@@ -1976,135 +1976,135 @@ const script = {
         && !this.isItemDisabled(processedItem.item)
         && !this.isItemSeparator(processedItem.item)
         && this.isItemVisible(processedItem.item)
-      )
+      );
     },
     isValidSelectedItem: function isValidSelectedItem(processedItem) {
-      return this.isValidItem(processedItem) && this.isSelected(processedItem)
+      return this.isValidItem(processedItem) && this.isSelected(processedItem);
     },
     isSelected: function isSelected(processedItem) {
       return this.activeItemPath.some((p) => {
-        return p.key === processedItem.key
-      })
+        return p.key === processedItem.key;
+      });
     },
     findFirstItemIndex: function findFirstItemIndex() {
-      const _this8 = this
+      const _this8 = this;
       return this.visibleItems.findIndex((processedItem) => {
-        return _this8.isValidItem(processedItem)
-      })
+        return _this8.isValidItem(processedItem);
+      });
     },
     findLastItemIndex: function findLastItemIndex() {
-      const _this9 = this
+      const _this9 = this;
       return ObjectUtils.findLastIndex(this.visibleItems, (processedItem) => {
-        return _this9.isValidItem(processedItem)
-      })
+        return _this9.isValidItem(processedItem);
+      });
     },
     findNextItemIndex: function findNextItemIndex(index) {
-      const _this10 = this
+      const _this10 = this;
       const matchedItemIndex
         = index < this.visibleItems.length - 1
           ? this.visibleItems.slice(index + 1).findIndex((processedItem) => {
-            return _this10.isValidItem(processedItem)
+            return _this10.isValidItem(processedItem);
           })
-          : -1
-      return matchedItemIndex > -1 ? matchedItemIndex + index + 1 : index
+          : -1;
+      return matchedItemIndex > -1 ? matchedItemIndex + index + 1 : index;
     },
     findPrevItemIndex: function findPrevItemIndex(index) {
-      const _this11 = this
+      const _this11 = this;
       const matchedItemIndex
         = index > 0
           ? ObjectUtils.findLastIndex(
             this.visibleItems.slice(0, index),
             (processedItem) => {
-              return _this11.isValidItem(processedItem)
+              return _this11.isValidItem(processedItem);
             },
           )
-          : -1
-      return matchedItemIndex > -1 ? matchedItemIndex : index
+          : -1;
+      return matchedItemIndex > -1 ? matchedItemIndex : index;
     },
     findSelectedItemIndex: function findSelectedItemIndex() {
-      const _this12 = this
+      const _this12 = this;
       return this.visibleItems.findIndex((processedItem) => {
-        return _this12.isValidSelectedItem(processedItem)
-      })
+        return _this12.isValidSelectedItem(processedItem);
+      });
     },
     findFirstFocusedItemIndex: function findFirstFocusedItemIndex() {
-      const selectedIndex = this.findSelectedItemIndex()
-      return selectedIndex < 0 ? this.findFirstItemIndex() : selectedIndex
+      const selectedIndex = this.findSelectedItemIndex();
+      return selectedIndex < 0 ? this.findFirstItemIndex() : selectedIndex;
     },
     findLastFocusedItemIndex: function findLastFocusedItemIndex() {
-      const selectedIndex = this.findSelectedItemIndex()
-      return selectedIndex < 0 ? this.findLastItemIndex() : selectedIndex
+      const selectedIndex = this.findSelectedItemIndex();
+      return selectedIndex < 0 ? this.findLastItemIndex() : selectedIndex;
     },
     searchItems: function searchItems(event, _char) {
-      const _this13 = this
-      this.searchValue = (this.searchValue || '') + _char
-      let itemIndex = -1
-      let matched = false
+      const _this13 = this;
+      this.searchValue = (this.searchValue || '') + _char;
+      let itemIndex = -1;
+      let matched = false;
       if (this.focusedItemInfo.index !== -1) {
         itemIndex = this.visibleItems
           .slice(this.focusedItemInfo.index)
           .findIndex((processedItem) => {
-            return _this13.isItemMatched(processedItem)
-          })
+            return _this13.isItemMatched(processedItem);
+          });
         itemIndex
           = itemIndex === -1
             ? this.visibleItems
               .slice(0, this.focusedItemInfo.index)
               .findIndex((processedItem) => {
-                return _this13.isItemMatched(processedItem)
+                return _this13.isItemMatched(processedItem);
               })
-            : itemIndex + this.focusedItemInfo.index
+            : itemIndex + this.focusedItemInfo.index;
       }
       else {
         itemIndex = this.visibleItems.findIndex((processedItem) => {
-          return _this13.isItemMatched(processedItem)
-        })
+          return _this13.isItemMatched(processedItem);
+        });
       }
       if (itemIndex !== -1)
-        matched = true
+        matched = true;
 
       if (itemIndex === -1 && this.focusedItemInfo.index === -1)
-        itemIndex = this.findFirstFocusedItemIndex()
+        itemIndex = this.findFirstFocusedItemIndex();
 
       if (itemIndex !== -1)
-        this.changeFocusedItemIndex(event, itemIndex)
+        this.changeFocusedItemIndex(event, itemIndex);
 
       if (this.searchTimeout)
-        clearTimeout(this.searchTimeout)
+        clearTimeout(this.searchTimeout);
 
       this.searchTimeout = setTimeout(() => {
-        _this13.searchValue = ''
-        _this13.searchTimeout = null
-      }, 500)
-      return matched
+        _this13.searchValue = '';
+        _this13.searchTimeout = null;
+      }, 500);
+      return matched;
     },
     changeFocusedItemIndex: function changeFocusedItemIndex(event, index) {
       if (this.focusedItemInfo.index !== index) {
-        this.focusedItemInfo.index = index
-        this.scrollInView()
+        this.focusedItemInfo.index = index;
+        this.scrollInView();
       }
     },
     scrollInView: function scrollInView() {
-      const index = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : -1
-      const id = index !== -1 ? ''.concat(this.id, '_').concat(index) : this.focusedItemId
-      const element = DomHandler.findSingle(this.menubar, 'li[id="'.concat(id, '"]'))
+      const index = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : -1;
+      const id = index !== -1 ? ''.concat(this.id, '_').concat(index) : this.focusedItemId;
+      const element = DomHandler.findSingle(this.menubar, 'li[id="'.concat(id, '"]'));
       if (element) {
         element.scrollIntoView
         && element.scrollIntoView({
           block: 'nearest',
           inline: 'start',
-        })
+        });
       }
     },
     createProcessedItems: function createProcessedItems(items) {
-      const _this14 = this
-      const level = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0
-      const parent = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}
-      const parentKey = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ''
-      const processedItems2 = []
+      const _this14 = this;
+      const level = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      const parent = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
+      const parentKey = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : '';
+      const processedItems2 = [];
       items
       && items.forEach((item, index) => {
-        const key = (parentKey !== '' ? `${parentKey}_` : '') + index
+        const key = (parentKey !== '' ? `${parentKey}_` : '') + index;
         const newItem = {
           item,
           index,
@@ -2112,29 +2112,29 @@ const script = {
           key,
           parent,
           parentKey,
-        }
-        newItem.items = _this14.createProcessedItems(item.items, level + 1, newItem, key)
-        processedItems2.push(newItem)
-      })
-      return processedItems2
+        };
+        newItem.items = _this14.createProcessedItems(item.items, level + 1, newItem, key);
+        processedItems2.push(newItem);
+      });
+      return processedItems2;
     },
     containerRef: function containerRef(el) {
-      this.container = el
+      this.container = el;
     },
     menubarRef: function menubarRef(el) {
-      this.menubar = el ? el.$el : void 0
+      this.menubar = el ? el.$el : void 0;
     },
   },
   computed: {
     processedItems: function processedItems() {
-      return this.createProcessedItems(this.model || [])
+      return this.createProcessedItems(this.model || []);
     },
     visibleItems: function visibleItems() {
-      const _this15 = this
+      const _this15 = this;
       const processedItem = this.activeItemPath.find((p) => {
-        return p.key === _this15.focusedItemInfo.parentKey
-      })
-      return processedItem ? processedItem.items : this.processedItems
+        return p.key === _this15.focusedItemInfo.parentKey;
+      });
+      return processedItem ? processedItem.items : this.processedItems;
     },
     focusedItemId: function focusedItemId() {
       return this.focusedItemInfo.index !== -1
@@ -2147,21 +2147,21 @@ const script = {
             '_',
           )
           .concat(this.focusedItemInfo.index)
-        : null
+        : null;
     },
   },
   components: {
     MenubarSub: script$1,
     BarsIcon: script$5,
   },
-}
+};
 function _typeof(o) {
-  '@babel/helpers - typeof'
+  '@babel/helpers - typeof';
   return (
     (_typeof
       = typeof Symbol == 'function' && typeof Symbol.iterator == 'symbol'
         ? function (o2) {
-          return typeof o2
+          return typeof o2;
         }
         : function (o2) {
           return o2
@@ -2169,73 +2169,73 @@ function _typeof(o) {
             && o2.constructor === Symbol
             && o2 !== Symbol.prototype
             ? 'symbol'
-            : typeof o2
+            : typeof o2;
         }),
     _typeof(o)
-  )
+  );
 }
 function ownKeys(e, r) {
-  const t = Object.keys(e)
+  const t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-    let o = Object.getOwnPropertySymbols(e)
+    let o = Object.getOwnPropertySymbols(e);
     r
     && (o = o.filter((r2) => {
-      return Object.getOwnPropertyDescriptor(e, r2).enumerable
+      return Object.getOwnPropertyDescriptor(e, r2).enumerable;
     })),
-    t.push.apply(t, o)
+    t.push.apply(t, o);
   }
-  return t
+  return t;
 }
 function _objectSpread(e) {
   for (let r = 1; r < arguments.length; r++) {
-    var t = arguments[r] != null ? arguments[r] : {}
+    var t = arguments[r] != null ? arguments[r] : {};
     r % 2
       ? ownKeys(Object(t), true).forEach((r2) => {
-        _defineProperty(e, r2, t[r2])
+        _defineProperty(e, r2, t[r2]);
       })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
         : ownKeys(Object(t)).forEach((r2) => {
-          Object.defineProperty(e, r2, Object.getOwnPropertyDescriptor(t, r2))
-        })
+          Object.defineProperty(e, r2, Object.getOwnPropertyDescriptor(t, r2));
+        });
   }
-  return e
+  return e;
 }
 function _defineProperty(obj, key, value) {
-  key = _toPropertyKey(key)
+  key = _toPropertyKey(key);
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value,
       enumerable: true,
       configurable: true,
       writable: true,
-    })
+    });
   }
   else {
-    obj[key] = value
+    obj[key] = value;
   }
-  return obj
+  return obj;
 }
 function _toPropertyKey(t) {
-  const i = _toPrimitive(t, 'string')
-  return _typeof(i) == 'symbol' ? i : String(i)
+  const i = _toPrimitive(t, 'string');
+  return _typeof(i) == 'symbol' ? i : String(i);
 }
 function _toPrimitive(t, r) {
   if (_typeof(t) != 'object' || !t)
-    return t
-  const e = t[Symbol.toPrimitive]
+    return t;
+  const e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
-    const i = e.call(t, r || 'default')
+    const i = e.call(t, r || 'default');
     if (_typeof(i) != 'object')
-      return i
-    throw new TypeError('@@toPrimitive must return a primitive value.')
+      return i;
+    throw new TypeError('@@toPrimitive must return a primitive value.');
   }
-  return (r === 'string' ? String : Number)(t)
+  return (r === 'string' ? String : Number)(t);
 }
-const _hoisted_1 = ['aria-haspopup', 'aria-expanded', 'aria-controls', 'aria-label']
+const _hoisted_1 = ['aria-haspopup', 'aria-expanded', 'aria-controls', 'aria-label'];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_BarsIcon = resolveComponent('BarsIcon')
-  const _component_MenubarSub = resolveComponent('MenubarSub')
+  const _component_BarsIcon = resolveComponent('BarsIcon');
+  const _component_MenubarSub = resolveComponent('MenubarSub');
   return (
     openBlock(),
     createElementBlock(
@@ -2270,11 +2270,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             id: $data.id,
             class: normalizeClass(_ctx.cx('button')),
             toggleCallback: function toggleCallback(event) {
-              return $options.menuButtonClick(event)
+              return $options.menuButtonClick(event);
             },
           },
           () => {
-            let _ctx$$primevue$config
+            let _ctx$$primevue$config;
             return [
               _ctx.model && _ctx.model.length > 0
                 ? (openBlock(),
@@ -2299,12 +2299,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                         'onClick':
                           _cache[0]
                           || (_cache[0] = function ($event) {
-                            return $options.menuButtonClick($event)
+                            return $options.menuButtonClick($event);
                           }),
                         'onKeydown':
                           _cache[1]
                           || (_cache[1] = function ($event) {
-                            return $options.menuButtonKeydown($event)
+                            return $options.menuButtonKeydown($event);
                           }),
                       },
                       _objectSpread(_objectSpread({}, _ctx.buttonProps), _ctx.ptm('button')),
@@ -2318,14 +2318,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                             null,
                             16,
                           ),
-                        ]
+                        ];
                       }),
                     ],
                     16,
                     _hoisted_1,
                   ))
                 : createCommentVNode('', true),
-            ]
+            ];
           },
         ),
         createVNode(
@@ -2396,9 +2396,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ],
       16,
     )
-  )
+  );
 }
-script.render = render
+script.render = render;
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: 'index',
   __ssrInlineRender: true,
@@ -2425,7 +2425,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             _attrs,
           ),
         )} data-v-211d9b93>`,
-      )
+      );
       _push(
         ssrRenderComponent(
           unref(script),
@@ -2452,10 +2452,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                           _push2,
                           _parent2,
                           _scopeId,
-                        )
+                        );
                       }
                       else {
-                        return [renderSlot(_ctx.$slots, 'start', {}, void 0, true)]
+                        return [renderSlot(_ctx.$slots, 'start', {}, void 0, true)];
                       }
                     }),
                     key: '0',
@@ -2485,7 +2485,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                             _push2,
                             _parent2,
                             _scopeId,
-                          )
+                          );
                         }
                         else {
                           return [
@@ -2501,7 +2501,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                               void 0,
                               true,
                             ),
-                          ]
+                          ];
                         }
                       },
                     ),
@@ -2521,10 +2521,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                           _push2,
                           _parent2,
                           _scopeId,
-                        )
+                        );
                       }
                       else {
-                        return [renderSlot(_ctx.$slots, 'end', {}, void 0, true)]
+                        return [renderSlot(_ctx.$slots, 'end', {}, void 0, true)];
                       }
                     }),
                     key: '2',
@@ -2534,23 +2534,23 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
           ),
           _parent,
         ),
-      )
-      _push('</div>')
-    }
+      );
+      _push('</div>');
+    };
   },
-})
-const _sfc_setup$2 = _sfc_main$2.setup
+});
+const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(
     'UI/components/MenuBar/index.vue',
-  )
-  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0
-}
+  );
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [
   ['__scopeId', 'data-v-211d9b93'],
   ['__file', '/Users/khaledoghli/Work/BID-New-Nuxt/UI/components/MenuBar/index.vue'],
-])
+]);
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: 'SubMenu',
   __ssrInlineRender: true,
@@ -2609,12 +2609,12 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         icon: 'pi pi-envelope',
         badge: 3,
       },
-    ])
+    ]);
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_VMenuBar = __nuxt_component_0
-      const _component_ThemeSwitcher = resolveComponent('ThemeSwitcher')
-      const _component_LangSwitcher = resolveComponent('LangSwitcher')
-      const _directive_ripple = resolveDirective('ripple')
+      const _component_VMenuBar = __nuxt_component_0;
+      const _component_ThemeSwitcher = resolveComponent('ThemeSwitcher');
+      const _component_LangSwitcher = resolveComponent('LangSwitcher');
+      const _directive_ripple = resolveDirective('ripple');
       _push(
         `<div${ssrRenderAttrs(
           mergeProps(
@@ -2624,7 +2624,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             _attrs,
           ),
         )}>`,
-      )
+      );
       _push(
         ssrRenderComponent(
           _component_VMenuBar,
@@ -2636,7 +2636,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               if (_push2) {
                 _push2(
                   `<svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2rem"${_scopeId}><path d="M25.87 18.05L23.16 17.45L25.27 20.46V29.78L32.49 23.76V13.53L29.18 14.73L25.87 18.04V18.05ZM25.27 35.49L29.18 31.58V27.67L25.27 30.98V35.49ZM20.16 17.14H20.03H20.17H20.16ZM30.1 5.19L34.89 4.81L33.08 12.33L24.1 15.67L30.08 5.2L30.1 5.19ZM5.72 14.74L2.41 13.54V23.77L9.63 29.79V20.47L11.74 17.46L9.03 18.06L5.72 14.75V14.74ZM9.63 30.98L5.72 27.67V31.58L9.63 35.49V30.98ZM4.8 5.2L10.78 15.67L1.81 12.33L0 4.81L4.79 5.19L4.8 5.2ZM24.37 21.05V34.59L22.56 37.29L20.46 39.4H14.44L12.34 37.29L10.53 34.59V21.05L12.42 18.23L17.45 26.8L22.48 18.23L24.37 21.05ZM22.85 0L22.57 0.69L17.45 13.08L12.33 0.69L12.05 0H22.85Z" fill="var(--primary-color)"${_scopeId}></path><path d="M30.69 4.21L24.37 4.81L22.57 0.69L22.86 0H26.48L30.69 4.21ZM23.75 5.67L22.66 3.08L18.05 14.24V17.14H19.7H20.03H20.16H20.2L24.1 15.7L30.11 5.19L23.75 5.67ZM4.21002 4.21L10.53 4.81L12.33 0.69L12.05 0H8.43002L4.22002 4.21H4.21002ZM21.9 17.4L20.6 18.2H14.3L13 17.4L12.4 18.2L12.42 18.23L17.45 26.8L22.48 18.23L22.5 18.2L21.9 17.4ZM4.79002 5.19L10.8 15.7L14.7 17.14H14.74H15.2H16.85V14.24L12.24 3.09L11.15 5.68L4.79002 5.2V5.19Z" fill="var(--text-color)"${_scopeId}></path></svg>`,
-                )
+                );
               }
               else {
                 return [
@@ -2662,7 +2662,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       }),
                     ],
                   )),
-                ]
+                ];
               }
             }),
             item: withCtx(
@@ -2678,14 +2678,14 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         ssrGetDirectiveProps(_ctx, _directive_ripple),
                       ),
                     )}${_scopeId}><span${_scopeId}>${ssrInterpolate(item.label)}</span>`,
-                  )
+                  );
                   if (item.shortcut) {
                     _push2(
                       `<span class="border-1 surface-border border-round surface-100 ml-auto p-1 text-xs"${_scopeId}>${ssrInterpolate(item.shortcut)}</span>`,
-                    )
+                    );
                   }
                   else {
-                    _push2('<!---->')
+                    _push2('<!---->');
                   }
                   if (hasSubmenu) {
                     _push2(
@@ -2696,12 +2696,12 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           'pi-angle-right ml-auto': !root2,
                         },
                       ])}"${_scopeId}></i>`,
-                    )
+                    );
                   }
                   else {
-                    _push2('<!---->')
+                    _push2('<!---->');
                   }
-                  _push2('</a>')
+                  _push2('</a>');
                 }
                 else {
                   return [
@@ -2760,7 +2760,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         16,
                         /* FULL_PROPS */
                       )), [[_directive_ripple]]),
-                  ]
+                  ];
                 }
               },
             ),
@@ -2768,14 +2768,14 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               if (_push2) {
                 _push2(
                   `<div class="align-items-center flex gap-2"${_scopeId}><div class="flex flex-col space-x-3 space-y-4 sm:flex-row sm:space-y-0 rtl:space-x-reverse"${_scopeId}>`,
-                )
+                );
                 _push2(
                   ssrRenderComponent(_component_ThemeSwitcher, null, null, _parent2, _scopeId),
-                )
+                );
                 _push2(
                   ssrRenderComponent(_component_LangSwitcher, null, null, _parent2, _scopeId),
-                )
-                _push2('</div></div>')
+                );
+                _push2('</div></div>');
               }
               else {
                 return [
@@ -2798,7 +2798,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       ),
                     ],
                   ),
-                ]
+                ];
               }
             }),
             _: 1,
@@ -2806,22 +2806,22 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           },
           _parent,
         ),
-      )
-      _push('</div>')
-    }
+      );
+      _push('</div>');
+    };
   },
-})
-const _sfc_setup$1 = _sfc_main$1.setup
+});
+const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(
     'components/layout/SubMenu.vue',
-  )
-  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0
-}
+  );
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
 const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [
   ['__file', '/Users/khaledoghli/Work/BID-New-Nuxt/components/layout/SubMenu.vue'],
-])
+]);
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: 'default',
   __ssrInlineRender: true,
@@ -2830,11 +2830,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       addDirAttribute: true,
       identifierAttribute: 'id',
       addSeoAttributes: true,
-    })
+    });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$1
-      const _component_NuxtImg = __nuxt_component_1
-      const _component_Layout_SubMenu = __nuxt_component_2
+      const _component_NuxtLink = __nuxt_component_0$1;
+      const _component_NuxtImg = __nuxt_component_1;
+      const _component_Layout_SubMenu = __nuxt_component_2;
       _push(
         `<div${ssrRenderAttrs(
           mergeProps(
@@ -2844,7 +2844,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _attrs,
           ),
         )}><header class="mb-5"><div class="container mx-auto px-1"><nav class="flex flex-row justify-between pb-5 pt-10">`,
-      )
+      );
       _push(
         ssrRenderComponent(
           _component_NuxtLink,
@@ -2873,7 +2873,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     _parent2,
                     _scopeId,
                   ),
-                )
+                );
                 _push2(
                   ssrRenderComponent(
                     _component_NuxtImg,
@@ -2891,7 +2891,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     _parent2,
                     _scopeId,
                   ),
-                )
+                );
               }
               else {
                 return [
@@ -2915,7 +2915,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       width: '99px',
                     },
                   }),
-                ]
+                ];
               }
             }),
             _: 1,
@@ -2923,30 +2923,30 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           },
           _parent,
         ),
-      )
-      _push('</nav></div>')
-      _push(ssrRenderComponent(_component_Layout_SubMenu, null, null, _parent))
+      );
+      _push('</nav></div>');
+      _push(ssrRenderComponent(_component_Layout_SubMenu, null, null, _parent));
       _push(
         '</header><div class="main_content container mx-auto px-1"><div class="rounded-2xl bg-white px-6 py-8 shadow-xl dark:bg-slate-800">',
-      )
-      ssrRenderSlot(_ctx.$slots, 'default', {}, null, _push, _parent)
+      );
+      ssrRenderSlot(_ctx.$slots, 'default', {}, null, _push, _parent);
       _push(
         `</div></div><footer class="sticky_footer py-20 text-center text-sm text-gray-600 dark:bg-slate-900"><div class="container mx-auto max-w-screen-lg px-8"><p> \xA9 ${ssrInterpolate(/* @__PURE__ */ new Date().getFullYear())} - ${ssrInterpolate(_ctx.$t('site.name'))}</p></div></footer></div>`,
-      )
-    }
+      );
+    };
   },
-})
-const _sfc_setup = _sfc_main.setup
+});
+const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(
     'layouts/default.vue',
-  )
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0
-}
+  );
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
 const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [
   ['__file', '/Users/khaledoghli/Work/BID-New-Nuxt/layouts/default.vue'],
-])
+]);
 
-export { _default as default }
+export { _default as default };
 // # sourceMappingURL=default-C3s4TwZ5.mjs.map

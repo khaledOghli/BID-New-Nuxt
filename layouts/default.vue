@@ -4,7 +4,7 @@ useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
-})
+});
 // useHeadSafe({
 //   htmlAttrs: {
 //     dir: locale.value == 'ar' ? 'rtl' : 'ltr',
@@ -19,7 +19,7 @@ useLocaleHead({
         <nav class="flex flex-row justify-between pb-5 pt-10">
           <NuxtLink
             to="/"
-            :aria-label="t('home')"
+            :aria-label="$t('home')"
             class="min-w-fit"
           >
             <NuxtImg
@@ -51,7 +51,7 @@ useLocaleHead({
         <p>
           ©
           {{ new Date().getFullYear() }}
-          - {{ t('site.name') }}
+          - {{ $t('site.name') }}
         </p>
       </div>
     </footer>

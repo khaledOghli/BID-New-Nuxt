@@ -1,6 +1,6 @@
-import { useToast } from 'primevue/usetoast'
-import type { ToastServiceMethods } from 'primevue/toastservice'
-import type { ToastProps } from 'primevue/toast'
+import type { ToastProps } from 'primevue/toast';
+import type { ToastServiceMethods } from 'primevue/toastservice';
+import { useToast } from 'primevue/usetoast';
 
 interface ToastOptionsInterface extends ToastProps {
   allwedMultiple?: boolean
@@ -10,12 +10,16 @@ interface ToastOptionsInterface extends ToastProps {
   summary?: string
   life?: number
 }
-// const defaultToastMessage: ToastMessageOptions = {
-//   severity: 'error',
-//   summary: 'Oops...',
-//   detail: 'Something went wrong! Try again',
-//   life: 4000,
-// };
+export enum ToastPosition {
+  TopLeft = 'top-left',
+  TopCenter = 'top-center',
+  TopRight = 'top-right',
+  BottomLeft = 'bottom-left',
+  BottomCenter = 'bottom-center',
+  BottomRight = 'bottom-right',
+  Center = 'center',
+}
+
 const defaultToastOptions: ToastOptionsInterface = {
   severity: 'error',
   summary: 'Oops...',
@@ -23,28 +27,28 @@ const defaultToastOptions: ToastOptionsInterface = {
   life: 4000,
   allwedMultiple: false,
   position: 'top-right',
-}
+};
 
-export function useToaster(options: ToastOptionsInterface) {
-  const toast = useToast() as ToastServiceMethods
+export function useToaster() {
+  const toast = useToast() as ToastServiceMethods;
   return {
     add: (options: ToastOptionsInterface) => {
       if (options && options.allwedMultiple) {
-        toast.add({ ...defaultToastOptions, ...options })
+        toast.add({ ...defaultToastOptions, ...options });
       }
       else {
-        toast.removeAllGroups()
-        toast.add({ ...defaultToastOptions, ...options })
+        toast.removeAllGroups();
+        toast.add({ ...defaultToastOptions, ...options });
       }
     },
     remove: (options: ToastOptionsInterface) => {
-      toast.remove(options)
+      toast.remove(options);
     },
     removeGroup: (group: string) => {
-      toast.removeGroup(group)
+      toast.removeGroup(group);
     },
     removeAllGroups: () => {
-      toast.removeAllGroups()
+      toast.removeAllGroups();
     },
-  }
+  };
 }

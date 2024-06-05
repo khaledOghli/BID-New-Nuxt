@@ -6,9 +6,9 @@ import {
   presetUno,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss'
-import { presetScrollbar } from 'unocss-preset-scrollbar'
-import presetWind from '@unocss/preset-wind'
+} from 'unocss';
+import { presetScrollbar } from 'unocss-preset-scrollbar';
+import presetWind from '@unocss/preset-wind';
 // import presetTheme from 'unocss-preset-theme';
 
 export default defineConfig({
@@ -134,4 +134,4 @@ export default defineConfig({
   // },
 
   transformers: [transformerDirectives(), transformerVariantGroup()],
-})
+});

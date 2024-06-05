@@ -1,6 +1,6 @@
-const _messages = { appName: 'Nuxt', version: '', statusCode: 500, statusMessage: 'Server error', description: 'This page is temporarily unavailable.' }
+const _messages = { appName: 'Nuxt', version: '', statusCode: 500, statusMessage: 'Server error', description: 'This page is temporarily unavailable.' };
 const _render = function ({ messages }) {
-  let __t; let __p = ''
+  let __t; let __p = '';
   __p += `<!DOCTYPE html><html data-critters-container><head><title>${
 (__t = (messages.statusCode)) == null ? '' : __t
 } - ${
@@ -11,11 +11,11 @@ const _render = function ({ messages }) {
 (__t = (messages.statusCode)) == null ? '' : __t
 }</h1><p class="text-xl px-8 sm:px-0 sm:text-4xl font-light mb-16 leading-tight">${
 (__t = (messages.description)) == null ? '' : __t
-}</p></div></body></html>`
-  return __p
-}
-const _template = messages => _render({ messages: { ..._messages, ...messages } })
-const template = _template
+}</p></div></body></html>`;
+  return __p;
+};
+const _template = messages => _render({ messages: { ..._messages, ...messages } });
+const template = _template;
 
-export { template }
+export { template };
 // # sourceMappingURL=error-500.mjs.map

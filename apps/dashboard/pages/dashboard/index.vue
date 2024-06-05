@@ -2,9 +2,9 @@
 definePageMeta({
   layout: 'admin',
   // middleware: 'auth',
-})
+});
 
-const stats = ref([
+const _stats = ref([
   {
     text: 'Users',
     count: '100',
@@ -29,7 +29,7 @@ const stats = ref([
     icon: 'ri:line-chart-line',
     color: 'bg-emerald-500',
   },
-])
+]);
 </script>
 
 <template>

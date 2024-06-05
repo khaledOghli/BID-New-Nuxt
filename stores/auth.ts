@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export interface AuthUser extends Record<string, any> { }
 
@@ -11,21 +11,21 @@ export interface AuthState {
 export const useAuthStore = defineStore({
   id: 'auth',
   state: (): AuthState => {
-    const { token, user } = useAuthStorage()
+    const { token, user } = useAuthStorage();
 
     return {
       loggedIn: !!token.value,
       user: user.value,
       loading: false,
-    }
+    };
   },
   actions: {
     logout() {
-      const { clear } = useAuthStorage()
-      clear()
+      const { clear } = useAuthStorage();
+      clear();
 
-      this.loggedIn = false
-      this.user = null
+      this.loggedIn = false;
+      this.user = null;
     },
   },
-})
+});

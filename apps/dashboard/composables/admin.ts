@@ -1,1 +1,1 @@
-export const useAdminSidebar = () => useState<boolean>('sidebar', () => false)
+export const useAdminSidebar = () => useState<boolean>('sidebar', () => false);

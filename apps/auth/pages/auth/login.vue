@@ -1,60 +1,62 @@
 <script lang="ts" setup>
-import { useField, useForm } from 'vee-validate'
-import { object, string } from 'yup'
-import { useAuthStore } from '~~/stores/auth'
+import { useField, useForm } from 'vee-validate';
+import { object, string } from 'yup';
+import { useAuthStore } from '~~/stores/auth';
+
+const { $t } = useI18n();
 
 useHead({
   title: 'Login',
-})
+});
 
 definePageMeta({
   layout: 'auth',
   middleware: 'guest',
-})
+});
 
 const { handleSubmit } = useForm({
   validationSchema: object({
     email: string().required().email().label('Email'),
     password: string().required().label('Password'),
   }),
-})
+});
 
-const auth = useAuthStore()
-const router = useRouter()
-const error = ref()
-const route = useRoute()
+const auth = useAuthStore();
+const router = useRouter();
+const error = ref();
+const route = useRoute();
 
-const { store } = useAuthStorage()
+const { store } = useAuthStorage();
 
 const { value: email } = useField('email', undefined, {
   initialValue: '',
-})
+});
 const { value: password } = useField('password', undefined, {
   initialValue: '',
-})
+});
 
 const onSubmit = handleSubmit(async (values) => {
-  error.value = ''
+  error.value = '';
   try {
     const res = await $fetch('/api/auth/login', {
       method: 'post',
       body: values,
-    })
+    });
 
-    const token = res.token
-    const user = res.user
+    const token = res.token;
+    const user = res.user;
 
-    store(token, user)
+    store(token, user);
 
-    auth.user = user
-    auth.loggedIn = true
+    auth.user = user;
+    auth.loggedIn = true;
 
-    router.push(route.query.next || '/')
+    router.push(route.query.next || '/');
   }
   catch (e: any) {
-    error.value = e.data.error
+    error.value = e.data.error;
   }
-})
+});
 </script>
 
 <template>
@@ -96,13 +98,13 @@ const onSubmit = handleSubmit(async (values) => {
             type="checkbox"
             class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500"
           >
-          Remember me
+          {{ $t('Remember me') }}
         </label>
         <NuxtLink
           to="/auth/forgot-password"
           class="text-sm text-primary-500 font-semibold hover:underline"
         >
-          Forgot Password?
+          {{ $t('Forgot Password?') }}
         </NuxtLink>
       </div>
 
@@ -112,7 +114,7 @@ const onSubmit = handleSubmit(async (values) => {
         block
         class="mb-5"
       >
-        Login
+        {{ $t('Login') }}
       </VButton>
 
       <!-- <button
@@ -122,12 +124,12 @@ const onSubmit = handleSubmit(async (values) => {
       </button> -->
 
       <div class="text-sm text-gray-600">
-        Don't have account?
+        {{ $t("Don't have account?") }}
         <NuxtLink
           to="/auth/register"
           class="text-sm text-primary-500 font-semibold hover:underline"
         >
-          Register
+          {{ $t('Register') }}
         </NuxtLink>
       </div>
     </form>

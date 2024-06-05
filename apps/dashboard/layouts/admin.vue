@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const { locale, locales } = useI18n()
 useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
-})
+});
 // useHeadSafe({
 //   htmlAttrs: {
 //     dir: locale.value == 'ar' ? 'rtl' : 'ltr',

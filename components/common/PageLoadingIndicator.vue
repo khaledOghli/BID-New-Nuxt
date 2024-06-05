@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nuxtLoadingIndicator } from '~/config/layouts'
+import { nuxtLoadingIndicator } from '~/config/layouts';
 </script>
 
 <template>
@@ -11,5 +11,3 @@ import { nuxtLoadingIndicator } from '~/config/layouts'
     :throttle="nuxtLoadingIndicator.throttle"
   />
 </template>
-
-<style></style>

@@ -1,8 +1,8 @@
-const HEADER_MAX_LENGTH = 72
-const BODY_MAX_LINE_LENGTH = 100
-const FOOTER_MAX_LINE_LENGTH = 100
-const RULE_LEVEL_ERROR = 2
-const RULE_LEVEL_WARNING = 1
+const HEADER_MAX_LENGTH = 72;
+const BODY_MAX_LINE_LENGTH = 100;
+const FOOTER_MAX_LINE_LENGTH = 100;
+const RULE_LEVEL_ERROR = 2;
+const RULE_LEVEL_WARNING = 1;
 
 export default {
   parserPreset: 'conventional-changelog-conventionalcommits',
@@ -126,4 +126,4 @@ export default {
       },
     },
   },
-}
+};

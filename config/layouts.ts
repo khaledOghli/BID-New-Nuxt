@@ -25,7 +25,7 @@ export const sideMenuConfig: SideMenuConfig = {
   hoverColor: '#495057', // Hover color for the menu items
   transitionDuration: '0.3s', // Duration of the transition effects
   position: 'left', // Position of the side menu (left or right)
-}
+};
 
 export const nuxtLoadingIndicator: NuxtLoadingIndicator = {
   color: '#3B8070',
@@ -33,4 +33,4 @@ export const nuxtLoadingIndicator: NuxtLoadingIndicator = {
   height: 3,
   duration: 2000,
   throttle: 200,
-}
+};

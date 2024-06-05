@@ -1,12 +1,10 @@
-<script setup lang="ts"></script>
-
 <template>
   <header class="mb-5">
     <div class="layout-container">
       <nav class="flex flex-row justify-between pb-5 pt-10">
         <NuxtLink
           to="/"
-          aria-label="Home"
+          :aria-label="$t('Home')"
           class="min-w-fit"
         >
           <NuxtImg
@@ -29,5 +27,3 @@
     <AppSubHeader />
   </header>
 </template>
-
-<style scoped></style>

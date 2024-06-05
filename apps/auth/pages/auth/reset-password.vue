@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { useForm } from 'vee-validate'
-import { object, string } from 'yup'
+import { useForm } from 'vee-validate';
+import { object, string } from 'yup';
+
+const { $t } = useI18n();
 
 useHead({
   title: 'Forgot Password',
-})
+});
 
 definePageMeta({
   layout: 'auth',
-})
+});
 
 const { handleSubmit } = useForm({
   validationSchema: object({
@@ -16,11 +18,12 @@ const { handleSubmit } = useForm({
     password: string().required().label('Password'),
     passwordConfirmation: string().required().label('Password Confirmation'),
   }),
-})
+});
 
 const onSubmit = handleSubmit((values) => {
-  console.log(JSON.stringify(values, null, 2))
-})
+  const PRETTY_PRINT_INDENTATION = 2;
+  console.log(JSON.stringify(values, null, PRETTY_PRINT_INDENTATION));
+});
 </script>
 
 <template>
@@ -58,7 +61,7 @@ const onSubmit = handleSubmit((values) => {
         color="primary"
         block
       >
-        Submit
+        {{ $t('Submit') }}
       </VButton>
     </form>
   </div>

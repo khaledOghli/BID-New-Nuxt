@@ -1,4 +1,4 @@
-import { v as defineStore, t as useCookie } from './server.mjs'
+import { v as defineStore, t as useCookie } from './server.mjs';
 
 function useAuthStorage({
   authTokenKey,
@@ -7,22 +7,22 @@ function useAuthStorage({
   authTokenKey: 'auth.token',
   authUserKey: 'auth.user',
 }) {
-  const user = useCookie(authUserKey)
-  const token = useCookie(authTokenKey)
+  const user = useCookie(authUserKey);
+  const token = useCookie(authTokenKey);
   const store = (newToken, newUser) => {
-    token.value = newToken
-    user.value = newUser
-  }
+    token.value = newToken;
+    user.value = newUser;
+  };
   const clear = () => {
-    user.value = null
-    token.value = ''
-  }
+    user.value = null;
+    token.value = '';
+  };
   return {
     store,
     clear,
     user,
     token,
-  }
+  };
 }
 const useAuthStore = defineStore({
   id: 'auth',
@@ -30,24 +30,24 @@ const useAuthStore = defineStore({
     const {
       token,
       user,
-    } = useAuthStorage()
+    } = useAuthStorage();
     return {
       loggedIn: !!token.value,
       user: user.value,
       loading: false,
-    }
+    };
   },
   actions: {
     logout() {
       const {
         clear,
-      } = useAuthStorage()
-      clear()
-      this.loggedIn = false
-      this.user = null
+      } = useAuthStorage();
+      clear();
+      this.loggedIn = false;
+      this.user = null;
     },
   },
-})
+});
 
-export { useAuthStorage as a, useAuthStore as u }
+export { useAuthStorage as a, useAuthStore as u };
 // # sourceMappingURL=auth-se_92EcM.mjs.map

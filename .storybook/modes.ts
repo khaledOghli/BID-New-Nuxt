@@ -1,10 +1,10 @@
-type Viewport = 'mobile' | 'tablet' | 'desktop'
-type Theme = 'light' | 'dark'
-type Locale = 'en' | 'ar'
+type Viewport = 'mobile' | 'tablet' | 'desktop';
+type Theme = 'light' | 'dark';
+type Locale = 'en' | 'ar';
 
-const viewports: Viewport[] = ['mobile', 'tablet', 'desktop']
-const themes: Theme[] = ['light', 'dark']
-const locales: Locale[] = ['en', 'ar']
+const viewports: Viewport[] = ['mobile', 'tablet', 'desktop'];
+const themes: Theme[] = ['light', 'dark'];
+const locales: Locale[] = ['en', 'ar'];
 
 /**
  * All modes with different viewports
@@ -12,7 +12,7 @@ const locales: Locale[] = ['en', 'ar']
 export const allModes: Record<
   string,
   { viewport: Viewport, theme: Theme, locale: Locale }
-> = {}
+> = {};
 
 /**
  * Modes for different themes and locales
@@ -20,20 +20,20 @@ export const allModes: Record<
 export const themeLocaleModes: Record<
   string,
   { theme: Theme, locale: Locale }
-> = {}
+> = {};
 
-let i = 1
-let j = 1
+let i = 1;
+let j = 1;
 
 for (const theme of themes) {
   for (const locale of locales) {
-    themeLocaleModes[`${i++}-${theme}-${locale}`] = { theme, locale }
+    themeLocaleModes[`${i++}-${theme}-${locale}`] = { theme, locale };
     for (const viewport of viewports) {
       allModes[`${j++}-${viewport}-${theme}-${locale}`] = {
         viewport,
         theme,
         locale,
-      }
+      };
     }
   }
 }

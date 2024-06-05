@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenuItem } from './MenuBar'
+import type { MenuItem } from './MenuBar';
 
 withDefaults(
   defineProps<{
@@ -53,7 +53,7 @@ withDefaults(
       },
     ],
   },
-)
+);
 </script>
 
 <template>

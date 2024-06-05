@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { usePrimeVue } from 'primevue/config'
+import { usePrimeVue } from 'primevue/config';
 
-const PrimeVue = usePrimeVue()
-const color = useColorMode()
+const PrimeVue = usePrimeVue();
+const color = useColorMode();
 
 useHead({
   meta: [
@@ -12,21 +12,21 @@ useHead({
       content: () => (color.value === 'dark' ? '#222222' : '#ffffff'),
     },
   ],
-})
+});
 watch(
   color,
   (newColor) => {
     if (newColor.value === 'dark' && newColor.preference === 'dark')
-      PrimeVue.changeTheme('aura-light-blue', 'aura-dark-blue', 'theme-link', () => {})
+      PrimeVue.changeTheme('aura-light-blue', 'aura-dark-blue', 'theme-link', () => {});
     else if (newColor.value === 'light' && newColor.preference === 'light')
-      PrimeVue.changeTheme('aura-dark-blue', 'aura-light-blue', 'theme-link', () => {})
+      PrimeVue.changeTheme('aura-dark-blue', 'aura-light-blue', 'theme-link', () => {});
     else if (newColor.value === 'light' && newColor.preference === 'system')
-      PrimeVue.changeTheme('aura-dark-blue', 'aura-light-blue', 'theme-link', () => {})
+      PrimeVue.changeTheme('aura-dark-blue', 'aura-light-blue', 'theme-link', () => {});
     else if (newColor.value === 'dark' && newColor.preference === 'system')
-      PrimeVue.changeTheme('aura-light-blue', 'aura-dark-blue', 'theme-link', () => {})
+      PrimeVue.changeTheme('aura-light-blue', 'aura-dark-blue', 'theme-link', () => {});
   },
   { immediate: true },
-)
+);
 </script>
 
 <template>
@@ -40,7 +40,7 @@ watch(
     <select
       id="themes"
       v-model="$colorMode.preference"
-      aria-label="themes"
+      :aria-label="$t('themes')"
       class="mx-1 inline-block border-1 border-l-3 border-gray-900 bg-inherit text-sm"
     >
       <option

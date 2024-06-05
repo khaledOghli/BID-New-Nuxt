@@ -9,4 +9,4 @@ declare module '#app' {
   }
 }
 
-export {}
+export {};

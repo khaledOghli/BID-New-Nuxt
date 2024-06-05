@@ -1,14 +1,14 @@
 // @ts-check
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
+import NuxtEslintConfig from './.nuxt/eslint.config.mjs';
 
-import nuxt from './.nuxt/eslint.config.mjs'
-
-export default nuxt(
-  antfu({
+export default antfu(
+  {
     unocss: true,
     formatters: true,
     rules: {
-      'semi': ['error', 'never'],
+      '@stylistic/semi': ['error', 'always'],
+      'semi-style': ['error', 'last'],
       'quotes': ['error', 'single'],
       'quote-props': ['error', 'consistent'],
       'no-console': ['off'],
@@ -135,25 +135,30 @@ export default nuxt(
       'vue/no-use-v-else-with-v-for': ['error'],
       'vue/padding-line-between-blocks': ['error'],
     },
+  },
+  NuxtEslintConfig,
+  {
     ignores: [
       'node_modules',
-      '.nuxt',
+      '**/node_modules/',
+      '**/.nuxt/',
       '.git',
       '.vscode',
       '.github',
       '.storybook',
       '.nuxt-storybook',
       '.husky',
+      '**/.storybook/',
+      '**/.nuxt-storybook/',
+      '**/.husky/',
       'dist',
       '.output',
       'package.json',
       'package-lock.json',
-      'docs',
-      '*.md',
-      'theme',
-      'theme/**',
-      'docs/**',
+      '**/docs/',
+      '**/*.md',
+      '**/theme/',
       'assets/primevue',
     ],
-  }),
-)
+  },
+);

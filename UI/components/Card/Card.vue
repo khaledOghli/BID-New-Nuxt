@@ -27,7 +27,7 @@ withDefaults(
       footer: '',
     }),
   },
-)
+);
 </script>
 
 <template>

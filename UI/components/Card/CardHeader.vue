@@ -7,13 +7,13 @@ const props = withDefaults(
   {
     bordered: false,
   },
-)
+);
 </script>
 
 <template>
   <h3 class="border-b px-4 py-3 text-lg text-gray-700 font-semibold">
     <slot>
-      {{ title }}
+      {{ props.title }}
     </slot>
   </h3>
 </template>

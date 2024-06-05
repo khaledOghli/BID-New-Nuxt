@@ -4,7 +4,7 @@ useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
-})
+});
 // useHeadSafe({
 //   htmlAttrs: {
 //     dir: locale.value == 'ar' ? 'rtl' : 'ltr',

@@ -1,20 +1,20 @@
 // @ts-nocheck
-import locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_en_US_json from '../locales/en-US.json'
-import locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_ar_AR_json from '../locales/ar-AR.json'
+import locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_en_US_json from '../locales/en-US.json';
+import locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_ar_AR_json from '../locales/ar-AR.json';
 
 export const localeCodes = [
   'en',
   'ar',
-]
+];
 
 export const localeLoaders = {
   en: [{ key: '../locales/en-US.json', load: () => Promise.resolve(locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_en_US_json), cache: true }],
   ar: [{ key: '../locales/ar-AR.json', load: () => Promise.resolve(locale__Users_khaledoghli_Work_BID_New_Nuxt_locales_ar_AR_json), cache: true }],
-}
+};
 
 export const vueI18nConfigs = [
   () => import('../i18n.config.ts?hash=bffaebcb&config=1' /* webpackChunkName: "__i18n_config_ts_bffaebcb" */),
-]
+];
 
 export const nuxtI18nOptions = {
   experimental: {
@@ -86,7 +86,7 @@ export const nuxtI18nOptions = {
   debug: false,
   parallelPlugin: false,
   i18nModules: [],
-}
+};
 
 export const normalizedLocales = [
   {
@@ -111,12 +111,12 @@ export const normalizedLocales = [
       },
     ],
   },
-]
+];
 
-export const NUXT_I18N_MODULE_ID = '@nuxtjs/i18n'
-export const parallelPlugin = false
-export const isSSG = false
+export const NUXT_I18N_MODULE_ID = '@nuxtjs/i18n';
+export const parallelPlugin = false;
+export const isSSG = false;
 
-export const DEFAULT_DYNAMIC_PARAMS_KEY = 'nuxtI18n'
-export const DEFAULT_COOKIE_KEY = 'i18n_redirected'
-export const SWITCH_LOCALE_PATH_LINK_IDENTIFIER = 'nuxt-i18n-slp'
+export const DEFAULT_DYNAMIC_PARAMS_KEY = 'nuxtI18n';
+export const DEFAULT_COOKIE_KEY = 'i18n_redirected';
+export const SWITCH_LOCALE_PATH_LINK_IDENTIFIER = 'nuxt-i18n-slp';

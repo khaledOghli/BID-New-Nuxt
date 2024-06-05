@@ -1,10 +1,10 @@
 <script setup lang="ts">
 defineProps<{
   error: { statusCode: number, message: string }
-}>()
+}>();
 
 function handleClearError() {
-  this.clearError({ redirect: '/' })
+  this.clearError({ redirect: '/' });
 }
 </script>
 

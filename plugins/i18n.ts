@@ -9,22 +9,22 @@ async function fetchAndApplyTranslations(lang: any, _i18nSetLocaleMessage: any) 
     // }
   }
   catch (error) {
-    console.error(`Failed to fetch translations for ${lang}:`, error)
+    console.error(`Failed to fetch translations for ${lang}:`, error);
   }
 }
 
 export default defineNuxtPlugin(async (_nuxtApp) => {
-  const { $i18n } = useNuxtApp()
+  const { $i18n } = useNuxtApp();
   // onBeforeLanguageSwitch called right before setting a new locale
   $i18n.onBeforeLanguageSwitch = (
     _oldLocale: any,
     _newLocale: any,
     _isInitialSetup: any,
     _nuxtApp: any,
-  ) => { }
+  ) => { };
   $i18n.onLanguageSwitched = (_oldLocale: string, _newLocale: string) => {
     if (window && window.document && document.querySelector('html'))
-      document.querySelector('html')?.setAttribute('dir', $i18n.localeProperties.value.dir)
-  }
-  await fetchAndApplyTranslations($i18n.locale.value, $i18n.setLocaleMessage)
-})
+      document.querySelector('html')?.setAttribute('dir', $i18n.localeProperties.value.dir);
+  };
+  await fetchAndApplyTranslations($i18n.locale.value, $i18n.setLocaleMessage);
+});

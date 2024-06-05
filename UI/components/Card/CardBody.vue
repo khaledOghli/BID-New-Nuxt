@@ -6,11 +6,14 @@ const props = withDefaults(
   {
     bordered: false,
   },
-)
+);
 </script>
 
 <template>
-  <div class="px-4 py-3 text-gray-600">
+  <div
+    class="px-4 py-3 text-gray-600"
+    :class="{ 'border-b': props.bordered }"
+  >
     <slot />
   </div>
 </template>

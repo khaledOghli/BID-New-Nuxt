@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import type { SweetAlertOptions } from 'sweetalert2'
+import type { SweetAlertOptions } from 'sweetalert2';
 
-import { useForm } from 'vee-validate'
-import { toTypedSchema } from '@vee-validate/zod'
-import * as zod from 'zod'
+import { toTypedSchema } from '@vee-validate/zod';
+import { useForm } from 'vee-validate';
+import * as zod from 'zod';
 
 // const { $useSweetAlert } = useNuxtApp();
-const swal = useSwal()
-const toaster = useToaster()
+const swal = useSwal();
+const toaster = useToaster();
+const { $t } = useI18n();
 
 useHead({
   title: 'Home',
-})
-const date = useLocaleDate(new Date())
-const dateOnlyTime = useLocaleOnlyTime(new Date())
-const dateWithTime = useLocaleDateWithTime(new Date())
+});
+const date = useLocaleDate(new Date());
+const dateOnlyTime = useLocaleOnlyTime(new Date());
+const dateWithTime = useLocaleDateWithTime(new Date());
 function showAlert() {
   const options: SweetAlertOptions = {
     title: 'Hello World!',
@@ -24,21 +25,21 @@ function showAlert() {
     showCancelButton: true,
     confirmButtonText: 'Yes',
     cancelButtonText: 'No',
-  }
+  };
 
   const confirmCallback = () => {
-    console.log('Confirmed!')
-  }
+    console.log('Confirmed!');
+  };
 
   const dismissedCallback = () => {
-    console.log('Dismissed!')
-  }
+    console.log('Dismissed!');
+  };
 
   const deniedCallback = () => {
-    console.log('Denied!')
-  }
+    console.log('Denied!');
+  };
 
-  swal.add(options, confirmCallback, dismissedCallback, deniedCallback)
+  swal.add(options, confirmCallback, dismissedCallback, deniedCallback);
 }
 
 function showToast() {
@@ -48,8 +49,8 @@ function showToast() {
     detail: 'ccccc',
     life: 0,
     position: 'bottom-left',
-  }
-  toaster.add(taostOptions)
+  };
+  toaster.add(taostOptions);
 }
 
 function showToast2() {
@@ -58,8 +59,8 @@ function showToast2() {
     summary: 'interceptOptions.msgTitle',
     detail: 'interceptOptions.msgBody',
     life: 0,
-  }
-  toaster.add(taostOptions)
+  };
+  toaster.add(taostOptions);
 }
 
 const validationSchema = toTypedSchema(
@@ -76,25 +77,28 @@ const validationSchema = toTypedSchema(
     // number with uae mobile number
     UAEMobile: zod.number().refine(
       (value) => {
-        const str = value.toString()
-        return str.length === 12 && str.startsWith('971')
+        const str = value.toString();
+        const UAE_MOBILE_LENGTH = 12;
+
+        return str.length === UAE_MOBILE_LENGTH && str.startsWith('971');
       },
       { message: 'Must be a valid UAE mobile number' },
     ),
   }),
-)
+);
 const { handleSubmit, errors } = useForm({
   validationSchema,
-})
+});
 const onSubmit = handleSubmit((values) => {
-  alert(JSON.stringify(values, null, 2))
-})
-const mobile = ref('')
+  const PRETTY_PRINT_INDENTATION = 2;
+  console.log(JSON.stringify(values, null, PRETTY_PRINT_INDENTATION));
+});
+const mobile = ref('');
 </script>
 
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>{{ $t('Home') }}</h1>
     <p>{{ date }}</p>
     <p>{{ dateOnlyTime }}</p>
     <p>{{ dateWithTime }}</p>
@@ -143,7 +147,7 @@ const mobile = ref('')
       type="submit"
       @click="onSubmit"
     >
-      Submit
+      {{ $t('Submit') }}
     </PrimeButton>
   </div>
 </template>

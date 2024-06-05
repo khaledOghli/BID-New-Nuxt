@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenuItem } from '~/UI/components/MenuBar/MenuBar.d.ts'
+import type { MenuItem } from '~/UI/components/MenuBar/MenuBar.d.ts';
 
 const items = ref<Array<MenuItem>>([
   {
@@ -55,7 +55,7 @@ const items = ref<Array<MenuItem>>([
     icon: 'pi pi-envelope',
     badge: 3,
   },
-])
+]);
 </script>
 
 <template>

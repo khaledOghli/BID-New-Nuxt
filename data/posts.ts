@@ -1,4 +1,4 @@
-import type { Category } from './categories'
+import type { Category } from './categories';
 
 export interface Post {
   id: string
@@ -16,13 +16,13 @@ export interface PostDetails {
   content: string
 }
 
-export const getPostsUrl = () => 'http://localhost:3001/posts'
+export const getPostsUrl = () => 'http://localhost:3001/posts';
 
 export function getPostDetailsUrl(postSlug: string) {
-  return `http://localhost:3001/post-details/${postSlug}?_expand=category`
+  return `http://localhost:3001/post-details/${postSlug}?_expand=category`;
 }
 
 export async function getPosts(): Promise<Post[]> {
-  const res = await fetch(getPostsUrl())
-  return res.json()
+  const res = await fetch(getPostsUrl());
+  return res.json();
 }

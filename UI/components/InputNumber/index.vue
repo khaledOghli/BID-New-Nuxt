@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useField } from 'vee-validate'
-import type { InputNumberProps } from './InputNumber.d'
+import { useField } from 'vee-validate';
+import { computed, ref } from 'vue';
+import type { InputNumberProps } from './InputNumber.d';
 
 const props = withDefaults(defineProps<InputNumberProps>(), {
   validationName: '',
@@ -24,20 +24,20 @@ const props = withDefaults(defineProps<InputNumberProps>(), {
   buttonLayout: 'stacked',
   step: 1,
   disabled: false,
-})
-const showLabel = ref(!!props.label)
-const inputRef = ref(null)
-const { value, errorMessage } = useField(() => props.validationName)
-const model = defineModel()
+});
+const showLabel = ref(!!props.label);
+const inputRef = ref(null);
+const { value, errorMessage } = useField(() => props.validationName);
+const model = defineModel();
 const modelComputed = computed({
   get: () => (props.validationName ? value.value : model.value),
   set: (val) => {
     if (props.validationName)
-      value.value = val
+      value.value = val;
     else
-      model.value = val
+      model.value = val;
   },
-})
+});
 </script>
 
 <template>
@@ -69,7 +69,7 @@ const modelComputed = computed({
         v-if="props.helper"
         id="username-help"
       >
-        Enter your username to reset your password.
+        {{ props.helper }}
       </small>
     </slot>
     <CommonTransition>

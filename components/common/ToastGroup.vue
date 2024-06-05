@@ -1,22 +1,12 @@
 <script setup lang="ts">
-import Toast from 'primevue/toast'
-import type { ToastProps } from 'primevue/toast'
+import Toast from 'primevue/toast';
+import { ToastPosition } from '~/composables/useToaster';
 
-const toastPositions: ToastProps.Position[] = [
-  'bottom-left',
-  'top-left',
-  'top-center',
-  'top-right',
-  'bottom-center',
-  'bottom-right',
-  'center',
-]
+const defaultToastPosition = ToastPosition.TopRight;
 </script>
 
 <template>
   <div>
-    <Toast position="top-right" />
+    <Toast :position="defaultToastPosition" />
   </div>
 </template>
-
-<style scoped></style>

@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { useForm } from 'vee-validate'
-import { object, string } from 'yup'
+import { useForm } from 'vee-validate';
+import { object, string } from 'yup';
+
+const { $t } = useI18n();
 
 useHead({
   title: 'Register',
-})
+});
 
 definePageMeta({
   layout: 'auth',
-})
+});
 
 const { handleSubmit } = useForm({
   validationSchema: object({
@@ -16,11 +18,12 @@ const { handleSubmit } = useForm({
     email: string().required().email().label('Email'),
     password: string().required().label('Password'),
   }),
-})
+});
 
 const onSubmit = handleSubmit((values) => {
-  console.log(JSON.stringify(values, null, 2))
-})
+  const PRETTY_PRINT_INDENT = 2;
+  console.log(JSON.stringify(values, null, PRETTY_PRINT_INDENT));
+});
 </script>
 
 <template>
@@ -58,12 +61,12 @@ const onSubmit = handleSubmit((values) => {
             class="h-4 w-4 rounded text-primary-500 transition duration-300 focus:ring-primary-500"
           >
 
-          <span> I agree with </span>
+          <span> {{ $t('I agree with') }} </span>
           <NuxtLink
             to="/toc"
             class="inline text-sm text-primary-500 font-semibold hover:underline"
           >
-            Terms and Condition
+            {{ $t('Terms and Condition') }}
           </NuxtLink>
         </label>
       </div>
@@ -74,16 +77,16 @@ const onSubmit = handleSubmit((values) => {
         block
         class="mb-5"
       >
-        Register
+        {{ $t('Register') }}
       </VButton>
 
       <div class="text-sm text-gray-600">
-        Already have an account?
+        {{ $t('Already have an account?') }}
         <NuxtLink
           to="/auth/login"
           class="text-sm text-primary-500 font-semibold hover:underline"
         >
-          Login
+          {{ $t('Login') }}
         </NuxtLink>
       </div>
     </form>

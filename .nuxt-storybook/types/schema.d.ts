@@ -1,4 +1,4 @@
-import type { NuxtModule, RuntimeConfig } from 'nuxt/schema'
+import type { NuxtModule, RuntimeConfig } from 'nuxt/schema';
 
 declare module 'nuxt/schema' {
   interface NuxtConfig {

@@ -1,1 +1,1 @@
-export * from 'vue-router/auto'
+export * from 'vue-router/auto';

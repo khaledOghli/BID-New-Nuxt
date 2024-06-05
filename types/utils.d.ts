@@ -32,4 +32,4 @@ declare module '@nuxt/types' {
 }
 
 // Ensure these types are included in the project
-export {}
+export { };

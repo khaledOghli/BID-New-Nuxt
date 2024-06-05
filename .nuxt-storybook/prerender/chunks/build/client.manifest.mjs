@@ -438,7 +438,7 @@ const client_manifest = {
       '_CS0a6b9R.js',
     ],
   },
-}
+};
 
-export { client_manifest as default }
+export { client_manifest as default };
 // # sourceMappingURL=client.manifest.mjs.map

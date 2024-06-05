@@ -1,17 +1,18 @@
-import process from 'node:process'
-import { fileURLToPath } from 'node:url'
+import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 // import { pwa } from './config/pwa'
-import { appDescription } from './constants/index'
+import { appDescription } from './constants/index';
 
-const baseUrl = process.env.BASE_URL || '/'
+const baseUrl = process.env.BASE_URL || '/';
 
 /* eslint-disable no-magic-numbers */
-const oneYear = 1000 * 60 * 60 * 24 * 365
+const oneYear = 1000 * 60 * 60 * 24 * 365;
 
 export default defineNuxtConfig({
   extends: ['./UI', './apps/landing', './apps/dashboard', './apps/auth'],
   modules: [
     '@vueuse/nuxt',
+    'nuxt-module-eslint-config',
     '@nuxt/fonts',
     '@nuxtjs/fontaine',
     '@unocss/nuxt',
@@ -222,6 +223,7 @@ export default defineNuxtConfig({
         dir: 'rtl',
       },
     ],
+    globalInjection: true,
     strategy: 'prefix',
     defaultLocale: 'en',
     customRoutes: 'config',
@@ -279,4 +281,4 @@ export default defineNuxtConfig({
       },
     },
   },
-})
+});
