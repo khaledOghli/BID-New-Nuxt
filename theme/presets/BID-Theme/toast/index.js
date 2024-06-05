@@ -127,4 +127,4 @@ export default {
       '!transition-[max-height_.45s_cubic-bezier(0,1,0,1),opacity_.3s,margin-bottom_.3s] overflow-hidden',
     leaveToClass: 'max-h-0 opacity-0 mb-0',
   },
-};
+}

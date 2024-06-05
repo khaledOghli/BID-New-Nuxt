@@ -200,4 +200,4 @@ export default {
   end: {
     class: 'ml-auto self-center',
   },
-};
+}

@@ -48,7 +48,7 @@ features:
   - icon: ⚡
     title: Blazing Fast Render
     details: Experience lightning-fast rendering for an optimal user experience
-  - icon: 
+  - icon:
         <svg style="padding:7px"
         width="256"
         height="224"
@@ -130,7 +130,6 @@ features:
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #3878d3, #3ae0cd);
-
 
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #3878d3 50%, #3ae0cd 50%);
   --vp-home-hero-image-filter: blur(50px);

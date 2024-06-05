@@ -566,4 +566,4 @@ export default {
   end: {
     class: 'ml-auto',
   },
-};
+}

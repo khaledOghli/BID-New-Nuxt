@@ -288,4 +288,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-};
+}

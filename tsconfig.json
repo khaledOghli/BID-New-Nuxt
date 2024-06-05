@@ -1,32 +1,34 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "include": ["env.d.ts", ".nuxt/nuxt.d.ts", "**/*"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
     "types": [
       "@nuxt/types",
       "./types/sweetAlert/sweetalert2.d.ts",
       "./types/index.d.ts",
       "./types/utils.d.ts"
     ],
-    "typeRoots": ["./types", "./node_modules/@types"],
-    "esModuleInterop": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
     "allowJs": true,
     "strict": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
     "noEmit": true,
-    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
-    }
-  }
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "include": ["env.d.ts", ".nuxt/nuxt.d.ts", "**/*"],
+  "exclude": ["node_modules", ".nuxt", "dist", "docs"]
 }

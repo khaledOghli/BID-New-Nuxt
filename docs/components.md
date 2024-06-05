@@ -2,7 +2,6 @@
 
 > 更新时间：2023-12-18
 
-
 ## 简介
 
 常说的 SFC 组件，即 `Single file component` ，也就是我们的vue组件
@@ -12,14 +11,13 @@
 分别是：`<script>`、`<template>`、`<style>`
 
 ::: tip 说明
-* JavaScript 对应：`<script>`
 
-* HTML 对应：`<template>`
+- JavaScript 对应：`<script>`
 
-* CSS 对应：`<style>`
-:::
+- HTML 对应：`<template>`
 
-
+- CSS 对应：`<style>`
+  :::
 
 ## 安装
 
@@ -30,6 +28,7 @@
 :::
 
 ::: code-group
+
 ```sh [pmpm]
 pnpm add -D vue
 ```
@@ -45,9 +44,8 @@ npm i vue
 ```sh [bun]
 bun add -D vue
 ```
+
 :::
-
-
 
 ## 使用
 
@@ -79,9 +77,7 @@ docs
 </template>
 ```
 
-
 然后，在 `theme\index.ts` 中注册全局组件
-
 
 ```md{7}
 docs
@@ -107,12 +103,7 @@ export default {
 }
 ```
 
-
-
-
-
 ## 演示
-
 
 本次演示一下使用 视频播放器 组件，参考了 [@themusecatcher](https://github.com/themusecatcher) 的 [Amazing UI 组件库](https://themusecatcher.github.io/vue-amazing-ui/guide/components/video.html)
 
@@ -121,7 +112,6 @@ export default {
 
 比 [vue-dplayer](https://github.com/MoePlayer/vue-dplayer)、[videojs-player](https://github.com/surmon-china/videojs-player) 好用，还支持弹幕，喜欢就自己花时间研究下
 :::
-
 
 在 `theme` 目录中 创建 `components`文件夹，然后创建 `Video.vue`
 
@@ -140,7 +130,7 @@ docs
 
 ```vue
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 interface Props {
   src: string // 视频文件地址，支持网络地址 https 和相对地址
   poster?: string // 视频封面地址，支持网络地址 https 和相对地址
@@ -151,9 +141,9 @@ interface Props {
   controls?: boolean // 是否向用户显示控件，比如进度条，全屏等
   loop?: boolean // 视频播放完成后，是否循环播放
   muted?: boolean // 是否静音
-  preload?: 'auto'|'metadata'|'none' // 是否在页面加载后载入视频，如果设置了autoplay属性，则preload将被忽略
+  preload?: 'auto' | 'metadata' | 'none' // 是否在页面加载后载入视频，如果设置了autoplay属性，则preload将被忽略
   showPlay?: boolean // 播放暂停时是否显示播放器中间的暂停图标
-  fit?: 'none'|'fill'|'contain'|'cover' // video的poster默认图片和视频内容缩放规则
+  fit?: 'none' | 'fill' | 'contain' | 'cover' // video的poster默认图片和视频内容缩放规则
 }
 const props = withDefaults(defineProps<Props>(), {
   src: '',
@@ -193,7 +183,7 @@ const props = withDefaults(defineProps<Props>(), {
     contain: 保存原有比例，内容以包含方式缩放;
     cover: 保存原有比例，内容以覆盖方式缩放
   */
-  fit: 'contain'
+  fit: 'contain',
 })
 // 参考文档：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video
 const veoPoster = ref(props.poster)
@@ -207,7 +197,7 @@ const veo = ref()
   loadeddata 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发
   preload为none时不会触发
 */
-function getPoster () { // 在未设置封面时，自动截取视频0.5s对应帧作为视频封面
+function getPoster() { // 在未设置封面时，自动截取视频0.5s对应帧作为视频封面
   // 由于不少视频第一帧为黑屏，故设置视频开始播放时间为0.5s，即取该时刻帧作为封面图
   veo.value.currentTime = props.second
   // 创建canvas元素
@@ -220,22 +210,23 @@ function getPoster () { // 在未设置封面时，自动截取视频0.5s对应�
   // 把canvas转成base64编码格式
   veoPoster.value = canvas.toDataURL('image/png')
 }
-function onPlay () {
+function onPlay() {
   if (originPlay.value) {
     veo.value.currentTime = 0
     originPlay.value = false
   }
   if (props.autoplay) {
     veo.value?.pause()
-  } else {
+  }
+  else {
     hidden.value = true
     veo.value?.play()
   }
 }
-function onPause () {
+function onPause() {
   hidden.value = false
 }
-function onPlaying () {
+function onPlaying() {
   hidden.value = true
 }
 onMounted(() => {
@@ -251,8 +242,13 @@ onMounted(() => {
   // veo.value.defaultPlaybackRate = 2
 })
 </script>
+
 <template>
-  <div class="m-video" :class="{'u-video-hover': !hidden}" :style="`width: ${width}px; height: ${height}px;`">
+  <div
+    class="m-video"
+    :class="{ 'u-video-hover': !hidden }"
+    :style="`width: ${width}px; height: ${height}px;`"
+  >
     <video
       ref="veo"
       :style="`object-fit: ${fit};`"
@@ -261,26 +257,38 @@ onMounted(() => {
       :width="width"
       :height="height"
       :autoplay="autoplay"
-      :controls="!originPlay&&controls"
+      :controls="!originPlay && controls"
       :loop="loop"
       :muted="autoplay || muted"
       :preload="preload"
       crossorigin="anonymous"
+      v-bind="$attrs"
       @loadeddata="poster ? () => false : getPoster()"
       @pause="showPlay ? onPause() : () => false"
       @playing="showPlay ? onPlaying() : () => false"
       @click.prevent.once="onPlay"
-      v-bind="$attrs">
+    >
       您的浏览器不支持video标签。
     </video>
-    <span v-show="originPlay || showPlay" class="m-icon-play" :class="{'hidden': hidden}">
-      <svg class="u-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
-      <path d="M28.26,11.961L11.035,0.813C7.464-1.498,3,1.391,3,6.013v21.974c0,4.622,4.464,7.511,8.035,5.2L28.26,22.039
-          C31.913,19.675,31.913,14.325,28.26,11.961z"></path>
-      </svg>        
+    <span
+      v-show="originPlay || showPlay"
+      class="m-icon-play"
+      :class="{ hidden }"
+    >
+      <svg
+        class="u-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 34 34"
+      >
+        <path
+          d="M28.26,11.961L11.035,0.813C7.464-1.498,3,1.391,3,6.013v21.974c0,4.622,4.464,7.511,8.035,5.2L28.26,22.039
+          C31.913,19.675,31.913,14.325,28.26,11.961z"
+        />
+      </svg>
     </span>
   </div>
 </template>
+
 <style lang="less" scoped>
 .m-video {
   display: inline-block;
@@ -298,12 +306,12 @@ onMounted(() => {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     pointer-events: none;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
     .u-svg {
       display: inline-block;
-      fill: #FFF;
+      fill: #fff;
       width: 29px;
       height: 34px;
       margin-top: 23px;
@@ -317,7 +325,7 @@ onMounted(() => {
 .u-video-hover {
   &:hover {
     .m-icon-play {
-      background-color: rgba(0, 0, 0, .7);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 }
@@ -326,8 +334,8 @@ onMounted(() => {
 
 现在是报错的状态，因为还没有安装 `less` ，我们现在来安装
 
-
 ::: code-group
+
 ```sh [pmpm]
 pnpm add -D less
 ```
@@ -343,11 +351,10 @@ npm i less
 ```sh [bun]
 bun add -D less
 ```
+
 :::
 
-
 然后，在 `index.ts` 中注册全局组件
-
 
 ```md{9}
 docs
@@ -400,7 +407,6 @@ export default {
     :second="3"
 />
 
-
 最大的不足就是，播放器没有自适应！
 
 ::: details 关于 Video.vue 组件引入爆红
@@ -416,10 +422,11 @@ export default {
 ```ts
 // 引入文件爆红且不提示的处理
 declare module '*.vue' {
-    import { DefineComponent } from 'vue'
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
-    const component: DefineComponent<{}, {}, any>
-    export default component
+  import { DefineComponent } from 'vue'
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
+  const component: DefineComponent<{}, {}, any>
+  export default component
 }
 ```
+
 :::

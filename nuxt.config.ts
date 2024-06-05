@@ -1,11 +1,12 @@
-import process from 'node:process';
-import { fileURLToPath } from 'node:url';
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 // import { pwa } from './config/pwa'
-import { appDescription } from './constants/index';
+import { appDescription } from './constants/index'
 
-const baseUrl = process.env.BASE_URL || '/';
-// eslint-disable-next-line no-magic-numbers
-const oneYear = 1000 * 60 * 60 * 24 * 365;
+const baseUrl = process.env.BASE_URL || '/'
+
+/* eslint-disable no-magic-numbers */
+const oneYear = 1000 * 60 * 60 * 24 * 365
 
 export default defineNuxtConfig({
   extends: ['./UI', './apps/landing', './apps/dashboard', './apps/auth'],
@@ -52,11 +53,11 @@ export default defineNuxtConfig({
 
   viewport: {
     breakpoints: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
       '2xl': 1536,
     },
 
@@ -278,4 +279,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})

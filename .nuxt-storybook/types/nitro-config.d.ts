@@ -3,12 +3,10 @@
 // App Config
 import type { Defu } from 'defu'
 
-
-
 type UserAppConfig = Defu<{}, []>
 
 declare module 'nitropack' {
   interface AppConfig extends UserAppConfig {}
 }
-    
+
 export {}

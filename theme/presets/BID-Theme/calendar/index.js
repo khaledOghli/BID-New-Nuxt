@@ -107,7 +107,7 @@ export default {
     class: [
       // Display & Position
       {
-        absolute: !props.inline,
+        'absolute': !props.inline,
         'inline-block': props.inline,
       },
 
@@ -705,4 +705,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-};
+}

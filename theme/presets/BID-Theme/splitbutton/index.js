@@ -75,23 +75,23 @@ export default {
         // Primary Button
         {
           'text-primary-inverse':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-primary':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-primary':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Primary Text Button
         {
@@ -107,20 +107,20 @@ export default {
         // Secondary Button
         {
           'text-surface-900 dark:text-white':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-surface-100 dark:bg-surface-700':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-surface-100 dark:border-surface-700':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Secondary Text Button
         {
@@ -130,28 +130,28 @@ export default {
         // Secondary Outlined Button
         {
           'text-surface-500 dark:text-surface-300 border border-surface-500 hover:bg-surface-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'secondary' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'secondary'
+            && !parent.props.plain,
         },
 
         // Success Button
         {
           'text-white dark:text-green-900':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-green-500 dark:bg-green-400':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-green-500 dark:border-green-400':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Success Text Button
         {
@@ -161,28 +161,28 @@ export default {
         // Success Outlined Button
         {
           'text-green-500 border border-green-500 hover:bg-green-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'success' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'success'
+            && !parent.props.plain,
         },
 
         // Info Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-blue-500 dark:bg-blue-400':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-blue-500 dark:border-blue-400':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Info Text Button
         {
@@ -198,20 +198,20 @@ export default {
         // Warning Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-orange-500 dark:bg-orange-400':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-orange-500 dark:border-orange-400':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Warning Text Button
         {
@@ -221,28 +221,28 @@ export default {
         // Warning Outlined Button
         {
           'text-orange-500 border border-orange-500 hover:bg-orange-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'warning' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'warning'
+            && !parent.props.plain,
         },
 
         // Help Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-purple-500 dark:bg-purple-400':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-purple-500 dark:border-purple-400':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Help Text Button
         {
@@ -258,20 +258,20 @@ export default {
         // Danger Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-red-500 dark:bg-red-400':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-red-500 dark:border-red-400':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Danger Text Button
         {
@@ -287,20 +287,20 @@ export default {
         // Contrast Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-surface-900 dark:bg-surface-0':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-surface-900 dark:border-surface-0':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Contrast Text Button
         {
@@ -310,9 +310,9 @@ export default {
         // Contrast Outlined Button
         {
           'text-surface-900 dark:text-surface-0 border border-surface-900 dark:border-surface-0':
-            parent.props.outlined &&
-            parent.props.severity === 'contrast' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'contrast'
+            && !parent.props.plain,
         },
 
         // --- Severity Button States ---
@@ -337,11 +337,11 @@ export default {
         // Primary
         {
           'hover:bg-primary-hover hover:border-primary-hover':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-primary': parent.props.severity === null,
@@ -349,18 +349,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-primary-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === null &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === null
+            && !parent.props.plain,
         },
 
         // Secondary
         {
           'hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-200 dark:hover:border-surface-600':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-surface-500 dark:focus:ring-surface-400':
@@ -369,18 +369,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-surface-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'secondary' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'secondary'
+            && !parent.props.plain,
         },
 
         // Success
         {
           'hover:bg-green-600 dark:hover:bg-green-300 hover:border-green-600 dark:hover:border-green-300':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-green-500 dark:focus:ring-green-400':
@@ -389,18 +389,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-green-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'success' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'success'
+            && !parent.props.plain,
         },
 
         // Info
         {
           'hover:bg-blue-600 dark:hover:bg-blue-300 hover:border-blue-600 dark:hover:border-blue-300':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-blue-500 dark:focus:ring-blue-400': parent.props.severity === 'info',
@@ -408,18 +408,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-blue-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'info' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'info'
+            && !parent.props.plain,
         },
 
         // Warning
         {
           'hover:bg-orange-600 dark:hover:bg-orange-300 hover:border-orange-600 dark:hover:border-orange-300':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-orange-500 dark:focus:ring-orange-400':
@@ -428,18 +428,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-orange-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'warning' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'warning'
+            && !parent.props.plain,
         },
 
         // Help
         {
           'hover:bg-purple-600 dark:hover:bg-purple-300 hover:border-purple-600 dark:hover:border-purple-300':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-purple-500 dark:focus:ring-purple-400': parent.props.severity === 'help',
@@ -447,18 +447,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-purple-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'help' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'help'
+            && !parent.props.plain,
         },
 
         // Danger
         {
           'hover:bg-red-600 dark:hover:bg-red-300 hover:border-red-600 dark:hover:border-red-300':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-red-500 dark:focus:ring-red-400': parent.props.severity === 'danger',
@@ -466,18 +466,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-red-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'danger' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'danger'
+            && !parent.props.plain,
         },
 
         // Contrast
         {
           'hover:bg-surface-800 dark:hover:bg-surface-100 hover:border-surface-800 dark:hover:border-surface-100':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-surface-500 dark:focus:ring-surface-400':
@@ -486,9 +486,9 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-surface-900/10 dark:hover:bg-[rgba(255,255,255,0.03)]':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'contrast' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'contrast'
+            && !parent.props.plain,
         },
 
         // Transitions
@@ -569,23 +569,23 @@ export default {
         // Primary Button
         {
           'text-primary-inverse':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-primary':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-primary':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Primary Text Button
         {
@@ -601,20 +601,20 @@ export default {
         // Secondary Button
         {
           'text-surface-900 dark:text-white':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-surface-100 dark:bg-surface-700':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-surface-100 dark:border-surface-700':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Secondary Text Button
         {
@@ -624,28 +624,28 @@ export default {
         // Secondary Outlined Button
         {
           'text-surface-500 dark:text-surface-300 border border-surface-500 hover:bg-surface-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'secondary' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'secondary'
+            && !parent.props.plain,
         },
 
         // Success Button
         {
           'text-white dark:text-green-900':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-green-500 dark:bg-green-400':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-green-500 dark:border-green-400':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Success Text Button
         {
@@ -655,28 +655,28 @@ export default {
         // Success Outlined Button
         {
           'text-green-500 border border-green-500 hover:bg-green-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'success' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'success'
+            && !parent.props.plain,
         },
 
         // Info Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-blue-500 dark:bg-blue-400':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-blue-500 dark:border-blue-400':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Info Text Button
         {
@@ -692,20 +692,20 @@ export default {
         // Warning Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-orange-500 dark:bg-orange-400':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-orange-500 dark:border-orange-400':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Warning Text Button
         {
@@ -715,28 +715,28 @@ export default {
         // Warning Outlined Button
         {
           'text-orange-500 border border-orange-500 hover:bg-orange-300/10':
-            parent.props.outlined &&
-            parent.props.severity === 'warning' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'warning'
+            && !parent.props.plain,
         },
 
         // Help Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-purple-500 dark:bg-purple-400':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-purple-500 dark:border-purple-400':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Help Text Button
         {
@@ -752,20 +752,20 @@ export default {
         // Danger Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-red-500 dark:bg-red-400':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-red-500 dark:border-red-400':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Danger Text Button
         {
@@ -781,20 +781,20 @@ export default {
         // Contrast Button
         {
           'text-white dark:text-surface-900':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'bg-surface-900 dark:bg-surface-0':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
           'border border-surface-900 dark:border-surface-0':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         // Contrast Text Button
         {
@@ -804,9 +804,9 @@ export default {
         // Contrast Outlined Button
         {
           'text-surface-900 dark:text-surface-0 border border-surface-900 dark:border-surface-0':
-            parent.props.outlined &&
-            parent.props.severity === 'contrast' &&
-            !parent.props.plain,
+            parent.props.outlined
+            && parent.props.severity === 'contrast'
+            && !parent.props.plain,
         },
 
         // --- Severity Button States ---
@@ -831,11 +831,11 @@ export default {
         // Primary
         {
           'hover:bg-primary-hover hover:border-primary-hover':
-            !parent.props.link &&
-            parent.props.severity === null &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            !parent.props.link
+            && parent.props.severity === null
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-primary': parent.props.severity === null,
@@ -843,18 +843,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-primary-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === null &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === null
+            && !parent.props.plain,
         },
 
         // Secondary
         {
           'hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-200 dark:hover:border-surface-600':
-            parent.props.severity === 'secondary' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'secondary'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-surface-500 dark:focus:ring-surface-400':
@@ -863,18 +863,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-surface-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'secondary' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'secondary'
+            && !parent.props.plain,
         },
 
         // Success
         {
           'hover:bg-green-600 dark:hover:bg-green-300 hover:border-green-600 dark:hover:border-green-300':
-            parent.props.severity === 'success' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'success'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-green-500 dark:focus:ring-green-400':
@@ -883,18 +883,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-green-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'success' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'success'
+            && !parent.props.plain,
         },
 
         // Info
         {
           'hover:bg-blue-600 dark:hover:bg-blue-300 hover:border-blue-600 dark:hover:border-blue-300':
-            parent.props.severity === 'info' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'info'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-blue-500 dark:focus:ring-blue-400': parent.props.severity === 'info',
@@ -902,18 +902,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-blue-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'info' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'info'
+            && !parent.props.plain,
         },
 
         // Warning
         {
           'hover:bg-orange-600 dark:hover:bg-orange-300 hover:border-orange-600 dark:hover:border-orange-300':
-            parent.props.severity === 'warning' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'warning'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-orange-500 dark:focus:ring-orange-400':
@@ -922,18 +922,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-orange-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'warning' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'warning'
+            && !parent.props.plain,
         },
 
         // Help
         {
           'hover:bg-purple-600 dark:hover:bg-purple-300 hover:border-purple-600 dark:hover:border-purple-300':
-            parent.props.severity === 'help' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'help'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-purple-500 dark:focus:ring-purple-400': parent.props.severity === 'help',
@@ -941,18 +941,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-purple-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'help' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'help'
+            && !parent.props.plain,
         },
 
         // Danger
         {
           'hover:bg-red-600 dark:hover:bg-red-300 hover:border-red-600 dark:hover:border-red-300':
-            parent.props.severity === 'danger' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'danger'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-red-500 dark:focus:ring-red-400': parent.props.severity === 'danger',
@@ -960,18 +960,18 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-red-300/10':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'danger' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'danger'
+            && !parent.props.plain,
         },
 
         // Contrast
         {
           'hover:bg-surface-800 dark:hover:bg-surface-100 hover:border-surface-800 dark:hover:border-surface-100':
-            parent.props.severity === 'contrast' &&
-            !parent.props.text &&
-            !parent.props.outlined &&
-            !parent.props.plain,
+            parent.props.severity === 'contrast'
+            && !parent.props.text
+            && !parent.props.outlined
+            && !parent.props.plain,
         },
         {
           'focus:ring-surface-500 dark:focus:ring-surface-400':
@@ -980,9 +980,9 @@ export default {
         // Text & Outlined Button
         {
           'hover:bg-surface-900/10 dark:hover:bg-[rgba(255,255,255,0.03)]':
-            (parent.props.text || parent.props.outlined) &&
-            parent.props.severity === 'contrast' &&
-            !parent.props.plain,
+            (parent.props.text || parent.props.outlined)
+            && parent.props.severity === 'contrast'
+            && !parent.props.plain,
         },
 
         // Transitions
@@ -1135,4 +1135,4 @@ export default {
       },
     },
   },
-};
+}

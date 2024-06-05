@@ -41,4 +41,4 @@ export default {
   icon: {
     class: 'mr-1 text-sm',
   },
-};
+}

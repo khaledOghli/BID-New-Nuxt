@@ -157,8 +157,8 @@ export default {
         // States
         {
           'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]':
-            (props.selectionMode == 'single' || props.selectionMode == 'multiple') &&
-            !context.selected,
+            (props.selectionMode == 'single' || props.selectionMode == 'multiple')
+            && !context.selected,
         },
 
         // Transition
@@ -189,7 +189,7 @@ export default {
         {
           'text-surface-600 dark:text-white/70': !context.selected,
           'text-primary-600 dark:text-white': context.selected,
-          invisible: context.leaf,
+          'invisible': context.leaf,
         },
 
         // States
@@ -409,4 +409,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-};
+}

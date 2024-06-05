@@ -1,8 +1,8 @@
-const HEADER_MAX_LENGTH = 72;
-const BODY_MAX_LINE_LENGTH = 100;
-const FOOTER_MAX_LINE_LENGTH = 100;
-const RULE_LEVEL_ERROR = 2;
-const RULE_LEVEL_WARNING = 1;
+const HEADER_MAX_LENGTH = 72
+const BODY_MAX_LINE_LENGTH = 100
+const FOOTER_MAX_LINE_LENGTH = 100
+const RULE_LEVEL_ERROR = 2
+const RULE_LEVEL_WARNING = 1
 
 export default {
   parserPreset: 'conventional-changelog-conventionalcommits',
@@ -33,7 +33,7 @@ export default {
     },
     questions: {
       type: {
-        description: "Select the type of change that you're committing:",
+        description: 'Select the type of change that you\'re committing:',
         enum: {
           feat: {
             description: 'A new feature',
@@ -84,7 +84,7 @@ export default {
             emoji: '⚙️',
           },
           chore: {
-            description: "Other changes that don't modify src or test files",
+            description: 'Other changes that don\'t modify src or test files',
             title: 'Chores',
             emoji: '♻️',
           },
@@ -126,4 +126,4 @@ export default {
       },
     },
   },
-};
+}

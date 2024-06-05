@@ -43,4 +43,4 @@ export default {
       'fill-surface-600 dark:fill-surface-200',
     ],
   },
-};
+}

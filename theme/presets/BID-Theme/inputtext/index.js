@@ -70,4 +70,4 @@ export default {
       'transition-colors duration-200',
     ],
   }),
-};
+}

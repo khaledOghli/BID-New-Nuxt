@@ -60,8 +60,8 @@ export default {
       // Spacing
       {
         'py-2 px-3':
-          props.display === 'comma' ||
-          (props.display === 'chip' && !props?.modelValue?.length),
+          props.display === 'comma'
+          || (props.display === 'chip' && !props?.modelValue?.length),
         'py-1 px-1': props.display === 'chip' && props?.modelValue?.length > 0,
       },
 
@@ -582,4 +582,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-};
+}

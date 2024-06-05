@@ -96,4 +96,4 @@ export default {
       'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
     leaveToClass: 'max-h-0',
   },
-};
+}

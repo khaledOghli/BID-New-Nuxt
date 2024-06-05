@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Toast from 'primevue/toast';
-import type {ToastProps,ToastMessageOptions} from 'primevue/toast';
+import Toast from 'primevue/toast'
+import type { ToastProps } from 'primevue/toast'
 
-const toastPositions:ToastProps.Position[] = [
+const toastPositions: ToastProps.Position[] = [
   'bottom-left',
   'top-left',
   'top-center',
@@ -10,7 +10,7 @@ const toastPositions:ToastProps.Position[] = [
   'bottom-center',
   'bottom-right',
   'center',
-];
+]
 </script>
 
 <template>
@@ -18,6 +18,5 @@ const toastPositions:ToastProps.Position[] = [
     <Toast position="top-right" />
   </div>
 </template>
-
 
 <style scoped></style>

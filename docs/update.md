@@ -2,7 +2,6 @@
 
 > 更新时间：2023-10-28
 
-
 ## 更新
 
 ### 安装ncu
@@ -25,7 +24,6 @@ ncu可以可以检查出需更新的软件包
 ncu
 ```
 
-
 ### 更新
 
 更新模块包版本信息
@@ -39,12 +37,10 @@ ncu
 ncu -u
 ```
 
-
-
 我们直接用命令更新安装依赖即可
 
-
 ::: code-group
+
 ```sh [pmpm]
 pnpm install
 ```
@@ -56,15 +52,15 @@ yarn install
 ```sh [bun]
 bun install
 ```
+
 :::
-
-
 
 ## 卸载
 
 卸载就比较简单了，在 `package.json` 中找到包名即可
 
 ::: code-group
+
 ```sh [pmpm]
 pnpm uninstall <包名>
 ```
@@ -76,6 +72,7 @@ yarn uninstall <包名>
 ```sh [bun]
 bun uninstall <包名>
 ```
+
 :::
 
 ::: info 比如

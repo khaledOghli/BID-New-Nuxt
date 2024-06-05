@@ -62,23 +62,23 @@ export default {
       // Primary Button
       {
         'text-primary-inverse':
-          !props.link &&
-          props.severity === null &&
-          !props.text &&
-          !props.outlined &&
-          !props.plain,
+          !props.link
+          && props.severity === null
+          && !props.text
+          && !props.outlined
+          && !props.plain,
         'bg-primary':
-          !props.link &&
-          props.severity === null &&
-          !props.text &&
-          !props.outlined &&
-          !props.plain,
+          !props.link
+          && props.severity === null
+          && !props.text
+          && !props.outlined
+          && !props.plain,
         'border border-primary':
-          !props.link &&
-          props.severity === null &&
-          !props.text &&
-          !props.outlined &&
-          !props.plain,
+          !props.link
+          && props.severity === null
+          && !props.text
+          && !props.outlined
+          && !props.plain,
       },
       // Primary Text Button
       {
@@ -251,11 +251,11 @@ export default {
       // Primary
       {
         'hover:bg-primary-hover hover:border-primary-hover':
-          !props.link &&
-          props.severity === null &&
-          !props.text &&
-          !props.outlined &&
-          !props.plain,
+          !props.link
+          && props.severity === null
+          && !props.text
+          && !props.outlined
+          && !props.plain,
       },
       {
         'focus:ring-primary': props.severity === null,
@@ -420,4 +420,4 @@ export default {
       },
     ],
   }),
-};
+}

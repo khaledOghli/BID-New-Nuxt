@@ -5,4 +5,4 @@ export default {
   mask: {
     class: 'bg-black/40',
   },
-};
+}

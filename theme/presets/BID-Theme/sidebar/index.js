@@ -151,6 +151,6 @@ export default {
                 enterActiveClass: 'transition-opacity duration-400 ease-in',
                 leaveActiveClass: 'transition-opacity duration-400 ease-in',
                 leaveToClass: 'opacity-0 mask-active',
-              };
+              }
   },
-};
+}

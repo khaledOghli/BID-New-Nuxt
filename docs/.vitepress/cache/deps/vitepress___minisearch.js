@@ -946,7 +946,7 @@ var MiniSearch = (
               _a2 = __values(this._index), _b = _a2.next();
               _j.label = 2;
             case 2:
-              if (!!_b.done)
+              if (_b.done)
                 return [3, 6];
               _c = __read(_b.value, 2), term = _c[0], fieldsData = _c[1];
               try {

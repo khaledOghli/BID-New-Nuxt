@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import Button from "primevue/button";
+import type { Meta, StoryObj } from '@storybook/vue3'
+import Button from 'primevue/button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
+  title: 'Components/Button',
   component: Button,
   argTypes: {
-    label: { control: "text" },
+    label: { control: 'text' },
   },
-  args: { label: "Button" },
-};
+  args: { label: 'Button' },
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -22,6 +22,6 @@ type Story = StoryObj<typeof meta>;
  */
 export const Primary: Story = {
   args: {
-    label: "Primary",
+    label: 'Primary',
   },
-};
+}

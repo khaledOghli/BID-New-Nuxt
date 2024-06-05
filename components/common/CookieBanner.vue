@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-  const { locale } = useI18n();
-  /* Example to watch for a cookie being accepted */
-  /*
+const { locale } = useI18n()
+/* Example to watch for a cookie being accepted */
+/*
 const {
   // cookiesEnabled,
   cookiesEnabledIds,

@@ -81,7 +81,7 @@ var setGiscus = (props, frontmatter, defaultEnable = true) => {
   }
   console.log(frontmatter == null ? void 0 : frontmatter.value.comment);
   if ((frontmatter == null ? void 0 : frontmatter.value.comment) !== void 0) {
-    if (!Boolean(frontmatter == null ? void 0 : frontmatter.value.comment)) {
+    if (!(frontmatter == null ? void 0 : frontmatter.value.comment)) {
       return;
     }
   } else {

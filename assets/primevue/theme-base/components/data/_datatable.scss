@@ -406,7 +406,10 @@
   }
 
   &.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table,
-  &.p-datatable-scrollable > .p-datatable-wrapper > .p-virtualscroller > .p-datatable-table {
+  &.p-datatable-scrollable
+    > .p-datatable-wrapper
+    > .p-virtualscroller
+    > .p-datatable-table {
     > .p-datatable-thead,
     > .p-datatable-tfoot {
       background-color: $tableHeaderCellBg;

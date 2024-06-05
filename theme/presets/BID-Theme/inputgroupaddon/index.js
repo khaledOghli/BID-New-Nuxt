@@ -25,4 +25,4 @@ export default {
       'border-surface-300 dark:border-surface-700',
     ],
   },
-};
+}

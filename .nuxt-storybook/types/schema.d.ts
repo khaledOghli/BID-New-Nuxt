@@ -1,511 +1,512 @@
-import { NuxtModule, RuntimeConfig } from 'nuxt/schema'
+import type { NuxtModule, RuntimeConfig } from 'nuxt/schema'
+
 declare module 'nuxt/schema' {
   interface NuxtConfig {
-    ["vueuse"]?: typeof import("@vueuse/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["fonts"]?: typeof import("@nuxt/fonts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["fontMetrics"]?: typeof import("@nuxtjs/fontaine").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["unocss"]?: typeof import("@unocss/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["image"]?: typeof import("@nuxt/image").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["pinia"]?: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["colorMode"]?: typeof import("@nuxtjs/color-mode").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["eslint"]?: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["primevue"]?: typeof import("nuxt-primevue").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["icon"]?: typeof import("nuxt-icon").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["i18n"]?: typeof import("@nuxtjs/i18n").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["cookieControl"]?: typeof import("@dargmuesli/nuxt-cookie-control").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["lodash"]?: typeof import("nuxt-lodash").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["viewport"]?: typeof import("nuxt-viewport").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["nuxtIcons"]?: typeof import("nuxt-icons").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["webVitals"]?: typeof import("@nuxtjs/web-vitals").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["time"]?: typeof import("nuxt-time").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["scripts"]?: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["unlazy"]?: typeof import("@unlazy/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["security"]?: typeof import("nuxt-security").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@vueuse/nuxt", Exclude<NuxtConfig["vueuse"], boolean>] | ["@nuxt/fonts", Exclude<NuxtConfig["fonts"], boolean>] | ["@nuxtjs/fontaine", Exclude<NuxtConfig["fontMetrics"], boolean>] | ["@unocss/nuxt", Exclude<NuxtConfig["unocss"], boolean>] | ["@nuxt/image", Exclude<NuxtConfig["image"], boolean>] | ["@pinia/nuxt", Exclude<NuxtConfig["pinia"], boolean>] | ["@nuxtjs/color-mode", Exclude<NuxtConfig["colorMode"], boolean>] | ["@nuxt/eslint", Exclude<NuxtConfig["eslint"], boolean>] | ["nuxt-primevue", Exclude<NuxtConfig["primevue"], boolean>] | ["nuxt-icon", Exclude<NuxtConfig["icon"], boolean>] | ["@nuxtjs/i18n", Exclude<NuxtConfig["i18n"], boolean>] | ["@dargmuesli/nuxt-cookie-control", Exclude<NuxtConfig["cookieControl"], boolean>] | ["nuxt-lodash", Exclude<NuxtConfig["lodash"], boolean>] | ["nuxt-viewport", Exclude<NuxtConfig["viewport"], boolean>] | ["nuxt-icons", Exclude<NuxtConfig["nuxtIcons"], boolean>] | ["@nuxtjs/web-vitals", Exclude<NuxtConfig["webVitals"], boolean>] | ["nuxt-time", Exclude<NuxtConfig["time"], boolean>] | ["@nuxt/scripts", Exclude<NuxtConfig["scripts"], boolean>] | ["@unlazy/nuxt", Exclude<NuxtConfig["unlazy"], boolean>] | ["nuxt-security", Exclude<NuxtConfig["security"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    ['vueuse']?: typeof import('@vueuse/nuxt').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['fonts']?: typeof import('@nuxt/fonts').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['fontMetrics']?: typeof import('@nuxtjs/fontaine').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['unocss']?: typeof import('@unocss/nuxt').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['image']?: typeof import('@nuxt/image').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['pinia']?: typeof import('@pinia/nuxt').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['colorMode']?: typeof import('@nuxtjs/color-mode').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['eslint']?: typeof import('@nuxt/eslint').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['primevue']?: typeof import('nuxt-primevue').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['icon']?: typeof import('nuxt-icon').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['i18n']?: typeof import('@nuxtjs/i18n').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['cookieControl']?: typeof import('@dargmuesli/nuxt-cookie-control').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['lodash']?: typeof import('nuxt-lodash').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['viewport']?: typeof import('nuxt-viewport').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['nuxtIcons']?: typeof import('nuxt-icons').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['webVitals']?: typeof import('@nuxtjs/web-vitals').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['time']?: typeof import('nuxt-time').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['scripts']?: typeof import('@nuxt/scripts').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['unlazy']?: typeof import('@unlazy/nuxt').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['security']?: typeof import('nuxt-security').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['devtools']?: typeof import('@nuxt/devtools').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ['telemetry']?: typeof import('@nuxt/telemetry').default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ['@vueuse/nuxt', Exclude<NuxtConfig['vueuse'], boolean>] | ['@nuxt/fonts', Exclude<NuxtConfig['fonts'], boolean>] | ['@nuxtjs/fontaine', Exclude<NuxtConfig['fontMetrics'], boolean>] | ['@unocss/nuxt', Exclude<NuxtConfig['unocss'], boolean>] | ['@nuxt/image', Exclude<NuxtConfig['image'], boolean>] | ['@pinia/nuxt', Exclude<NuxtConfig['pinia'], boolean>] | ['@nuxtjs/color-mode', Exclude<NuxtConfig['colorMode'], boolean>] | ['@nuxt/eslint', Exclude<NuxtConfig['eslint'], boolean>] | ['nuxt-primevue', Exclude<NuxtConfig['primevue'], boolean>] | ['nuxt-icon', Exclude<NuxtConfig['icon'], boolean>] | ['@nuxtjs/i18n', Exclude<NuxtConfig['i18n'], boolean>] | ['@dargmuesli/nuxt-cookie-control', Exclude<NuxtConfig['cookieControl'], boolean>] | ['nuxt-lodash', Exclude<NuxtConfig['lodash'], boolean>] | ['nuxt-viewport', Exclude<NuxtConfig['viewport'], boolean>] | ['nuxt-icons', Exclude<NuxtConfig['nuxtIcons'], boolean>] | ['@nuxtjs/web-vitals', Exclude<NuxtConfig['webVitals'], boolean>] | ['nuxt-time', Exclude<NuxtConfig['time'], boolean>] | ['@nuxt/scripts', Exclude<NuxtConfig['scripts'], boolean>] | ['@unlazy/nuxt', Exclude<NuxtConfig['unlazy'], boolean>] | ['nuxt-security', Exclude<NuxtConfig['security'], boolean>] | ['@nuxt/devtools', Exclude<NuxtConfig['devtools'], boolean>] | ['@nuxt/telemetry', Exclude<NuxtConfig['telemetry'], boolean>])[]
   }
   interface RuntimeConfig {
-   app: {
-      baseURL: string,
+    'app': {
+      baseURL: string
 
-      buildAssetsDir: string,
+      buildAssetsDir: string
 
-      cdnURL: string,
-   },
+      cdnURL: string
+    }
 
-   "nuxt-scripts": {
-      version: string,
-   },
+    'nuxt-scripts': {
+      version: string
+    }
 
-   private: {
-      basicAuth: boolean,
-   },
+    'private': {
+      basicAuth: boolean
+    }
 
-   security: {
+    'security': {
       headers: {
-         crossOriginResourcePolicy: string,
+        crossOriginResourcePolicy: string
 
-         crossOriginOpenerPolicy: string,
+        crossOriginOpenerPolicy: string
 
-         crossOriginEmbedderPolicy: string,
+        crossOriginEmbedderPolicy: string
 
-         contentSecurityPolicy: {
-            "base-uri": Array<string>,
+        contentSecurityPolicy: {
+          'base-uri': Array<string>
 
-            "font-src": Array<string>,
+          'font-src': Array<string>
 
-            "form-action": Array<string>,
+          'form-action': Array<string>
 
-            "frame-ancestors": Array<string>,
+          'frame-ancestors': Array<string>
 
-            "img-src": Array<string>,
+          'img-src': Array<string>
 
-            "object-src": Array<string>,
+          'object-src': Array<string>
 
-            "script-src-attr": Array<string>,
+          'script-src-attr': Array<string>
 
-            "style-src": Array<string>,
+          'style-src': Array<string>
 
-            "script-src": Array<string>,
+          'script-src': Array<string>
 
-            "upgrade-insecure-requests": boolean,
-         },
+          'upgrade-insecure-requests': boolean
+        }
 
-         originAgentCluster: string,
+        originAgentCluster: string
 
-         referrerPolicy: string,
+        referrerPolicy: string
 
-         strictTransportSecurity: {
-            maxAge: number,
+        strictTransportSecurity: {
+          maxAge: number
 
-            includeSubdomains: boolean,
-         },
+          includeSubdomains: boolean
+        }
 
-         xContentTypeOptions: string,
+        xContentTypeOptions: string
 
-         xDNSPrefetchControl: string,
+        xDNSPrefetchControl: string
 
-         xDownloadOptions: string,
+        xDownloadOptions: string
 
-         xFrameOptions: string,
+        xFrameOptions: string
 
-         xPermittedCrossDomainPolicies: string,
+        xPermittedCrossDomainPolicies: string
 
-         xXSSProtection: string,
+        xXSSProtection: string
 
-         permissionsPolicy: {
-            camera: Array<any>,
+        permissionsPolicy: {
+          'camera': Array<any>
 
-            "display-capture": Array<any>,
+          'display-capture': Array<any>
 
-            fullscreen: Array<any>,
+          'fullscreen': Array<any>
 
-            geolocation: Array<any>,
+          'geolocation': Array<any>
 
-            microphone: Array<any>,
-         },
-      },
+          'microphone': Array<any>
+        }
+      }
 
       requestSizeLimiter: {
-         maxRequestSizeInBytes: number,
+        maxRequestSizeInBytes: number
 
-         maxUploadFileRequestInBytes: number,
+        maxUploadFileRequestInBytes: number
 
-         throwError: boolean,
-      },
+        throwError: boolean
+      }
 
       rateLimiter: {
-         tokensPerInterval: number,
+        tokensPerInterval: number
 
-         interval: number,
+        interval: number
 
-         headers: boolean,
+        headers: boolean
 
-         driver: {
-            name: string,
-         },
+        driver: {
+          name: string
+        }
 
-         throwError: boolean,
-      },
+        throwError: boolean
+      }
 
       xssValidator: {
-         methods: Array<string>,
+        methods: Array<string>
 
-         throwError: boolean,
-      },
+        throwError: boolean
+      }
 
       corsHandler: {
-         origin: string,
+        origin: string
 
-         methods: Array<string>,
+        methods: Array<string>
 
-         preflight: {
-            statusCode: number,
-         },
-      },
+        preflight: {
+          statusCode: number
+        }
+      }
 
       allowedMethodsRestricter: {
-         methods: string,
+        methods: string
 
-         throwError: boolean,
-      },
+        throwError: boolean
+      }
 
-      hidePoweredBy: boolean,
+      hidePoweredBy: boolean
 
-      enabled: boolean,
+      enabled: boolean
 
-      csrf: boolean,
+      csrf: boolean
 
-      nonce: boolean,
+      nonce: boolean
 
       removeLoggers: {
-         external: Array<any>,
+        external: Array<any>
 
-         consoleType: Array<string>,
+        consoleType: Array<string>
 
-         include: Array<{
+        include: Array<{
 
-         }>,
+        }>
 
-         exclude: Array<{
+        exclude: Array<{
 
-         }>,
-      },
+        }>
+      }
 
       ssg: {
-         meta: boolean,
+        meta: boolean
 
-         hashScripts: boolean,
+        hashScripts: boolean
 
-         hashStyles: boolean,
+        hashStyles: boolean
 
-         nitroHeaders: boolean,
+        nitroHeaders: boolean
 
-         exportToPresets: boolean,
-      },
+        exportToPresets: boolean
+      }
 
-      sri: boolean,
-   },
+      sri: boolean
+    }
   }
   interface PublicRuntimeConfig {
-   baseUrl: string,
+    'baseUrl': string
 
-   primevue: {
-      usePrimeVue: boolean,
+    'primevue': {
+      usePrimeVue: boolean
 
-      resolvePath: any,
+      resolvePath: any
 
-      cssLayerOrder: string,
+      cssLayerOrder: string
 
-      importPT: any,
+      importPT: any
 
       options: {
-         ripple: boolean,
-      },
+        ripple: boolean
+      }
 
       components: Array<{
 
-      }>,
+      }>
 
       directives: Array<{
 
-      }>,
+      }>
 
       composables: Array<{
 
-      }>,
+      }>
 
       config: Array<{
 
-      }>,
+      }>
 
-      services: Array<any>,
+      services: Array<any>
 
       styles: Array<{
 
-      }>,
+      }>
 
-      injectStylesAsString: Array<any>,
+      injectStylesAsString: Array<any>
 
-      injectStylesAsStringToTop: Array<string>,
-   },
+      injectStylesAsStringToTop: Array<string>
+    }
 
-   i18n: {
-      baseUrl: string,
+    'i18n': {
+      baseUrl: string
 
-      defaultLocale: string,
+      defaultLocale: string
 
-      defaultDirection: string,
+      defaultDirection: string
 
-      strategy: string,
+      strategy: string
 
-      lazy: boolean,
+      lazy: boolean
 
-      rootRedirect: any,
+      rootRedirect: any
 
-      routesNameSeparator: string,
+      routesNameSeparator: string
 
-      defaultLocaleRouteNameSuffix: string,
+      defaultLocaleRouteNameSuffix: string
 
-      skipSettingLocaleOnNavigate: boolean,
+      skipSettingLocaleOnNavigate: boolean
 
-      differentDomains: boolean,
+      differentDomains: boolean
 
-      trailingSlash: boolean,
+      trailingSlash: boolean
 
       configLocales: Array<{
 
-      }>,
+      }>
 
       locales: {
-         en: {
-            domain: any,
-         },
+        en: {
+          domain: any
+        }
 
-         ar: {
-            domain: any,
-         },
-      },
+        ar: {
+          domain: any
+        }
+      }
 
       detectBrowserLanguage: {
-         alwaysRedirect: boolean,
+        alwaysRedirect: boolean
 
-         cookieCrossOrigin: boolean,
+        cookieCrossOrigin: boolean
 
-         cookieDomain: any,
+        cookieDomain: any
 
-         cookieKey: string,
+        cookieKey: string
 
-         cookieSecure: boolean,
+        cookieSecure: boolean
 
-         fallbackLocale: string,
+        fallbackLocale: string
 
-         redirectOn: string,
+        redirectOn: string
 
-         useCookie: boolean,
-      },
+        useCookie: boolean
+      }
 
       experimental: {
-         localeDetector: string,
+        localeDetector: string
 
-         switchLocalePathLinkSSR: boolean,
+        switchLocalePathLinkSSR: boolean
 
-         autoImportTranslationFunctions: boolean,
-      },
-   },
+        autoImportTranslationFunctions: boolean
+      }
+    }
 
-   "nuxt-scripts": {
+    'nuxt-scripts': {
       defaultScriptOptions: {
-         trigger: string,
-      },
-   },
+        trigger: string
+      }
+    }
 
-   unlazy: {
-      ssr: boolean,
+    'unlazy': {
+      ssr: boolean
 
-      placeholderSize: number,
-   },
+      placeholderSize: number
+    }
 
-   cookieControl: {
-      barPosition: string,
+    'cookieControl': {
+      barPosition: string
 
-      closeModalOnClickOutside: boolean,
+      closeModalOnClickOutside: boolean
 
       colors: {
-         barBackground: string,
+        barBackground: string
 
-         barButtonBackground: string,
+        barButtonBackground: string
 
-         barButtonColor: string,
+        barButtonColor: string
 
-         barButtonHoverBackground: string,
+        barButtonHoverBackground: string
 
-         barButtonHoverColor: string,
+        barButtonHoverColor: string
 
-         barTextColor: string,
+        barTextColor: string
 
-         checkboxActiveBackground: string,
+        checkboxActiveBackground: string
 
-         checkboxActiveCircleBackground: string,
+        checkboxActiveCircleBackground: string
 
-         checkboxDisabledBackground: string,
+        checkboxDisabledBackground: string
 
-         checkboxDisabledCircleBackground: string,
+        checkboxDisabledCircleBackground: string
 
-         checkboxInactiveBackground: string,
+        checkboxInactiveBackground: string
 
-         checkboxInactiveCircleBackground: string,
+        checkboxInactiveCircleBackground: string
 
-         controlButtonBackground: string,
+        controlButtonBackground: string
 
-         controlButtonHoverBackground: string,
+        controlButtonHoverBackground: string
 
-         controlButtonIconColor: string,
+        controlButtonIconColor: string
 
-         controlButtonIconHoverColor: string,
+        controlButtonIconHoverColor: string
 
-         focusRingColor: string,
+        focusRingColor: string
 
-         modalBackground: string,
+        modalBackground: string
 
-         modalButtonBackground: string,
+        modalButtonBackground: string
 
-         modalButtonColor: string,
+        modalButtonColor: string
 
-         modalButtonHoverBackground: string,
+        modalButtonHoverBackground: string
 
-         modalButtonHoverColor: string,
+        modalButtonHoverColor: string
 
-         modalOverlay: string,
+        modalOverlay: string
 
-         modalOverlayOpacity: number,
+        modalOverlayOpacity: number
 
-         modalTextColor: string,
+        modalTextColor: string
 
-         modalUnsavedColor: string,
-      },
+        modalUnsavedColor: string
+      }
 
       cookies: {
-         necessary: Array<any>,
+        necessary: Array<any>
 
-         optional: Array<any>,
-      },
+        optional: Array<any>
+      }
 
-      cookieExpiryOffsetMs: number,
+      cookieExpiryOffsetMs: number
 
-      cookieNameIsConsentGiven: string,
+      cookieNameIsConsentGiven: string
 
-      cookieNameCookiesEnabledIds: string,
+      cookieNameCookiesEnabledIds: string
 
       cookieOptions: {
-         path: string,
+        path: string
 
-         sameSite: string,
+        sameSite: string
 
-         secure: any,
-      },
+        secure: any
+      }
 
-      isAcceptNecessaryButtonEnabled: boolean,
+      isAcceptNecessaryButtonEnabled: boolean
 
-      isControlButtonEnabled: boolean,
+      isControlButtonEnabled: boolean
 
-      isCookieIdVisible: boolean,
+      isCookieIdVisible: boolean
 
-      isCssEnabled: boolean,
+      isCssEnabled: boolean
 
-      isCssPonyfillEnabled: boolean,
+      isCssPonyfillEnabled: boolean
 
-      isDashInDescriptionEnabled: boolean,
+      isDashInDescriptionEnabled: boolean
 
-      isIframeBlocked: boolean,
+      isIframeBlocked: boolean
 
-      isModalForced: boolean,
+      isModalForced: boolean
 
-      locales: Array<string>,
+      locales: Array<string>
 
       localeTexts: {
-         en: {
-            accept: string,
+        en: {
+          accept: string
 
-            acceptAll: string,
+          acceptAll: string
 
-            bannerDescription: string,
+          bannerDescription: string
 
-            bannerTitle: string,
+          bannerTitle: string
 
-            close: string,
+          close: string
 
-            cookiesFunctional: string,
+          cookiesFunctional: string
 
-            cookiesNecessary: string,
+          cookiesNecessary: string
 
-            cookiesOptional: string,
+          cookiesOptional: string
 
-            decline: string,
+          decline: string
 
-            declineAll: string,
+          declineAll: string
 
-            here: string,
+          here: string
 
-            iframeBlocked: string,
+          iframeBlocked: string
 
-            manageCookies: string,
+          manageCookies: string
 
-            save: string,
+          save: string
 
-            settingsUnsaved: string,
-         },
+          settingsUnsaved: string
+        }
 
-         fr: {
-            accept: string,
+        fr: {
+          accept: string
 
-            acceptAll: string,
+          acceptAll: string
 
-            bannerDescription: string,
+          bannerDescription: string
 
-            bannerTitle: string,
+          bannerTitle: string
 
-            close: string,
+          close: string
 
-            cookiesFunctional: string,
+          cookiesFunctional: string
 
-            cookiesNecessary: string,
+          cookiesNecessary: string
 
-            cookiesOptional: string,
+          cookiesOptional: string
 
-            decline: string,
+          decline: string
 
-            declineAll: string,
+          declineAll: string
 
-            here: string,
+          here: string
 
-            iframeBlocked: string,
+          iframeBlocked: string
 
-            manageCookies: string,
+          manageCookies: string
 
-            save: string,
+          save: string
 
-            settingsUnsaved: string,
-         },
+          settingsUnsaved: string
+        }
 
-         ar: {
-            accept: string,
+        ar: {
+          accept: string
 
-            acceptAll: string,
+          acceptAll: string
 
-            bannerDescription: string,
+          bannerDescription: string
 
-            bannerTitle: string,
+          bannerTitle: string
 
-            close: string,
+          close: string
 
-            cookiesFunctional: string,
+          cookiesFunctional: string
 
-            cookiesNecessary: string,
+          cookiesNecessary: string
 
-            cookiesOptional: string,
+          cookiesOptional: string
 
-            decline: string,
+          decline: string
 
-            declineAll: string,
+          declineAll: string
 
-            here: string,
+          here: string
 
-            iframeBlocked: string,
+          iframeBlocked: string
 
-            manageCookies: string,
+          manageCookies: string
 
-            save: string,
+          save: string
 
-            settingsUnsaved: string,
-         },
-      },
-   },
+          settingsUnsaved: string
+        }
+      }
+    }
   }
 }
 declare module 'vue' {
-        interface ComponentCustomProperties {
-          $config: RuntimeConfig
-        }
-      }
+  interface ComponentCustomProperties {
+    $config: RuntimeConfig
+  }
+}

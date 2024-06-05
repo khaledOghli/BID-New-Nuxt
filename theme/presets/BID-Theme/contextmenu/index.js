@@ -130,4 +130,4 @@ export default {
     enterFromClass: 'opacity-0',
     enterActiveClass: 'transition-opacity duration-250',
   },
-};
+}

@@ -50,4 +50,4 @@ export default {
   footer: {
     class: 'p-0',
   },
-};
+}

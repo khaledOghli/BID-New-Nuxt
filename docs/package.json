@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.2",
     "less": "^4.2.0",
@@ -8,10 +13,5 @@
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-comment-with-giscus": "^1.1.12",
     "vue": "^3.4.25"
-  },
-  "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
   }
 }

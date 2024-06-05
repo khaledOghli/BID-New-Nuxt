@@ -62,4 +62,4 @@ export default {
       'leading-5',
     ],
   },
-};
+}

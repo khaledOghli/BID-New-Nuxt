@@ -25,4 +25,4 @@ export default {
   end: {
     class: 'flex items-center',
   },
-};
+}

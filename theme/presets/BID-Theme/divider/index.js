@@ -71,4 +71,4 @@ export default {
       'bg-surface-0 dark:bg-surface-800',
     ],
   },
-};
+}

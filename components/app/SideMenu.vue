@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { sideMenuConfig } from '~/config/layouts';
+import { computed, ref } from 'vue'
+import { sideMenuConfig } from '~/config/layouts'
 
-const visible = ref(false);
+const visible = ref(false)
 
 // Computed property for sidebar styles
 const sidebarInlineStyle = computed(() => ({
@@ -16,20 +16,28 @@ const sidebarInlineStyle = computed(() => ({
   height: '95%',
   overflowX: 'hidden',
   transition: `width ${sideMenuConfig.transitionDuration}`,
-}));
+}))
 
 const containerStyle = {
   position: 'relative',
   width: sideMenuConfig.width,
   height: '100vh',
   margin: '20px',
-};
+}
 </script>
 
 <template>
   <div :style="containerStyle">
-    <Button label="Toggle Sidebar" icon="pi pi-bars" @click="visible = !visible" />
-    <Sidebar :visible="visible" @hide="visible = false" :style="sidebarInlineStyle">
+    <Button
+      label="Toggle Sidebar"
+      icon="pi pi-bars"
+      @click="visible = !visible"
+    />
+    <Sidebar
+      :visible="visible"
+      :style="sidebarInlineStyle"
+      @hide="visible = false"
+    >
       <h2>Sidebar Content</h2>
       <ul>
         <li><a href="#home">Home</a></li>

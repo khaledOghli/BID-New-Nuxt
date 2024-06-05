@@ -68,4 +68,4 @@ export default {
   icon: {
     class: 'mr-2',
   },
-};
+}

@@ -7,11 +7,11 @@ export default {
       },
       {
         'flex-col':
-          parent.props.thumbnailsPosition === 'top' ||
-          parent.props.thumbnailsPosition === 'bottom',
+          parent.props.thumbnailsPosition === 'top'
+          || parent.props.thumbnailsPosition === 'bottom',
         'flex-row':
-          parent.props.thumbnailsPosition === 'right' ||
-          parent.props.thumbnailsPosition === 'left',
+          parent.props.thumbnailsPosition === 'right'
+          || parent.props.thumbnailsPosition === 'left',
       },
     ],
   }),
@@ -24,16 +24,16 @@ export default {
       },
       {
         'flex-col':
-          parent.props.indicatorsPosition === 'bottom' ||
-          parent.props.indicatorsPosition === 'top',
+          parent.props.indicatorsPosition === 'bottom'
+          || parent.props.indicatorsPosition === 'top',
         'flex-row items-center':
-          parent.props.indicatorsPosition === 'left' ||
-          parent.props.indicatorsPosition === 'right',
+          parent.props.indicatorsPosition === 'left'
+          || parent.props.indicatorsPosition === 'right',
       },
       {
         'order-2':
-          parent.props.thumbnailsPosition === 'top' ||
-          parent.props.thumbnailsPosition === 'left',
+          parent.props.thumbnailsPosition === 'top'
+          || parent.props.thumbnailsPosition === 'left',
         'flex-row': parent.props.thumbnailsPosition === 'right',
       },
     ],
@@ -44,11 +44,11 @@ export default {
       'flex h-full relative',
       {
         'order-1':
-          parent.props.indicatorsPosition === 'bottom' ||
-          parent.props.indicatorsPosition === 'right',
+          parent.props.indicatorsPosition === 'bottom'
+          || parent.props.indicatorsPosition === 'right',
         'order-2':
-          parent.props.indicatorsPosition === 'top' ||
-          parent.props.indicatorsPosition === 'left',
+          parent.props.indicatorsPosition === 'top'
+          || parent.props.indicatorsPosition === 'left',
       },
     ],
   }),
@@ -68,8 +68,8 @@ export default {
 
       {
         'order-1':
-          parent.props.thumbnailsPosition === 'top' ||
-          parent.props.thumbnailsPosition === 'left',
+          parent.props.thumbnailsPosition === 'top'
+          || parent.props.thumbnailsPosition === 'left',
       },
 
       // Misc
@@ -89,11 +89,11 @@ export default {
 
       {
         'flex-row':
-          parent.props.thumbnailsPosition === 'top' ||
-          parent.props.thumbnailsPosition === 'bottom',
+          parent.props.thumbnailsPosition === 'top'
+          || parent.props.thumbnailsPosition === 'bottom',
         'flex-col grow':
-          parent.props.thumbnailsPosition === 'right' ||
-          parent.props.thumbnailsPosition === 'left',
+          parent.props.thumbnailsPosition === 'right'
+          || parent.props.thumbnailsPosition === 'left',
       },
     ],
   }),
@@ -126,8 +126,8 @@ export default {
       'flex',
       {
         'flex-col h-full':
-          parent.props.thumbnailsPosition === 'right' ||
-          parent.props.thumbnailsPosition === 'left',
+          parent.props.thumbnailsPosition === 'right'
+          || parent.props.thumbnailsPosition === 'left',
       },
     ],
   }),
@@ -140,8 +140,8 @@ export default {
       // Sizing
       {
         'w-full md:w-[25%] lg:w-[20%]':
-          parent.props.thumbnailsPosition === 'top' ||
-          parent.props.thumbnailsPosition === 'bottom',
+          parent.props.thumbnailsPosition === 'top'
+          || parent.props.thumbnailsPosition === 'bottom',
       },
 
       // Misc
@@ -213,11 +213,11 @@ export default {
     class: [
       {
         'mr-2':
-          parent.props.indicatorsPosition == 'bottom' ||
-          parent.props.indicatorsPosition == 'top',
+          parent.props.indicatorsPosition == 'bottom'
+          || parent.props.indicatorsPosition == 'top',
         'mb-2':
-          parent.props.indicatorsPosition == 'left' ||
-          parent.props.indicatorsPosition == 'right',
+          parent.props.indicatorsPosition == 'left'
+          || parent.props.indicatorsPosition == 'right',
       },
     ],
   }),
@@ -346,4 +346,4 @@ export default {
     leaveActiveClass: 'transition-all duration-150 ease-in',
     leaveToClass: 'opacity-0 scale-75',
   },
-};
+}

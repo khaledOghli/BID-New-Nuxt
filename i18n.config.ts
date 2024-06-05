@@ -1,5 +1,5 @@
-import en from './locales/en-US.json';
-import ar from './locales/ar-AR.json';
+import en from './locales/en-US.json'
+import ar from './locales/ar-AR.json'
 
 export default defineI18nConfig(() => ({
   legacy: false,
@@ -17,4 +17,4 @@ export default defineI18nConfig(() => ({
   // },
   // strategy: 'prefix_and_default',
   // baseUrl: import.meta.env.VITE_BASE_URL,
-}));
+}))

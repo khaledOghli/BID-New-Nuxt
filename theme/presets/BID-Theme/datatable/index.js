@@ -40,7 +40,7 @@ export default {
   wrapper: ({ props }) => ({
     class: [
       {
-        relative: props.scrollable,
+        'relative': props.scrollable,
         'flex flex-col grow': props.scrollable && props.scrollHeight === 'flex',
       },
 
@@ -1291,4 +1291,4 @@ export default {
   resizehelper: {
     class: 'absolute hidden w-[2px] z-20 bg-primary',
   },
-};
+}

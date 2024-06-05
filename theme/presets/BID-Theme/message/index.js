@@ -99,4 +99,4 @@ export default {
     leaveActiveClass: 'overflow-hidden transition-all duration-300 ease-in',
     leaveToClass: 'max-h-0 opacity-0 !m-0',
   },
-};
+}

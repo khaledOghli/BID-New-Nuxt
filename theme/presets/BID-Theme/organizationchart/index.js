@@ -140,4 +140,4 @@ export default {
       'w-4 h-4',
     ],
   },
-};
+}

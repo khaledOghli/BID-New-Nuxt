@@ -118,4 +118,4 @@ export default {
   separator: {
     class: 'border-t border-surface-200 dark:border-surface-600 my-[2px]',
   },
-};
+}

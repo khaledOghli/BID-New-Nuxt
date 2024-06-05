@@ -4,8 +4,6 @@
 
 主要讲一下GitHub，其他的方式都大同小异，[更多部署方式可以参考官方文档](https://vitepress.dev/zh/guide/deploy)
 
-
-
 ## Base
 
 ::: warning 注意
@@ -21,8 +19,8 @@ base必须配置，否则打包会丢失css样式！！
 
 ```ts
 export default defineConfig({
-    base: '/', //网站部署的路径，默认根目录
-    // base: '/vitepress/', //网站部署到github的vitepress这个仓库里
+  base: '/', // 网站部署的路径，默认根目录
+  // base: '/vitepress/', //网站部署到github的vitepress这个仓库里
 })
 ```
 
@@ -40,12 +38,12 @@ export default defineConfig({
 })
 ```
 
-
 ## 构建
 
 构建完成后，在dist文件夹上传到Github即可
 
 ::: code-group
+
 ```sh [pmpm]
 pnpm run docs:build
 ```
@@ -61,13 +59,12 @@ npm run docs:build
 ```sh [bun]
 bun run docs:build
 ```
+
 :::
-
-
-
 
 :::: details 如果你需要本地预览，可以执行
 ::: code-group
+
 ```sh [pmpm]
 pnpm run docs:preview
 ```
@@ -83,9 +80,9 @@ npm run docs:preview
 ```sh [bun]
 bun run docs:preview
 ```
+
 :::
 ::::
-
 
 ## 部署
 
@@ -93,15 +90,15 @@ bun run docs:preview
 常见的静态部署方式，无论你采用哪种，都会先上传到GitHub
 :::
 
-| 名称 | 自定义域名 | 限制 | 缺点 |
-|:-:|:-:|:-:|:-:|
-| [Github page](https://pages.github.com/) | 支持 | 空间1G，100G/月 | 国内访问慢，百度不收录 |
-| [Gitee Pages](https://gitee.com/help/articles/4136#article-header0) | 收费 | 空间1G，100G/月 | 需实名，仓库审查 |
-| [GitLab Pages](https://docs.gitlab.cn/jh/user/project/pages/index.html) | 支持 | - | 国内访问慢 |
-| |
-| [Netlify](https://docs.netlify.com/get-started/) | 支持 | 100G/月 | 从GitHub、GitLab、BitBucket拉取 |
-| [Vercel](https://vercel.com/docs/concepts/get-started) | 支持 | 100G/月 | 从GitHub、GitLab、BitBucket拉取 |
-| [Cloudflare Pages](https://developers.cloudflare.com/pages/get-started/) | 支持 | - | 从GitHub、GitLab拉取 |
+|                                   名称                                   | 自定义域名 |      限制       |              缺点               |
+| :----------------------------------------------------------------------: | :--------: | :-------------: | :-----------------------------: |
+|                 [Github page](https://pages.github.com/)                 |    支持    | 空间1G，100G/月 |     国内访问慢，百度不收录      |
+|   [Gitee Pages](https://gitee.com/help/articles/4136#article-header0)    |    收费    | 空间1G，100G/月 |        需实名，仓库审查         |
+| [GitLab Pages](https://docs.gitlab.cn/jh/user/project/pages/index.html)  |    支持    |        -        |           国内访问慢            |
+|                                                                          |
+|             [Netlify](https://docs.netlify.com/get-started/)             |    支持    |     100G/月     | 从GitHub、GitLab、BitBucket拉取 |
+|          [Vercel](https://vercel.com/docs/concepts/get-started)          |    支持    |     100G/月     | 从GitHub、GitLab、BitBucket拉取 |
+| [Cloudflare Pages](https://developers.cloudflare.com/pages/get-started/) |    支持    |        -        |      从GitHub、GitLab拉取       |
 
 ### 手动上传
 
@@ -111,13 +108,9 @@ bun run docs:preview
 如果你还不会使用，请参考教程：[Github的注册使用到上传](https://yiov.top/daily/github)
 :::
 
-
 在GitHub仓库 - 设置 - page里把分支改成main，默认root，保存
 
-
 等创建成功后即可获得访问链接
-
-
 
 ### 工作流
 
@@ -128,7 +121,6 @@ bun run docs:preview
 
 分支默认是 `main`
 :::
-
 
 ```yml{3,9}
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程

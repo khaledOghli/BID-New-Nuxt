@@ -289,7 +289,7 @@ export default {
         // Misc
         {
           'cursor-pointer': context.selectable,
-          sticky: context.scrollable && context.scrollDirection === 'both' && context.frozen,
+          'sticky': context.scrollable && context.scrollDirection === 'both' && context.frozen,
           'border-x-0 border-l-0': !context.showGridlines,
         },
       ],
@@ -502,4 +502,4 @@ export default {
   resizehelper: {
     class: 'absolute hidden w-[2px] z-20 bg-primary',
   },
-};
+}

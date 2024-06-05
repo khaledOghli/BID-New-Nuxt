@@ -60,8 +60,8 @@ export default {
 
         {
           'border-0':
-            parent.instance.$parentInstance?.$name == 'InputGroup' &&
-            !parent.props.showButtons,
+            parent.instance.$parentInstance?.$name == 'InputGroup'
+            && !parent.props.showButtons,
         },
 
         // Colors
@@ -95,15 +95,15 @@ export default {
         // Filled State *for FloatLabel
         {
           filled:
-            parent.instance?.$parentInstance?.$name == 'FloatLabel' &&
-            parent.state.d_modelValue !== null,
+            parent.instance?.$parentInstance?.$name == 'FloatLabel'
+            && parent.state.d_modelValue !== null,
         },
 
         // Position
         {
           'order-2':
-            parent.props.buttonLayout == 'horizontal' ||
-            parent.props.buttonLayout == 'vertical',
+            parent.props.buttonLayout == 'horizontal'
+            || parent.props.buttonLayout == 'vertical',
         },
       ],
     }),
@@ -153,15 +153,15 @@ export default {
         },
         {
           'border-l-0':
-            parent.props.showButtons &&
-            parent.props.buttonLayout !== 'stacked' &&
-            parent.props.buttonLayout == 'horizontal',
+            parent.props.showButtons
+            && parent.props.buttonLayout !== 'stacked'
+            && parent.props.buttonLayout == 'horizontal',
         },
         {
           'border-b-0':
-            parent.props.showButtons &&
-            parent.props.buttonLayout !== 'stacked' &&
-            parent.props.buttonLayout == 'vertical',
+            parent.props.showButtons
+            && parent.props.buttonLayout !== 'stacked'
+            && parent.props.buttonLayout == 'vertical',
         },
 
         // Sizing
@@ -234,15 +234,15 @@ export default {
         },
         {
           'border-r-0':
-            parent.props.showButtons &&
-            parent.props.buttonLayout !== 'stacked' &&
-            parent.props.buttonLayout == 'horizontal',
+            parent.props.showButtons
+            && parent.props.buttonLayout !== 'stacked'
+            && parent.props.buttonLayout == 'horizontal',
         },
         {
           'border-t-0':
-            parent.props.showButtons &&
-            parent.props.buttonLayout !== 'stacked' &&
-            parent.props.buttonLayout == 'vertical',
+            parent.props.showButtons
+            && parent.props.buttonLayout !== 'stacked'
+            && parent.props.buttonLayout == 'vertical',
         },
 
         // Sizing
@@ -283,4 +283,4 @@ export default {
       class: 'h-0 w-0',
     },
   },
-};
+}

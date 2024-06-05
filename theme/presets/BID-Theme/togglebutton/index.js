@@ -97,4 +97,4 @@ export default {
   icon: {
     class: ['relative z-10', 'mr-2'],
   },
-};
+}

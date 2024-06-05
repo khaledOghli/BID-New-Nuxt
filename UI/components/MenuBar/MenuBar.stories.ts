@@ -1,30 +1,30 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import MenuBar from './index.vue';
+import type { Meta, StoryObj } from '@storybook/vue3'
+import MenuBar from './index.vue'
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing- stories/introduction
 const meta: Meta<typeof MenuBar> = {
-  title: "Components/MenuBar",
+  title: 'Components/MenuBar',
   component: MenuBar,
   argTypes: {
 
   },
   args: { },
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
  * See https://storybook.js.org/docs/vue/api/csf
  * to learn how to use render functions.
  */
- export const Primary: Story = {
-  render: (args) => ({
+export const Primary: Story = {
+  render: args => ({
     components: { MenuBar },
     setup() {
-      return { args };
+      return { args }
     },
     template: `
     <div class="bg-light-200 dark:bg-slate-900">
@@ -46,11 +46,11 @@ type Story = StoryObj<typeof meta>;
         <template #end> {{ args.end }} </template>
       </MenuBar>
     </div>
-      `
-      ,
+      `,
+
   }),
   args: {
-    //👇 The args you need here will depend on your component
+    // 👇 The args you need here will depend on your component
   },
   parameters: {
     // slots: {
@@ -68,7 +68,5 @@ type Story = StoryObj<typeof meta>;
     //   },
     // },
 
-
   },
-};
-
+}

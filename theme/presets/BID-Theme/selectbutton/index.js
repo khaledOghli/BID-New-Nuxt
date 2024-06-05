@@ -59,4 +59,4 @@ export default {
   label: {
     class: 'font-medium leading-[normal] text-center w-full z-10 relative',
   },
-};
+}

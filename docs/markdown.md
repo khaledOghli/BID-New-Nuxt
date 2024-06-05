@@ -16,13 +16,11 @@ VitePress 使用 [markdown-it](https://github.com/markdown-it/markdown-it) 作�
 
 ```ts
 export default defineConfig({
-  markdown:{
-      //这里填配置项
+  markdown: {
+    // 这里填配置项
   },
 })
 ```
-
-
 
 ### 标题锚 {#title-anchor}
 
@@ -64,7 +62,6 @@ export default defineConfig({
 
 [点我跳转：标题锚](#title-anchor)
 
-
 ### 图片引用
 
 这里涉及到一个相对路径 `./` 和 绝对路径 `/`
@@ -81,22 +78,21 @@ export default defineConfig({
 │  ├─ public
 │  │  └─ logo.png     <-- LOGO
 │  ├─ markdown.md    <-- 我的位置
-│  └─ index.md 
+│  └─ index.md
 └─ package.json
 ```
 
 输入：
 
-
 ```md
 <!-- 相对路径，目标文件相对于本文章所在位置 -->
+
 ![LOGO](./public/logo.png)
 
 <!-- 绝对路径，目标文件就是真实路径在哪 -->
+
 ![LOGO](/public/logo.png)
 ```
-
-
 
 输出：
 
@@ -106,12 +102,7 @@ export default defineConfig({
 其他文件夹请遵从上面的使用规则
 :::
 
-
-
 ![LOGO](/logo.png)
-
-
-
 
 ### 图片懒加载
 
@@ -122,7 +113,6 @@ export default defineConfig({
 
 开启：快速打开网页，当访问到了图片的位置，它再加载出来
 :::
-
 
 ```ts{4-7}
 export default defineConfig({
@@ -136,10 +126,9 @@ export default defineConfig({
 })
 ```
 
-
 ### 链接
 
-分为内部和外部链接，且默认情况下，生成链接带有  `.html`后缀
+分为内部和外部链接，且默认情况下，生成链接带有 `.html`后缀
 
 内部链接引用，输入：
 
@@ -147,28 +136,23 @@ export default defineConfig({
 [点我跳转：Frontmatter文章中的大纲](./frontmatter.md#大纲)
 ```
 
-
 输出：
 
 [点我跳转：Frontmatter文章中的大纲](./frontmatter.md#大纲)
 
-
 外部链接引用，输入：
 
 ```md
-* [vuejs.org](https://vuejs.org/)
+- [vuejs.org](https://vuejs.org/)
 
-* [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
+- [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
 ```
 
 输出：
 
-* [vuejs.org](https://vuejs.org/)
+- [vuejs.org](https://vuejs.org/)
 
-* [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
-
-
-
+- [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
 
 ### 表格
 
@@ -182,7 +166,6 @@ export default defineConfig({
 | zebra stripes |   are neat    |    $1 |
 ```
 
-
 输出：
 
 | Tables        |      Are      |  Cool |
@@ -191,14 +174,11 @@ export default defineConfig({
 | col 2 is      |   centered    |   $12 |
 | zebra stripes |   are neat    |    $1 |
 
-
 ::: tip 说明
 更详细的使用方式，我在 [Markdown教程](https://yiov.top/daily/markdown/#表格.html) 里也说到过
 
 也可使用 Execl 生成 Markdwon：https://tableconvert.com/zh-cn/
 :::
-
-
 
 ### Emoji
 
@@ -212,15 +192,9 @@ export default defineConfig({
 
 :tada: :100:
 
-
 Emoji大全：https://www.emojiall.com/zh-hans/
 
-
-
-
-
 ### 目录
-
 
 输入：
 
@@ -234,10 +208,7 @@ Emoji大全：https://www.emojiall.com/zh-hans/
 [[toc]]
 :::
 
-
-
 ### 折叠语法
-
 
 输入：
 
@@ -255,16 +226,11 @@ Emoji大全：https://www.emojiall.com/zh-hans/
   Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
 </details>
 
-
-
-
-
 ## 容器
 
 ### 基础使用
 
 容器可以通过其类型、标题和内容来定义
-
 
 输入：
 
@@ -289,7 +255,6 @@ Emoji大全：https://www.emojiall.com/zh-hans/
 这是一条详情，details后面的文字可修改
 :::
 ```
-
 
 输出：
 
@@ -317,8 +282,8 @@ Emoji大全：https://www.emojiall.com/zh-hans/
 ```md
 Hello, VitePress!
 ```
-:::
 
+:::
 
 ::: danger 为什么和我不一样？
 因为我对样式进行了修改，还原了beta时用的样式
@@ -326,14 +291,11 @@ Hello, VitePress!
 详情请看 [样式美化 - badge颜色](./style.md#badge颜色)
 :::
 
-
-
 ::: warning 注意
 官方有写关于 `raw` 使用，半吊子的我不是很明白使用场景
 
 具体请看官方：https://vitepress.dev/guide/markdown#raw.html
 :::
-
 
 你也可以使用 [GitHub 风格的警报](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
 
@@ -356,7 +318,6 @@ Hello, VitePress!
 > 行为可能带来的负面影响。
 ```
 
-
 输出：
 
 > [!NOTE]
@@ -374,9 +335,6 @@ Hello, VitePress!
 > [!CAUTION]
 > 行为可能带来的负面影响。
 
-
-
-
 ### Badge组件
 
 徽章可让您向标题添加状态
@@ -384,38 +342,36 @@ Hello, VitePress!
 输入：
 
 ```md
-* VitePress <Badge type="info" text="default" />
-* VitePress <Badge type="tip" text="^1.9.0" />
-* VitePress <Badge type="warning" text="beta" />
-* VitePress <Badge type="danger" text="caution" />
+- VitePress <Badge type="info" text="default" />
+- VitePress <Badge type="tip" text="^1.9.0" />
+- VitePress <Badge type="warning" text="beta" />
+- VitePress <Badge type="danger" text="caution" />
 ```
-
 
 输出：
 
-* VitePress <Badge type="info" text="default" />
-* VitePress <Badge type="tip" text="^1.9.0" />
-* VitePress <Badge type="warning" text="beta" />
-* VitePress <Badge type="danger" text="caution" />
+- VitePress <Badge type="info" text="default" />
+- VitePress <Badge type="tip" text="^1.9.0" />
+- VitePress <Badge type="warning" text="beta" />
+- VitePress <Badge type="danger" text="caution" />
 
 你也可以自定义 `children`
 
 输入：
 
 ```md
-* VitePress <Badge type="info">custom element</Badge>
+- VitePress <Badge type="info">custom element</Badge>
 ```
 
 输出：
 
-* VitePress <Badge type="info">custom element</Badge>
-
+- VitePress <Badge type="info">custom element</Badge>
 
 您可以通过覆盖 css 变量来自定义徽章的 `background-color`
 
 默认值：
 
-::: details 点击查看css变量 
+::: details 点击查看css变量
 
 var的值都改程颜色代码即可
 
@@ -440,16 +396,8 @@ var的值都改程颜色代码即可
   --vp-badge-danger-bg: var(--vp-c-danger-soft);
 }
 ```
+
 :::
-
-
-
-
-
-
-
-
-
 
 ## 代码块
 
@@ -462,8 +410,6 @@ var的值都改程颜色代码即可
 中间写代码内容
 ```
 ````
-
-
 
 ### 语法突出
 
@@ -492,29 +438,22 @@ export default defineConfig({
 ``` // [!code focus]
 ````
 
-
-
-
 输出：
 
 ```ts
 export default defineConfig({
   lang: 'zh-CN',
-  title: "VitePress",
-  description: "我的vitpress文档教程",
-  titleTemplate: '另起标题覆盖title' ,
+  title: 'VitePress',
+  description: '我的vitpress文档教程',
+  titleTemplate: '另起标题覆盖title',
 })
 ```
 
-
 ```html
 <ul>
-  <li v-for="todo in todos" :key="todo.id">
-    {{ todo.text }}
-  </li>
+  <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
 </ul>
 ```
-
 
 ### 行高亮
 
@@ -533,7 +472,6 @@ export default defineConfig({
 ```
 ````
 
-
 输出：
 
 ```ts{2-3,5}
@@ -545,9 +483,7 @@ export default defineConfig({
 })
 ```
 
-
 也可以使用 `// [!code highlight]`
-
 
 输入：
 
@@ -565,22 +501,19 @@ export default defineConfig({
 ```
 ````
 
-
 输出：
 
 ```ts
 export default defineConfig({
   lang: 'zh-CN',
-  title: "VitePress",
-  description: "我的vitpress文档教程", // [!code highlight]
+  title: 'VitePress',
+  description: '我的vitpress文档教程', // [!code highlight]
 })
 ```
-
 
 ### 聚焦代码
 
 在某一行后添加 `// [!code focus]` 注释会聚焦该行，并模糊代码的其他部分
-
 
 输入：
 
@@ -609,7 +542,6 @@ export default defineConfig({
   titleTemplate: '另起标题覆盖title' ,
 })
 ```
-
 
 如果你要聚焦连续多行，可以使用 `// [!code focus:<lines>]`
 
@@ -647,10 +579,6 @@ export default defineConfig({
 })
 ```
 
-
-
-
-
 ### 增减差异
 
 在某一行上添加 `// [!code --]` 或 `// [!code ++]` 注释将创建该行的差异，同时保留代码块的颜色
@@ -664,8 +592,8 @@ export default defineConfig({
 ````
 ```ts{4-5}
 export default defineConfig({
-  lang: 'zh-CN', 
-  title: "VitePress", 
+  lang: 'zh-CN',
+  title: "VitePress",
   description: "我的vitpress文档教程", // [!code  --]
   description: "更详细的vitpress中文文档教程", // [!code  ++]
   titleTemplate: '另起标题覆盖title' ,
@@ -677,20 +605,17 @@ export default defineConfig({
 
 ```ts{4-5}
 export default defineConfig({
-  lang: 'zh-CN', 
-  title: "VitePress", 
+  lang: 'zh-CN',
+  title: "VitePress",
   description: "我的vitpress文档教程", // [!code --]
   description: "更详细的vitpress中文文档教程", // [!code ++]
   titleTemplate: '另起标题覆盖title' ,
 })
 ```
 
-
-
 ### 错误和警告
 
 在某一行上添加 `// [!code warning]` 或 `// [!code error]` 注释会相应地为其着色
-
 
 输入：
 
@@ -701,8 +626,8 @@ export default defineConfig({
 ````
 ```ts{4-5}
 export default defineConfig({
-  lang: 'zh-CN', 
-  title: "VitePress", 
+  lang: 'zh-CN',
+  title: "VitePress",
   description: "我的vitpress文档教程", // [!code  error]
   description: "更详细的vitpress中文文档教程", // [!code  warning]
   titleTemplate: '另起标题覆盖title' ,
@@ -714,15 +639,13 @@ export default defineConfig({
 
 ```ts{4-5}
 export default defineConfig({
-  lang: 'zh-CN', 
-  title: "VitePress", 
+  lang: 'zh-CN',
+  title: "VitePress",
   description: "我的vitpress文档教程", // [!code error]
   description: "更详细的vitpress中文文档教程", // [!code warning]
   titleTemplate: '另起标题覆盖title' ,
 })
 ```
-
-
 
 ### 行号显示
 
@@ -738,7 +661,6 @@ export default defineConfig({
 
 如果你在某个代码块不想使用，可以通过 `ts:no-line-numbers` 来临时关闭
 
-
 输入：
 
 ````
@@ -753,11 +675,7 @@ export default defineConfig({
 无行号演示
 ```
 
-
-
-
 ### 代码组
-
 
 和Vuepress不同，我们用 `code-group` 包裹
 
@@ -792,20 +710,19 @@ yarn -v
 可以等你搭建完成再来修改 [代码组风格](./style#代码组风格)
 :::
 
-
-
 ::: code-group
+
 ```sh [pnpm]
 #查询pnpm版本
 pnpm -v
 ```
+
 ```sh [yarn]
 #查询yarn版本
 yarn -v
 ```
+
 :::
-
-
 
 ### 导入代码
 
@@ -837,17 +754,13 @@ yarn -v
 
 ```md
 <!-- 绝对路径 二选一-->
+
 <<< @/.vitepress/config.mts#fav{2}
 
 <!-- 相对路径 二选一-->
+
 <<< ./.vitepress/config.mts#fav{2}
 ```
-
-
-
-
-
-
 
 ### 代码块嵌套
 
@@ -871,19 +784,15 @@ pnpm run docs:dev
 
 输出：
 
-
 ````sh
 ```
 pnpm run docs:dev
 ```
 ````
 
-
-
 ## 团队页面
 
 使用从 `vitepress/theme` 公开的 `<VPTeamMembers>` 组件在任何页面上显示团队成员列表
-
 
 ### 页面中显示
 
@@ -922,7 +831,6 @@ Say hello to our awesome team.
 <VPTeamMembers size="medium" :members="members" />
 ```
 
-
 输出：
 
 ::: tip 说明
@@ -956,10 +864,7 @@ const members = [
 ]
 </script>
 
-
 <VPTeamMembers size="medium" :members="members" />
-
-
 
 ### 创建完整页面
 
@@ -970,7 +875,6 @@ const members = [
 :::
 
 在此文件中，设置 [frontmatter](./frontmatter.md#首页) 选项 `layout: page`，然后使用 TeamPage 组件构建页面结构
-
 
 输入：
 
@@ -1029,9 +933,7 @@ const members = [
 `<VPMembers>` 的工作方式与在文档页面中使用时相同，它将显示成员列表
 :::
 
-
 [点我查看：团队成员信息](./team.md)
-
 
 ### 合作伙伴
 
@@ -1041,6 +943,7 @@ const members = [
 ---
 layout: page
 ---
+
 <script setup>
 import {
   VPTeamPage,
@@ -1117,7 +1020,6 @@ const partners = [
 
 [点我查看：团队成员信息](./team.md)
 
-
 ### 组件显示成员
 
 ::: tip 说明
@@ -1127,7 +1029,6 @@ const partners = [
 如果你在 `const coreMembers = []` 或 `const partners = []` 没有配置成员列表
 
 你可以在 `<VPTeamMembers` 中单独配置
-
 
 ```md
 const coreMembers = [],
@@ -1155,6 +1056,4 @@ const coreMembers = [],
   },
     ]"
 />
-
 ```
-

@@ -2,8 +2,6 @@
 
 > 更新时间：2024-3-4
 
-
-
 ## 主题目录(必看)
 
 ::: tip 说明
@@ -25,7 +23,6 @@
 
 然后在 `theme` 目录下新建 `index.mts` 并填入如下代码
 
-
 ```ts
 import DefaultTheme from 'vitepress/theme'
 
@@ -35,11 +32,7 @@ export default {
 }
 ```
 
-
-
-
 ## 主题美化
-
 
 ### 主题色
 
@@ -85,7 +78,6 @@ export default {
 
 这样就修改回了绿色
 
-
 ```ts{2}
 import DefaultTheme from 'vitepress/theme'
 import './style/index.css' // [!code focus]
@@ -113,10 +105,7 @@ export default {
 </style>
 ```
 
-
 ---
-
-
 
 ### H1标题颜色
 
@@ -142,9 +131,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-
 ```
 
 ::: tip 说明
@@ -155,11 +142,7 @@ background-clip: 使文本的背景颜色与渐变效果相同
 text-fill-color：将文字透明
 :::
 
-
-
-
 ---
-
 
 ### 链接下划线
 
@@ -170,17 +153,13 @@ text-fill-color：将文字透明
 ```css
 /* var.css */
 .vp-doc a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
 [参考：MDN Web Docs 社区](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
 
-
-
-
 ---
-
 
 ### Badge颜色
 
@@ -189,11 +168,13 @@ text-fill-color：将文字透明
 版本更新迭代，现在这 `tip` `warning` `danger` 颜色真的想吐槽，好丑！
 
 ::: details 原css文件路径
+
 ```
 node_modules\vitepress\dist\client\theme-default\styles\components\custom-block.css
 
 node_modules\vitepress\dist\client\theme-default\styles\vars.css
 ```
+
 :::
 
 ```css
@@ -219,7 +200,6 @@ node_modules\vitepress\dist\client\theme-default\styles\vars.css
   /* border-color: #f43f5e; */
   border-color: var(--vp-c-red-2);
 }
-
 ```
 
 看看效果
@@ -227,7 +207,6 @@ node_modules\vitepress\dist\client\theme-default\styles\vars.css
 ::: tip 提示
 改为边框+绿色
 :::
-
 
 ::: warning 警告
 改为边框+橘色
@@ -237,10 +216,7 @@ node_modules\vitepress\dist\client\theme-default\styles\vars.css
 改为边框+红色
 :::
 
-
 ---
-
-
 
 ### 引用颜色
 
@@ -268,16 +244,16 @@ node_modules\vitepress\dist\client\theme-default\styles\vars.css
 
 > 更新时间：2024年
 
-
 ---
 
 ### 视图过渡
 
-请先了解过 [组件的使用](./components.md) 后再来看 
+请先了解过 [组件的使用](./components.md) 后再来看
 
 可以扩展默认主题以在切换颜色模式时提供自定义过渡动画。例如：
 
 ::: details 点我查看详细代码
+
 ```vue
 <!-- .vitepress/theme/Layout.vue -->
 
@@ -288,9 +264,10 @@ import { nextTick, provide } from 'vue'
 
 const { isDark } = useData()
 
-const enableTransitions = () =>
-  'startViewTransition' in document &&
-  window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+function enableTransitions() {
+  return 'startViewTransition' in document
+    && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+}
 
 provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   if (!enableTransitions()) {
@@ -302,8 +279,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     `circle(0px at ${x}px ${y}px)`,
     `circle(${Math.hypot(
       Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y)
-    )}px at ${x}px ${y}px)`
+      Math.max(y, innerHeight - y),
+    )}px at ${x}px ${y}px)`,
   ]
 
   await document.startViewTransition(async () => {
@@ -316,8 +293,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     {
       duration: 300,
       easing: 'ease-in',
-      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
-    }
+      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`,
+    },
   )
 })
 </script>
@@ -352,19 +329,14 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 }
 </style>
 ```
+
 :::
-
-
 
 效果：
 
 ![](https://vitepress.dev/appearance-toggle-transition.webp)
 
 有关视图过渡动画的更多详细信息，请参阅 [Chrome 文档](https://developer.chrome.com/docs/web-platform/view-transitions/)。
-
-
-
-
 
 ## 其他美化
 
@@ -373,7 +345,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 ::: tip 说明
 主色调都是引用的indigo，你也可以去换`indigo`，反正怎么改都可以
 :::
-
 
 ```
 node_modules\vitepress\dist\client\theme-default\styles\var.css
@@ -902,14 +873,11 @@ node_modules\vitepress\dist\client\theme-default\styles\var.css
   --vp-local-search-highlight-bg: var(--vp-c-brand-1);
   --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
 }
-
 ```
+
 :::
 
-
-
 ---
-
 
 ### 链接图标
 
@@ -967,7 +935,6 @@ node_modules\vitepress\dist\client\theme-default\styles\var.css
 @import './link.css';
 ```
 
-
 输入：
 
 ```md
@@ -982,22 +949,15 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
 
 B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
 
-
 ---
 
-
-
-
-
-
-### 链接卡片 
+### 链接卡片
 
 ::: tip 说明
 方法参考自 [vuejs官网](https://cn.vuejs.org/guide/introduction.html) 的 [中文仓库](https://github.com/vuejs-translations/docs-zh-cn)
 :::
 
 在 `.vitepress\theme\style\` 目录新建一个 `linkcard.css` 文件
-
 
 ```md{8}
 .
@@ -1014,7 +974,6 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
 
 粘贴如下代码，保存
 
-
 ```css
 /* .vitepress\theme\style\linkcard.css */
 
@@ -1023,7 +982,9 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
   background-color: var(--vp-c-bg-soft);
   border-radius: 8px;
   padding: 8px 16px 8px 8px;
-  transition: color 0.5s, background-color 0.5s;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
 }
 
 /* 卡片鼠标悬停 */
@@ -1072,7 +1033,6 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
 @import './linkcard.css';
 ```
 
-
 输入：
 
 ```md
@@ -1097,17 +1057,13 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
   </a>
 </div>
 
-
-
 ---
-
 
 ### 代码组风格
 
 将代码组改成Mac风格，三个小圆点
 
 在 `.vitepress\theme\style\` 目录新建一个 `vp-code-group.css` 文件
-
 
 ```md{8}
 .
@@ -1124,36 +1080,35 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
 
 粘贴如下代码，保存
 
-
 ```css
 /* .vitepress\theme\style\vp-code-group.css */
 
 /* 代码块tab */
 .vp-code-group .tabs {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 /* 代码块tab-顶部小圆点 */
 .vp-code-group .tabs::before {
-    background: #fc625d;
-    border-radius: 50%;
-    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-    content: ' ';
-    height: 12px;
-    width: 12px;
-    left: 12px;
-    margin-top: -20px;
-    position: absolute;
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow:
+    20px 0 #fdbc40,
+    40px 0 #35cd4b;
+  content: ' ';
+  height: 12px;
+  width: 12px;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
 }
-
 
 /* 代码组 */
 .vp-code-group {
-    color: var(--vp-c-black-soft);
-    border-radius: 8px;
-    box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+  color: var(--vp-c-black-soft);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
 }
-
 ```
 
 然后在 `index.css` 中引入生效
@@ -1181,10 +1136,7 @@ yarn -v
 :::
 ````
 
-
-
 输出：
-
 
 ::: code-group
 
@@ -1197,12 +1149,12 @@ pnpm -v
 #查询yarn版本
 yarn -v
 ```
+
 :::
 
 修改默认单个代码块，就会影响到代码组
 
 如果你想单个使用，在 `code-group` 只写入一组即可
-
 
 输入：
 
@@ -1213,6 +1165,7 @@ yarn -v
 #查询pnpm版本
 pnpm -v
 ```
+
 :::
 ````
 
@@ -1224,21 +1177,18 @@ pnpm -v
 #查询pnpm版本
 pnpm -v
 ```
+
 :::
 
-
 ---
-
 
 ### 代码精简
 
 当我们的内容多了，在 `config.mts` 中配置导航和侧边栏，翻就要半天了
 
-
 所以那就来个简化导航栏，其他同理
 
 在 `.vitepress` 目录新建 `config` 文件夹，并新建 `index.ts` 文件
-
 
 ```md{5-6}
 .
@@ -1258,7 +1208,6 @@ pnpm -v
 export * from './nav'
 ```
 
-
 然后再新建 `nav.ts` 文件
 
 ```md{7}
@@ -1266,7 +1215,7 @@ export * from './nav'
 ├─ docs
 │  ├─ .vitepress
 │  │  └─ config.mts
-│  │  └─ configs      
+│  │  └─ configs
 │  │     └─ index.ts
 │  │     └─ nav.ts     <- 导航配置
 │  └─ index.md
@@ -1287,11 +1236,10 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: '更新日志', link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md' },
       { text: '贡献', link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md' },
-      ],
+    ],
   },
 ]
 ```
-
 
 最后我们回到 `config.mts` 中引入配置
 
@@ -1308,14 +1256,6 @@ export default defineConfig({
   }
 })
 ```
-
-
-
-
-
-
-
-
 
 ## 徽章
 
@@ -1335,18 +1275,17 @@ https://forthebadge.com/
 https://badge.fury.io/
 :::
 
-
 ### 组成
 
 由三部分组成：标签、消息和颜色，其中标签可以不写，但消息和颜色必须存在！
 
 格式：`label-message-color`(由左至右)
 
-* label：标签
+- label：标签
 
-* message：消息
+- message：消息
 
-* color：颜色
+- color：颜色
 
 ---
 
@@ -1372,9 +1311,7 @@ https://badge.fury.io/
 
 ![](https://img.shields.io/badge/any_text-you_like-blue)
 
-
 如果不写标签，只写消息和颜色的话，输入 `just_do_it-8A2BE2`
-
 
 生成链接：https://img.shields.io/badge/just_do_it-8A2BE2
 
@@ -1387,7 +1324,6 @@ https://badge.fury.io/
 输出：
 
 ![](https://img.shields.io/badge/just_do_it-8A2BE2)
-
 
 点击输入框下面的 `Show optional parameters` 展开更多详细信息
 
@@ -1405,7 +1341,6 @@ https://badge.fury.io/
 
 ![](https://img.shields.io/badge/just_do_it-blue?style=for-the-badge&logo=alipay&logoColor=1677FF&label=%E6%94%AF%E4%BB%98%E5%AE%9D&labelColor=lightgrey)
 
-
 静态徽章做跳转的话，可以直接使用markdown格式
 
 ```md
@@ -1415,11 +1350,9 @@ https://badge.fury.io/
 效果：
 [![](https://img.shields.io/badge/just_do_it-blue?style=for-the-badge&logo=alipay&logoColor=1677FF&label=%E6%94%AF%E4%BB%98%E5%AE%9D&labelColor=lightgrey)](https://shields.io/badges)
 
-
 ::: warning 关于其他动态徽章
 可以参照官网，挨个摸索并不难上手
 :::
-
 
 ---
 
@@ -1432,6 +1365,7 @@ https://github.com/Envoy-VC/awesome-badges
 :::
 
 ::: details 这里引用 [查尔斯](https://blog.charles7c.top/about/me) 的页面展示
+
 ```md
 #### 后端技术栈
 
@@ -1546,9 +1480,8 @@ https://github.com/Envoy-VC/awesome-badges
   <img src="https://img.shields.io/badge/-Adobe%20Photoshop-A9A9A9?logo=Adobe-Photoshop&logoColor=31A8FF" alt="Adobe Photoshop" style="display: inline-block;" />&nbsp;
 </p>
 ```
+
 :::
-
-
 
 效果：
 
@@ -1664,8 +1597,6 @@ https://github.com/Envoy-VC/awesome-badges
   <img src="https://img.shields.io/badge/-GitHub%20Pages-222?logo=GitHub-Pages&logoColor=FFF" alt="GitHub Pages" style="display: inline-block;" />&nbsp;
   <img src="https://img.shields.io/badge/-Adobe%20Photoshop-A9A9A9?logo=Adobe-Photoshop&logoColor=31A8FF" alt="Adobe Photoshop" style="display: inline-block;" />&nbsp;
 </p>
-
-
 
 ## Github美化
 

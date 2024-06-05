@@ -1,3 +1,3 @@
 export interface TransitionProps {
-  effect?: string;
+  effect?: string
 }

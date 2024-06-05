@@ -93,4 +93,4 @@ export default {
       'transition duration-200 ease-in',
     ],
   }),
-};
+}

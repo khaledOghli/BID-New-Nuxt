@@ -20,7 +20,7 @@ features:
   - icon: 📝
     title: Se concentrer sur le contenu
     details: Créez facilement de superbes sites web de documents en utilisant uniquement Markdown
-  - icon: 
+  - icon:
       dark: /vitepress.png
       light: /vitepress-light.png
     title: Appréciez Vite DX
@@ -37,7 +37,6 @@ features:
   :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
-
 
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(40px);

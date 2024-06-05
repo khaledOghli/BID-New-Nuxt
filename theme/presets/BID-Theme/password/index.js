@@ -127,9 +127,9 @@ export default {
         // Filled State *for FloatLabel
         {
           filled:
-            parent.instance?.$parentInstance?.$name == 'FloatLabel' &&
-            parent.props.modelValue !== null &&
-            parent.props.modelValue?.length !== 0,
+            parent.instance?.$parentInstance?.$name == 'FloatLabel'
+            && parent.props.modelValue !== null
+            && parent.props.modelValue?.length !== 0,
         },
 
         // Misc
@@ -145,4 +145,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-100 ease-linear',
     leaveToClass: 'opacity-0',
   },
-};
+}

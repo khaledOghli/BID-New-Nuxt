@@ -140,4 +140,4 @@ export default {
       'touch-action-none',
     ],
   }),
-};
+}

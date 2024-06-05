@@ -79,4 +79,4 @@ export default {
       leaveToClass: 'max-h-0',
     },
   },
-};
+}

@@ -2,7 +2,6 @@
 
 > 更新时间：2023-12-20
 
-
 ## 简介
 
 Vitepress基于Vue3用到了 `<slot>` 插槽，在 `<Layout/>` 布局组件中预留了一些插槽，可以对页面布局进行自定义修改
@@ -13,13 +12,12 @@ Vitepress基于Vue3用到了 `<slot>` 插槽，在 `<Layout/>` 布局组件中�
 布局插槽就好比一个插线板，将电器的插头插入对应的插线孔就可以工作了
 :::
 
-
 ## 示例
 
 开始前，请确保你安装了 `vue` ，已安装的无视
 
-
 ::: code-group
+
 ```sh [pmpm]
 pnpm add -D vue
 ```
@@ -35,13 +33,10 @@ npm i vue
 ```sh [bun]
 bun add -D vue
 ```
+
 :::
 
-
-
 在 `.vitepress/theme/components` 目录新建一个 `MyLayout.vue`组件
-
-
 
 ```md{6}
 docs
@@ -54,11 +49,9 @@ docs
 └─ index.md
 ```
 
-
 使用上，有两种方案，按使用习惯选择 [示例1](#示例1-layout) 和 [示例2](#示例2-h函数)
 
 ---
-
 
 ### 示例1：Layout
 
@@ -95,9 +88,7 @@ const { Layout } = DefaultTheme
 如果只改一个布局插槽，自行增减一个 `<template>` 即可
 :::
 
-
 然后在 `.vitepress/theme/index.mts` 中引入
-
 
 ```ts{3,7}
 // .vitepress/theme/index.mts
@@ -110,13 +101,7 @@ export default {
 }
 ```
 
-
-
 ---
-
-
-
-
 
 ### 示例2：h函数
 
@@ -143,8 +128,6 @@ export default {
 如果想使用多个插槽，再新建一个vue组件即可
 :::
 
-
-
 ```ts{3-4,9-14}
 // .vitepress/theme/index.mts
 import DefaultTheme from 'vitepress/theme'
@@ -163,9 +146,6 @@ export default {
 }
 ```
 
-
-
-
 ## 插槽表
 
 不同的页面，可使用的插槽不同
@@ -174,46 +154,39 @@ export default {
 
 当 [Frontmatter](./frontmatter.md) 配置 `layout: doc` (默认)时插槽及位置
 
-* doc-top
-* doc-bottom
-* doc-footer-before
-* doc-before
-* doc-after
+- doc-top
+- doc-bottom
+- doc-footer-before
+- doc-before
+- doc-after
 
-
-* sidebar-nav-before
-* sidebar-nav-after
-
-
+- sidebar-nav-before
+- sidebar-nav-after
 
 * aside-top
-* aside-bottom
-* aside-outline-before
-* aside-outline-after
-* aside-ads-before
-* aside-ads-after
 
+- aside-bottom
+- aside-outline-before
+- aside-outline-after
+- aside-ads-before
+- aside-ads-after
 
 ![](/layout-doc.png)
 
-
 ---
-
 
 ### home
 
 当 [Frontmatter](./frontmatter.md) 配置 `layout: home` (默认)时插槽及位置
 
-* home-hero-before
-* home-hero-info
-* home-hero-image
-* home-hero-after
-* home-features-before
-* home-features-after
-
+- home-hero-before
+- home-hero-info
+- home-hero-image
+- home-hero-after
+- home-features-before
+- home-features-after
 
 ![](/layout-home.png)
-
 
 ---
 
@@ -221,11 +194,10 @@ export default {
 
 当 [Frontmatter](./frontmatter.md) 配置 `layout: page` (默认)时插槽及位置
 
-* page-top
-* page-bottom
+- page-top
+- page-bottom
 
 ![](/layout-page.png)
-
 
 ---
 
@@ -233,7 +205,7 @@ export default {
 
 在未找到 (404) 页面上
 
-* not-found
+- not-found
 
 ![](/layout-404.png)
 
@@ -243,22 +215,20 @@ export default {
 
 所有布局均可使用
 
-* layout-top
-* layout-bottom
-
+- layout-top
+- layout-bottom
 
 * nav-bar-title-before
-* nav-bar-title-after
-* nav-bar-content-before
-* nav-bar-content-after
 
+- nav-bar-title-after
+- nav-bar-content-before
+- nav-bar-content-after
 
 * nav-screen-content-before
-* nav-screen-content-after
 
+- nav-screen-content-after
 
 ![](/layout-nav.png)
-
 
 ## 使用演示
 
@@ -286,7 +256,6 @@ interface VitePressData {
 ```
 
 我这里仅演示 `frontmatter` 使用，其他的同理
-
 
 在 `.vitepress/theme/components` 目录新建一个 `tags.vue`组件
 
@@ -353,25 +322,18 @@ date: 2023-12-19 08:09
 ```
 
 查看效果
- 
+
 ![](/layout-demo-01.png)
-
-
 
 ---
 
-
 ### 常规使用
 
-
 这里我们参考 [Vite官网](https://vitejs.cn/vite3-cn/) 下的赞助，代码在 [仓库](https://github.com/vitejs/vite) 查找
-
 
 ![](/layout-vite.png)
 
 在 `untils` 目录新建一个 `sponsors.ts` 文件
-
-
 
 ```md{7}
 docs
@@ -388,7 +350,7 @@ docs
 粘贴如下代码，保存
 
 ```ts
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
 interface Sponsors {
   special: Sponsor[]
@@ -444,9 +406,8 @@ const viteSponsors: Pick<Sponsors, 'special' | 'gold'> = {
 
 export function useSponsor() {
   onMounted(async () => {
-    if (data.value) {
+    if (data.value)
       return
-    }
 
     const result = await fetch(dataUrl)
     const json = await result.json()
@@ -464,24 +425,24 @@ function mapSponsors(sponsors: Sponsors) {
     {
       tier: 'Special Sponsors',
       size: 'big',
-      items: viteSponsors['special'],
+      items: viteSponsors.special,
     },
     {
       tier: 'Platinum Sponsors',
       size: 'big',
-      items: mapImgPath(sponsors['platinum']),
+      items: mapImgPath(sponsors.platinum),
     },
     {
       tier: 'Gold Sponsors',
       size: 'medium',
-      items: viteSponsors['gold'].concat(mapImgPath(sponsors['gold'])),
+      items: viteSponsors.gold.concat(mapImgPath(sponsors.gold)),
     },
   ]
 }
 
 const viteSponsorNames = new Set(
-  Object.values(viteSponsors).flatMap((sponsors) =>
-    sponsors.map((s) => s.name),
+  Object.values(viteSponsors).flatMap(sponsors =>
+    sponsors.map(s => s.name),
   ),
 )
 
@@ -490,17 +451,15 @@ const viteSponsorNames = new Set(
  */
 function mapImgPath(sponsors: Sponsor[]) {
   return sponsors
-    .filter((sponsor) => !viteSponsorNames.has(sponsor.name))
-    .map((sponsor) => ({
+    .filter(sponsor => !viteSponsorNames.has(sponsor.name))
+    .map(sponsor => ({
       ...sponsor,
       img: `${dataHost}/images/${sponsor.img}`,
     }))
 }
 ```
 
-
 然后我们将赞助商的图片放入 `public - svg`文件夹
-
 
 ```md{6}
 docs
@@ -513,8 +472,6 @@ docs
 ```
 
 在 `components` 目录新建 `HomeSponsors.vue` 组件
-
-
 
 ```md{6}
 docs
@@ -602,7 +559,7 @@ const { data } = useSponsor()
 </style>
 ```
 
-最后我们使用 `home-features-after` 插槽并引入配置文件`index.ts` 
+最后我们使用 `home-features-after` 插槽并引入配置文件`index.ts`
 
 ```ts{4,8-12}
 // .vitepress/theme/index.ts

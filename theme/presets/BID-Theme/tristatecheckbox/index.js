@@ -119,4 +119,4 @@ export default {
       'duration-200',
     ],
   },
-};
+}

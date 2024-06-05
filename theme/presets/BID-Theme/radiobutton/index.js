@@ -112,4 +112,4 @@ export default {
       'transition duration-200',
     ],
   }),
-};
+}

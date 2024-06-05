@@ -119,24 +119,24 @@ bun add -D vue
 /* type.ts */
 export interface NavLink {
   /** 站点图标 */
-  icon?: string | { svg: string };
+  icon?: string | { svg: string }
   badge?:
     | string
     | {
-        text?: string;
-        type?: 'info' | 'tip' | 'warning' | 'danger';
-      };
+      text?: string
+      type?: 'info' | 'tip' | 'warning' | 'danger'
+    }
   /** 站点名称 */
-  title: string;
+  title: string
   /** 站点名称 */
-  desc?: string;
+  desc?: string
   /** 站点链接 */
-  link: string;
+  link: string
 }
 
 export interface NavData {
-  title: string;
-  items: NavLink[];
+  title: string
+  items: NavLink[]
 }
 ```
 
@@ -159,55 +159,78 @@ export interface NavData {
 
 ```vue [MNavLink.vue]
 <script setup lang="ts">
-  import { computed } from 'vue';
-  import { withBase } from 'vitepress';
-  import { slugify } from '@mdit-vue/shared';
+import { computed } from 'vue'
+import { withBase } from 'vitepress'
+import { slugify } from '@mdit-vue/shared'
 
-  import { NavLink } from '../untils/types';
+import { NavLink } from '../untils/types'
 
-  const props = defineProps<{
-    noIcon?: boolean;
-    icon?: NavLink['icon'];
-    badge?: NavLink['badge'];
-    title?: NavLink['title'];
-    desc?: NavLink['desc'];
-    link: NavLink['link'];
-  }>();
+const props = defineProps<{
+  noIcon?: boolean
+  icon?: NavLink['icon']
+  badge?: NavLink['badge']
+  title?: NavLink['title']
+  desc?: NavLink['desc']
+  link: NavLink['link']
+}>()
 
-  const formatTitle = computed(() => {
-    if (!props.title) {
-      return '';
-    }
-    return slugify(props.title);
-  });
+const formatTitle = computed(() => {
+  if (!props.title)
+    return ''
 
-  const svg = computed(() => {
-    if (typeof props.icon === 'object') return props.icon.svg;
-    return '';
-  });
+  return slugify(props.title)
+})
 
-  const formatBadge = computed(() => {
-    if (typeof props.badge === 'string') {
-      return { text: props.badge, type: 'info' };
-    }
-    return props.badge;
-  });
+const svg = computed(() => {
+  if (typeof props.icon === 'object')
+    return props.icon.svg
+  return ''
+})
+
+const formatBadge = computed(() => {
+  if (typeof props.badge === 'string')
+    return { text: props.badge, type: 'info' }
+
+  return props.badge
+})
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
-    <article class="box" :class="{ 'has-badge': formatBadge }">
+  <a
+    v-if="link"
+    class="m-nav-link"
+    :href="link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <article
+      class="box"
+      :class="{ 'has-badge': formatBadge }"
+    >
       <div class="box-header">
         <template v-if="!noIcon">
-          <div v-if="svg" class="icon" v-html="svg"></div>
-          <div v-else-if="icon && typeof icon === 'string'" class="icon">
+          <div
+            v-if="svg"
+            class="icon"
+            v-html="svg"
+          />
+          <div
+            v-else-if="icon && typeof icon === 'string'"
+            class="icon"
+          >
             <img
               :src="withBase(icon)"
               :alt="title"
-              onerror="this.parentElement.style.display='none'" />
+              onerror="this.parentElement.style.display='none'"
+            >
           </div>
         </template>
-        <h5 v-if="title" :id="formatTitle" class="title" :class="{ 'no-icon': noIcon }">
+        <h5
+          v-if="title"
+          :id="formatTitle"
+          class="title"
+          :class="{ 'no-icon': noIcon }"
+        >
           {{ title }}
         </h5>
       </div>
@@ -215,113 +238,117 @@ export interface NavData {
         v-if="formatBadge"
         class="badge"
         :type="formatBadge.type"
-        :text="formatBadge.text" />
-      <p v-if="desc" class="desc">{{ desc }}</p>
+        :text="formatBadge.text"
+      />
+      <p
+        v-if="desc"
+        class="desc"
+      >{{ desc }}</p>
     </article>
   </a>
 </template>
 
 <style lang="scss" scoped>
   .m-nav-link {
-    --m-nav-icon-box-size: 50px;
-    --m-nav-icon-size: 45px;
-    --m-nav-box-gap: 12px;
+  --m-nav-icon-box-size: 50px;
+  --m-nav-icon-size: 45px;
+  --m-nav-box-gap: 12px;
 
-    display: block;
-    border: 1px solid var(--vp-c-bg-soft);
-    border-radius: 12px;
+  display: block;
+  border: 1px solid var(--vp-c-bg-soft);
+  border-radius: 12px;
+  height: 100%;
+  background-color: var(--vp-c-bg-soft);
+  transition: all 0.25s;
+  &:hover {
+    box-shadow: var(--vp-shadow-2);
+    //border-color: var(--vp-c-brand);
+    text-decoration: initial;
+    background-color: var(--vp-c-bg-soft-up);
+    transform: translateY(-5px);
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: var(--m-nav-box-gap);
     height: 100%;
-    background-color: var(--vp-c-bg-soft);
-    transition: all 0.25s;
-    &:hover {
-      box-shadow: var(--vp-shadow-2);
-      //border-color: var(--vp-c-brand);
-      text-decoration: initial;
-      background-color: var(--vp-c-bg-soft-up);
-      transform: translateY(-5px);
+    color: var(--vp-c-text-1);
+    &.has-badge {
+      padding-top: calc(var(--m-nav-box-gap) + 2px);
     }
-
-    .box {
+    &-header {
       display: flex;
-      flex-direction: column;
-      position: relative;
-      padding: var(--m-nav-box-gap);
-      height: 100%;
-      color: var(--vp-c-text-1);
-      &.has-badge {
-        padding-top: calc(var(--m-nav-box-gap) + 2px);
-      }
-      &-header {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    .icon {
-      display: flex;
-      justify-content: center;
       align-items: center;
-      margin-right: calc(var(--m-nav-box-gap) - 2px);
-      border-radius: 6px;
-      width: var(--m-nav-icon-box-size);
-      height: var(--m-nav-icon-box-size);
-      font-size: var(--m-nav-icon-size);
-      background-color: var(--vp-c-bg-soft-down);
-      transition: background-color 0.25s;
-      :deep(svg) {
-        width: var(--m-nav-icon-size);
-        fill: currentColor;
-      }
-      :deep(img) {
-        border-radius: 4px;
-        width: var(--m-nav-icon-size);
-      }
     }
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: calc(var(--m-nav-box-gap) - 2px);
+    border-radius: 6px;
+    width: var(--m-nav-icon-box-size);
+    height: var(--m-nav-icon-box-size);
+    font-size: var(--m-nav-icon-size);
+    background-color: var(--vp-c-bg-soft-down);
+    transition: background-color 0.25s;
+    :deep(svg) {
+      width: var(--m-nav-icon-size);
+      fill: currentColor;
+    }
+    :deep(img) {
+      border-radius: 4px;
+      width: var(--m-nav-icon-size);
+    }
+  }
+
+  .title {
+    overflow: hidden;
+    flex-grow: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    &:not(.no-icon) {
+      line-height: var(--m-nav-icon-box-size);
+    }
+  }
+
+  .badge {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    transform: scale(0.8);
+  }
+
+  .desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin: calc(var(--m-nav-box-gap) - 2px) 0 0;
+    line-height: 1.5;
+    font-size: 12px;
+    color: var(--vp-c-text-2);
+  }
+}
+
+@media (max-width: 960px) {
+  .m-nav-link {
+    --m-nav-icon-box-size: 36px;
+    --m-nav-icon-size: 20px;
+    --m-nav-box-gap: 8px;
 
     .title {
-      overflow: hidden;
-      flex-grow: 1;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-size: 16px;
-      font-weight: 600;
-      &:not(.no-icon) {
-        line-height: var(--m-nav-icon-box-size);
-      }
-    }
-
-    .badge {
-      position: absolute;
-      top: 2px;
-      right: 0;
-      transform: scale(0.8);
-    }
-
-    .desc {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex-grow: 1;
-      margin: calc(var(--m-nav-box-gap) - 2px) 0 0;
-      line-height: 1.5;
-      font-size: 12px;
-      color: var(--vp-c-text-2);
+      font-size: 14px;
     }
   }
-
-  @media (max-width: 960px) {
-    .m-nav-link {
-      --m-nav-icon-box-size: 36px;
-      --m-nav-icon-size: 20px;
-      --m-nav-box-gap: 8px;
-
-      .title {
-        font-size: 14px;
-      }
-    }
-  }
+}
 </style>
 ```
 
@@ -581,7 +608,7 @@ sidebar: false
 ::: details 点我查看 data.ts 代码
 
 ```ts
-import type { NavData } from './types';
+import type { NavData } from './types'
 
 export const NAV_DATA: NavData[] = [
   {
@@ -1201,7 +1228,7 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-];
+]
 ```
 
 :::
@@ -1224,7 +1251,6 @@ next: false
 <script setup>
 import { NAV_DATA } from '/.vitepress/theme/untils/data'
 </script>
-
 
 # 我的导航
 
@@ -1737,7 +1763,6 @@ bun add -D vue
     min-height: 60px;
   }
 
-
   /* 悬浮状态头像 */
   .flink-list>.flink-list-item:hover a img {
     transition: 0.6s;
@@ -1759,7 +1784,6 @@ bun add -D vue
     overflow: hidden;
     width: 100%;
   }
-
 
   #article-container.flink {
     margin-top: 1rem;
@@ -1938,7 +1962,6 @@ bun add -D vue
     align-items: flex-start;
   }
 
-
   /* 超级博主描述 */
   .site-card .info .desc {
     font-size: 0.7rem;
@@ -2043,7 +2066,6 @@ bun add -D vue
     left: -50px;
   }
 
-
   .flink-list-item:hover .site-card-tag {
     left: -70px;
   }
@@ -2076,7 +2098,6 @@ bun add -D vue
     }
   }
 
-
   .site-card .img {
     -webkit-mask-image: -webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0));
     border-radius: 0;
@@ -2086,7 +2107,6 @@ bun add -D vue
     border: none;
     padding: 0 !important;
   }
-
 
   /* 头像 */
   .site-card .info img {
@@ -2099,7 +2119,6 @@ bun add -D vue
     min-height: 20px;
     background: var(--star-secondbg);
   }
-
 
   /* 边距 */
   .site-card-group {
@@ -2297,17 +2316,17 @@ sidebar: false
 ::: details 点我查看 data-ahua.ts 代码
 
 ```ts
-type NavData = {
-  title: string;
-  desc: string;
-  items: NavLink[];
-};
-type NavLink = {
-  icon: string;
-  title: string;
-  desc?: string;
-  link: string;
-};
+interface NavData {
+  title: string
+  desc: string
+  items: NavLink[]
+}
+interface NavLink {
+  icon: string
+  title: string
+  desc?: string
+  link: string
+}
 export const NAV_DATA: NavData[] = [
   {
     title: 'AI 导航',
@@ -2572,7 +2591,7 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-];
+]
 ```
 
 :::

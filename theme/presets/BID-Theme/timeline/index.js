@@ -13,16 +13,16 @@ export default {
       'flex relative min-h-[70px]',
       {
         'flex-row-reverse':
-          props.align === 'right' ||
-          (props.layout === 'vertical' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 1),
+          props.align === 'right'
+          || (props.layout === 'vertical'
+          && props.align === 'alternate'
+          && context.index % 2 === 1),
         'flex-col flex-1': props.layout === 'horizontal',
         'flex-col-reverse ':
-          props.align === 'bottom' ||
-          (props.layout === 'horizontal' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 1),
+          props.align === 'bottom'
+          || (props.layout === 'horizontal'
+          && props.align === 'alternate'
+          && context.index % 2 === 1),
       },
     ],
   }),
@@ -35,15 +35,15 @@ export default {
       },
       {
         'text-right':
-          props.align === 'left' ||
-          (props.layout === 'vertical' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 0),
+          props.align === 'left'
+          || (props.layout === 'vertical'
+          && props.align === 'alternate'
+          && context.index % 2 === 0),
         'text-left':
-          props.align === 'right' ||
-          (props.layout === 'vertical' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 1),
+          props.align === 'right'
+          || (props.layout === 'vertical'
+          && props.align === 'alternate'
+          && context.index % 2 === 1),
       },
     ],
   }),
@@ -93,15 +93,15 @@ export default {
       },
       {
         'text-left':
-          props.align === 'left' ||
-          (props.layout === 'vertical' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 0),
+          props.align === 'left'
+          || (props.layout === 'vertical'
+          && props.align === 'alternate'
+          && context.index % 2 === 0),
         'text-right':
-          props.align === 'right' ||
-          (props.layout === 'vertical' &&
-            props.align === 'alternate' &&
-            context.index % 2 === 1),
+          props.align === 'right'
+          || (props.layout === 'vertical'
+          && props.align === 'alternate'
+          && context.index % 2 === 1),
       },
       {
         'min-h-0': props.layout === 'vertical' && context.index === context.count - 1,
@@ -109,4 +109,4 @@ export default {
       },
     ],
   }),
-};
+}

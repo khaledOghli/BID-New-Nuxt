@@ -740,4 +740,4 @@ export default {
     leaveActiveClass: '!transition-none',
     leaveToClass: '!transition-none',
   },
-};
+}

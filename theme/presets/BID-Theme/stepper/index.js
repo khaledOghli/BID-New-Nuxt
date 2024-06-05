@@ -171,4 +171,4 @@ export default {
       'p-4',
     ],
   },
-};
+}

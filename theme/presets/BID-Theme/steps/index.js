@@ -116,4 +116,4 @@ export default {
       'max-w-full',
     ],
   }),
-};
+}

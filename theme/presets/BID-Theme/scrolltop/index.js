@@ -41,4 +41,4 @@ export default {
     leaveActiveClass: 'transition-opacity duration-150',
     leaveToClass: 'opacity-0',
   },
-};
+}

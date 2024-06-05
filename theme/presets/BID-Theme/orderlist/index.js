@@ -287,4 +287,4 @@ export default {
       'cursor-pointer overflow-hidden',
     ],
   }),
-};
+}

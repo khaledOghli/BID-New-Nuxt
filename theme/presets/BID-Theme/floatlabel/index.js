@@ -23,4 +23,4 @@ export default {
       '[&>*:last-child]:has-[.filled]:text-sm',
     ],
   },
-};
+}

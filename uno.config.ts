@@ -6,10 +6,9 @@ import {
   presetUno,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss';
-import { presetScrollbar } from 'unocss-preset-scrollbar';
-import presetWind from '@unocss/preset-wind';
-import type { Theme } from 'unocss/preset-uno';
+} from 'unocss'
+import { presetScrollbar } from 'unocss-preset-scrollbar'
+import presetWind from '@unocss/preset-wind'
 // import presetTheme from 'unocss-preset-theme';
 
 export default defineConfig({
@@ -55,18 +54,18 @@ export default defineConfig({
       },
       light: {
         default: '#ffffff',
-        '50': '#ffffff',
-        '100': '#efefef',
-        '200': '#dcdcdc',
-        '300': '#bdbdbd',
-        '400': '#989898',
-        '500': '#7c7c7c',
-        '600': '#656565',
-        '700': '#525252',
-        '800': '#464646',
-        '900': '#3d3d3d',
-        '950': '#292929',
-        '1000': '#0e0e0e',
+        50: '#ffffff',
+        100: '#efefef',
+        200: '#dcdcdc',
+        300: '#bdbdbd',
+        400: '#989898',
+        500: '#7c7c7c',
+        600: '#656565',
+        700: '#525252',
+        800: '#464646',
+        900: '#3d3d3d',
+        950: '#292929',
+        1000: '#0e0e0e',
       },
     },
     // breakpoints: {
@@ -74,7 +73,7 @@ export default defineConfig({
     //   'md': '768px',
     //   'lg': '1024px',
     //   'xl': '1280px',
-    //   '2xl': '1536px',
+    //   '2xl': '1536px'
     // },
   },
   shortcuts: [
@@ -135,4 +134,4 @@ export default defineConfig({
   // },
 
   transformers: [transformerDirectives(), transformerVariantGroup()],
-});
+})

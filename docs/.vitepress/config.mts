@@ -1,8 +1,8 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig } from 'vitepress'
 
-//命令集：pnpm add -D vitepress vue less sass @mdit-vue/shared vitepress-markdown-timeline medium-zoom vitepress-plugin-comment-with-giscus
+// 命令集：pnpm add -D vitepress vue less sass @mdit-vue/shared vitepress-markdown-timeline medium-zoom vitepress-plugin-comment-with-giscus
 
-import timeline from 'vitepress-markdown-timeline';
+import timeline from 'vitepress-markdown-timeline'
 
 export default defineConfig({
   lang: 'en',
@@ -13,14 +13,14 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/BID-logo.svg' }]],
   // #endregion fav
 
-  base: '/', //网站部署到github的vitepress这个仓库里
+  base: '/', // 网站部署到github的vitepress这个仓库里
 
-  //cleanUrls:true, //开启纯净链接无html
+  // cleanUrls:true, //开启纯净链接无html
 
-  //启用深色模式
+  // 启用深色模式
   appearance: 'dark',
 
-  //多语言
+  // 多语言
   locales: {
     root: {
       label: 'English',
@@ -33,14 +33,14 @@ export default defineConfig({
     },
   },
 
-  //markdown配置
+  // markdown配置
   markdown: {
-    //行号显示
+    // 行号显示
     lineNumbers: true,
 
-    //时间线
+    // 时间线
     config: (md) => {
-      md.use(timeline);
+      md.use(timeline)
     },
 
     // 开启图片懒加载
@@ -49,17 +49,17 @@ export default defineConfig({
     },
   },
 
-  //主题配置
+  // 主题配置
   themeConfig: {
-    //左上角logo
-    //logo: '/logo.png',
-    //logo: 'https://vitejs.cn/vite3-cn/logo-with-shadow.png', //远程引用
-    //siteTitle: false, //标题隐藏
+    // 左上角logo
+    // logo: '/logo.png',
+    // logo: 'https://vitejs.cn/vite3-cn/logo-with-shadow.png', //远程引用
+    // siteTitle: false, //标题隐藏
 
-    //设置站点标题 会覆盖title
-    //siteTitle: 'Hello World',
+    // 设置站点标题 会覆盖title
+    // siteTitle: 'Hello World',
 
-    //导航栏
+    // 导航栏
     nav: [
       { text: 'Home', link: '/' },
       {
@@ -200,10 +200,10 @@ export default defineConfig({
     },
 
     // Edit this page
-    //editLink: {
+    // editLink: {
     //  pattern: 'https://github.com/accountname/repositoryname/edit/main/docs/:path',
     //  text: 'Edit this page on GitHub'
-    //},
+    // },
 
     // Custom previous and next page name
     docFooter: {
@@ -211,4 +211,4 @@ export default defineConfig({
       next: 'Next Page',
     },
   },
-});
+})

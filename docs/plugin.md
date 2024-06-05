@@ -46,7 +46,7 @@
   cancelButtonColor: '#7c7c7c',
   denyButtonColor: '#fc2134',
  -->
- <!-- 2: 
+ <!-- 2:
    buttonsStyling: false,
   customClass: {
     confirmButton: 'btn-primary',
@@ -64,7 +64,7 @@ const options: SweetAlertOptions = {
   denyButtonColor: '#fc2134',
   color: '#7c7c7c',
   background: '#f1f1f1',
-};
+}
 ```
 
 Using Class Method
@@ -80,7 +80,7 @@ const options: SweetAlertOptions = {
   },
   color: '#7c7c7c',
   background: '#f1f1f1',
-};
+}
 ```
 
 ### Typescript
@@ -172,7 +172,6 @@ export type SweetAlertOptions = SweetAlertInputValidator & {
   didDestroy?(): void;
   scrollbarPadding?: boolean | undefined;
 }
-
 
 ```
 
