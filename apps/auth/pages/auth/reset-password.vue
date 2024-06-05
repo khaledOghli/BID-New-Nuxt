@@ -2,7 +2,6 @@
 import { useForm } from 'vee-validate';
 import { object, string } from 'yup';
 
-const { $t } = useI18n();
 
 useHead({
   title: 'Forgot Password',

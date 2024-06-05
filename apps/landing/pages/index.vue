@@ -8,7 +8,6 @@ import * as zod from 'zod';
 // const { $useSweetAlert } = useNuxtApp();
 const swal = useSwal();
 const toaster = useToaster();
-const { $t } = useI18n();
 
 useHead({
   title: 'Home',

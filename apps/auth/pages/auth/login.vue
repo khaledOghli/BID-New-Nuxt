@@ -3,8 +3,6 @@ import { useField, useForm } from 'vee-validate';
 import { object, string } from 'yup';
 import { useAuthStore } from '~~/stores/auth';
 
-const { $t } = useI18n();
-
 useHead({
   title: 'Login',
 });

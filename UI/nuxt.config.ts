@@ -6,4 +6,5 @@ export default defineNuxtConfig({
       prefix: 'V',
     },
   ],
+  modules: ['@nuxtjs/i18n'],
 });
