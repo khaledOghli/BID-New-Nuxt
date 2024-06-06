@@ -1,5 +1,3 @@
-// import { defaultDirection } from
-
 async function fetchAndApplyTranslations(lang: any, _i18nSetLocaleMessage: any) {
   try {
     // const translations = await $fetch(`/api/locales?lang=${lang}`);
@@ -27,4 +25,8 @@ export default defineNuxtPlugin(async (_nuxtApp) => {
       document.querySelector('html')?.setAttribute('dir', $i18n.localeProperties.value.dir);
   };
   await fetchAndApplyTranslations($i18n.locale.value, $i18n.setLocaleMessage);
+  const $t = (key: string) => $i18n.t(key);
+  return {
+    $t,
+  };
 });

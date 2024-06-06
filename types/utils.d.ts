@@ -1,35 +1,41 @@
-// Specify the module for your composables
-declare module '#app' {
-  interface NuxtApp {
-    $useLocaleDate: (date: Ref<Date> | Date, locale?: Ref<string>) => ComputedRef<string>
-    $useLocaleDateWithTime: (
-      date: Ref<Date> | Date,
-      locale?: Ref<string>
-    ) => ComputedRef<string>
-    $useLocaleOnlyTime: (date: Ref<Date> | Date, locale?: Ref<string>) => ComputedRef<string>
-    $getCurrentGMTOffset: () => string
-  }
-}
-
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $useLocaleDate: (date: Ref<Date> | Date, locale?: Ref<string>) => ComputedRef<string>
-    $useLocaleDateWithTime: (
-      date: Ref<Date> | Date,
-      locale?: Ref<string>
-    ) => ComputedRef<string>
-    $useLocaleOnlyTime: (date: Ref<Date> | Date, locale?: Ref<string>) => ComputedRef<string>
-    $getCurrentGMTOffset: () => string
+    useSwal: () => any
+    useToaster: () => any
+    useLocaleDate: (date: Date) => string
+    useLocaleOnlyTime: (date: Date) => string
+    useLocaleDateWithTime: (date: Date) => string
+    getCurrentGMTOffset: () => string
   }
 }
+
 declare module '@nuxt/types' {
+  interface NuxtAppOptions {
+    $useSwal: () => any
+    $useToaster: () => any
+    $useLocaleDate: (date: Date) => string
+    $useLocaleOnlyTime: (date: Date) => string
+    $useLocaleDateWithTime: (date: Date) => string
+    $getCurrentGMTOffset: () => string
+  }
   interface Context {
-    $useLocaleDate: (date: Ref<Date> | Date) => ComputedRef<string>
-    $useLocaleDateWithTime: (date: Ref<Date> | Date) => ComputedRef<string>
-    $useLocaleOnlyTime: (date: Ref<Date> | Date) => ComputedRef<string>
+    $useSwal: () => any
+    $useToaster: () => any
+    $useLocaleDate: (date: Date) => string
+    $useLocaleOnlyTime: (date: Date) => string
+    $useLocaleDateWithTime: (date: Date) => string
     $getCurrentGMTOffset: () => string
   }
 }
 
-// Ensure these types are included in the project
+declare global {
+  interface Window {
+    $useSwal: () => any
+    $useToaster: () => any
+    $useLocaleDate: (date: Date) => string
+    $useLocaleOnlyTime: (date: Date) => string
+    $useLocaleDateWithTime: (date: Date) => string
+    $getCurrentGMTOffset: () => string
+  }
+}
 export { };

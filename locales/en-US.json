@@ -1,80 +1,85 @@
 {
-  "locale.en": "English",
-  "locale.ar": "Arabic",
-  "locale.dir": "ltr",
-  "site": {
-    "name": "Nuxt Boilerplate"
-  },
-  "themes": {
-    "system": "System",
-    "light": "Light",
-    "dark": "Dark"
-  },
+  "Home": "Home",
+  "Submit": "Submit",
+  "cancel": "Cancel",
   "cookies": {
     "bar": {
-      "title": "🍪 Hi. This site uses cookies",
-      "description": "We use cookies and similar technologies to help personalize content and offer a better experience. You can opt to customize them by clicking the customize button."
+      "description": "We use cookies and similar technologies to help personalize content and offer a better experience. You can opt to customize them by clicking the customize button.",
+      "title": "🍪 Hi. This site uses cookies"
     },
     "modal": {
-      "title": "Customize",
       "description": "We use different types of cookies to optimize your experience on our website. Click on the categories below to learn more about their purposes. You can choose the types of cookies to be allowed and can change your preferences later. Remember that disabling cookies can affect your experience.",
-      "privacy-policy": "Privacy policy"
+      "privacy-policy": "Privacy policy",
+      "title": "Customize"
     },
     "necessary": {
-      "title": "Strictly necessary cookies",
-      "description": "These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly"
+      "description": "These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly",
+      "title": "Strictly necessary cookies"
     }
   },
   "error": {
-    "return": "Go back",
-    "page-not-found": "Page not found"
+    "page-not-found": "Page not found",
+    "return": "Go back"
   },
+  "home": "Home",
+  "locale.ar": "Arabic",
+  "locale.dir": "ltr",
+  "locale.en": "English",
   "pages": {
-    "index": {
+    "about": {
+      "link": "About",
       "meta": {
-        "title": "Home",
-        "description": "Home page"
+        "description": "About page",
+        "title": "About"
+      },
+      "p": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque iste atque, hic porro officiis fugit quae deserunt nobis dolorum odit dignissimos consequatur esse maiores repellat impedit. Quae dolorum id rem?",
+      "title": "About"
+    },
+    "index": {
+      "features": {
+        "Iconify": "Iconify",
+        "Pinia": "Pinia",
+        "Prettier": "Prettier",
+        "TailwindCSS": "TailwindCSS",
+        "Typescript": "Typescript",
+        "cookies": "Cookie banner",
+        "darkMode": "Dark mode",
+        "deviceDetect": "Device detection",
+        "eslint": "ESLint",
+        "googleFonts": "Google Fonts",
+        "i18n": "Localization (i18n)",
+        "imageOptim": "Image optimization",
+        "lightHouse": "Lighthouse 100%",
+        "postcss": "PostCSS"
+      },
+      "hero": {
+        "description": "A ready to use starter kit for all kinds of projects",
+        "subtitle": "Unofficial",
+        "title": "Nuxt Boilerplate"
       },
       "link": "Home",
-      "hero": {
-        "title": "Nuxt Boilerplate",
-        "subtitle": "Unofficial",
-        "description": "A ready to use starter kit for all kinds of projects"
-      },
-      "features": {
-        "googleFonts": "Google Fonts",
-        "eslint": "ESLint",
-        "Typescript": "Typescript",
-        "Prettier": "Prettier",
-        "imageOptim": "Image optimization",
-        "TailwindCSS": "TailwindCSS",
-        "darkMode": "Dark mode",
-        "i18n": "Localization (i18n)",
-        "postcss": "PostCSS",
-        "lightHouse": "Lighthouse 100%",
-        "deviceDetect": "Device detection",
-        "cookies": "Cookie banner",
-        "Iconify": "Iconify",
-        "Pinia": "Pinia"
+      "meta": {
+        "description": "Home page",
+        "title": "Home"
       }
     },
-    "about": {
-      "meta": {
-        "title": "About",
-        "description": "About page"
-      },
-      "link": "About",
-      "title": "About",
-      "p": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque iste atque, hic porro officiis fugit quae deserunt nobis dolorum odit dignissimos consequatur esse maiores repellat impedit. Quae dolorum id rem?"
-    },
     "minimal": {
-      "meta": {
-        "title": "Minimal page (Fullscreen-layout)",
-        "description": "Minimal page using Fullscreen-layout"
-      },
       "link": "Minimal",
-      "title": "Minimal with Fullscreen-layout",
-      "p": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque iste atque, hic porro officiis fugit quae deserunt nobis dolorum odit dignissimos consequatur esse maiores repellat impedit. Quae dolorum id rem?"
+      "meta": {
+        "description": "Minimal page using Fullscreen-layout",
+        "title": "Minimal page (Fullscreen-layout)"
+      },
+      "p": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque iste atque, hic porro officiis fugit quae deserunt nobis dolorum odit dignissimos consequatur esse maiores repellat impedit. Quae dolorum id rem?",
+      "title": "Minimal with Fullscreen-layout"
     }
+  },
+  "site": {
+    "name": "Nuxt Boilerplate"
+  },
+  "submit": "Submit",
+  "themes": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
   }
 }

@@ -86,10 +86,11 @@ export default defineNuxtConfig({
   },
 
   imports: {
+
     // presets: [
     //   {
-    // from: './composables/locale.ts',
-    // imports: ['useLocaleDate', 'useLocaleDateWithTime', 'useLocaleOnlyTime'],
+    //     from: './composables/locale.ts',
+    //     imports: ['useLocaleDate', 'useLocaleDateWithTime', 'useLocaleOnlyTime'],
     //   },
     // ],
     // dirs: ['./stores', './locales', './composables'],

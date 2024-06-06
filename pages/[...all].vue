@@ -14,7 +14,7 @@ const router = useRouter();
       />
     </div>
     <div>
-      {{ t('not-found') }}
+      {{ $t('not-found') }}
     </div>
     <div>
       <button
@@ -24,7 +24,7 @@ const router = useRouter();
         m="3 t8"
         @click="router.back()"
       >
-        {{ t('back') }}
+        {{ $t('back') }}
       </button>
     </div>
   </main>

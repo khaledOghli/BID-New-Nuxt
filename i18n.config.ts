@@ -19,8 +19,8 @@ export default defineI18nConfig(() => ({
   // strategy: 'prefix_and_default',
   // baseUrl: import.meta.env.VITE_BASE_URL,
 }));
+
 export function translate(key: string) {
-  if (!key)
-    return '';
-  return i18n.global.t(key);
+  const { $i18n } = useNuxtApp();
+  return $i18n.t(key);
 }

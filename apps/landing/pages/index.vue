@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { SweetAlertOptions } from 'sweetalert2';
-
 import { toTypedSchema } from '@vee-validate/zod';
+import type { SweetAlertOptions } from 'sweetalert2';
 import { useForm } from 'vee-validate';
 import * as zod from 'zod';
+// import { useSwal } from '../../../composables/useSwal';
+import { translate } from '../../../i18n.config';
 
 // const { $useSweetAlert } = useNuxtApp();
 const swal = useSwal();
@@ -93,6 +94,10 @@ const onSubmit = handleSubmit((values) => {
   console.log(JSON.stringify(values, null, PRETTY_PRINT_INDENTATION));
 });
 const mobile = ref('');
+
+onMounted(() => {
+  translate('Home');
+});
 </script>
 
 <template>

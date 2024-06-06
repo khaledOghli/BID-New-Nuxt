@@ -12,12 +12,12 @@
     },
     "resolveJsonModule": true,
     "typeRoots": ["./types", "./node_modules/@types"],
-    "types": [
-      "@nuxt/types",
-      "./types/sweetAlert/sweetalert2.d.ts",
-      "./types/index.d.ts",
-      "./types/utils.d.ts"
-    ],
+    // "types": [
+    //   "@nuxt/types",
+    //   "@types/node",
+    //   "types/sweetAlert/sweetalert2.d.ts",
+    //   "types/utils.d.ts"
+    // ],
     "allowJs": true,
     "strict": true,
     "strictNullChecks": false,
@@ -29,6 +29,11 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["env.d.ts", ".nuxt/nuxt.d.ts", "**/*"],
+  "include": [
+    ".nuxt/nuxt.d.ts",
+    "types/**/*.d.ts",
+    "plugins/**/*.ts",
+    "apps/**/*"
+  ],
   "exclude": ["node_modules", ".nuxt", "dist", "docs"]
 }
