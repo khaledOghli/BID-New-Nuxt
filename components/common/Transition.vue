@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TransitionEffect } from '~/enums/transitionEffect';
+import { TransitionEffect } from '~/enums/TransitionEffect';
 import type { TransitionProps } from '~/interfaces/transitions';
 
 const props = withDefaults(defineProps<TransitionProps>(), {
