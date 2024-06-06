@@ -74,3 +74,9 @@ export function useSwal() {
     },
   };
 }
+
+declare global {
+  interface Window {
+    useSwal: ReturnType<typeof useSwal>
+  }
+}

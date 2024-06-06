@@ -9,7 +9,7 @@ const baseUrl = process.env.BASE_URL || '/';
 const oneYear = 1000 * 60 * 60 * 24 * 365;
 
 export default defineNuxtConfig({
-  extends: ['./UI', './apps/landing', './apps/dashboard', './apps/auth'],
+  extends: ['./UI', './apps/landing', './apps/dashboard', './nuxt-layer', './apps/auth'],
   modules: [
     '@vueuse/nuxt',
     'nuxt-module-eslint-config',
