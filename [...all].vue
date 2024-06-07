@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const router = useRouter();
-const swal = useSwal();
 </script>
 
 <template>

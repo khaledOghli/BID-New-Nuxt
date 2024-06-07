@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { usePrimeVue } from 'primevue/config';
+import { playIconAnimation, stopIconAnimation } from '~/utils/iconsAnimation';
 
 const PrimeVue = usePrimeVue();
 const color = useColorMode();
+const iconRef = ref();
 
 useHead({
   meta: [
@@ -30,11 +32,15 @@ watch(
 </script>
 
 <template>
-  <form class="inline-flex border border-gray-200 rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-700 dark:bg-slate-800 dark:text-white">
+  <form
+    class="inline-flex border border-gray-200 rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-700 dark:bg-slate-800 dark:text-white"
+    @mouseenter="playIconAnimation(iconRef)"
+    @mouseleave="stopIconAnimation(iconRef)"
+  >
     <label for="themes">
-      <Icon
-        name="gg:dark-mode"
-        size="1.5em"
+      <IconsBrightnessHalf
+        ref="iconRef"
+        class="h-7 w-7 text-blue-500"
       />
     </label>
     <select

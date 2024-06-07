@@ -25,3 +25,10 @@ html[lang='en'] {
   user-select: none;
   touch-action: none;
 }
+/* has att */
+.lottie_svg path[fill] {
+  fill:currentColor !important;
+}
+.lottie_svg path[stroke] {
+  stroke:currentColor !important;
+}
