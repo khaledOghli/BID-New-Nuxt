@@ -2,7 +2,6 @@
 import { useForm } from 'vee-validate';
 import { object, string } from 'yup';
 
-
 useHead({
   title: 'Register',
 });

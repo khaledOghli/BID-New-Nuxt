@@ -27,8 +27,8 @@ html[lang='en'] {
 }
 /* has att */
 .lottie_svg path[fill] {
-  fill:currentColor !important;
+  fill: currentColor !important;
 }
 .lottie_svg path[stroke] {
-  stroke:currentColor !important;
+  stroke: currentColor !important;
 }

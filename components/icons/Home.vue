@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineExpose, ref } from 'vue';
 import json from '~/assets/json/icons/Home.json';
 
 const lottieRef = ref();

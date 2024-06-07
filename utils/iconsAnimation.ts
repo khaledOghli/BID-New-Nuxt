@@ -1,5 +1,4 @@
 export function playIconAnimation(ref: { playAnimation: () => void }) {
-  debugger;
   ref?.playAnimation();
 }
 

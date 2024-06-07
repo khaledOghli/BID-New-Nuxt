@@ -84,6 +84,7 @@ const validationSchema = toTypedSchema(
       },
       { message: 'Must be a valid UAE mobile number' },
     ),
+    dropdown: zod.number().min(1, { message: 'This is required' }),
   }),
 );
 const { handleSubmit, errors } = useForm({
@@ -144,6 +145,23 @@ onMounted(() => {
         placeholder="Enter your UAEMobile"
         label="UAEMobile"
         helper="Enter your UAEMobile"
+      />
+
+      <VDropdown
+        id="dropdown"
+        validation-name="dropdown"
+        :invalid="errors.dropdown"
+        placeholder="Select an option"
+        label="Dropdown"
+        helper="Enter your UAEMobile"
+        :options="[
+          { label: 'Option 1', value: 1 },
+          { label: 'Option 2', value: 2 },
+          { label: 'Option 3', value: 3 },
+        ]"
+        option-label="label"
+        option-value="value"
+        option-disabled="disabled"
       />
     </div>
 

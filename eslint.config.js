@@ -159,6 +159,7 @@ export default antfu(
       '**/*.md',
       '**/theme/',
       'assets/primevue',
+      'assets/json',
     ],
   },
 );
